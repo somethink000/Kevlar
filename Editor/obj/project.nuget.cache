@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "8Ol1QPCjMsck84lJd42yEPpJ3G8XykKOU09GohKmKOa8mwhAfDLKLiiVqCEqvwhHsBWmFE9E/rJ1GC5lcyyL0A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\susan\\Documents\\GitHub\\SomeMod\\Editor\\real_fps_base.editor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\susan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.18\\microsoft.windowsdesktop.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\susan\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.18\\microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\susan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.18\\microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512"
+  ],
+  "logs": []
+}

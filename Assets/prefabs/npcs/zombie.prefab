@@ -1,0 +1,151 @@
+{
+  "RootObject": {
+    "__guid": "6b7d7ec9-c676-4fd4-9450-935bbd28f249",
+    "Flags": 0,
+    "Name": "zombie",
+    "Tags": "bad",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "GeneralGame.MoveHelper",
+        "__guid": "dcd81055-a1ae-4280-82d3-0d16f6c1ce4a",
+        "AccelerationCurve": [
+          {
+            "x": 0.5,
+            "y": 0.5
+          }
+        ],
+        "AirAcceleration": 800,
+        "AirFriction": 1,
+        "Bounce": 0.3,
+        "EnableUnstuck": true,
+        "Gravity": "0,0,850",
+        "GroundAcceleration": 2000,
+        "GroundAngle": 45,
+        "GroundFriction": 30,
+        "IgnoreTags": "",
+        "MaxUnstuckTries": 20,
+        "StepHeight": 18,
+        "StickToGround": true,
+        "StopSpeed": 10,
+        "TraceHeight": 72,
+        "TraceRadius": 16,
+        "TraceType": "BBox",
+        "UseCollider": false,
+        "UseSceneGravity": true
+      },
+      {
+        "__type": "GeneralGame.Zombie",
+        "__guid": "beb93a30-af55-4acb-bfee-12364023a888",
+        "AlertOthers": true,
+        "animationHelper": {
+          "_type": "component",
+          "component_id": "ca71c78c-33ff-4d7e-b458-f030416e9c12",
+          "go": "14f82cd9-9f6e-4f29-8b02-6c143e181e31",
+          "component_type": "CitizenAnimationHelper"
+        },
+        "AttackCooldown": 1,
+        "AttackRange": 80,
+        "deathSounds": "sounds/zombie/death/death_rnd.sound",
+        "DetectRange": 1024,
+        "detectSounds": "sounds/zombie/alert/alert_rnd.sound",
+        "EnemyTags": "player",
+        "FaceTowardsVelocity": true,
+        "headshotSounds": "sounds/weapons/bullet_flesh.sound",
+        "hitSounds": "sounds/zombie/hit/hit_rnd.sound",
+        "Idle": true,
+        "MaxHealth": 100,
+        "MaximumIdleCooldown": 6,
+        "MaxRunAnimationSpeed": 300,
+        "MinimumIdleCooldown": 4,
+        "Model": {
+          "_type": "component",
+          "component_id": "57283574-b072-4e08-9452-c160384187d5",
+          "go": "14f82cd9-9f6e-4f29-8b02-6c143e181e31",
+          "component_type": "SkinnedModelRenderer"
+        },
+        "MoveHelper": {
+          "_type": "component",
+          "component_id": "dcd81055-a1ae-4280-82d3-0d16f6c1ce4a",
+          "go": "6b7d7ec9-c676-4fd4-9450-935bbd28f249",
+          "component_type": "MoveHelper"
+        },
+        "Name": "Default",
+        "rageSounds": "sounds/zombie/rage/rage_rnd.sound",
+        "RunningType": "Smart",
+        "RunSpeed": 300,
+        "ScaleStats": true,
+        "shotedSounds": "sounds/zombie/shoted/shoted_rnd.sound",
+        "Static": false,
+        "VisionRange": 784,
+        "WalkingType": "Dumb",
+        "WalkSpeed": 90,
+        "Weight": "Middle"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "14f82cd9-9f6e-4f29-8b02-6c143e181e31",
+        "Flags": 0,
+        "Name": "body",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "57283574-b072-4e08-9452-c160384187d5",
+            "BodyGroups": 341,
+            "CreateBoneObjects": false,
+            "MaterialOverride": "models/citizen/skin/citizen_skin_zombie.vmat",
+            "Model": "models/citizen/citizen.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
+          },
+          {
+            "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+            "__guid": "ca71c78c-33ff-4d7e-b458-f030416e9c12",
+            "BodyWeight": 1,
+            "EyesWeight": 1,
+            "HeadWeight": 1,
+            "Height": 1,
+            "LookAtEnabled": false,
+            "Target": {
+              "_type": "component",
+              "component_id": "57283574-b072-4e08-9452-c160384187d5",
+              "go": "14f82cd9-9f6e-4f29-8b02-6c143e181e31",
+              "component_type": "SkinnedModelRenderer"
+            }
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "5c88017c-f93a-4b5c-9a5e-7f434e97a227",
+            "IsTrigger": false,
+            "Model": "models/citizen/citizen.vmdl",
+            "Static": false
+          },
+          {
+            "__type": "Sandbox.ModelHitboxes",
+            "__guid": "9c6488ad-ee14-40f6-b074-b82929686957",
+            "Renderer": {
+              "_type": "component",
+              "component_id": "57283574-b072-4e08-9452-c160384187d5",
+              "go": "14f82cd9-9f6e-4f29-8b02-6c143e181e31",
+              "component_type": "SkinnedModelRenderer"
+            },
+            "Target": {
+              "_type": "gameobject",
+              "go": "14f82cd9-9f6e-4f29-8b02-6c143e181e31"
+            }
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

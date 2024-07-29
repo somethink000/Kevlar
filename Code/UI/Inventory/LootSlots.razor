@@ -1,0 +1,37 @@
+
+@namespace GeneralGame.UI
+@attribute [StyleSheet]
+@inherits Panel
+
+@if (PlayerBase.GetLocal() is null)
+	return;
+
+<root>
+	
+	<div class="section">
+		
+        <text class="title">Inventory</text>
+		<div class="items">
+            @for (var index = 0; index < Storage.BackpackItems.Count; index++)
+			{
+                var item = Storage.BackpackItems[index];
+				<InventorySlot Item=@item BackpackSlotIndex=@index />
+			}
+		</div>
+	</div>
+	
+</root>
+
+@code {
+    public LootItem Storage { get; set; }
+
+	protected override int BuildHash()
+	{
+		if (PlayerBase.GetLocal() is null)
+			return -1;
+
+		return HashCode.Combine(
+            Storage.BackpackItems.HashCombine(i => i?.GetHashCode() ?? -1)
+        );
+	}
+}

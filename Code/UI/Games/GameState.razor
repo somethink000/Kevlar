@@ -1,0 +1,78 @@
+
+@namespace GeneralGame.UI
+@attribute [StyleSheet]
+@inherits Panel
+
+
+<root class="txt">
+
+    @if (CurGame != null)
+    {
+        @if (CurGame.TimerValue > 0)
+        {
+            <div class="timer ttl">
+
+                <div>Wave Starts</div>
+
+                <div>@CurGame.TimerValue</div>
+
+            </div>
+        }
+
+        <div class="values">
+
+            @if (CurGame.SecondCountValue > 0)
+            {
+                <div class="value ttl">
+
+                    <div>Wawe</div>
+
+                    <div>@CurGame.CountValue</div>
+
+                </div>
+            }
+
+            @if (CurGame.SecondCountValue > 0)
+            {
+                <div class="value ttl">
+
+                    <div>Zombies Left</div>
+
+                    <div>@CurGame.SecondCountValue</div>
+
+                </div>
+            }
+
+        </div>
+        
+
+    }
+
+
+</root>
+
+@code {
+    public static GameState Instance { get; private set; }
+
+    public BaseGame CurGame => PlayerBase.GetLocal().CurrentGame;
+    
+    public GameState()
+    {
+        Instance = this;
+    }
+
+
+    public void RockNotificate(string message)
+    {
+        PlaySound("sounds/ui/vave_start.sound");
+    }
+
+    protected override int BuildHash() 
+    {
+       // Log.Info(CurGame);
+        if (PlayerBase.GetLocal() == null) return -1;
+  
+
+        return HashCode.Combine(CurGame.TimerValue, CurGame.CountValue, CurGame.SecondCountValue);
+    } 
+}

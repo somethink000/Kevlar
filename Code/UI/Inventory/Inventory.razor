@@ -1,0 +1,76 @@
+
+@namespace GeneralGame.UI
+@attribute [StyleSheet]
+@inherits Panel
+
+@if (PlayerBase.GetLocal() is null)
+	return;
+
+<root>
+	
+	<div class="section">
+		<div>
+			
+			<InventorySlot EquipSlotIndex=@EquipSlot.FirstWeapon Item=@PlayerBase.GetLocal().Inventory.EquippedItems[(int)EquipSlot.FirstWeapon]/>
+			<InventorySlot EquipSlotIndex=@EquipSlot.SeccondWeapon Item=@PlayerBase.GetLocal().Inventory.EquippedItems[(int)EquipSlot.SeccondWeapon]/>
+            
+		</div>
+       
+        <text class="title">Inventory</text>
+		<div class="items">
+			@for (var index = 0; index < PlayerBase.GetLocal().Inventory.BackpackItems.Count; index++)
+			{
+				var item = PlayerBase.GetLocal().Inventory.BackpackItems[index];
+				<InventorySlot Item=@item BackpackSlotIndex=@index />
+			}
+		</div>
+		<div>
+			<div class="total-weight @(PlayerBase.GetLocal().IsEncumbered ? "encumbered" : "")">
+				<text class="encumbrance">ENCUMBERED!</text>
+				<text>TOTAL WEIGHT: </text>
+				<text class="active-weight">@PlayerBase.GetLocal().Inventory.Weight.ToKilograms() kg</text>
+				<text class="max">/ @PlayerBase.GetLocal().MaxCarryWeight.ToKilograms() kg</text>
+			</div>
+		</div>
+	</div>
+
+    <div class="section txt">
+        <div class="about">
+            <textarea>wtf is that - another shitty wip game</textarea>
+            <div>why is it in this condition - So that there is at least something interesting in s&box</div>
+            <div>more guns - soon</div>
+            <div>more maps - soon</div>
+            <div>more gamemodes - soon</div>
+            <div>workable multiplayer - soon</div>
+            <div>cool human zombies - soon</div>
+        </div>
+    </div>
+   
+</root>
+
+@code {
+   
+
+	public static Inventory Instance { get; private set; }
+
+	public Inventory() => Instance = this;
+
+   
+	// We want the inspect menu to be apart of the inventory so both close.
+	public void Inspect( ItemComponent item )
+	{
+		if ( item is not null )
+			AddChild( new InspectItem( item ) );
+	}
+
+	protected override int BuildHash()
+	{
+		if (PlayerBase.GetLocal() is null)
+			return -1;
+
+		return HashCode.Combine(
+			PlayerBase.GetLocal().Inventory.BackpackItems.HashCombine(i => i?.GetHashCode() ?? -1),
+			PlayerBase.GetLocal().Inventory.EquippedItems.HashCombine(i => i?.GetHashCode() ?? -1)
+        );
+	}
+}

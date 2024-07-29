@@ -1,0 +1,22 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "forest_road",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "forest_road",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "evilinc.forest_4_grass#48937",
+        "evilinc.ah_super_large_pine002#48323"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "scenes/objection/forest_road.vmap"
+      }
+    }
+  }
+}

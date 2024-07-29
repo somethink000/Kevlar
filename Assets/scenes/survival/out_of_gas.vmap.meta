@@ -1,0 +1,30 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "out_of_gas",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "out_of_gas",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "evilinc.forest_4_grass#48937",
+        "evilinc.ah_super_large_pine002#48323",
+        "aitextures.marblefloor02#17652",
+        "rustextended.metal_panels_f#43308",
+        "facepunch.metal_painted_b_hs#28950",
+        "evilinc.metal_list_clean#48919",
+        "facepunch.metal_brushed#18749",
+        "mrtrn.mrtrn_metalup1#34220",
+        "evilinc.floorold1#48231",
+        "evilinc.plaster_p#48227"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "scenes/survival/out_of_gas.vmap"
+      }
+    }
+  }
+}

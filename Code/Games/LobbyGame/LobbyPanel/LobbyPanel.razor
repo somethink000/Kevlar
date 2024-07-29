@@ -1,0 +1,202 @@
+﻿
+@using GeneralGame
+@namespace GeneralGame.UI
+@attribute [StyleSheet]
+@inherits Panel
+
+
+<root class="txt">
+  
+	<div class="left">
+
+        <label @ref=redText> </label>
+
+        <div @ref=StartButton class="start_button ttl @( ready ? "activated" : "" )" onclick=@( () => StartGame() )>
+            Start Game >>>
+        </div>
+
+
+        <div @ref=CategoriesPanel class="cat_buttons">
+            
+        </div>
+
+	</div> 
+
+     <div class="right">
+
+        <div @ref=mapsListPanel class="scenes">
+           
+           
+
+        </div>
+
+        <div class="lobbyes txt">
+
+            <div class="ttl">Lobbies</div>
+
+            @if (IsRefreshing)
+            {
+                <label class="ttl">Refreshing the server list, please wait...</label>
+            }
+            else if (Servers.Count == 0)
+            {
+                <label class="ttl">No servers were found, create one to play.</label>
+            }
+            else
+            {
+                <div class="button-list">
+                    @foreach (var lobby in Servers)
+                    {
+                        @if( lobby.Map != "Basement") { continue; }
+                        <div class="button" onclick=@( () => OpenLobby( lobby ) )>
+                            <div class="title">
+                                @lobby.Name
+                            </div>
+
+                            <div class="meta">
+                                <div class="map">
+                                    @lobby.Map
+                                </div>
+
+                                <div class="count">
+                                    @lobby.Members / @lobby.MaxMembers
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+         </div>
+       
+
+     </div> 
+
+</root>
+
+@code
+{
+    public bool IsRefreshing { get; set; }
+    public List<LobbyInformation> Servers { get; set; } = new();
+    
+    public static LobbyPanel Instance { get; private set; }
+
+    private Label redText;
+
+    private Panel StartButton;
+    private Panel CategoriesPanel;
+    private Panel mapsListPanel;
+
+    private Panel mapsList { get; set; }
+
+    private CategoryImage curCategoty { get; set; }
+    
+    private MapImage CurrentMap { get; set; }
+   // private  curMapInfo 
+    private bool ready { get; set; }
+
+
+
+    private List<Panel> GameButtons = new();
+
+    public LobbyPanel()
+    {
+        Instance = this;
+        _ = RefreshLobbyList();
+    }
+
+   
+
+    protected override void OnAfterTreeRender(bool firstTime)
+    {
+        base.OnAfterTreeRender(firstTime);
+
+        if (!firstTime) return;
+
+
+        foreach (var entry in GlobalGameNamespace.TypeLibrary.GetTypes<BaseGame>())
+        {
+            @if (@entry.Name == "BaseGame" || @entry.Name == "LobbyGame") { continue; }
+
+            Panel category = new CategoryImage(entry, Instance);
+            CategoriesPanel.AddChild(category);
+        }
+
+    }
+
+
+    public void SelectCategory(CategoryImage category, string name)
+    {
+        if (curCategoty == category) return;
+        if (curCategoty != null) curCategoty.RemoveClass("activate");
+
+        ready = false;
+
+        curCategoty = category;
+        curCategoty.SetClass("activate", true);
+
+        if (mapsList != null) mapsList.Delete();
+
+        mapsList = new Panel();
+        mapsListPanel.AddChild(mapsList);
+
+        foreach (MapDefinition map in MapSystem.ByGame(name)) 
+        {
+            Panel mapimg = new MapImage(map, Instance);
+            mapsList.AddChild(mapimg);
+        }
+
+    }
+
+    public void SelectMap(MapImage map)
+    {
+        if (CurrentMap == map) return;
+        if (CurrentMap != null) CurrentMap.RemoveClass("activate");
+
+        CurrentMap = map;
+        CurrentMap.SetClass("activate", true);
+
+        ready = true;
+    }
+
+    private void StartGame()
+    {
+        if (CurrentMap == null) 
+       Game.ActiveScene.Load(CurrentMap.map.SceneFile);
+        //.Load(SelectedMap.SceneFile);
+    }
+   
+
+    private void OpenLobby(LobbyInformation lobby)
+    {
+        GameNetworkSystem.Connect(lobby.LobbyId);
+    }
+
+
+    public void NewGame(string check)
+    {
+        if (check == "none") return;
+        GameManager.ActiveScene.LoadFromFile("scenes/survival/out_of_gas.scene");
+    }
+
+    protected override int BuildHash() => HashCode.Combine(RealTime.Now);
+
+    private async Task RefreshLobbyList()
+    {
+        while (true)
+        {
+            IsRefreshing = true;
+            StateHasChanged();
+
+            Servers = await Networking.QueryLobbies();
+
+            IsRefreshing = false;
+            StateHasChanged();
+
+            await Task.DelayRealtimeSeconds(5f);
+
+            HashCode.Combine(ready);
+        }
+
+        
+    }
+}

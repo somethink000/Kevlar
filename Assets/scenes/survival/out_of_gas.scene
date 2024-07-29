@@ -1,0 +1,1019 @@
+{
+  "__guid": "868ef9bc-433e-4fe9-bbdd-15f18c361c6f",
+  "GameObjects": [
+    {
+      "__guid": "c3fe7d19-05e0-4f92-9623-f8b31eec3171",
+      "Flags": 0,
+      "Name": "Defence",
+      "Position": "-28.82959,5370.101,9.022205",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.DefenceObject",
+          "__guid": "626440bd-49fc-4a7f-bae2-64e2c253539a",
+          "MaxHealth": 100
+        }
+      ]
+    },
+    {
+      "__guid": "4b593407-5da1-4e87-a132-edc2a651b610",
+      "Flags": 0,
+      "Name": "niva2329",
+      "Position": "-790.5034,4724.083,-106.2094",
+      "Rotation": "0,0,-0.04361969,-0.9990482",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "94cc611b-4edc-488f-912a-8f62fcf49d9a",
+          "BodyGroups": 18446744073709551615,
+          "Model": "cars/niva/niva2329.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "7f7bca41-8027-4f76-903c-01af77d8348c",
+          "IsTrigger": false,
+          "Model": "cars/niva/niva2329.vmdl",
+          "Static": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "e8d41af3-38f2-484a-9484-4cc0a3f832ff",
+          "Flags": 0,
+          "Name": "ofroad_wheels",
+          "Position": "-49.00004,35.00003,-30",
+          "Rotation": "-0,0,-1,-0.00000004371139",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "02ca0360-ae4e-4f60-a325-d5849e1ba283",
+              "BodyGroups": 18446744073709551615,
+              "Model": "cars/niva/ofroad_wheels.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "d00ce434-08b7-4189-8dc5-8fb2b08c82f4",
+          "Flags": 0,
+          "Name": "ofroad_wheels",
+          "Position": "68.9999,34.99996,-30",
+          "Rotation": "0,-0,-1,-0.00000004371139",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "8c68a732-cea4-46ce-b94a-8a64075c972b",
+              "BodyGroups": 18446744073709551615,
+              "Model": "cars/niva/ofroad_wheels.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "8311558a-4d4e-42d4-b9ce-6be14ff638d6",
+          "Flags": 0,
+          "Name": "ofroad_wheels",
+          "Position": "-49.00008,-34.99997,-30",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "b2a5db12-db20-4a9d-ac25-9168c9f773c1",
+              "BodyGroups": 18446744073709551615,
+              "Model": "cars/niva/ofroad_wheels.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "794be9a3-a139-443b-a1fc-d7330c773b4d",
+          "Flags": 0,
+          "Name": "ofroad_wheels",
+          "Position": "68.99992,-34.99998,-30",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "94a8f05c-355b-49b5-b47d-c13315a0c417",
+              "BodyGroups": 18446744073709551615,
+              "Model": "cars/niva/ofroad_wheels.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "759629fa-ac1e-41d8-be90-ac659883fc3e",
+      "Flags": 0,
+      "Name": "Logic",
+      "Position": "-55.41614,5244.126,44.5015",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "e0fbc366-1843-4b91-9a36-fecf36e72425",
+          "Flags": 0,
+          "Name": "Gradient Fog",
+          "Position": "0,0,0",
+          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.GradientFog",
+              "__guid": "21913479-ab86-4fd1-9a59-104fd7896971",
+              "Color": "0.7814,0.7814,1,1",
+              "EndDistance": 10000,
+              "FalloffExponent": 1,
+              "Height": 120000,
+              "StartDistance": 1000,
+              "VerticalFalloffExponent": 2
+            }
+          ]
+        },
+        {
+          "__guid": "44599370-eab6-4d58-8834-575447b160ae",
+          "Flags": 0,
+          "Name": "Sound",
+          "Position": "0,0,0",
+          "Rotation": "0.3210197,-0.3851179,0.5930297,-0.6300368",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SoundscapeTrigger",
+              "__guid": "76319fe7-6e09-481e-8b2e-c190988bbdd0",
+              "BoxSize": "50,50,50",
+              "Radius": 5000,
+              "Soundscape": "sounds/ambient/construct_outside.sndscape",
+              "StayActiveOnExit": true,
+              "Type": "Sphere"
+            }
+          ]
+        },
+        {
+          "__guid": "4f7db652-3fe6-4a19-b76b-67dd14df30be",
+          "Flags": 0,
+          "Name": "Sun",
+          "Position": "0,0,0",
+          "Rotation": "0.2277959,-0.6439012,0.5992499,-0.4176125",
+          "Tags": "light_directional,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.DirectionalLight",
+              "__guid": "86920de1-dec8-4acf-bd34-51aed89ee1cd",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.73488,0.46212,0.15039,1",
+              "Shadows": false,
+              "SkyColor": "0.16744,0.13437,0.09657,1"
+            }
+          ]
+        },
+        {
+          "__guid": "7b507888-48d8-48ba-af9f-bab745768d22",
+          "Flags": 0,
+          "Name": "Envmap",
+          "Position": "0,0,0",
+          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "9988890c-542b-4803-9d43-369c393bf7a5",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-16384,-16384,-16384",
+                "Maxs": "16384,16384,16384"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 16384,
+              "Projection": "Sphere",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 16384,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "8b3cd142-6acb-47f1-b4e0-6b00f75f7355",
+          "Flags": 0,
+          "Name": "WeaponRegistry",
+          "Position": "0,0,0",
+          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
+          "Enabled": true,
+          "NetworkMode": 1,
+          "Components": [
+            {
+              "__type": "GeneralGame.WeaponRegistry",
+              "__guid": "f328f8ca-7b21-4aa6-9bdd-e7bee1635e5e",
+              "WeaponPrefabs": []
+            },
+            {
+              "__type": "GeneralGame.WeaponSettings",
+              "__guid": "48a4c454-4b38-44d3-9b1b-c1750fa5441f",
+              "AutoReload": true,
+              "Customization": true
+            },
+            {
+              "__type": "GeneralGame.PrefabInitializer",
+              "__guid": "d6defc57-ba33-4862-a195-c8483ca27ec4"
+            }
+          ]
+        },
+        {
+          "__guid": "c988658d-a998-405a-b169-e1711fe59578",
+          "Flags": 0,
+          "Name": "ExampleNetworkManager",
+          "Position": "0,0,0",
+          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.DemoNetworkManager",
+              "__guid": "e2d36775-e195-461c-9fa6-154ca128be43",
+              "PlayerPrefab": {
+                "_type": "gameobject",
+                "prefab": "prefabs/player.prefab"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "d74f755b-b470-462a-bcf2-988314f90bfa",
+          "Flags": 0,
+          "Name": "2D Skybox",
+          "Position": "0,0,0",
+          "Tags": "skybox",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkyBox2D",
+              "__guid": "440f3719-3ce8-4e08-82e4-9dfbb5afa586",
+              "SkyMaterial": "materials/sky/atmosphere_sky.vmat",
+              "Tint": "0.9907,0.9907,0.9907,1"
+            }
+          ]
+        },
+        {
+          "__guid": "65d545c0-0167-4c8b-8da5-ba561eddd43f",
+          "Flags": 0,
+          "Name": "Game",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ZombieSurvivalGame",
+              "__guid": "264d3249-4e60-49d6-b982-63a06c3fdaaf",
+              "DefendObject": {
+                "_type": "gameobject",
+                "go": "c3fe7d19-05e0-4f92-9623-f8b31eec3171"
+              },
+              "Vaves": [
+                60,
+                100,
+                140
+              ],
+              "VaveStartColdown": 40,
+              "ZombieSpawnDelay": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "40e2041b-759b-4cb2-b863-3759e3f3c2e3",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "-1266.255,4455.864,-103.9918",
+      "Rotation": "0,0,0.8660254,0.5000001",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "a0b3e506-1d30-4fd2-bcd9-f11fb67335a3",
+          "BodyGroups": 18446744073709551615,
+          "Model": "content/models/instrument/instr.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "5081f618-ddfd-42d4-8a8a-49049c41a317",
+          "IsTrigger": false,
+          "Model": "content/models/instrument/instr.vmdl",
+          "Static": false
+        },
+        {
+          "__type": "GeneralGame.LootItem",
+          "__guid": "af534cbe-7e1a-4973-a2e9-a129ad0e9bcb",
+          "MAX_SLOTS": 9,
+          "StartItems": [
+            "prefabs/weapons/colt.prefab",
+            "prefabs/weapons/geagelol.prefab",
+            "prefabs/weapons/remington870.prefab",
+            "prefabs/weapons/lr300.prefab",
+            "prefabs/weapons/ak74u.prefab"
+          ]
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "d3015133-889e-49d5-94ca-510a7562db47",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ]
+    },
+    {
+      "__guid": "6035dcd5-3c6c-4aa2-b619-19bda4bca5d3",
+      "Flags": 0,
+      "Name": "Spawn",
+      "Position": "-1233.33,4411.725,-146.9778",
+      "Rotation": "0,0,-0.7071074,0.7071066",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpawnPoint",
+          "__guid": "6cb486f3-8811-42f9-adfb-eb5af657c944",
+          "Color": "0.8902,0.31765,0.05098,1"
+        }
+      ]
+    },
+    {
+      "__guid": "aa5203dc-8cce-4adc-a896-0278204d6df5",
+      "Flags": 0,
+      "Name": "Map",
+      "Position": "312,1588,-180.9993",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "229b1fc7-d1a2-4f63-be11-15dc86f69f20",
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "scenes/survival/out_of_gas.vmap",
+          "NoOrigin": false,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "8fd8f2bd-1c02-4652-a635-ec46bfe89f03",
+      "Flags": 0,
+      "Name": "zombiespawner",
+      "Position": "3652.505,6708.376,-200.4538",
+      "Rotation": "-0.153927,-0.0000002483011,0.9880823,-0.000001593885",
+      "Enabled": true,
+      "__Prefab": "prefabs/npcs/zombiespawner.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7bf5cf51-8325-4ba8-b318-a1a8e9e6bc3e",
+      "Flags": 0,
+      "Name": "zombiespawner (1)",
+      "Position": "2221.247,7569.214,-173.0845",
+      "Rotation": "-0.09983078,-0.000000005364575,0.9950044,-0.00000005346815",
+      "Enabled": true,
+      "__Prefab": "prefabs/npcs/zombiespawner.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "26494508-5917-4112-909e-ece7fdca225c",
+      "Flags": 0,
+      "Name": "zombiespawner (2)",
+      "Position": "1164.953,8755.148,-195.6022",
+      "Rotation": "-0.09052107,-0.0112787,0.9881896,-0.1231259",
+      "Enabled": true,
+      "__Prefab": "prefabs/npcs/zombiespawner.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "60789cb2-0a9e-4a3b-aef8-8129e11e086b",
+      "Flags": 0,
+      "Name": "zombiespawner (3)",
+      "Position": "526.2983,9520.377,-154.998",
+      "Rotation": "-0.000000257045,0.000001728535,0.07462344,0.9972118",
+      "Enabled": true,
+      "__Prefab": "prefabs/npcs/zombiespawner.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "65cb601b-421f-4098-93c7-73b564384ac2",
+      "Flags": 0,
+      "Name": "zombiespawner (4)",
+      "Position": "-3212.135,11368.39,-155.3249",
+      "Rotation": "0.01832011,0.01826349,-0.7079531,0.7057855",
+      "Enabled": true,
+      "__Prefab": "prefabs/npcs/zombiespawner.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8507cded-1c7b-4783-8361-0fbebe96375a",
+      "Flags": 0,
+      "Name": "zombiespawner (5)",
+      "Position": "-3700.02,7994.699,-157.3029",
+      "Rotation": "0.00003297487,0.00265184,-0.01243408,0.9999192",
+      "Enabled": true,
+      "__Prefab": "prefabs/npcs/zombiespawner.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ee655f63-f94c-4d2c-a0bc-233a95ee00a9",
+      "Flags": 0,
+      "Name": "m_ll_lamp_halogen_01 (3)",
+      "Position": "-1200.914,4319.947,15.22896",
+      "Rotation": "0.2988362,0.6408563,0.2988363,-0.6408563",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "ed8bae48-cc53-4266-9c91-95ce3e3f4df8",
+          "BodyGroups": 18446744073709551615,
+          "Model": "content/models/m_ll_lamp_halogen_01.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.SoundPointComponent",
+          "__guid": "3c201229-34b1-438e-99bf-92162b4db7f7",
+          "DistanceAttenuation": false,
+          "DistanceAttenuationOverride": false,
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "Pitch": 1,
+          "PlayOnStart": true,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundEvent": "sounds/ambient/lamp_zzzz1.sound",
+          "SoundOverride": false,
+          "StopOnNew": false,
+          "TargetMixer": {
+            "Name": "unknown",
+            "Id": "00000000-0000-0000-0000-000000000000"
+          },
+          "Volume": 1
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "ea771e88-d468-4ab8-9bb0-2594cc546163",
+          "Flags": 0,
+          "Name": "Point Light",
+          "Position": "-8.937455,-3.425446,6.411254",
+          "Rotation": "0.2988364,-0.6408564,-0.2988363,-0.6408564",
+          "Tags": "light_point,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.PointLight",
+              "__guid": "6709284b-5d7a-400d-9f41-d0114b15fc71",
+              "Attenuation": 1,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Radius": 400,
+              "Shadows": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "03adad1b-613b-4f3c-85e9-17d5f716073a",
+      "Flags": 0,
+      "Name": "m_ll_lamp_halogen_01 (1)",
+      "Position": "-1040.342,4484.848,15.22899",
+      "Rotation": "0.2988362,0.6408563,0.2988363,-0.6408563",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "c8be004f-3e34-4154-90a2-40adda5a89e6",
+          "BodyGroups": 18446744073709551615,
+          "Model": "content/models/m_ll_lamp_halogen_01.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.SoundPointComponent",
+          "__guid": "c2296c5d-5f2d-4315-800a-c86e39d069c0",
+          "DistanceAttenuation": false,
+          "DistanceAttenuationOverride": false,
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "Pitch": 1,
+          "PlayOnStart": true,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundEvent": "sounds/ambient/lamp_zzzz1.sound",
+          "SoundOverride": false,
+          "StopOnNew": false,
+          "TargetMixer": {
+            "Name": "unknown",
+            "Id": "00000000-0000-0000-0000-000000000000"
+          },
+          "Volume": 1
+        }
+      ]
+    },
+    {
+      "__guid": "d76a63a6-9f4d-4938-a846-a7891501d665",
+      "Flags": 0,
+      "Name": "m_ll_lamp_halogen_01 (2)",
+      "Position": "-1214.202,4687.078,15.22897",
+      "Rotation": "0.2988362,0.6408563,0.2988363,-0.6408563",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "0120db14-1287-4cc9-bdd9-719c09708edc",
+          "BodyGroups": 18446744073709551615,
+          "Model": "content/models/m_ll_lamp_halogen_01.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.SoundPointComponent",
+          "__guid": "0569ad61-b40b-43d0-8750-dd4919863545",
+          "DistanceAttenuation": false,
+          "DistanceAttenuationOverride": false,
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "Pitch": 1,
+          "PlayOnStart": true,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundEvent": "sounds/ambient/lamp_zzzz1.sound",
+          "SoundOverride": false,
+          "StopOnNew": false,
+          "TargetMixer": {
+            "Name": "unknown",
+            "Id": "00000000-0000-0000-0000-000000000000"
+          },
+          "Volume": 1
+        }
+      ]
+    },
+    {
+      "__guid": "5df2f5ca-820d-4205-aa44-2cb939b0ceac",
+      "Flags": 0,
+      "Name": "m_ll_lamp_halogen_01 (4)",
+      "Position": "-1380.593,4547.905,15.22893",
+      "Rotation": "0.2988362,0.6408563,0.2988363,-0.6408563",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "70a206a2-d02d-4c06-bff1-22382aa62b22",
+          "BodyGroups": 18446744073709551615,
+          "Model": "content/models/m_ll_lamp_halogen_01.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.SoundPointComponent",
+          "__guid": "d399e0cd-e695-4217-bb12-eab0ad516597",
+          "DistanceAttenuation": false,
+          "DistanceAttenuationOverride": false,
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "Pitch": 1,
+          "PlayOnStart": true,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundEvent": "sounds/ambient/lamp_zzzz1.sound",
+          "SoundOverride": false,
+          "StopOnNew": false,
+          "TargetMixer": {
+            "Name": "unknown",
+            "Id": "00000000-0000-0000-0000-000000000000"
+          },
+          "Volume": 1
+        }
+      ]
+    },
+    {
+      "__guid": "0a6359d4-14fe-452c-8c7a-b31ef8970105",
+      "Flags": 0,
+      "Name": "ammo_pistol",
+      "Position": "-1259.049,4277.673,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "65b0bc70-0b0d-4d6c-a00a-65c5041fc0d3",
+      "Flags": 0,
+      "Name": "ammo_pistol (1)",
+      "Position": "-1237.911,4248.111,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8e6f768f-aa46-4bbd-927b-50644932c85c",
+      "Flags": 0,
+      "Name": "ammo_pistol (2)",
+      "Position": "-1288.335,4313.294,-101.2714",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e9b27f60-aa4f-4cd3-bdaf-9d611ef6a07e",
+      "Flags": 0,
+      "Name": "ammo_rifle",
+      "Position": "-1253.579,4294.987,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "30b04a0c-185d-4e56-ac5e-7e7f75c671ff",
+      "Flags": 0,
+      "Name": "ammo_rifle (1)",
+      "Position": "-1232.442,4265.425,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "a9b7fc3a-b388-40b8-9327-e464547da75c",
+      "Flags": 0,
+      "Name": "ammo_rifle (2)",
+      "Position": "-1282.866,4330.608,-101.2714",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "44d97e57-1d91-475e-bf4b-6a7a2f93bc8f",
+      "Flags": 0,
+      "Name": "ammo_shotgun",
+      "Position": "-1272.315,4284.034,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_shotgun.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "adbad242-ddd4-4319-8b0a-550903600a7b",
+      "Flags": 0,
+      "Name": "ammo_shotgun (1)",
+      "Position": "-1251.177,4254.472,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_shotgun.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "98c90c5c-38c4-4823-95c2-a3e668a874c4",
+      "Flags": 0,
+      "Name": "ammo_rifle (3)",
+      "Position": "-1299.928,4323.407,-104.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "01daa824-e078-49a4-a24f-241c4a29f523",
+      "Flags": 0,
+      "Name": "ammo_rifle (4)",
+      "Position": "-1298.41,4342.404,-104.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6519dd4c-0226-4ea9-9c39-8cb263588754",
+      "Flags": 0,
+      "Name": "ammo_rifle (5)",
+      "Position": "-1299.586,4332.19,-104.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d6b8c081-dd84-4fbe-bead-07ffef939f1a",
+      "Flags": 0,
+      "Name": "ammo_rifle (6)",
+      "Position": "-1284.32,4331.908,-98.01444",
+      "Rotation": "-0.00110355,0.001093835,0.7048841,0.7093207",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ba9fe625-29f2-4440-b6eb-cd1a37e64368",
+      "Flags": 0,
+      "Name": "ammo_rifle (7)",
+      "Position": "-1301.232,4325.256,-101.7441",
+      "Rotation": "-0.00110355,0.001093835,0.7048841,0.7093207",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "fd431041-fd21-499d-b037-49a5f3fdefdf",
+      "Flags": 0,
+      "Name": "ammo_rifle (8)",
+      "Position": "-1299.353,4340.538,-101.7324",
+      "Rotation": "-0.00110355,0.001093835,0.7048841,0.7093207",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "20097fdb-a6f0-47db-b956-b188b51e595e",
+      "Flags": 0,
+      "Name": "ammo_rifle (9)",
+      "Position": "-1288.456,4332.079,-94.76692",
+      "Rotation": "-0.002054602,0.0008519143,0.9235113,0.3835649",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "dbf9121a-5795-49d5-8b8a-b75af4943e13",
+      "Flags": 0,
+      "Name": "ammo_rifle (10)",
+      "Position": "-1308.619,4314.333,-104.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ad4d7aaf-f401-47f0-a942-fcc706e9956b",
+      "Flags": 0,
+      "Name": "ammo_rifle (11)",
+      "Position": "-1286.667,4321.256,-104.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0d625e72-c02c-454a-bc3f-892f6989bde6",
+      "Flags": 0,
+      "Name": "ammo_rifle (12)",
+      "Position": "-1313.306,4302.548,-104.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "9b22b067-c3ac-4a37-a93d-f0043d8f7338",
+      "Flags": 0,
+      "Name": "ammo_rifle (13)",
+      "Position": "-1309.877,4355.38,-104.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e476f895-f89d-49ea-82a2-8b911a315733",
+      "Flags": 0,
+      "Name": "ammo_pistol (3)",
+      "Position": "-1312.263,4427.825,-119.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c73e30d5-7d7c-4a83-8d1f-33b62b3b3eaa",
+      "Flags": 0,
+      "Name": "ammo_pistol (11)",
+      "Position": "-1307.692,4417.183,-119.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "fb330690-9d72-4abf-9941-b852a492b5f7",
+      "Flags": 0,
+      "Name": "ammo_pistol (12)",
+      "Position": "-1322.248,4410.344,-119.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c23ab155-badd-4793-8a00-20d3185bc5e2",
+      "Flags": 0,
+      "Name": "ammo_pistol (13)",
+      "Position": "-1315.789,4413.793,-119.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "2253a8cd-8874-4480-b363-45fd35af57ac",
+      "Flags": 0,
+      "Name": "ammo_pistol (10)",
+      "Position": "-1299.576,4425.869,-119.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "39dd39a9-17a1-478d-bf74-02f4306dd569",
+      "Flags": 0,
+      "Name": "ammo_pistol (9)",
+      "Position": "-1310.434,4435.075,-119.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "95977a9a-f977-47c6-944c-f8cc29232df6",
+      "Flags": 0,
+      "Name": "ammo_pistol (6)",
+      "Position": "-1323.439,4434.634,-119.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c0e2e931-4103-4d25-a9f5-9faeee2054d2",
+      "Flags": 0,
+      "Name": "ammo_pistol (8)",
+      "Position": "-1316.936,4448.75,-119.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e1815f96-42a7-4cbb-9ab6-7221ba85171d",
+      "Flags": 0,
+      "Name": "ammo_pistol (4)",
+      "Position": "-1319.182,4423.418,-119.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6a0bf1a3-33ac-4e33-b7e1-2ca4326f4e02",
+      "Flags": 0,
+      "Name": "ammo_pistol (5)",
+      "Position": "-1330.359,4430.227,-119.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7dff680c-6119-4d3c-832b-f7337ed1adf3",
+      "Flags": 0,
+      "Name": "ammo_pistol (7)",
+      "Position": "-1323.855,4444.343,-119.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e34287e9-1571-4dd0-b2ea-82c1a6fe2cc2",
+      "Flags": 0,
+      "Name": "ammo_shotgun (2)",
+      "Position": "-1284.078,4436.129,-106.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_shotgun.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b2680dce-d9cf-4738-b1a6-2e0eb2f609b2",
+      "Flags": 0,
+      "Name": "ammo_shotgun (5)",
+      "Position": "-1287.514,4448.171,-106.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_shotgun.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "30121a54-a156-4ded-92ba-0249db2facf2",
+      "Flags": 0,
+      "Name": "ammo_shotgun (6)",
+      "Position": "-1297.929,4452.822,-106.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_shotgun.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "2ec5fa54-ff19-4e61-aa0a-17f3f991dbca",
+      "Flags": 0,
+      "Name": "ammo_shotgun (7)",
+      "Position": "-1296.739,4466.059,-106.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_shotgun.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "44a54e40-6e23-4cad-b297-8f12e6c44f78",
+      "Flags": 0,
+      "Name": "ammo_shotgun (8)",
+      "Position": "-1287.509,4445.02,-102.7603",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_shotgun.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "649e6bd6-1765-494e-9138-c0424fe21af6",
+      "Flags": 0,
+      "Name": "ammo_shotgun (9)",
+      "Position": "-1295.813,4455.756,-102.7603",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_shotgun.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ff387857-7487-4e06-b54b-e8f83ee1b811",
+      "Flags": 0,
+      "Name": "ammo_shotgun (10)",
+      "Position": "-1294.097,4471.682,-102.7603",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_shotgun.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "21fcba3d-0c9a-4066-ab0b-5a33d32abcd7",
+      "Flags": 0,
+      "Name": "ammo_shotgun (3)",
+      "Position": "-1290.845,4444.848,-106.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_shotgun.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d221d3db-43d5-49d3-bb68-91e46def22af",
+      "Flags": 0,
+      "Name": "ammo_shotgun (4)",
+      "Position": "-1296.743,4460.778,-106.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_shotgun.prefab",
+      "__PrefabVariables": {}
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 60,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": true,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": false,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "minimal",
+  "Description": "",
+  "ResourceVersion": 1,
+  "__references": [
+    "evilinc.instr",
+    "evilinc.m_ll_lamp_halogen_01"
+  ],
+  "__version": 1
+}
