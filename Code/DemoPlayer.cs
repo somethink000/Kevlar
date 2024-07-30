@@ -24,12 +24,6 @@ public class DemoPlayer : PlayerBase
 	}*/
 
 
-	public override void OnDeath( Vector3 force, Vector3 origin )
-	{
-		base.OnDeath( force, origin );
-		
-	}
-
 	/*public override void TakeDamage(DamageInfo info)
 	{
 		base.TakeDamage(info);

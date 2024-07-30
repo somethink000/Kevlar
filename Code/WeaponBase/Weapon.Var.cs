@@ -19,8 +19,6 @@ public partial class Weapon
 
 	[Property, Group( "General" )] public string DisplayName { get; set; }
 
-	[Property, Group( "General" ), ImageAssetPathAttribute] public string Icon { get; set; }
-
 	/// <summary>How the player holds the weapon in thirdperson</summary>
 	[Property, Group( "General" )] public CitizenAnimationHelper.HoldTypes HoldType { get; set; } = CitizenAnimationHelper.HoldTypes.Pistol;
 

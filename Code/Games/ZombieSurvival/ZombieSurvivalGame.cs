@@ -25,10 +25,7 @@ public class ZombieSurvivalGame : BaseGame
 	public override int TimerValue => UntilNextVave.Relative.CeilToInt();
 	public override int CountValue => CurVave;
 	public override int SecondCountValue => ZombieLeft;
-	public int GetUtilSeconds()
-	{
-		return (int)((UntilNextVave / 24) * 24 * 60 * 60);
-	}
+	
 
 	protected override void OnAwake()
 	{
@@ -48,12 +45,19 @@ public class ZombieSurvivalGame : BaseGame
 		DefendObject = Scene.GetAllComponents<PlayerBase>().First().GameObject;
 	}
 
+	public override void OnPlayerDeath( PlayerBase player, PlayerBase killer )
+	{
+		if  (Scene.GetAllComponents<PlayerBase>().Where( x => x.IsAlive).Count() <= 0)
+		{
+			GameManager.ActiveScene.LoadFromFile( "scenes/basement.scene" );
+		}
+	}
 
 
-	public override void OnZombieKilled()
+	public override void OnZombieKilled( PlayerBase ply )
 	{
 		ZombieLeft--;
-
+		ply.Kills++;
 		if (ZombieLeft <= 0 )
 		{
 			VaveEnd();
@@ -72,14 +76,11 @@ public class ZombieSurvivalGame : BaseGame
 
 	public void VaveEnd()
 	{
-		var plys = Scene.GetAllComponents<PlayerBase>();
+		var plys = Scene.GetAllComponents<PlayerBase>().Where( x => !x.IsAlive );
 
 		foreach ( var ply in plys )
 		{
-			if ( !ply.IsAlive )
-			{
-				ply.Respawn();
-			} 
+			ply.Respawn();
 		}
 
 		if( CurVave >= Vaves.Count   )
@@ -124,18 +125,4 @@ public class ZombieSurvivalGame : BaseGame
 		}
 	}
 
-
-	protected override void DrawGizmos()
-	{
-		const float boxSize = 4f;
-		var bounds = new BBox( Vector3.One * -boxSize, Vector3.One * boxSize );
-
-		Gizmo.Hitbox.BBox( bounds );
-
-		Gizmo.Draw.Color = Color.Cyan.WithAlpha( (Gizmo.IsHovered || Gizmo.IsSelected) ? 0.5f : 0.2f );
-		Gizmo.Draw.LineBBox( bounds );
-		Gizmo.Draw.SolidBox( bounds );
-
-		Gizmo.Draw.Color = Color.Cyan.WithAlpha( (Gizmo.IsHovered || Gizmo.IsSelected) ? 0.8f : 0.6f );
-	}
 }

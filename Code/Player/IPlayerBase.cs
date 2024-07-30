@@ -18,8 +18,7 @@ public interface IPlayerBase : IValid
 	public bool IsRunning { get; set; }
 	public bool IsOnGround { get; }
 	public bool IsAlive { get; }
-	public int Kills { get; set; }
-	public int Deaths { get; set; }
+	
 	public Guid Id { get; }
 
 	/// <summary>Input sensitivity modifier</summary>

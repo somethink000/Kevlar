@@ -75,8 +75,12 @@ public class Zombie : NPC
 
 	protected override void OnDead( GameObject killer )
 	{
-		killer.Components.GetInAncestorsOrSelf<PlayerBase>().CurrentGame.OnZombieKilled();
-		Log.Info( killer);
+		if ( killer.Components.GetInAncestorsOrSelf<PlayerBase>() is PlayerBase ply ) 
+		{
+			ply.CurrentGame.OnZombieKilled( ply );
+		}
+
+		
 		GameObject.PlaySound( deathSounds );
 	}
 }

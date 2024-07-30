@@ -287,7 +287,8 @@
                 140
               ],
               "VaveStartColdown": 40,
-              "ZombieSpawnDelay": 4
+              "ZombieSpawnDelay": 4,
+              "InfiniteAmmo": false
             }
           ]
         }
@@ -319,14 +320,15 @@
         {
           "__type": "GeneralGame.LootItem",
           "__guid": "af534cbe-7e1a-4973-a2e9-a129ad0e9bcb",
-          "MAX_SLOTS": 9,
           "StartItems": [
             "prefabs/weapons/colt.prefab",
             "prefabs/weapons/geagelol.prefab",
             "prefabs/weapons/remington870.prefab",
             "prefabs/weapons/lr300.prefab",
-            "prefabs/weapons/ak74u.prefab"
-          ]
+            "prefabs/weapons/ak74u.prefab",
+            "prefabs/weapons/m110.prefab"
+          ],
+          "MAX_SLOTS": 9
         },
         {
           "__type": "Sandbox.Rigidbody",
@@ -984,6 +986,106 @@
       "Position": "-1296.743,4460.778,-106.9993",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_shotgun.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "3b2f01a9-429f-4627-b5f9-a84eb8bd8eba",
+      "Flags": 0,
+      "Name": "ammo_sniper",
+      "Position": "-1228,4224,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_sniper.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "379e31cb-f8c3-40cc-ae13-6061f718546f",
+      "Flags": 0,
+      "Name": "ammo_sniper (1)",
+      "Position": "-1200,4236,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_sniper.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e8ef2f2f-44de-42ba-b0f4-f4b6613ee7d6",
+      "Flags": 0,
+      "Name": "ammo_sniper (2)",
+      "Position": "-1216,4248,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_sniper.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6fe6149e-c405-4d33-a2d3-90aaf25bd21e",
+      "Flags": 0,
+      "Name": "ammo_sniper (3)",
+      "Position": "-1212,4232,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_sniper.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "663f5d2b-5580-4942-a635-8413c664047b",
+      "Flags": 0,
+      "Name": "ammo_sniper (4)",
+      "Position": "-1216,4216,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_sniper.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b5f71808-ba69-4d3b-84ac-0f8ae2618e4b",
+      "Flags": 0,
+      "Name": "ammo_sniper (5)",
+      "Position": "-1204,4212,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_sniper.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "bf2b4519-8648-406a-abc7-e76771c4afeb",
+      "Flags": 0,
+      "Name": "ammo_sniper (6)",
+      "Position": "-1192,4220,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_sniper.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "06076a48-01e6-4568-9570-e7d4266dcc39",
+      "Flags": 0,
+      "Name": "ammo_sniper (7)",
+      "Position": "-1204,4224,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_sniper.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c1fe8894-fffb-48dd-a3a5-c5d7602b4f5e",
+      "Flags": 0,
+      "Name": "ammo_sniper (8)",
+      "Position": "-1188,4240,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_sniper.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "08667189-edad-473d-8256-989fe78455ad",
+      "Flags": 0,
+      "Name": "ammo_sniper (9)",
+      "Position": "-1206.867,4225.644,-146.7759",
+      "Rotation": "-0.001010001,0.0008416474,0.7694688,0.638683",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_sniper.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "10d83268-2482-4e26-83ce-52ccfb582027",
+      "Flags": 0,
+      "Name": "ammo_sniper (10)",
+      "Position": "-1220,4216,-148.9993",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_sniper.prefab",
       "__PrefabVariables": {}
     }
   ],

@@ -1,3 +1,5 @@
+@import "Style.scss";
+
 Hud {
     position: absolute;
     left: 0px;
@@ -6,4 +8,11 @@ Hud {
     height: 100%;
     color: white;
     font-smooth: never;
+
+
+    .dlya_tupih {
+        font-family: zekton;
+        position: absolute;
+        flex-direction: column;
+    }
 }

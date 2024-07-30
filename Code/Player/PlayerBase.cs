@@ -1,6 +1,7 @@
 
 using System;
 using System.Linq;
+using static Sandbox.Connection;
 
 namespace GeneralGame;
 
@@ -14,6 +15,7 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IPlayerBas
 	[Property] public PanelComponent RootDisplay { get; set; }
     [Property] public Inventory Inventory { get; set; }
 	[Property] public Vehicle Vehicle { get; set; }
+	[Property] public Voice Voice { get; set; }
 
 
 	public int MaxCarryWeight { get; set; }
@@ -30,11 +32,14 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IPlayerBas
 
 		OnCameraAwake();
 		OnMovementAwake();
+		
 	}
+	
+
 
 	public void OnNetworkSpawn( Connection connection )
 	{
-		ApplyClothes( connection );
+		
 	}
 
 	protected override void OnStart()
@@ -55,7 +60,7 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IPlayerBas
 
 		base.OnStart();
 	}
-
+	
 	public void Respawn()
 	{
 		if ( IsProxy )
@@ -88,7 +93,7 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IPlayerBas
 	
 
 	[Broadcast]
-	public virtual void OnDeath( Vector3 force, Vector3 origin )
+	public virtual void OnDeath( Vector3 force, Vector3 origin, Guid killerid )
 	{
 		
 
@@ -97,15 +102,19 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IPlayerBas
 		Deaths += 1;
 		CharacterController.Velocity = 0;
 		Ragdoll( force, origin );
-		RespawnWithDelay( 5 );
 
+		
+		var ply = Scene.Directory.FindByGuid( killerid ).Components.GetInAncestorsOrSelf<PlayerBase>();
 
+		CurrentGame.OnPlayerDeath( this, ply );
+
+		
 	}
-
+	///GameManager.ActiveScene.LoadFromFile( "scenes/basement.scene" );
 	public async void RespawnWithDelay( float delay )
 	{
 		await GameTask.DelaySeconds( delay );
-		GameManager.ActiveScene.LoadFromFile( "scenes/basement.scene" );
+		Respawn();
 	}
 
 
@@ -114,7 +123,16 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IPlayerBas
 		
 		OnCameraUpdate();
 		HandleFlinch();
-		UpdateClothes();
+
+		if ( !IsProxy && IsAlive && IsFirstPerson )
+		{
+			BodyRenderer.RenderType = ModelRenderer.ShadowRenderType.ShadowsOnly;
+		}
+		else
+		{
+			BodyRenderer.RenderType = ModelRenderer.ShadowRenderType.On;
+		}
+
 
 		if ( IsAlive )
 		{

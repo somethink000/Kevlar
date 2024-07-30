@@ -2,8 +2,9 @@ namespace GeneralGame;
 
 public partial class PlayerBase
 {
-	private const float INTERACTION_DISTANCE = 150f;
-	private const float INTERACTION_SIZE = 15f;
+	private const float INTERACTION_DISTANCE = 650f;
+	private const float INTERACTION_SIZE = 25f;
+
 
 	public Ray ViewRay => new( EyePos, Camera.Transform.Rotation.Forward );
 	public GameObject TargetedGameObject { get; private set; }
@@ -18,9 +19,10 @@ public partial class PlayerBase
 					.IgnoreGameObjectHierarchy(GameObject.Root)
 					//.WithoutTags( "world" )
 					.Run();
-
+		
 		if ( thinTrace.GameObject != null && thinTrace.GameObject.GetInteractions() != null )
 		{
+			
 			InteractionTrace = thinTrace;
 			InteractionBounds = thinTrace.GameObject != TargetedGameObject ? null : InteractionBounds;
 			TargetedGameObject = thinTrace.GameObject;
@@ -44,6 +46,7 @@ public partial class PlayerBase
 						.IgnoreGameObject( GameObject )
 						//.WithoutTags( "world" )
 						.Run();
+
 			var obj = InteractionTrace.GameObject;
 			obj = obj?.GetInteractions() == null ? null : obj;
 

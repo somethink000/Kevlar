@@ -1,8 +1,8 @@
 {
-  "Title": null,
-  "Gamemode": null,
-  "SceneFile": null,
-  "Background": null,
+  "Title": "Containers",
+  "Gamemode": "DeathmatchGame",
+  "SceneFile": "scenes/deathmatch/containers.scene",
+  "Background": "ui/maps/containers.png",
   "__references": [],
   "__version": 0
 }

@@ -10,6 +10,7 @@ public partial class PlayerBase
 	[Sync] public LifeState LifeState { get; private set; } = LifeState.Alive;
 	[Sync] public float Health { get; private set; } = 100f;
 
+
 	[Sync] public int Kills { get; set; }
 	[Sync] public int Deaths { get; set; }
 	[Sync] public bool GodMode { get; set; }
@@ -40,6 +41,6 @@ public partial class PlayerBase
 
 
 		if ( Health <= 0 )
-			OnDeath( force, position );
+			OnDeath( force, position, attackerId );
 	}
 }

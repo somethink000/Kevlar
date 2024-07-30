@@ -110,9 +110,9 @@
         SetClass( "visible", ShowHint() );
         if (!HasClass("visible"))
             return;
-
+        
         var pos = (PlayerBase.GetLocal().InteractionBounds == null ? PlayerBase.GetLocal().TargetedGameObject.Transform.Position : PlayerBase.GetLocal().TargetedGameObject.Transform.World.PointToWorld(PlayerBase.GetLocal().InteractionBounds.Value.Center));
-
+        
         foreach ( var interaction in _interactions )
         {
             if ( interaction is null || !WithinBounds(interaction) || !IsAccessible(interaction) )
@@ -173,13 +173,13 @@
     {
         if (!_targetObject.IsValid())
             return false;
-
+        
         if (!_targetObject.Components.TryGet<Interactions>( out var interactions ))
             return false;
 
 
         Item = _targetObject.Components.Get<ItemComponent>();
-
+       
         Loot = _targetObject.Components.Get<LootItem>();
 
         if (Loot != null){
@@ -191,7 +191,7 @@
 		var interactionsAvailable = interactions.AllInteractions.Any( i => WithinBounds(i) && WithinRange(i) );
 		if (!interactionsAvailable && interactions.HideOnEmpty)
 			return false;
-
+        
 		return interactionsAvailable;
 	}
 

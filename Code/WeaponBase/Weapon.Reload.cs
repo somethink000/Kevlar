@@ -16,9 +16,10 @@ public partial class Weapon
 		var isEmptyReload = ReloadEmptyTime > 0 && Primary.Ammo == 0;
 		TimeSinceReload = -(isEmptyReload ? ReloadEmptyTime : ReloadTime);
 
-		if ( !Owner.Inventory.HasItems( AmmoType ) )
+		
+		if ( !Owner.Inventory.HasItems( AmmoType ) && !Owner.CurrentGame.InfiniteAmmo )
 			return;
-
+		
 		if ( IsScoping )
 			OnScopeEnd();
 
@@ -49,13 +50,14 @@ public partial class Weapon
 		IsReloading = false;
 		var maxClipSize = BulletCocking && Primary.Ammo > 0 ? Primary.ClipSize + 1 : Primary.ClipSize;
 
-		/*if ( Primary.InfiniteAmmo == InfiniteAmmoType.reserve )
+		if ( Owner.CurrentGame.InfiniteAmmo )
 		{
 			Primary.Ammo = maxClipSize;
+			IsEmpty = false;
 			return;
-		}*/
+		}
 
-		
+
 
 		var ammo = Owner.Inventory.TryTake( AmmoType, maxClipSize - Primary.Ammo ); //Owner.TakeAmmo( Primary.AmmoType, maxClipSize - Primary.Ammo );
 

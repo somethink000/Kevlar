@@ -7,7 +7,10 @@
 
 <root>
 	    <Chat/>
+
+
        
+
 		@switch ( ActivePanel )
 		{
 			case FullScreenPanel.InGameHud:
@@ -21,8 +24,10 @@
 			default:
 				throw new ArgumentOutOfRangeException();
 		}
-	
-		
+
+   
+    
+        
 </root>
 
 @code {
@@ -75,24 +80,36 @@
             Toggle(FullScreenPanel.InGameHud);
 
         }
-     
+
         if (Input.Pressed(InputButtonHelper.Chat) || Input.Pressed(InputButtonHelper.ChatLocal))
         {
             Toggle(FullScreenPanel.Chat);
             Chat.Instance.Toggle();
 
         }
-		if (Input.Pressed(InputButtonHelper.Inventory))
-		{
-			Toggle( FullScreenPanel.Inventory );
-            
+        if (Input.Pressed(InputButtonHelper.Inventory))
+        {
+        	Toggle( FullScreenPanel.Inventory );
+
         }
-     
-        
+        if (Input.Down(InputButtonHelper.Score) && ActivePanel != FullScreenPanel.Inventory)
+        {
+
+            Toggle(FullScreenPanel.Inventory);
+
+        }
+        else if (!Input.Down(InputButtonHelper.Score) && ActivePanel == FullScreenPanel.Inventory)
+        {
+            Toggle(FullScreenPanel.Inventory);
+        }
+
+
+
     }
 
-	private void Toggle( FullScreenPanel panel )
-	{
+    private void Toggle( FullScreenPanel panel )
+    {
+      
         if (OutsiderPanel != null) OutsiderPanel.Delete();
 
 		if ( ActivePanel == panel )

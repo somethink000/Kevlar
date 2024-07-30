@@ -93,10 +93,10 @@
           {
             "__type": "Sandbox.SkinnedModelRenderer",
             "__guid": "57283574-b072-4e08-9452-c160384187d5",
-            "BodyGroups": 341,
+            "BodyGroups": 18446744073709551615,
             "CreateBoneObjects": false,
             "MaterialOverride": "models/citizen/skin/citizen_skin_zombie.vmat",
-            "Model": "models/citizen/citizen.vmdl",
+            "Model": "models/player/mplayer/mplayer/mplayer.vmdl",
             "RenderType": "On",
             "Tint": "1,1,1,1",
             "UseAnimGraph": true
@@ -120,7 +120,7 @@
             "__type": "Sandbox.ModelCollider",
             "__guid": "5c88017c-f93a-4b5c-9a5e-7f434e97a227",
             "IsTrigger": false,
-            "Model": "models/citizen/citizen.vmdl",
+            "Model": "models/player/mplayer/mplayer/mplayer.vmdl",
             "Static": false
           },
           {

@@ -10,74 +10,130 @@ Inventory {
     flex-direction: row;
     transition: opacity 0.13s ease;
     opacity: 1;
+    padding: 1%;
 
-    &:intro {
-        opacity: 0;
-    }
-
-    .section {
-        padding: 100px;
-        width: 50%;
+    .left {
+        height: 100%;
+        width: 40%;
         flex-direction: column;
         justify-content: center;
-    }
+        //align-items: center;
 
-    .title {
-        font-size: 40px;
-        font-family: Metro;
-        margin-bottom: 10px;
-    }
-
-    .items {
-        flex-wrap: wrap;
-        width: 700px;
-    }
-
-    .total-weight {
-        text-shadow: $text-shadow-sm;
-        font-size: 28px;
-        gap: 10px;
-        width: 100%;
-
-        .encumbrance {
-            animation: blink;
-            animation-iteration-count: infinite;
-            animation-duration: 0.5s;
-            font-weight: bold;
-            position: absolute;
+        &:intro {
             opacity: 0;
         }
 
-        &.encumbered {
+        .title {
+            font-size: 40px;
+            font-family: Metro;
+            margin-bottom: 10px;
+        }
+
+        .items {
+            flex-wrap: wrap;
+            width: 700px;
+        }
+
+        .total-weight {
+            text-shadow: $text-shadow-sm;
+            font-size: 28px;
+            gap: 10px;
+            width: 100%;
+
             .encumbrance {
-                position: relative;
-                opacity: 1;
+                animation: blink;
+                animation-iteration-count: infinite;
+                animation-duration: 0.5s;
+                font-weight: bold;
+                position: absolute;
+                opacity: 0;
+            }
+
+            &.encumbered {
+                .encumbrance {
+                    position: relative;
+                    opacity: 1;
+                }
+            }
+
+            .active-weight {
+                color: $orange;
+            }
+
+            .max {
+                color: $gray;
             }
         }
 
-        .active-weight {
-            color: $orange;
+        .inputs {
+            position: absolute;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-end;
+            bottom: -5px;
+            right: 10px;
+        }
+    }
+
+
+
+    .midle {
+        height: 100%;
+        width: 30%;
+        flex-direction: column;
+        justify-content: center;
+
+        
+    }
+
+    .right {
+        height: 100%;
+        width: 30%;
+        flex-direction: column;
+        justify-content: center;
+
+        .table-row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+            &:not( .heading ) {
+                background-color: rgba( 0 0 0 0.2 );
+            }
         }
 
-        .max {
-            color: $gray;
+        .table-row:nth-child( 2 ) {
+            background-color: rgba( 0 0 0 0.5 );
+        }
+
+        .heading {
+            opacity: 0.5;
+        }
+
+        .row-item {
+            flex: 1;
+            display: flex;
+            padding: 8px 0;
+            white-space: nowrap;
+            justify-content: center;
+            transition: all 0.15s ease-in-out;
+        }
+
+        .table {
+            flex-direction: column;
+            transform: scale( 1 );
+            transition: all 0.2s ease-in;
+            display: flex;
+            width: 600px;
+
+            .me {
+                color: #d7ab31;
+            }
         }
     }
-
-    .inputs {
-        position: absolute;
-        flex-direction: column;
-        gap: 15px;
-        align-items: flex-end;
-        bottom: -5px;
-        right: 10px;
-    }
-    .about{
-        flex-direction: column;
-    }
-    img {
+    /* img {
         image-rendering: pixelated;
-    }
+    }*/
 }
 
 @keyframes blink {

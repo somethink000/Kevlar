@@ -145,7 +145,9 @@
           "Components": [
             {
               "__type": "GeneralGame.DeathmatchGame",
-              "__guid": "16b8e647-f24a-4f26-80be-be728efee86e"
+              "__guid": "16b8e647-f24a-4f26-80be-be728efee86e",
+              "InfiniteAmmo": true,
+              "MatchTime": 500
             }
           ]
         },
@@ -172,60 +174,6 @@
       ]
     },
     {
-      "__guid": "40e2041b-759b-4cb2-b863-3759e3f3c2e3",
-      "Flags": 0,
-      "Name": "Object",
-      "Position": "1211,1262.819,36",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "a0b3e506-1d30-4fd2-bcd9-f11fb67335a3",
-          "BodyGroups": 18446744073709551615,
-          "Model": "models/empty.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "5081f618-ddfd-42d4-8a8a-49049c41a317",
-          "IsTrigger": false,
-          "Model": "models/empty.vmdl",
-          "Static": false
-        },
-        {
-          "__type": "GeneralGame.LootItem",
-          "__guid": "af534cbe-7e1a-4973-a2e9-a129ad0e9bcb",
-          "MAX_SLOTS": 9,
-          "StartItems": [
-            "prefabs/weapons/colt.prefab",
-            "prefabs/weapons/ak400.prefab",
-            "prefabs/weapons/geagelol.prefab",
-            "prefabs/weapons/remington870.prefab",
-            "prefabs/items/ammo_rifle.prefab",
-            "prefabs/items/ammo_rifle.prefab",
-            "prefabs/items/ammo_rifle.prefab",
-            "prefabs/items/ammo_shotgun.prefab",
-            "prefabs/items/ammo_shotgun.prefab",
-            "prefabs/items/ammo_pistol.prefab",
-            "prefabs/items/ammo_pistol.prefab"
-          ]
-        },
-        {
-          "__type": "Sandbox.Rigidbody",
-          "__guid": "d3015133-889e-49d5-94ca-510a7562db47",
-          "AngularDamping": 0,
-          "Gravity": true,
-          "LinearDamping": 0,
-          "Locking": {},
-          "MassOverride": 0,
-          "MotionEnabled": true,
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        }
-      ]
-    },
-    {
       "__guid": "6035dcd5-3c6c-4aa2-b619-19bda4bca5d3",
       "Flags": 0,
       "Name": "Spawn",
@@ -244,7 +192,7 @@
       "__guid": "c406cf8f-dd31-466a-a671-c71b0d686f1f",
       "Flags": 0,
       "Name": "Spawn (1)",
-      "Position": "2806.437,1695.412,28.00025",
+      "Position": "2098.194,1756.811,28.00011",
       "Rotation": "0,0,-0.9914451,-0.1305267",
       "Enabled": true,
       "Components": [
@@ -289,7 +237,7 @@
       "__guid": "c9c74a1e-b431-4994-92c5-45dd1befc8f7",
       "Flags": 0,
       "Name": "Spawn (4)",
-      "Position": "-313.9956,79.99402,27.99971",
+      "Position": "-359.532,150.2562,27.99974",
       "Rotation": "0,0,-0.9396926,-0.3420206",
       "Enabled": true,
       "Components": [
@@ -304,7 +252,7 @@
       "__guid": "3bc898b9-f0d3-4d0f-a392-97721f561717",
       "Flags": 0,
       "Name": "Spawn (5)",
-      "Position": "423.6359,25.7061,27.99968",
+      "Position": "386.3727,62.19528,27.99963",
       "Rotation": "0,0,-0.9396926,-0.3420206",
       "Enabled": true,
       "Components": [
@@ -5843,12 +5791,18 @@
           "Enabled": true,
           "Components": [
             {
-              "__type": "Sandbox.Prop",
-              "__guid": "2d58f3cf-5de2-4c00-a1a6-838aa960e578",
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": false,
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "288fea53-a8bb-4964-9fa7-a151ee76a868",
+              "IsTrigger": false,
               "Model": "content/models/doski/dosoli2.vmdl",
+              "Static": false
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "19e9c434-2f68-4d6d-8aad-66aab2c38bab",
+              "BodyGroups": 18446744073709551615,
+              "Model": "content/models/doski/dosoli2.vmdl",
+              "RenderType": "On",
               "Tint": "1,1,1,1"
             }
           ]
@@ -14376,6 +14330,393 @@
           ]
         }
       ]
+    },
+    {
+      "__guid": "79516808-f5bc-48ef-810b-8b2e0f299328",
+      "Flags": 0,
+      "Name": "lr300",
+      "Position": "-640,1416,17",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/lr300.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "2ab3d341-afca-4623-9480-35b41234468d",
+      "Flags": 0,
+      "Name": "lr300 (1)",
+      "Position": "-640,1344,17",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/lr300.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6dbe1bee-c607-49f1-ac5e-9ee2de64612d",
+      "Flags": 0,
+      "Name": "lr300 (2)",
+      "Position": "-632,1384,17.00002",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/lr300.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "3e2be257-8071-4576-9d58-52e8618b8845",
+      "Flags": 0,
+      "Name": "colt",
+      "Position": "1368,1136,7.28011",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/colt.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "cf4fd7e2-b60d-4154-b3ec-e1872a5145df",
+      "Flags": 0,
+      "Name": "lr300 (3)",
+      "Position": "2092,752,17",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/lr300.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6c8f2b42-82ef-494e-9b95-e7c2db2a4a1d",
+      "Flags": 0,
+      "Name": "remington870",
+      "Position": "1276,196,38",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/remington870.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6b2fd284-1d27-490d-8b9e-01daab1c945f",
+      "Flags": 0,
+      "Name": "colt (1)",
+      "Position": "1200,1404,7.280171",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/colt.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e034482d-e40a-46ac-a07e-e19af0a46096",
+      "Flags": 0,
+      "Name": "ak74u",
+      "Position": "1904,1248,20.99994",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/ak74u.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "3ca36823-e113-4a9a-a443-5a51755f29cf",
+      "Flags": 0,
+      "Name": "geagelol",
+      "Position": "2408,752,7.999939",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/geagelol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0bae0861-5f74-4baa-b40d-e4eee7b908d1",
+      "Flags": 0,
+      "Name": "lr300 (4)",
+      "Position": "2068,408,17",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/lr300.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "35b2e0d5-ebd4-41c3-848a-9320d3da3192",
+      "Flags": 0,
+      "Name": "remington870 (1)",
+      "Position": "2496,416,38",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/remington870.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "98d8a9b0-a147-4cb9-8d21-8a0ff1f2e24c",
+      "Flags": 0,
+      "Name": "ak74u (1)",
+      "Position": "2476,2412,21",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/ak74u.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8800b143-dc4c-4033-8ff1-f6eb507e7483",
+      "Flags": 0,
+      "Name": "geagelol (1)",
+      "Position": "1308,2488,8",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/geagelol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ce60d5c2-bc53-4cd9-87f1-a47124a892cc",
+      "Flags": 0,
+      "Name": "lr300 (5)",
+      "Position": "1364,1964,17",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/lr300.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "194953d0-bb92-4372-b1b5-9ad6a867a19d",
+      "Flags": 0,
+      "Name": "remington870 (2)",
+      "Position": "1880,2024,38",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/remington870.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0834966d-0f12-4ecd-a286-83d6e1e324fb",
+      "Flags": 0,
+      "Name": "remington870 (3)",
+      "Position": "1868,2604,38",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/remington870.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "cc99e51b-94fe-4136-ae1a-c94306d44453",
+      "Flags": 0,
+      "Name": "colt (2)",
+      "Position": "800,2728,7.280049",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/colt.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "a68689db-c2be-46db-9566-20651369ca33",
+      "Flags": 0,
+      "Name": "ak74u (2)",
+      "Position": "348,2404,21",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/ak74u.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d0f03293-b257-461f-81e3-388a44b2f8fd",
+      "Flags": 0,
+      "Name": "geagelol (2)",
+      "Position": "-384,2560,8.000061",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/geagelol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "9301a805-0bab-4692-9d28-967869faf61a",
+      "Flags": 0,
+      "Name": "lr300 (6)",
+      "Position": "-236,2120,17",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/lr300.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "240c0c0f-2fe1-4e12-8f54-791fac866c82",
+      "Flags": 0,
+      "Name": "remington870 (4)",
+      "Position": "-524,1648,38",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/remington870.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "66d3463a-9f42-48d4-82a1-e8bb7e2f0f96",
+      "Flags": 0,
+      "Name": "ak74u (3)",
+      "Position": "-40,1148,21",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/ak74u.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "de70be16-c4fc-4afd-a65c-3d107cd953c0",
+      "Flags": 0,
+      "Name": "geagelol (3)",
+      "Position": "-568,992,8",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/geagelol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "1f6361b7-2953-420a-8513-d384d84fcf00",
+      "Flags": 0,
+      "Name": "colt (3)",
+      "Position": "-472,300,7.28011",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/colt.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "75a10410-4c94-4249-9352-12955529b3bd",
+      "Flags": 0,
+      "Name": "geagelol (4)",
+      "Position": "316,292,7.999939",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/geagelol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "78a53916-3d62-48bc-bc48-55bbad03e8d8",
+      "Flags": 0,
+      "Name": "lr300 (7)",
+      "Position": "176,160,16.99994",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/lr300.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8774562c-6daa-4c98-a90b-2686e3405310",
+      "Flags": 0,
+      "Name": "m110",
+      "Position": "76,2312,28",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/m110.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "98110991-ff3a-459e-a615-51c9906f4723",
+      "Flags": 0,
+      "Name": "m110 (1)",
+      "Position": "-424,1976,28",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/m110.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "51259a15-07b5-4788-9e3e-39e833968200",
+      "Flags": 0,
+      "Name": "m110 (2)",
+      "Position": "-40,1568,28",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/m110.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e0b47ed5-a38f-4e58-84cf-c89ae01ef211",
+      "Flags": 0,
+      "Name": "m110 (3)",
+      "Position": "544,1440,28",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/m110.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c740351d-00df-43ed-afab-9f49e62429ea",
+      "Flags": 0,
+      "Name": "m110 (4)",
+      "Position": "188,568,28",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/m110.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "bd269e8b-9671-4184-9ba6-3c09f8b523c3",
+      "Flags": 0,
+      "Name": "m110 (5)",
+      "Position": "2512,540,28",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/m110.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6371ada3-1075-41cb-a354-506498187878",
+      "Flags": 0,
+      "Name": "m110 (6)",
+      "Position": "1616,1228,28",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/m110.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c0bf2aab-a96b-4dd6-aedd-6f7a8cd797a2",
+      "Flags": 0,
+      "Name": "m110 (7)",
+      "Position": "2324,1892,28",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/m110.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "66170b58-dfca-4a6d-8be7-07cb05b4f5b3",
+      "Flags": 0,
+      "Name": "m110 (8)",
+      "Position": "1272,2476,28",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/m110.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "5303183f-0d5c-4cdc-a7cd-88b60a4e1110",
+      "Flags": 0,
+      "Name": "m110 (9)",
+      "Position": "1368,532,28",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/m110.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

@@ -47,7 +47,7 @@
                 <div class="button-list">
                     @foreach (var lobby in Servers)
                     {
-                        @if( lobby.Map != "Basement") { continue; }
+                       // @if (lobby.Map != "Basement" || lobby.Members > 3 ) { continue; }
                         <div class="button" onclick=@( () => OpenLobby( lobby ) )>
                             <div class="title">
                                 @lobby.Name
@@ -160,9 +160,11 @@
 
     private void StartGame()
     {
-        if (CurrentMap == null) 
-       Game.ActiveScene.Load(CurrentMap.map.SceneFile);
-        //.Load(SelectedMap.SceneFile);
+        if (CurrentMap == null) return;
+        if (curCategoty.entry.ClassName == "DeathmatchGame" && Scene.GetAllComponents<PlayerBase>().Count() < 2) return;
+
+        Game.ActiveScene.Load(CurrentMap.map.SceneFile);
+       
     }
    
 

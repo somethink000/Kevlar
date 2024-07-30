@@ -7,7 +7,7 @@ GameState {
     height: 100%;
 
     .timer {
-        font-family: Metro;
+       // font-family: Metro;
         //position: absolute;
         font-size: 32px;
         margin: 0 auto;
@@ -22,7 +22,7 @@ GameState {
         flex-direction: column;
 
         .value {
-            font-family: Metro; 
+           // font-family: Metro; 
             font-size: 32px;
             padding-top: 5%;
 

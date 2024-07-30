@@ -17,7 +17,7 @@ public partial class Weapon
 	{
 		
 		if ( (IsReloading && !ShellReloading) || (IsReloading && ShellReloading && !ShellReloadingShootCancel) || InBoltBack ) return false;
-		if ( shootInfo is null || !Owner.IsValid() || !Input.Down( inputButton ) || (IsRunning && Secondary is null) ) return false;
+		if ( shootInfo is null || !Owner.IsValid() || !Input.Down( inputButton ) || (IsRunning && Secondary is null) || !Owner.IsAlive ) return false;
 		
 		if ( !HasAmmo() )
 		{
