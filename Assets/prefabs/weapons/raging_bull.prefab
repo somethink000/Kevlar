@@ -1,0 +1,188 @@
+{
+  "RootObject": {
+    "__guid": "75e8dbf9-98c5-4504-a879-6f6da3f32a1c",
+    "Flags": 0,
+    "Name": "raging_bull",
+    "NetworkMode": 1,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "db06a5e8-81be-4e4f-8e70-3d4a79dfddec",
+        "IsTrigger": false,
+        "Model": "weapons/rag_bull/world/w_rag_bull.vmdl",
+        "Static": false
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "b72cd90e-ed2f-4650-a0de-d31c6c9510c9",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {},
+        "MassOverride": 0,
+        "MotionEnabled": true,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      },
+      {
+        "__type": "GeneralGame.Weapon",
+        "__guid": "3fd73b46-c377-4098-9b22-0e8ea33064c3",
+        "ReloadTimes": [
+          5,
+          4.5,
+          4,
+          3.5,
+          3
+        ],
+        "AimAnimData": {
+          "Angle": "0.04,0.07,0",
+          "Pos": "-1.201,0,0.782"
+        },
+        "AimFOV": 20,
+        "AimInFOVSpeed": 1,
+        "AimOutFOVSpeed": 1,
+        "AimPlayerFOV": -1,
+        "AimSensitivity": 0.85,
+        "AmmoType": "prefabs/items/ammo_pistol.prefab",
+        "AnimSpeed": 1,
+        "BoltBack": false,
+        "BoltBackEjectDelay": 0,
+        "BoltBackTime": 0,
+        "BulletCocking": false,
+        "BulletsReload": true,
+        "ClassName": "swb_colt",
+        "CustomizeAnimData": {
+          "Angle": "-20.66,61.67,14.4",
+          "Pos": "7.01,-4.46,0.982"
+        },
+        "DeploySound": "sounds/swb/animations/swb_deploy.sound",
+        "DisplayName": "Colt M1911",
+        "DrawEmptyTime": -1,
+        "DrawTime": 0.4,
+        "HoldType": "PISTOL",
+        "Primary": {
+          "_type": "component",
+          "component_id": "90aafa5d-7f73-4334-ac7f-78143bc61a57",
+          "go": "75e8dbf9-98c5-4504-a879-6f6da3f32a1c",
+          "component_type": "ShootInfo"
+        },
+        "ReloadEmptyTime": 2.2,
+        "ReloadTime": 1.8,
+        "RunAnimData": {
+          "Angle": "-34.59,-0.63,0",
+          "Pos": "0.28,-2,-2.22"
+        },
+        "ScopeInfo": {
+          "LensTexture": "/materials/swb/scopes/swb_lens_hunter.png",
+          "ScopeTexture": "/materials/swb/scopes/swb_scope_hunter.png",
+          "ScopeInDelay": 0.2,
+          "FOV": 8,
+          "AimSensitivity": 0.25
+        },
+        "Scoping": false,
+        "ShellEjectDelay": 0,
+        "ShellReloading": false,
+        "ShellReloadingShootCancel": true,
+        "ShellReloadInsertTime": 0,
+        "ShellReloadStartTime": 0,
+        "Slot": 1,
+        "TuckRange": 30,
+        "ViewModel": "weapons/rag_bull/view/v_rag_bull.vmdl",
+        "ViewModelHands": "weapons/handes/pmm_ref_hand_blue.vmdl",
+        "WorldModel": "weapons/rag_bull/world/w_rag_bull.vmdl"
+      },
+      {
+        "__type": "GeneralGame.ShootInfo",
+        "__guid": "90aafa5d-7f73-4334-ac7f-78143bc61a57",
+        "Ammo": 5,
+        "AmmoType": "pistol",
+        "BarrelSmokeParticle": "particles/swb/muzzle/barrel_smoke.vpcf",
+        "BulletEjectParticle": "particles/swb/bullet_hulls/9mm_eject.vpcf",
+        "Bullets": 1,
+        "BulletSize": 2,
+        "BulletTracerChance": 0.33,
+        "BulletTracerParticle": "particles/swb/tracer/tracer.vpcf",
+        "ClipSize": 5,
+        "Damage": 80,
+        "DryShootSound": "sounds/swb/clip/swb_pistol.empty.sound",
+        "FiringType": "semi",
+        "Force": 3,
+        "HitFlinch": 1.25,
+        "InfiniteAmmo": "reserve",
+        "MuzzleFlashParticle": "particles/swb/muzzle/flash.vpcf",
+        "Recoil": 6,
+        "RPM": 500,
+        "ShootAimedAnim": "",
+        "ShootAnim": "b_attack",
+        "ShootEmptyAnim": "",
+        "ShootSound": "weapons/rag_bull/ragingbull_fire1.sound",
+        "Spread": 0.08,
+        "VMParticleScale": 1,
+        "WMParticleScale": 1
+      },
+      {
+        "__type": "GeneralGame.ReflexSightBG",
+        "__guid": "028b2269-e020-401d-8a7f-6f0c1bfabba2",
+        "AimAnimData": {
+          "Pos": "-1.208,0,0.257"
+        },
+        "AimFOV": 40,
+        "AimInFOVSpeed": -1,
+        "AimOutFOVSpeed": -1,
+        "RequiresAttachment": {
+          "_type": "component",
+          "component_id": "e71954fa-6616-4c09-a171-34ce88d1860c",
+          "go": "75e8dbf9-98c5-4504-a879-6f6da3f32a1c",
+          "component_type": "PistolRailBG"
+        },
+        "ViewModelScale": "1,1,1",
+        "WorldModelScale": "1,1,1"
+      },
+      {
+        "__type": "GeneralGame.PistolRailBG",
+        "__guid": "e71954fa-6616-4c09-a171-34ce88d1860c",
+        "ViewModelScale": "1,1,1",
+        "WorldModelScale": "1,1,1"
+      },
+      {
+        "__type": "GeneralGame.ItemEquipment",
+        "__guid": "665cf5a5-57e4-4dff-afed-bde764974ad7",
+        "Count": 0,
+        "Description": "Cool gun",
+        "Icon": {
+          "Model": "weapons/rag_bull/world/w_rag_bull.vmdl",
+          "MaterialGroup": "",
+          "Colour": "1,1,1,1",
+          "Position": "-2,4,-1",
+          "Rotation": "0.4055798,0.4055799,-0.5792278,0.579228",
+          "Guid": "fac30cb7-0fac-418a-9c27-ab4764139ea4"
+        },
+        "MaxStack": 0,
+        "Name": "Raging Bull",
+        "Slots": [
+          "FirstWeapon",
+          "SeccondWeapon"
+        ],
+        "WeightInGrams": 1200
+      },
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "9d529283-654e-4a5b-9f49-6a3a1a778660",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": false,
+        "Model": "weapons/rag_bull/world/w_rag_bull.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

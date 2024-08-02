@@ -1,19 +1,23 @@
 ﻿
 using System.Collections.Generic;
 using System.Linq;
+using static Sandbox.PhysicsContact;
 
 namespace GeneralGame;
 
 public partial class Weapon : Component
 {
 	public PlayerBase Owner { get; set; }
-	public ViewModelHandler ViewModelHandler { get; private set; }
-	public SkinnedModelRenderer ViewModelRenderer { get; private set; }
-	public SkinnedModelRenderer ViewModelHandsRenderer { get; private set; }
 	public SkinnedModelRenderer WorldModelRenderer { get; private set; }
 	public WeaponSettings Settings { get; private set; }
 	public List<Attachment> Attachments = new();
 
+
+	float animSpeed = 1;
+	float playerFOVSpeed = 1;
+	float targetPlayerFOV = Preferences.FieldOfView;
+	float finalPlayerFOV = Preferences.FieldOfView;
+	
 	protected override void OnAwake()
 	{
 		//Tags.Add( TagsHelper.Weapon );
@@ -30,9 +34,9 @@ public partial class Weapon : Component
 	public void Deploy(PlayerBase player)
 	{
 		Owner = player;
-
+		
 		GameObject.Enabled = true;
-
+		
 		SetupModels();
 
 		if ( IsProxy ) return;
@@ -50,13 +54,7 @@ public partial class Weapon : Component
 
 		if ( !IsProxy ) { 
 
-			ViewModelHandler.OnHolster();
-
 			WorldModelRenderer.RenderType = ModelRenderer.ShadowRenderType.On;
-			ViewModelRenderer.GameObject.Destroy();
-			ViewModelHandler = null;
-			ViewModelRenderer = null;
-			ViewModelHandsRenderer = null;
 
 			IsReloading = false;
 			IsScoping = false;
@@ -64,7 +62,7 @@ public partial class Weapon : Component
 			IsCustomizing = false;
 			DestroyUI();
 		}
-
+		WorldModelRenderer.BoneMergeTarget = null;
 		Owner = null;
 	}
 
@@ -78,17 +76,11 @@ public partial class Weapon : Component
 	{
 		
 		var delay = 0f;
+
 		
-		if ( Primary.Ammo == 0 && !string.IsNullOrEmpty( DrawEmptyAnim ) )
-		{
-			ViewModelRenderer?.Set( DrawEmptyAnim, true );
-			delay = DrawEmptyTime;
-		}
-		else if ( !string.IsNullOrEmpty( DrawAnim ) )
-		{
-			ViewModelRenderer?.Set( DrawAnim, true );
-			delay = DrawTime;
-		}
+		
+
+		delay = DrawTime;
 
 		TimeSinceDeployed = -delay;
 
@@ -96,8 +88,6 @@ public partial class Weapon : Component
 		if ( DeploySound is not null )
 			PlaySound( DeploySound.ResourceId );
 
-		// Start drawing
-		ViewModelHandler.ShouldDraw = true;
 
 		// Boltback
 		if ( InBoltBack )
@@ -108,52 +98,13 @@ public partial class Weapon : Component
 	void SetupModels()
 	{
 
-		if ( !IsProxy && ViewModel is not null && ViewModelRenderer is null )
-		{
-
-			var viewModelGO = new GameObject( true, "Viewmodel" );
-			viewModelGO.SetParent( Owner.GameObject, false );
-			viewModelGO.Tags.Add( TagsHelper.ViewModel );
-			viewModelGO.Flags |= GameObjectFlags.NotNetworked;
-
-			ViewModelRenderer = viewModelGO.Components.Create<SkinnedModelRenderer>();
-			ViewModelRenderer.Model = ViewModel;
-			ViewModelRenderer.AnimationGraph = ViewModel.AnimGraph;
-			ViewModelRenderer.CreateBoneObjects = true;
-			ViewModelRenderer.Enabled = false;
-			ViewModelRenderer.OnComponentEnabled += () =>
-			{
-				// Prevent flickering when enabling the component, this is controlled by the ViewModelHandler
-				ViewModelRenderer.RenderType = ModelRenderer.ShadowRenderType.ShadowsOnly;
-				ResetViewModelAnimations();
-				OnDeploy();
-			};
-
-			ViewModelHandler = viewModelGO.Components.Create<ViewModelHandler>();
-			ViewModelHandler.Weapon = this;
-			ViewModelHandler.ViewModelRenderer = ViewModelRenderer;
-			ViewModelHandler.Camera = Owner.Camera;
-
-			if ( ViewModelHands is not null )
-			{
-				ViewModelHandsRenderer = viewModelGO.Components.Create<SkinnedModelRenderer>();
-				ViewModelHandsRenderer.Model = ViewModelHands;
-				ViewModelHandsRenderer.BoneMergeTarget = ViewModelRenderer;
-				ViewModelHandsRenderer.OnComponentEnabled += () =>
-				{
-					// Prevent flickering when enabling the component, this is controlled by the ViewModelHandler
-					ViewModelHandsRenderer.RenderType = ModelRenderer.ShadowRenderType.ShadowsOnly;
-				};
-			}
-
-			ViewModelHandler.ViewModelHandsRenderer = ViewModelHandsRenderer;
-			foreach (Attachment att in Attachments) { att.RefreshView(); }
-		}
-
+		OnDeploy();
+		
+		foreach (Attachment att in Attachments) { att.RefreshView(); }
 
 
 		var bodyRenderer = Owner.Body.Components.Get<SkinnedModelRenderer>();
-		ModelUtil.ParentToBone( GameObject, bodyRenderer, "hold_R" );
+		WorldModelRenderer.BoneMergeTarget = bodyRenderer;
 		Network.ClearInterpolation();
 	}
 
@@ -177,10 +128,38 @@ public partial class Weapon : Component
 		if (Owner == null) return;
 
 		UpdateModels();
-		Owner.AnimationHelper.HoldType = HoldType;
 
-		ViewModelRenderer?.Set( EmptyState, IsEmpty );
-		ViewModelRenderer?.Set( AimState, IsAiming );
+
+
+		Owner.ApplyFov( targetPlayerFOV - Preferences.FieldOfView );
+
+		targetPlayerFOV = Preferences.FieldOfView;
+
+		if ( IsAiming && !IsReloading )
+		{
+			var speedMod = 1f;
+
+			animSpeed = 10 * AnimSpeed * speedMod;
+
+			if ( AimPlayerFOV > 0 )
+				targetPlayerFOV = AimPlayerFOV;
+
+			if ( AimFOV > 0 )
+				targetPlayerFOV = Preferences.FieldOfView - AimFOV;
+
+			playerFOVSpeed = AimInFOVSpeed;
+
+		}
+		else
+		{
+			targetPlayerFOV = Preferences.FieldOfView;
+
+			if ( finalPlayerFOV != AimPlayerFOV )
+			{
+				playerFOVSpeed = AimOutFOVSpeed;
+			}
+		}
+
 		if ( !IsProxy )
 		{
 			if ( IsDeploying ) return;
@@ -205,14 +184,6 @@ public partial class Weapon : Component
 				Owner.InputSensitivity = ScopeInfo.AimSensitivity;
 			else if ( IsAiming )
 				Owner.InputSensitivity = AimSensitivity;
-
-			if ( Scoping )
-			{
-				if ( IsAiming && !IsScoping )
-					OnScopeStart();
-				else if ( !IsAiming && IsScoping )
-					OnScopeEnd();
-			}
 
 			ResetBurstFireCount( Primary, InputButtonHelper.PrimaryAttack );
 			ResetBurstFireCount( Secondary, InputButtonHelper.SecondaryAttack );
@@ -253,31 +224,11 @@ public partial class Weapon : Component
 
 	void UpdateModels()
 	{
+
 		if ( !IsProxy && WorldModelRenderer is not null )
 		{
 			WorldModelRenderer.RenderType = Owner.IsFirstPerson ? ModelRenderer.ShadowRenderType.ShadowsOnly : ModelRenderer.ShadowRenderType.On;
 		}
-	}
-
-	
-	// Temp fix until https://github.com/Facepunch/sbox-issues/issues/5247 is fixed
-	void ResetViewModelAnimations()
-	{
-		ViewModelRenderer?.Set( Primary.ShootAnim, false );
-		ViewModelRenderer?.Set( Primary.ShootEmptyAnim, false );
-		ViewModelRenderer?.Set( Primary.ShootAimedAnim, false );
-
-		if ( Secondary is not null )
-		{
-			ViewModelRenderer?.Set( Secondary.ShootAnim, false );
-			ViewModelRenderer?.Set( Secondary.ShootEmptyAnim, false );
-			ViewModelRenderer?.Set( Secondary.ShootAimedAnim, false );
-		}
-
-		ViewModelRenderer?.Set( ReloadAnim, false );
-		ViewModelRenderer?.Set( ReloadEmptyAnim, false );
-		ViewModelRenderer?.Set( DrawAnim, false );
-		ViewModelRenderer?.Set( DrawEmptyAnim, false );
 	}
 
 	[Broadcast]

@@ -42,6 +42,7 @@ public partial class Weapon
 				// Dry fire
 				if ( shootInfo.DryShootSound is not null )
 					PlaySound( shootInfo.DryShootSound.ResourceId );
+					
 			}
 
 			return false;
@@ -87,13 +88,12 @@ public partial class Weapon
 		// Ammo
 		shootInfo.Ammo -= 1;
 
+
 		if ( shootInfo.Ammo <= 0 ) IsEmpty = true;
 
 		// Animations
 		var shootAnim = GetShootAnimation( shootInfo );
-		if ( !string.IsNullOrEmpty( shootAnim ) )
-			ViewModelRenderer.Set( shootAnim, true );
-
+		
 		// Sound
 		if ( shootInfo.ShootSound is not null )
 			PlaySound( shootInfo.ShootSound.ResourceId );

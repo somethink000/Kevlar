@@ -6,7 +6,7 @@ namespace GeneralGame;
 
 public class SniperScope : Panel
 {
-	IPlayerBase player => weapon.Owner;
+	PlayerBase player => weapon.Owner;
 	Weapon weapon;
 
 	Panel lensWrapper;

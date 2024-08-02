@@ -9,6 +9,7 @@ public partial class Weapon
 
 	private CustomizationMenu customizationMenu;
 
+	
 	/// <summary>Override this if you want custom UI elements</summary>
 	public virtual void CreateUI()
 	{

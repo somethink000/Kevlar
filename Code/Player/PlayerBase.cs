@@ -6,7 +6,7 @@ using static Sandbox.Connection;
 namespace GeneralGame;
 
 
-public partial class PlayerBase : Component, Component.INetworkSpawn, IPlayerBase, IHealthComponent
+public partial class PlayerBase : Component, Component.INetworkSpawn, IHealthComponent
 {
 	[Property] public GameObject Head { get; set; }
 	[Property] public GameObject Body { get; set; }
@@ -14,7 +14,6 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IPlayerBas
 	[Property] public CameraComponent Camera { get; set; }
 	[Property] public PanelComponent RootDisplay { get; set; }
     [Property] public Inventory Inventory { get; set; }
-	[Property] public Vehicle Vehicle { get; set; }
 	[Property] public Voice Voice { get; set; }
 
 
@@ -22,7 +21,7 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IPlayerBas
 	public bool IsEncumbered => Inventory.Weight > MaxCarryWeight;
 
 	public BaseGame CurrentGame { get; set; }
-	Guid IPlayerBase.Id { get => GameObject.Id; }
+	//Guid IPlayerBase.Id { get => GameObject.Id; }
 
 
 	protected override void OnAwake()

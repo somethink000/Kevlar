@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Sandbox
-build_property.ProjectDir = C:\Users\susan\Documents\GitHub\SomeMod\Editor\
+build_property.ProjectDir = C:\Users\susan\Documents\GitHub\Kevlar\Editor\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

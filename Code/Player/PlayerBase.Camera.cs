@@ -1,6 +1,7 @@
 
 
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using static Sandbox.CursorSettings;
 
 namespace GeneralGame;
@@ -13,7 +14,7 @@ public partial class PlayerBase
 	public float CurFOV { get; set; }
 	public float TargetFov { get; set; } = 0;
 
-
+	public Vector3 CamPos { get; set; } = Vector3.Zero;
 	public Rotation ZeroRotation { get; set; }
 	public Angles RotationMultyplier { get; set; }
 	public Rotation TargetRotation { get; set; }
@@ -77,8 +78,8 @@ public partial class PlayerBase
 		EyeAngles = eyeAngles;
 
 		// Set the current camera offset
-		var targetOffset = Vector3.Zero;
-		if ( IsCrouching ) targetOffset += Vector3.Down * 32f;
+		var targetOffset = Vector3.Zero + Vector3.Down * 4f;
+		if ( IsCrouching ) targetOffset += Vector3.Down * 22f;
 		EyeOffset = Vector3.Lerp( EyeOffset, targetOffset, Time.Delta * 10f );
 
 		// Set position of the camera
@@ -87,8 +88,8 @@ public partial class PlayerBase
 			var camPos = EyePos;
 			if ( !IsFirstPerson )
 			{
-				// Perform a trace backwards to see where we can safely place the camera
-				var camForward = eyeAngles.ToRotation().Forward;
+				
+				var camForward = eyeAngles.ToRotation().Forward + (new Vector3( 0.2f,0.5f,0 ) * eyeAngles) ;
 				var camTrace = Scene.Trace.Ray( camPos, camPos - (camForward * Distance) )
 					.WithoutTags( TagsHelper.Player, TagsHelper.Trigger, TagsHelper.ViewModel, TagsHelper.Weapon )
 					.Run();
@@ -102,9 +103,12 @@ public partial class PlayerBase
 				{
 					camPos = camTrace.EndPosition;
 				}
-			}
 
-			// Set the position of the camera to our calculated position
+				CamPos = camPos;
+			}
+		
+			//Camera.Transform.Local = Camera.Transform.Local.RotateAround( EyePos, EyeAngles.WithYaw( 0f ) );
+		
 
 
 			ZeroRotation = eyeAngles.ToRotation();

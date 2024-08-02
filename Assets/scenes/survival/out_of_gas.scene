@@ -16,103 +16,6 @@
       ]
     },
     {
-      "__guid": "4b593407-5da1-4e87-a132-edc2a651b610",
-      "Flags": 0,
-      "Name": "niva2329",
-      "Position": "-790.5034,4724.083,-106.2094",
-      "Rotation": "0,0,-0.04361969,-0.9990482",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "94cc611b-4edc-488f-912a-8f62fcf49d9a",
-          "BodyGroups": 18446744073709551615,
-          "Model": "cars/niva/niva2329.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "7f7bca41-8027-4f76-903c-01af77d8348c",
-          "IsTrigger": false,
-          "Model": "cars/niva/niva2329.vmdl",
-          "Static": false
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "e8d41af3-38f2-484a-9484-4cc0a3f832ff",
-          "Flags": 0,
-          "Name": "ofroad_wheels",
-          "Position": "-49.00004,35.00003,-30",
-          "Rotation": "-0,0,-1,-0.00000004371139",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "02ca0360-ae4e-4f60-a325-d5849e1ba283",
-              "BodyGroups": 18446744073709551615,
-              "Model": "cars/niva/ofroad_wheels.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "d00ce434-08b7-4189-8dc5-8fb2b08c82f4",
-          "Flags": 0,
-          "Name": "ofroad_wheels",
-          "Position": "68.9999,34.99996,-30",
-          "Rotation": "0,-0,-1,-0.00000004371139",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "8c68a732-cea4-46ce-b94a-8a64075c972b",
-              "BodyGroups": 18446744073709551615,
-              "Model": "cars/niva/ofroad_wheels.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "8311558a-4d4e-42d4-b9ce-6be14ff638d6",
-          "Flags": 0,
-          "Name": "ofroad_wheels",
-          "Position": "-49.00008,-34.99997,-30",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "b2a5db12-db20-4a9d-ac25-9168c9f773c1",
-              "BodyGroups": 18446744073709551615,
-              "Model": "cars/niva/ofroad_wheels.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "794be9a3-a139-443b-a1fc-d7330c773b4d",
-          "Flags": 0,
-          "Name": "ofroad_wheels",
-          "Position": "68.99992,-34.99998,-30",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "94a8f05c-355b-49b5-b47d-c13315a0c417",
-              "BodyGroups": 18446744073709551615,
-              "Model": "cars/niva/ofroad_wheels.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "__guid": "759629fa-ac1e-41d8-be90-ac659883fc3e",
       "Flags": 0,
       "Name": "Logic",
@@ -284,7 +187,8 @@
               "Vaves": [
                 60,
                 100,
-                140
+                140,
+                10
               ],
               "VaveStartColdown": 40,
               "ZombieSpawnDelay": 4,
@@ -326,7 +230,8 @@
             "prefabs/weapons/remington870.prefab",
             "prefabs/weapons/lr300.prefab",
             "prefabs/weapons/ak74u.prefab",
-            "prefabs/weapons/m110.prefab"
+            "prefabs/weapons/m110.prefab",
+            "prefabs/weapons/raging_bull.prefab"
           ],
           "MAX_SLOTS": 9
         },
@@ -493,6 +398,7 @@
             {
               "__type": "Sandbox.PointLight",
               "__guid": "6709284b-5d7a-400d-9f41-d0114b15fc71",
+              "__enabled": false,
               "Attenuation": 1,
               "FogMode": "Enabled",
               "FogStrength": 1,
@@ -1086,6 +992,26 @@
       "Position": "-1220,4216,-148.9993",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_sniper.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c4ea1d36-cd87-45b7-ad9d-6b1515028e09",
+      "Flags": 0,
+      "Name": "medical_box",
+      "Position": "-1260,4324,-148.9993",
+      "Rotation": "0,0,-0.5372996,0.8433914",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/medical_box.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "27484595-3c50-4c1a-a182-c7069210f05f",
+      "Flags": 0,
+      "Name": "medical_box (1)",
+      "Position": "-1276,4348,-148.9993",
+      "Rotation": "0,0,-0.5372996,0.8433914",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/medical_box.prefab",
       "__PrefabVariables": {}
     }
   ],

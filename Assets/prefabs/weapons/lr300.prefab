@@ -9,6 +9,7 @@
       {
         "__type": "GeneralGame.Weapon",
         "__guid": "4d44110c-f7a1-4168-a9f3-dbeaa77a630a",
+        "ReloadTimes": [],
         "AimAnimData": {
           "Angle": "-0.01,-0.21,-1",
           "Pos": "-2.395,-2,0.059"
@@ -18,14 +19,13 @@
         "AimOutFOVSpeed": 1,
         "AimPlayerFOV": -1,
         "AimSensitivity": 1,
-        "AimState": "b_aiming",
         "AmmoType": "prefabs/items/ammo_rifle.prefab",
         "AnimSpeed": 1,
         "BoltBack": false,
-        "BoltBackAnim": "boltback",
         "BoltBackEjectDelay": 0,
         "BoltBackTime": 0,
         "BulletCocking": true,
+        "BulletsReload": false,
         "ClassName": "lr300",
         "CustomizeAnimData": {
           "Angle": "-0.71,44.52,10",
@@ -33,21 +33,15 @@
         },
         "DeploySound": "sounds/swb/animations/swb_deploy.sound",
         "DisplayName": "LR 300",
-        "DrawAnim": "b_deploy",
-        "DrawEmptyAnim": "",
         "DrawEmptyTime": -1,
         "DrawTime": 0.6,
-        "EmptyState": "b_empty",
-        "HoldType": "Rifle",
-        "Icon": "weapons/swb/scarh/scarh.png",
+        "HoldType": "RIFLE",
         "Primary": {
           "_type": "component",
           "component_id": "ff1c8c67-10c8-4767-925a-0d606a3845ff",
           "go": "a3b668c3-acfb-4043-8f7c-93b7df84b5c8",
           "component_type": "ShootInfo"
         },
-        "ReloadAnim": "b_reload",
-        "ReloadEmptyAnim": "b_reload",
         "ReloadEmptyTime": 3.2,
         "ReloadTime": 2.9,
         "RunAnimData": {
@@ -99,7 +93,7 @@
         "ShootEmptyAnim": "",
         "ShootSound": "weapons/lr300/lr300_fire1.sound",
         "Spread": 0.05,
-        "VMParticleScale": 1.3,
+        "VMParticleScale": 1,
         "WMParticleScale": 1
       },
       {

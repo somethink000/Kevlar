@@ -358,5 +358,7 @@ public partial class Inventory : BaseInventory
 		item.GameObject.Transform.Position = Player.GameObject.Transform.Position;
 		item.GameObject.Transform.Rotation = Player.GameObject.Transform.Rotation;
 		item.LastOwner = Player;
+
+		Player.AnimationHelper.Target.Set( "b_pickup", true );
 	}
 }

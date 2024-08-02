@@ -12,7 +12,7 @@ public class HitScanBullet : IBulletBase
 		var forward = player.EyeAngles.Forward + spreadOffset;
 		forward = forward.Normal;
 		var endPos = player.EyePos + forward * 999999;
-		var bulletTr = weapon.TraceBullet( player.EyePos, endPos );
+		var bulletTr = weapon.TraceBullet( player.CamPos, endPos );
 		var hitObj = bulletTr.GameObject;
 
 		if ( SurfaceUtil.IsSkybox( bulletTr.Surface ) || bulletTr.HitPosition == Vector3.Zero ) return;

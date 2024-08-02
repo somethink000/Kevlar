@@ -6,12 +6,8 @@ public partial class Weapon
 {
 	public virtual SkinnedModelRenderer GetEffectRenderer()
 	{
-		SkinnedModelRenderer effectModel = WorldModelRenderer;
 
-		if ( CanSeeViewModel )
-			effectModel = ViewModelRenderer;
-
-		return effectModel;
+		return WorldModelRenderer;
 	}
 
 	/// <summary>

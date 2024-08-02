@@ -72,6 +72,34 @@
 					},
 				]
 			},
+			{
+				_class = "Skeleton"
+				children = 
+				[
+					{
+						_class = "Bone"
+						name = "hold_R"
+						origin = [ -11.654322, 0.0, 5.631947 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						do_not_discard = true
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "muzzle"
+						parent_bone = "muzzle"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
 		]
 		model_archetype = ""
 		primary_associated_entity = ""

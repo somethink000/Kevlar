@@ -9,6 +9,7 @@
       {
         "__type": "GeneralGame.Weapon",
         "__guid": "4d44110c-f7a1-4168-a9f3-dbeaa77a630a",
+        "ReloadTimes": [],
         "AimAnimData": {
           "Angle": "0.17,0,-0.2",
           "Pos": "-2.175,-2,0.28"
@@ -18,14 +19,13 @@
         "AimOutFOVSpeed": 1,
         "AimPlayerFOV": -1,
         "AimSensitivity": 0.85,
-        "AimState": "b_aiming",
         "AmmoType": "prefabs/items/ammo_rifle.prefab",
         "AnimSpeed": 1,
         "BoltBack": false,
-        "BoltBackAnim": "boltback",
         "BoltBackEjectDelay": 0,
         "BoltBackTime": 0,
         "BulletCocking": true,
+        "BulletsReload": false,
         "ClassName": "ak400",
         "CustomizeAnimData": {
           "Angle": "-0.71,44.52,10",
@@ -33,21 +33,15 @@
         },
         "DeploySound": "sounds/swb/animations/swb_deploy.sound",
         "DisplayName": "AK 400",
-        "DrawAnim": "b_deploy",
-        "DrawEmptyAnim": "",
         "DrawEmptyTime": -1,
         "DrawTime": 0.6,
-        "EmptyState": "b_empty",
-        "HoldType": "Rifle",
-        "Icon": "weapons/swb/scarh/scarh.png",
+        "HoldType": "RIFLE",
         "Primary": {
           "_type": "component",
           "component_id": "ff1c8c67-10c8-4767-925a-0d606a3845ff",
           "go": "a3b668c3-acfb-4043-8f7c-93b7df84b5c8",
           "component_type": "ShootInfo"
         },
-        "ReloadAnim": "b_reload",
-        "ReloadEmptyAnim": "b_reload",
         "ReloadEmptyTime": 3.2,
         "ReloadTime": 2.9,
         "RunAnimData": {
@@ -99,7 +93,7 @@
         "ShootEmptyAnim": "",
         "ShootSound": "weapons/ak74u/aks74u_fire1.sound",
         "Spread": 0.08,
-        "VMParticleScale": 1.3,
+        "VMParticleScale": 1,
         "WMParticleScale": 1
       },
       {

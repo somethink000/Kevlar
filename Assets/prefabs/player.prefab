@@ -7,25 +7,6 @@
     "Enabled": true,
     "Components": [
       {
-        "__type": "Sandbox.Citizen.CitizenAnimationHelper",
-        "__guid": "01531001-09de-46cc-8073-a07e669f50fd",
-        "BodyWeight": 1,
-        "EyeSource": {
-          "_type": "gameobject",
-          "go": "d8a09f79-a5a4-41e7-9522-ff9d3a8df4e8"
-        },
-        "EyesWeight": 1,
-        "HeadWeight": 1,
-        "Height": 1,
-        "LookAtEnabled": false,
-        "Target": {
-          "_type": "component",
-          "component_id": "fc51159a-2082-4de0-8c3e-5f44d049ed23",
-          "go": "55559241-6791-4c24-9635-07aceee3d8a4",
-          "component_type": "SkinnedModelRenderer"
-        }
-      },
-      {
         "__type": "Sandbox.CharacterController",
         "__guid": "f6a77d38-8825-4e12-8f26-8a6adc7cd4e6",
         "Acceleration": 10,
@@ -64,7 +45,7 @@
           "component_type": "CameraComponent"
         },
         "CrouchSpeed": 90,
-        "Distance": 0,
+        "Distance": 40,
         "GroundControl": 4,
         "Head": {
           "_type": "gameobject",
@@ -121,6 +102,24 @@
         "PushToTalkInput": "Voice",
         "Volume": 5,
         "WorldspacePlayback": true
+      },
+      {
+        "__type": "GeneralGame.HumanAnimationsHelper",
+        "__guid": "5af5b391-cd24-4daf-a600-91c8bd87d172",
+        "BodyWeight": 1,
+        "EyeSource": {
+          "_type": "gameobject",
+          "go": "d8a09f79-a5a4-41e7-9522-ff9d3a8df4e8"
+        },
+        "EyesWeight": 1,
+        "HeadWeight": 1,
+        "LookAtEnabled": false,
+        "Target": {
+          "_type": "component",
+          "component_id": "fc51159a-2082-4de0-8c3e-5f44d049ed23",
+          "go": "55559241-6791-4c24-9635-07aceee3d8a4",
+          "component_type": "SkinnedModelRenderer"
+        }
       }
     ],
     "Children": [
@@ -866,8 +865,8 @@
                                     "__guid": "ee9d8cf8-4ef6-412c-a7a0-da471d6d9933",
                                     "Flags": 4,
                                     "Name": "jiggle_hood",
-                                    "Position": "1.02232,-3.84446,-0.01067789",
-                                    "Rotation": "-0.583357,-0.367895,0.601539,-0.4031111",
+                                    "Position": "1.02232,-3.844469,-0.01068893",
+                                    "Rotation": "0.5833572,0.3678947,-0.6015392,0.4031107",
                                     "Enabled": true
                                   }
                                 ]
@@ -908,8 +907,8 @@
                                                 "__guid": "11002c85-9ec4-43e1-843a-39bab8781297",
                                                 "Flags": 4,
                                                 "Name": "weapon_hand_l",
-                                                "Position": "2.790657,1.123375,0.2952876",
-                                                "Rotation": "-0.0000002384188,0.0000006351625,1,-0.000001088717",
+                                                "Position": "2.790642,1.12331,0.2952948",
+                                                "Rotation": "0.0000002384192,-0.0000006351612,-0.9999999,0.00000110467",
                                                 "Enabled": true,
                                                 "Children": [
                                                   {
@@ -1156,8 +1155,8 @@
                                     "__guid": "6a866e22-cfd9-40cf-b946-e343a7f559f9",
                                     "Flags": 4,
                                     "Name": "scapula_l",
-                                    "Position": "5.998312,-0.4094577,-1.968964",
-                                    "Rotation": "0.714265,-0.3303078,0.5946099,0.1648068",
+                                    "Position": "5.99832,-0.409471,-1.968998",
+                                    "Rotation": "-0.714265,0.3303076,-0.59461,-0.1648065",
                                     "Enabled": true,
                                     "Children": [
                                       {
@@ -1207,15 +1206,15 @@
                                                 "__guid": "aa2d184e-f0f9-40ea-95dd-9c6029a7d32e",
                                                 "Flags": 4,
                                                 "Name": "weapon_hand_r",
-                                                "Position": "-2.79068,-1.123577,-0.2953",
-                                                "Rotation": "0.0000002756719,0.0000003073368,1,-0.0000006365598",
+                                                "Position": "-2.79068,-1.123474,-0.29531",
+                                                "Rotation": "-0.0000002831217,-0.0000003073364,-1,0.0000006278331",
                                                 "Enabled": true,
                                                 "Children": [
                                                   {
                                                     "__guid": "418ab3c4-4df8-401d-9597-5bb3b2739116",
                                                     "Flags": 4,
                                                     "Name": "hold_R",
-                                                    "Position": "0.00002861023,0.0001220703,0.00001192093",
+                                                    "Position": "-0.00004959106,-0.0002365112,-0.00008630753",
                                                     "Enabled": true
                                                   }
                                                 ]
@@ -1455,8 +1454,8 @@
                                     "__guid": "ca0dca2d-0cbb-40e5-9442-06e956545121",
                                     "Flags": 4,
                                     "Name": "scapula_r",
-                                    "Position": "-5.998293,0.4094868,1.968822",
-                                    "Rotation": "0.7142791,-0.3302942,0.5945978,0.1648168",
+                                    "Position": "-5.998341,0.409481,1.968872",
+                                    "Rotation": "-0.7142788,0.3302942,-0.5945979,-0.1648171",
                                     "Enabled": true,
                                     "Children": [
                                       {
@@ -1483,32 +1482,32 @@
                                 "__guid": "9ada9c89-6739-4878-83d5-e79e99b08e77",
                                 "Flags": 4,
                                 "Name": "jiggle_back_micropouches",
-                                "Position": "-0.1093445,-6.601195,0.7950596",
-                                "Rotation": "0.6179501,0.3669119,0.538467,-0.4399619",
+                                "Position": "-0.1093292,-6.60121,0.7950556",
+                                "Rotation": "-0.6179502,-0.3669119,-0.5384669,0.4399621",
                                 "Enabled": true
                               },
                               {
                                 "__guid": "b288155d-fc83-4934-9845-79c337821de8",
                                 "Flags": 4,
                                 "Name": "pect_l_aimup",
-                                "Position": "4.311527,3.005317,1.270506",
-                                "Rotation": "0.5145847,0.4849763,0.5145853,-0.4849769",
+                                "Position": "4.311531,3.005301,1.27049",
+                                "Rotation": "-0.5145845,-0.4849763,-0.5145853,0.4849771",
                                 "Enabled": true
                               },
                               {
                                 "__guid": "54421be7-7e4c-4a30-8eef-3cf7d5feb289",
                                 "Flags": 4,
                                 "Name": "pect_r_aimup",
-                                "Position": "4.311523,3.005317,-1.270473",
-                                "Rotation": "0.5145847,0.4849763,0.5145853,-0.4849769",
+                                "Position": "4.311531,3.005301,-1.27049",
+                                "Rotation": "-0.5145845,-0.4849763,-0.5145853,0.4849771",
                                 "Enabled": true
                               },
                               {
                                 "__guid": "d87b363c-6d2d-4b22-a589-737f7d8ef151",
                                 "Flags": 4,
                                 "Name": "scap_aimup",
-                                "Position": "7.273609,-3.04517,0.00001582115",
-                                "Rotation": "0.5145847,0.4849763,0.5145853,-0.4849769",
+                                "Position": "7.273624,-3.04519,0.000000379051",
+                                "Rotation": "-0.5145845,-0.4849763,-0.5145853,0.4849771",
                                 "Enabled": true
                               }
                             ]
@@ -1532,16 +1531,16 @@
                                     "__guid": "4fc8e4c2-d3fa-463d-ae7b-bf77ff38745c",
                                     "Flags": 4,
                                     "Name": "weaponhier_r_iktarget",
-                                    "Position": "-21.77699,-11.24401,1.798397",
-                                    "Rotation": "0.1697019,0.05798992,0.870664,-0.4580203",
+                                    "Position": "-21.777,-11.244,1.7984",
+                                    "Rotation": "-0.1697019,-0.05798982,-0.8706639,0.4580204",
                                     "Enabled": true,
                                     "Children": [
                                       {
                                         "__guid": "a81c378c-fbf9-4227-881f-d2be2dda5344",
                                         "Flags": 4,
                                         "Name": "weaponhier_l_iktarget",
-                                        "Position": "-22.77201,35.59413,10.55702",
-                                        "Rotation": "-0.5228379,0.8172448,0.2423873,-0.000001221639",
+                                        "Position": "-22.77201,35.59412,10.557",
+                                        "Rotation": "0.522838,-0.8172446,-0.2423871,0.000001341105",
                                         "Enabled": true
                                       }
                                     ]
@@ -1960,8 +1959,8 @@
                     "__guid": "4ced05c5-b3c6-4fb0-9fa4-ed605ae0fdef",
                     "Flags": 4,
                     "Name": "jiggle_holster",
-                    "Position": "-4.588352,0.8842745,-4.98422",
-                    "Rotation": "0.704254,0.6892616,0.04995066,-0.162633",
+                    "Position": "-4.588348,0.8842716,-4.984229",
+                    "Rotation": "-0.7042539,-0.6892616,-0.04995065,0.1626331",
                     "Enabled": true
                   }
                 ]
@@ -2043,8 +2042,8 @@
                 "__guid": "3b9aa0b2-2a70-44bf-a2a0-1ba412b2371d",
                 "Flags": 4,
                 "Name": "arm_l_iktarget",
-                "Position": "21.16449,44.18158,-1.199444",
-                "Rotation": "0.8708653,-0.4586181,0.168075,0.05489761",
+                "Position": "21.1645,44.1816,-1.19946",
+                "Rotation": "-0.8708653,0.4586182,-0.168075,-0.05489762",
                 "Enabled": true
               },
               {
@@ -2081,8 +2080,8 @@
                     "__guid": "2e5b9b67-c975-46ff-8b06-d9408ed572c0",
                     "Flags": 4,
                     "Name": "leg_r_iktarget",
-                    "Position": "-4.507535,4.331263,-3.535035",
-                    "Rotation": "0.760163,0.1907308,-0.6006738,-0.1580031",
+                    "Position": "-4.50754,4.33127,-3.53504",
+                    "Rotation": "-0.7601628,-0.1907305,0.6006738,0.1580035",
                     "Enabled": true
                   }
                 ]
@@ -2099,23 +2098,23 @@
                     "__guid": "18fe0df4-c7a5-4b79-aa88-0d52ff1c6114",
                     "Flags": 4,
                     "Name": "weapon_jnt",
-                    "Rotation": "-0.4516404,-0.5440767,-0.4516411,0.5440788",
+                    "Rotation": "-0.4516406,-0.5440771,-0.4516413,0.5440779",
                     "Enabled": true,
                     "Children": [
                       {
                         "__guid": "61f48787-81be-4def-a595-a2e6b1b4633e",
                         "Flags": 4,
                         "Name": "weapon_r_iktarget",
-                        "Position": "-21.77682,41.28574,-0.5846198",
-                        "Rotation": "0.168075,0.05489852,0.8708653,-0.4586179",
+                        "Position": "-21.7769,41.2858,-0.5846428",
+                        "Rotation": "-0.1680751,-0.05489833,-0.8708652,0.4586182",
                         "Enabled": true,
                         "Children": [
                           {
                             "__guid": "fd794eb0-f19b-4aa1-9ea0-4bb36410c701",
                             "Flags": 4,
                             "Name": "weapon_l_iktarget",
-                            "Position": "-22.77191,35.59411,10.55711",
-                            "Rotation": "-0.5228378,0.8172448,0.2423872,-0.0000004558358",
+                            "Position": "-22.772,35.5941,10.55709",
+                            "Rotation": "0.5228381,-0.8172445,-0.2423872,0.0000007152557",
                             "Enabled": true
                           }
                         ]
@@ -2225,7 +2224,8 @@
             "HeightStart": 2000,
             "HeightWidth": 0,
             "Sky": "materials/error.vmat",
-            "StartDistance": 10
+            "StartDistance": 10,
+            "Tint": "1,1,1,1"
           },
           {
             "__type": "Sandbox.ColorAdjustments",

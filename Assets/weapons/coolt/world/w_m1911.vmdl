@@ -60,6 +60,34 @@
 				_class = "BoneMarkupList"
 				bone_cull_type = "None"
 			},
+			{
+				_class = "Skeleton"
+				children = 
+				[
+					{
+						_class = "Bone"
+						name = "hold_R"
+						origin = [ -9.843212, 0.0, 4.766611 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						do_not_discard = true
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "muzzle"
+						parent_bone = "muzzle"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
 		]
 		model_archetype = ""
 		primary_associated_entity = ""

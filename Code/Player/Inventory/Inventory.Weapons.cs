@@ -24,21 +24,37 @@ public partial class Inventory
 			
 			
 			Deployed = nextWeapon;
-
+			
 			nextWeapon.Deploy( Player );
-
+			Player.AnimationHelper.HoldType = nextWeapon.HoldType;
+			Player.AnimationHelper.Target.Set( "b_deploy", true );
+			
 		}
 
 	}
 
 	public void UpdateWeaponSlot()
 	{
+		if ( Deployed != null )
+		{
+			Player.AnimationHelper.MoveStyle = Deployed.IsRunning ? HumanAnimationsHelper.MoveStyles.WeaponSprint : HumanAnimationsHelper.MoveStyles.Citizen;
+			Player.AnimationHelper.WeaponHold = Deployed.IsRunning ? HumanAnimationsHelper.WeaponHoldes.Relaxed : HumanAnimationsHelper.WeaponHoldes.Normal;
+			Player.AnimationHelper.HoldType = Deployed.HoldType;
+		} else
+		{
+
+			Player.AnimationHelper.HoldType = HumanAnimationsHelper.HoldTypes.None;
+		}
+		
+
 		if ( IsProxy ) return;
 		//if ( activeItem is null || !activeItem.CanCarryStop() ) return;
 		if ( Input.Pressed( InputButtonHelper.Slot1 ) ) Next();
 		else if ( Input.Pressed( InputButtonHelper.Slot2 ) ) Next();
 		else if ( Input.MouseWheel.y > 0 ) Next();
 		else if ( Input.MouseWheel.y < 0 ) Next();
+
+
 	}
 
 	public void RemoveEquipUpdate( EquipSlot slot, bool drop = false)

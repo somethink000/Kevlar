@@ -18,4 +18,7 @@ public class ModelUtil
 		gameObject.Transform.Position = holdBoneGO.Transform.Position;
 		gameObject.Transform.Rotation = holdBoneGO.Transform.Rotation;
 	}
+
+
+
 }

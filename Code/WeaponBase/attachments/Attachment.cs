@@ -97,9 +97,6 @@ public abstract class Attachment : Component, IComparable<Attachment>
 	{
 		if ( string.IsNullOrEmpty( BodyGroup ) ) return;
 
-		if ( !IsProxy )
-			Weapon.ViewModelRenderer.SetBodyGroup( BodyGroup, choice );
-
 		Weapon.WorldModelRenderer.SetBodyGroup( BodyGroup, choice );
 	}
 
@@ -115,19 +112,10 @@ public abstract class Attachment : Component, IComparable<Attachment>
 		attachmentRenderer.Model = Model.Load( ModelPath );
 		attachmentRenderer.Enabled = true;
 		
-		if ( isViewModel )
-		{
-			attachmentRenderer.Transform.Scale = ViewModelScale;
-			ViewModelRenderer = attachmentRenderer;
-			attachmentGO.Flags |= GameObjectFlags.NotNetworked;
-			ModelUtil.ParentToBone( attachmentGO, Weapon.ViewModelRenderer, Bone );
-		}
-		else
-		{
-			attachmentRenderer.Transform.Scale = WorldModelScale;
-			WorldModelRenderer = attachmentRenderer;
-			ModelUtil.ParentToBone( attachmentGO, Weapon.WorldModelRenderer, Bone );
-		}
+		
+		attachmentRenderer.Transform.Scale = WorldModelScale;
+		WorldModelRenderer = attachmentRenderer;
+		ModelUtil.ParentToBone( attachmentGO, Weapon.WorldModelRenderer, Bone );
 	}
 
 	private void CreateModels()
@@ -150,7 +138,7 @@ public abstract class Attachment : Component, IComparable<Attachment>
 	{
 		// Log.Info( "Trying to equip -> " + Name + ", info -> equippedOnClient: " + equippedOnClient + " equipTries: " + equipTries );
 		if ( equippedOnClient ) return;
-		if ( (!IsProxy && Weapon.ViewModelRenderer is null) || Weapon.WorldModelRenderer is null )
+		if ( Weapon.WorldModelRenderer is null )
 		{
 			if ( equipTries > 10 ) return;
 			equipTries += 1;

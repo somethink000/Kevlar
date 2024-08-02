@@ -2,258 +2,10 @@
   "__guid": "c6e7895b-1d64-4ff1-9f60-693cb49f7197",
   "GameObjects": [
     {
-      "__guid": "aa5203dc-8cce-4adc-a896-0278204d6df5",
-      "Flags": 0,
-      "Name": "Map",
-      "Enabled": true
-    },
-    {
-      "__guid": "3b5201c4-1582-48b8-b65b-8e91b61d489e",
-      "Flags": 0,
-      "Name": "niva2329",
-      "Position": "-56,332,48",
-      "Rotation": "0,0,-0.0000003278255,-1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "a3c6919d-9268-428e-a6ca-bfb8bc730b41",
-          "BodyGroups": 18446744073709551615,
-          "Model": "cars/niva/niva2329.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "f820f91e-8daf-4e01-9404-153066ea5842",
-          "IsTrigger": false,
-          "Model": "cars/niva/niva2329.vmdl",
-          "Static": false
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "b8807890-657a-482f-8d30-a4e60043ca3a",
-          "Flags": 0,
-          "Name": "ofroad_wheels",
-          "Position": "-49.00004,35.00003,-30",
-          "Rotation": "-0,0,-1,-0.00000004371139",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "a6aef955-6cfb-4100-b170-86bc0a182e1b",
-              "BodyGroups": 18446744073709551615,
-              "Model": "cars/niva/ofroad_wheels.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "57e41fee-4e27-46cf-bbfc-8a5120eb722f",
-          "Flags": 0,
-          "Name": "ofroad_wheels",
-          "Position": "68.9999,34.99996,-30",
-          "Rotation": "0,-0,-1,-0.00000004371139",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "92c6b3a3-39b7-41d3-8d7c-005952ef1184",
-              "BodyGroups": 18446744073709551615,
-              "Model": "cars/niva/ofroad_wheels.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "723fe12d-0a82-4a83-8696-51ae1389dd14",
-          "Flags": 0,
-          "Name": "ofroad_wheels",
-          "Position": "-49.00008,-34.99997,-30",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "b3457ce6-3b59-46a7-aad6-1252c0fd9dd3",
-              "BodyGroups": 18446744073709551615,
-              "Model": "cars/niva/ofroad_wheels.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "__guid": "83f6f0ef-ccd5-40c2-b2a5-4caed976998c",
-          "Flags": 0,
-          "Name": "ofroad_wheels",
-          "Position": "68.99992,-34.99998,-30",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "1d1fae18-d5d1-4ee6-85f1-e57b3dfa3773",
-              "BodyGroups": 18446744073709551615,
-              "Model": "cars/niva/ofroad_wheels.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "__guid": "056fe911-1848-492b-8745-458ea477143c",
-      "Flags": 0,
-      "Name": "Logic",
-      "Position": "-96,-56,156",
-      "Enabled": true,
-      "Children": [
-        {
-          "__guid": "ced06cad-4f18-446b-a2ef-2ddbb270f2f9",
-          "Flags": 0,
-          "Name": "Sound",
-          "Position": "0,0,0",
-          "Rotation": "0.3210197,-0.3851179,0.5930297,-0.6300368",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SoundscapeTrigger",
-              "__guid": "0b005dda-74a8-4ef6-bdea-c056a6dccb61",
-              "BoxSize": "50,50,50",
-              "Radius": 5000,
-              "StayActiveOnExit": true,
-              "Type": "Sphere"
-            }
-          ]
-        },
-        {
-          "__guid": "760cb151-ba23-4a23-a70d-8342d232bdc2",
-          "Flags": 0,
-          "Name": "Envmap",
-          "Position": "0,0,0",
-          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.EnvmapProbe",
-              "__guid": "3699bb84-1bf6-4f90-aa6b-eaea6948b177",
-              "Texture": "textures/cubemaps/default2.vtex",
-              "Bounds": {
-                "Mins": "-16384,-16384,-16384",
-                "Maxs": "16384,16384,16384"
-              },
-              "DelayBetweenUpdates": 0.1,
-              "Feathering": 0.02,
-              "FrameInterval": 5,
-              "MaxDistance": 16384,
-              "Projection": "Sphere",
-              "RenderDynamically": true,
-              "TintColor": "1,1,1,1",
-              "UpdateStrategy": "OnEnabled",
-              "ZFar": 16384,
-              "ZNear": 16
-            }
-          ]
-        },
-        {
-          "__guid": "d734b50a-e173-4e88-b45b-22070b2c7371",
-          "Flags": 0,
-          "Name": "WeaponRegistry",
-          "Position": "0,0,0",
-          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
-          "Enabled": true,
-          "NetworkMode": 1,
-          "Components": [
-            {
-              "__type": "GeneralGame.WeaponRegistry",
-              "__guid": "f7148026-55b9-40db-973f-8844516caf61",
-              "WeaponPrefabs": []
-            },
-            {
-              "__type": "GeneralGame.WeaponSettings",
-              "__guid": "105d1eca-2975-499e-9765-62796b45635c",
-              "AutoReload": true,
-              "Customization": true
-            },
-            {
-              "__type": "GeneralGame.PrefabInitializer",
-              "__guid": "5f9c944b-6c5e-4fbb-85b5-854b4548b345"
-            }
-          ]
-        },
-        {
-          "__guid": "cdc90544-b57e-46be-839b-dd0e5d3c255b",
-          "Flags": 0,
-          "Name": "ExampleNetworkManager",
-          "Position": "0,0,0",
-          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "GeneralGame.DemoNetworkManager",
-              "__guid": "5cf80343-4e99-4433-8ffa-e1ddef78052b",
-              "PlayerPrefab": {
-                "_type": "gameobject",
-                "prefab": "prefabs/player.prefab"
-              }
-            }
-          ]
-        },
-        {
-          "__guid": "20eda5f4-c77c-47c0-99a4-35b066b7b0e9",
-          "Flags": 0,
-          "Name": "Game",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "GeneralGame.LobbyGame",
-              "__guid": "2a02cf93-8bae-449a-a621-e6b502fb2389",
-              "InfiniteAmmo": true
-            }
-          ]
-        },
-        {
-          "__guid": "6b0724af-87cd-44f6-8c47-515741cb62cd",
-          "Flags": 0,
-          "Name": "Lobby",
-          "Position": "376.4999,-449.2498,68",
-          "Rotation": "-0.0000001490116,0.00000006154193,-0.7071068,-0.7071067",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "ab8486ab-5261-433d-9496-bd0fb1a6806e",
-              "BodyGroups": 18446744073709551615,
-              "CreateBoneObjects": false,
-              "Model": "model/15/untitled_87.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1",
-              "UseAnimGraph": true
-            },
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "7bd0b46d-abb6-4b02-82bd-2fee2be6adaf",
-              "IsTrigger": false,
-              "Model": "model/15/untitled_87.vmdl",
-              "Static": false
-            },
-            {
-              "__type": "GeneralGame.MapBoard",
-              "__guid": "3a816002-6bdd-413d-a814-a3e2c8418fe4"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "__guid": "56d7c94d-cd40-46a3-9fd2-0d06f114d6eb",
       "Flags": 0,
       "Name": "Spawnpoint",
-      "Position": "108,-512,208",
+      "Position": "-16,-512,208",
       "Rotation": "0,0,-0.0000001788139,-1",
       "Enabled": true,
       "Components": [
@@ -507,7 +259,8 @@
             "prefabs/weapons/remington870.prefab",
             "prefabs/weapons/lr300.prefab",
             "prefabs/weapons/ak74u.prefab",
-            "prefabs/weapons/m110.prefab"
+            "prefabs/weapons/m110.prefab",
+            "prefabs/weapons/raging_bull.prefab"
           ],
           "MAX_SLOTS": 9
         },
@@ -2851,6 +2604,174 @@
           "Model": "models/door_frame_single.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "f8d25098-f0dc-48e1-8ce9-d8f0a2ba17f3",
+      "Flags": 0,
+      "Name": "Logic",
+      "Position": "-55.41614,5244.126,44.5015",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "8cf5e5f8-925f-4b4d-b149-d118377823fa",
+          "Flags": 0,
+          "Name": "2D Skybox",
+          "Position": "0,0,0",
+          "Rotation": "-0.04788935,0.01371342,0.67264,-0.7382913",
+          "Tags": "skybox",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkyBox2D",
+              "__guid": "f9a898b0-2735-4b98-a567-67a42eb5bb8c",
+              "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+              "Tint": "0,0,0,1"
+            }
+          ]
+        },
+        {
+          "__guid": "6ec2e97d-14ea-4cd6-9dda-9bc44f80618e",
+          "Flags": 0,
+          "Name": "WeaponRegistry",
+          "Position": "0,0,0",
+          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
+          "Enabled": true,
+          "NetworkMode": 1,
+          "Components": [
+            {
+              "__type": "GeneralGame.WeaponRegistry",
+              "__guid": "58645e43-25d5-4c28-a5c1-9fd0950bd9b9",
+              "WeaponPrefabs": []
+            },
+            {
+              "__type": "GeneralGame.WeaponSettings",
+              "__guid": "e64960e2-5356-4ac9-a9f7-8ba3eea1fd7f",
+              "AutoReload": true,
+              "Customization": true
+            },
+            {
+              "__type": "GeneralGame.PrefabInitializer",
+              "__guid": "92a12b92-15ad-4cce-8551-cb2be602c7a6"
+            }
+          ]
+        },
+        {
+          "__guid": "79cd683c-a67f-4a76-b03e-eb13f2d2c3cb",
+          "Flags": 0,
+          "Name": "ExampleNetworkManager",
+          "Position": "0,0,0",
+          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.DemoNetworkManager",
+              "__guid": "baa0e7c4-bd72-4640-8a13-239cee9c4855",
+              "PlayerPrefab": {
+                "_type": "gameobject",
+                "prefab": "prefabs/player.prefab"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "8d0b6488-89a2-4086-af6c-f06096f53ccf",
+          "Flags": 0,
+          "Name": "Game",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.LobbyGame",
+              "__guid": "11bf1074-f3ae-4ed6-894c-1e6d21db5124",
+              "InfiniteAmmo": true
+            }
+          ]
+        },
+        {
+          "__guid": "2c905135-2c52-43a2-92f1-04a875ed3bb4",
+          "Flags": 0,
+          "Name": "Envmap Probe",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "8b378454-5bd6-4f9b-bbc0-144c4b288a71",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-1000,-1000,-1000",
+                "Maxs": "1000,1000,1000"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "Projection": "Box",
+              "RenderDynamically": false,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "61efa84f-f257-415a-97a6-6a7123705502",
+      "Flags": 0,
+      "Name": "ammo_pistol",
+      "Position": "192,-384,204",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "db965521-606d-4827-aaa3-3a9f8a36625e",
+      "Flags": 0,
+      "Name": "ammo_pistol (1)",
+      "Position": "176,-368,204",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8174f08d-51c8-496d-a1cd-af372020bd0a",
+      "Flags": 0,
+      "Name": "ammo_pistol (2)",
+      "Position": "172,-380,204",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "5464800e-2d61-4c09-a2a0-525a08d45dd9",
+      "Flags": 0,
+      "Name": "Lobby",
+      "Position": "280,-512,240",
+      "Rotation": "0,0,0.7071068,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.MapBoard",
+          "__guid": "898ee635-1046-4f40-9e10-8b5a7fcb2394"
+        },
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "b6b3d4d9-ac60-44a6-9297-1ee5e3ac25d5",
+          "BodyGroups": 18446744073709551615,
+          "Model": "model/15/untitled_87.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "cc3e25e5-cb41-4e09-8980-33a2cdbc165d",
+          "IsTrigger": false,
+          "Model": "model/15/untitled_87.vmdl",
+          "Static": false
         }
       ]
     }

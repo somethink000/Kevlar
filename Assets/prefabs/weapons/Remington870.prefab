@@ -9,6 +9,7 @@
       {
         "__type": "GeneralGame.Weapon",
         "__guid": "61ada1b9-4036-4907-be9e-e774c0e4154a",
+        "ReloadTimes": [],
         "AimAnimData": {
           "Angle": "-0.47,0.1,0",
           "Pos": "-1.888,0,1.428"
@@ -18,14 +19,13 @@
         "AimOutFOVSpeed": 1,
         "AimPlayerFOV": -1,
         "AimSensitivity": 0.85,
-        "AimState": "b_aiming",
         "AmmoType": "prefabs/items/ammo_shotgun.prefab",
         "AnimSpeed": 1,
         "BoltBack": true,
-        "BoltBackAnim": "boltback",
         "BoltBackEjectDelay": 0.8,
         "BoltBackTime": 0.8,
         "BulletCocking": false,
+        "BulletsReload": false,
         "ClassName": "remington",
         "CustomizeAnimData": {
           "Angle": "-2.31,27.25,10",
@@ -33,11 +33,8 @@
         },
         "DeploySound": "sounds/swb/animations/swb_deploy.sound",
         "DisplayName": "Remington 870",
-        "DrawAnim": "deploy",
-        "DrawEmptyAnim": "",
         "DrawEmptyTime": -1,
         "DrawTime": 0.7,
-        "EmptyState": "b_empty",
         "HoldType": "Shotgun",
         "Primary": {
           "_type": "component",
@@ -45,8 +42,6 @@
           "go": "90e1f323-4483-4cab-a02f-56d0ccf3fead",
           "component_type": "ShootInfo"
         },
-        "ReloadAnim": "reload",
-        "ReloadEmptyAnim": "",
         "ReloadEmptyTime": -1,
         "ReloadTime": 3.67,
         "RunAnimData": {
@@ -68,8 +63,6 @@
         "ShellReloadStartTime": 0.62,
         "Slot": 3,
         "TuckRange": 30,
-        "ViewModel": "weapons/remington/view/v_remington870_tact.vmdl",
-        "ViewModelHands": "weapons/handes/pmm_ref_hand_blue.vmdl",
         "WorldModel": "weapons/remington/world/w_remington870_tact.vmdl"
       },
       {
@@ -98,8 +91,8 @@
         "ShootEmptyAnim": "",
         "ShootSound": "weapons/remington/rem870_tact_fire1.sound",
         "Spread": 0.14,
-        "VMParticleScale": 2,
-        "WMParticleScale": 2.5
+        "VMParticleScale": 1,
+        "WMParticleScale": 1
       },
       {
         "__type": "GeneralGame.ReflexSightBG",

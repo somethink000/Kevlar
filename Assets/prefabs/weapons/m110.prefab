@@ -9,6 +9,7 @@
       {
         "__type": "GeneralGame.Weapon",
         "__guid": "4d44110c-f7a1-4168-a9f3-dbeaa77a630a",
+        "ReloadTimes": [],
         "AimAnimData": {
           "Angle": "-0.2,0,-1",
           "Pos": "-1.966,-2,1.163"
@@ -18,14 +19,13 @@
         "AimOutFOVSpeed": 1,
         "AimPlayerFOV": -1,
         "AimSensitivity": 1,
-        "AimState": "b_aiming",
         "AmmoType": "prefabs/items/ammo_sniper.prefab",
         "AnimSpeed": 1,
         "BoltBack": false,
-        "BoltBackAnim": "boltback",
         "BoltBackEjectDelay": 0,
         "BoltBackTime": 0,
         "BulletCocking": true,
+        "BulletsReload": false,
         "ClassName": "M110",
         "CustomizeAnimData": {
           "Angle": "-0.71,44.52,10",
@@ -33,20 +33,15 @@
         },
         "DeploySound": "sounds/swb/animations/swb_deploy.sound",
         "DisplayName": "M110",
-        "DrawAnim": "b_deploy",
-        "DrawEmptyAnim": "",
         "DrawEmptyTime": -1,
         "DrawTime": 0.6,
-        "EmptyState": "b_empty",
-        "HoldType": "Rifle",
+        "HoldType": "RIFLE",
         "Primary": {
           "_type": "component",
           "component_id": "ff1c8c67-10c8-4767-925a-0d606a3845ff",
           "go": "a3b668c3-acfb-4043-8f7c-93b7df84b5c8",
           "component_type": "ShootInfo"
         },
-        "ReloadAnim": "b_reload",
-        "ReloadEmptyAnim": "b_reload",
         "ReloadEmptyTime": 3.2,
         "ReloadTime": 2.9,
         "RunAnimData": {
@@ -144,7 +139,7 @@
         "__type": "Sandbox.SkinnedModelRenderer",
         "__guid": "383445c6-7b6a-4b53-9990-3b2d0850f9e1",
         "BodyGroups": 18446744073709551615,
-        "CreateBoneObjects": false,
+        "CreateBoneObjects": true,
         "Model": "weapons/m110/world/w_m110.vmdl",
         "RenderType": "On",
         "Tint": "1,1,1,1",
@@ -180,7 +175,28 @@
         "WorldModelScale": "1,1,1"
       }
     ],
-    "Children": [],
+    "Children": [
+      {
+        "__guid": "69f872a9-c179-46ca-8122-d7ed10bfa088",
+        "Flags": 4,
+        "Name": "hold_R",
+        "Enabled": true
+      },
+      {
+        "__guid": "b7cafd51-dc0a-4a93-8191-4ceab7b7530c",
+        "Flags": 4,
+        "Name": "bip01_r_hand",
+        "Enabled": true,
+        "Children": [
+          {
+            "__guid": "6b447219-ccd7-421a-b3dd-3aa904e816f6",
+            "Flags": 4,
+            "Name": "muzzle",
+            "Enabled": true
+          }
+        ]
+      }
+    ],
     "__variables": []
   },
   "ShowInMenu": false,

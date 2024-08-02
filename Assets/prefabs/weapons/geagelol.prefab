@@ -27,6 +27,7 @@
       {
         "__type": "GeneralGame.Weapon",
         "__guid": "3fd73b46-c377-4098-9b22-0e8ea33064c3",
+        "ReloadTimes": [],
         "AimAnimData": {
           "Angle": "-0.14,0.07,0",
           "Pos": "-2.398,0,0.799"
@@ -36,14 +37,13 @@
         "AimOutFOVSpeed": 1,
         "AimPlayerFOV": -1,
         "AimSensitivity": 0.85,
-        "AimState": "b_aiming",
         "AmmoType": "prefabs/items/ammo_pistol.prefab",
         "AnimSpeed": 1,
         "BoltBack": false,
-        "BoltBackAnim": "boltback",
         "BoltBackEjectDelay": 0,
         "BoltBackTime": 0,
         "BulletCocking": false,
+        "BulletsReload": false,
         "ClassName": "deagle",
         "CustomizeAnimData": {
           "Angle": "-22.88,42.22,14.4",
@@ -51,20 +51,15 @@
         },
         "DeploySound": "sounds/swb/animations/swb_deploy.sound",
         "DisplayName": "Deagle",
-        "DrawAnim": "b_deploy",
-        "DrawEmptyAnim": "",
         "DrawEmptyTime": -1,
         "DrawTime": 0.4,
-        "EmptyState": "b_empty",
-        "HoldType": "Pistol",
+        "HoldType": "PISTOL",
         "Primary": {
           "_type": "component",
           "component_id": "90aafa5d-7f73-4334-ac7f-78143bc61a57",
           "go": "75e8dbf9-98c5-4504-a879-6f6da3f32a1c",
           "component_type": "ShootInfo"
         },
-        "ReloadAnim": "b_reload",
-        "ReloadEmptyAnim": "",
         "ReloadEmptyTime": 3.1,
         "ReloadTime": 2,
         "RunAnimData": {

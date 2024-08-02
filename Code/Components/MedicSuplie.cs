@@ -18,6 +18,7 @@ public class MedicSuplie : Component
 			GameObject.PlaySound( TakeSound );
 			CurPockets += 1;
 			Model.SetBodyGroup( "pockets", CurPockets );
+			ply.AnimationHelper.Target.Set( "b_pickup", true );
 		}
 	}
 
