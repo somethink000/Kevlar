@@ -42,6 +42,7 @@ public partial class Weapon
 	{
 		customizationMenu = new CustomizationMenu( this );
 		RootPanel.Panel.AddChild( customizationMenu );
+		
 	}
 
 	void CloseCustomizationMenu()

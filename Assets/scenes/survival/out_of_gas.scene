@@ -19,7 +19,7 @@
       "__guid": "759629fa-ac1e-41d8-be90-ac659883fc3e",
       "Flags": 0,
       "Name": "Logic",
-      "Position": "-55.41614,5244.126,44.5015",
+      "Position": "-253.4116,6944.063,44.7504",
       "Enabled": true,
       "Children": [
         {
@@ -33,7 +33,7 @@
             {
               "__type": "Sandbox.GradientFog",
               "__guid": "21913479-ab86-4fd1-9a59-104fd7896971",
-              "Color": "0.7814,0.7814,1,1",
+              "Color": "0.03678,0.03678,0.04651,1",
               "EndDistance": 10000,
               "FalloffExponent": 1,
               "Height": 120000,
@@ -66,7 +66,7 @@
           "Flags": 0,
           "Name": "Sun",
           "Position": "0,0,0",
-          "Rotation": "0.2277959,-0.6439012,0.5992499,-0.4176125",
+          "Rotation": "0.3751312,-0.7300469,0.519873,-0.2367288",
           "Tags": "light_directional,light",
           "Enabled": true,
           "Components": [
@@ -75,9 +75,9 @@
               "__guid": "86920de1-dec8-4acf-bd34-51aed89ee1cd",
               "FogMode": "Enabled",
               "FogStrength": 1,
-              "LightColor": "0.73488,0.46212,0.15039,1",
+              "LightColor": "0.26977,0.19365,0.10665,1",
               "Shadows": false,
-              "SkyColor": "0.16744,0.13437,0.09657,1"
+              "SkyColor": "0.03256,0.02796,0.02271,1"
             }
           ]
         },
@@ -187,8 +187,7 @@
               "Vaves": [
                 60,
                 100,
-                140,
-                10
+                140
               ],
               "VaveStartColdown": 40,
               "ZombieSpawnDelay": 4,
@@ -199,61 +198,10 @@
       ]
     },
     {
-      "__guid": "40e2041b-759b-4cb2-b863-3759e3f3c2e3",
-      "Flags": 0,
-      "Name": "Object",
-      "Position": "-1266.255,4455.864,-103.9918",
-      "Rotation": "0,0,0.8660254,0.5000001",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "a0b3e506-1d30-4fd2-bcd9-f11fb67335a3",
-          "BodyGroups": 18446744073709551615,
-          "Model": "content/models/instrument/instr.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "5081f618-ddfd-42d4-8a8a-49049c41a317",
-          "IsTrigger": false,
-          "Model": "content/models/instrument/instr.vmdl",
-          "Static": false
-        },
-        {
-          "__type": "GeneralGame.LootItem",
-          "__guid": "af534cbe-7e1a-4973-a2e9-a129ad0e9bcb",
-          "StartItems": [
-            "prefabs/weapons/colt.prefab",
-            "prefabs/weapons/geagelol.prefab",
-            "prefabs/weapons/remington870.prefab",
-            "prefabs/weapons/lr300.prefab",
-            "prefabs/weapons/ak74u.prefab",
-            "prefabs/weapons/m110.prefab",
-            "prefabs/weapons/raging_bull.prefab"
-          ],
-          "MAX_SLOTS": 9
-        },
-        {
-          "__type": "Sandbox.Rigidbody",
-          "__guid": "d3015133-889e-49d5-94ca-510a7562db47",
-          "AngularDamping": 0,
-          "Gravity": true,
-          "LinearDamping": 0,
-          "Locking": {},
-          "MassOverride": 0,
-          "MotionEnabled": true,
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        }
-      ]
-    },
-    {
       "__guid": "6035dcd5-3c6c-4aa2-b619-19bda4bca5d3",
       "Flags": 0,
       "Name": "Spawn",
-      "Position": "-1233.33,4411.725,-146.9778",
+      "Position": "-1418.863,6126.186,-146.7289",
       "Rotation": "0,0,-0.7071074,0.7071066",
       "Enabled": true,
       "Components": [
@@ -287,7 +235,7 @@
       "__guid": "8fd8f2bd-1c02-4652-a635-ec46bfe89f03",
       "Flags": 0,
       "Name": "zombiespawner",
-      "Position": "3652.505,6708.376,-200.4538",
+      "Position": "1328,4032,-148",
       "Rotation": "-0.153927,-0.0000002483011,0.9880823,-0.000001593885",
       "Enabled": true,
       "__Prefab": "prefabs/npcs/zombiespawner.prefab",
@@ -307,7 +255,7 @@
       "__guid": "26494508-5917-4112-909e-ece7fdca225c",
       "Flags": 0,
       "Name": "zombiespawner (2)",
-      "Position": "1164.953,8755.148,-195.6022",
+      "Position": "-3060,5328,-152",
       "Rotation": "-0.09052107,-0.0112787,0.9881896,-0.1231259",
       "Enabled": true,
       "__Prefab": "prefabs/npcs/zombiespawner.prefab",
@@ -337,7 +285,7 @@
       "__guid": "8507cded-1c7b-4783-8361-0fbebe96375a",
       "Flags": 0,
       "Name": "zombiespawner (5)",
-      "Position": "-3700.02,7994.699,-157.3029",
+      "Position": "-3700.02,7994.699,-148",
       "Rotation": "0.00003297487,0.00265184,-0.01243408,0.9999192",
       "Enabled": true,
       "__Prefab": "prefabs/npcs/zombiespawner.prefab",
@@ -347,7 +295,7 @@
       "__guid": "ee655f63-f94c-4d2c-a0bc-233a95ee00a9",
       "Flags": 0,
       "Name": "m_ll_lamp_halogen_01 (3)",
-      "Position": "-1200.914,4319.947,15.22896",
+      "Position": "-1386.447,6034.408,15.47787",
       "Rotation": "0.2988362,0.6408563,0.2988363,-0.6408563",
       "Enabled": true,
       "Components": [
@@ -398,7 +346,6 @@
             {
               "__type": "Sandbox.PointLight",
               "__guid": "6709284b-5d7a-400d-9f41-d0114b15fc71",
-              "__enabled": false,
               "Attenuation": 1,
               "FogMode": "Enabled",
               "FogStrength": 1,
@@ -414,7 +361,7 @@
       "__guid": "03adad1b-613b-4f3c-85e9-17d5f716073a",
       "Flags": 0,
       "Name": "m_ll_lamp_halogen_01 (1)",
-      "Position": "-1040.342,4484.848,15.22899",
+      "Position": "-1225.875,6199.309,15.4779",
       "Rotation": "0.2988362,0.6408563,0.2988363,-0.6408563",
       "Enabled": true,
       "Components": [
@@ -457,7 +404,7 @@
       "__guid": "d76a63a6-9f4d-4938-a846-a7891501d665",
       "Flags": 0,
       "Name": "m_ll_lamp_halogen_01 (2)",
-      "Position": "-1214.202,4687.078,15.22897",
+      "Position": "-1399.735,6401.539,15.47788",
       "Rotation": "0.2988362,0.6408563,0.2988363,-0.6408563",
       "Enabled": true,
       "Components": [
@@ -500,7 +447,7 @@
       "__guid": "5df2f5ca-820d-4205-aa44-2cb939b0ceac",
       "Flags": 0,
       "Name": "m_ll_lamp_halogen_01 (4)",
-      "Position": "-1380.593,4547.905,15.22893",
+      "Position": "-1566.125,6262.366,15.47784",
       "Rotation": "0.2988362,0.6408563,0.2988363,-0.6408563",
       "Enabled": true,
       "Components": [
@@ -543,7 +490,7 @@
       "__guid": "0a6359d4-14fe-452c-8c7a-b31ef8970105",
       "Flags": 0,
       "Name": "ammo_pistol",
-      "Position": "-1259.049,4277.673,-148.9993",
+      "Position": "-1444.582,5992.134,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_pistol.prefab",
       "__PrefabVariables": {}
@@ -552,7 +499,7 @@
       "__guid": "65b0bc70-0b0d-4d6c-a00a-65c5041fc0d3",
       "Flags": 0,
       "Name": "ammo_pistol (1)",
-      "Position": "-1237.911,4248.111,-148.9993",
+      "Position": "-1423.444,5962.572,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_pistol.prefab",
       "__PrefabVariables": {}
@@ -561,7 +508,7 @@
       "__guid": "8e6f768f-aa46-4bbd-927b-50644932c85c",
       "Flags": 0,
       "Name": "ammo_pistol (2)",
-      "Position": "-1288.335,4313.294,-101.2714",
+      "Position": "-1473.867,6027.755,-101.0225",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_pistol.prefab",
       "__PrefabVariables": {}
@@ -570,7 +517,7 @@
       "__guid": "e9b27f60-aa4f-4cd3-bdaf-9d611ef6a07e",
       "Flags": 0,
       "Name": "ammo_rifle",
-      "Position": "-1253.579,4294.987,-148.9993",
+      "Position": "-1439.112,6009.448,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_rifle.prefab",
       "__PrefabVariables": {}
@@ -579,7 +526,7 @@
       "__guid": "30b04a0c-185d-4e56-ac5e-7e7f75c671ff",
       "Flags": 0,
       "Name": "ammo_rifle (1)",
-      "Position": "-1232.442,4265.425,-148.9993",
+      "Position": "-1417.975,5979.886,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_rifle.prefab",
       "__PrefabVariables": {}
@@ -588,7 +535,7 @@
       "__guid": "a9b7fc3a-b388-40b8-9327-e464547da75c",
       "Flags": 0,
       "Name": "ammo_rifle (2)",
-      "Position": "-1282.866,4330.608,-101.2714",
+      "Position": "-1468.398,6045.069,-101.0225",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_rifle.prefab",
       "__PrefabVariables": {}
@@ -597,7 +544,7 @@
       "__guid": "44d97e57-1d91-475e-bf4b-6a7a2f93bc8f",
       "Flags": 0,
       "Name": "ammo_shotgun",
-      "Position": "-1272.315,4284.034,-148.9993",
+      "Position": "-1457.847,5998.495,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_shotgun.prefab",
       "__PrefabVariables": {}
@@ -606,7 +553,7 @@
       "__guid": "adbad242-ddd4-4319-8b0a-550903600a7b",
       "Flags": 0,
       "Name": "ammo_shotgun (1)",
-      "Position": "-1251.177,4254.472,-148.9993",
+      "Position": "-1436.709,5968.933,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_shotgun.prefab",
       "__PrefabVariables": {}
@@ -615,7 +562,7 @@
       "__guid": "98c90c5c-38c4-4823-95c2-a3e668a874c4",
       "Flags": 0,
       "Name": "ammo_rifle (3)",
-      "Position": "-1299.928,4323.407,-104.9993",
+      "Position": "-1485.46,6037.868,-104.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_rifle.prefab",
       "__PrefabVariables": {}
@@ -624,7 +571,7 @@
       "__guid": "01daa824-e078-49a4-a24f-241c4a29f523",
       "Flags": 0,
       "Name": "ammo_rifle (4)",
-      "Position": "-1298.41,4342.404,-104.9993",
+      "Position": "-1483.943,6056.865,-104.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_rifle.prefab",
       "__PrefabVariables": {}
@@ -633,7 +580,7 @@
       "__guid": "6519dd4c-0226-4ea9-9c39-8cb263588754",
       "Flags": 0,
       "Name": "ammo_rifle (5)",
-      "Position": "-1299.586,4332.19,-104.9993",
+      "Position": "-1485.119,6046.651,-104.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_rifle.prefab",
       "__PrefabVariables": {}
@@ -642,7 +589,7 @@
       "__guid": "d6b8c081-dd84-4fbe-bead-07ffef939f1a",
       "Flags": 0,
       "Name": "ammo_rifle (6)",
-      "Position": "-1284.32,4331.908,-98.01444",
+      "Position": "-1469.853,6046.369,-97.76553",
       "Rotation": "-0.00110355,0.001093835,0.7048841,0.7093207",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_rifle.prefab",
@@ -652,7 +599,7 @@
       "__guid": "ba9fe625-29f2-4440-b6eb-cd1a37e64368",
       "Flags": 0,
       "Name": "ammo_rifle (7)",
-      "Position": "-1301.232,4325.256,-101.7441",
+      "Position": "-1486.765,6039.717,-101.4952",
       "Rotation": "-0.00110355,0.001093835,0.7048841,0.7093207",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_rifle.prefab",
@@ -662,7 +609,7 @@
       "__guid": "fd431041-fd21-499d-b037-49a5f3fdefdf",
       "Flags": 0,
       "Name": "ammo_rifle (8)",
-      "Position": "-1299.353,4340.538,-101.7324",
+      "Position": "-1484.885,6054.999,-101.4835",
       "Rotation": "-0.00110355,0.001093835,0.7048841,0.7093207",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_rifle.prefab",
@@ -672,7 +619,7 @@
       "__guid": "20097fdb-a6f0-47db-b956-b188b51e595e",
       "Flags": 0,
       "Name": "ammo_rifle (9)",
-      "Position": "-1288.456,4332.079,-94.76692",
+      "Position": "-1473.989,6046.54,-94.51801",
       "Rotation": "-0.002054602,0.0008519143,0.9235113,0.3835649",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_rifle.prefab",
@@ -682,7 +629,7 @@
       "__guid": "dbf9121a-5795-49d5-8b8a-b75af4943e13",
       "Flags": 0,
       "Name": "ammo_rifle (10)",
-      "Position": "-1308.619,4314.333,-104.9993",
+      "Position": "-1494.152,6028.794,-104.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_rifle.prefab",
       "__PrefabVariables": {}
@@ -691,7 +638,7 @@
       "__guid": "ad4d7aaf-f401-47f0-a942-fcc706e9956b",
       "Flags": 0,
       "Name": "ammo_rifle (11)",
-      "Position": "-1286.667,4321.256,-104.9993",
+      "Position": "-1472.199,6035.717,-104.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_rifle.prefab",
       "__PrefabVariables": {}
@@ -700,7 +647,7 @@
       "__guid": "0d625e72-c02c-454a-bc3f-892f6989bde6",
       "Flags": 0,
       "Name": "ammo_rifle (12)",
-      "Position": "-1313.306,4302.548,-104.9993",
+      "Position": "-1498.839,6017.009,-104.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_rifle.prefab",
       "__PrefabVariables": {}
@@ -709,7 +656,7 @@
       "__guid": "9b22b067-c3ac-4a37-a93d-f0043d8f7338",
       "Flags": 0,
       "Name": "ammo_rifle (13)",
-      "Position": "-1309.877,4355.38,-104.9993",
+      "Position": "-1495.409,6069.841,-104.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_rifle.prefab",
       "__PrefabVariables": {}
@@ -718,7 +665,7 @@
       "__guid": "e476f895-f89d-49ea-82a2-8b911a315733",
       "Flags": 0,
       "Name": "ammo_pistol (3)",
-      "Position": "-1312.263,4427.825,-119.9993",
+      "Position": "-1497.795,6142.286,-119.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_pistol.prefab",
       "__PrefabVariables": {}
@@ -727,7 +674,7 @@
       "__guid": "c73e30d5-7d7c-4a83-8d1f-33b62b3b3eaa",
       "Flags": 0,
       "Name": "ammo_pistol (11)",
-      "Position": "-1307.692,4417.183,-119.9993",
+      "Position": "-1493.225,6131.644,-119.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_pistol.prefab",
       "__PrefabVariables": {}
@@ -736,7 +683,7 @@
       "__guid": "fb330690-9d72-4abf-9941-b852a492b5f7",
       "Flags": 0,
       "Name": "ammo_pistol (12)",
-      "Position": "-1322.248,4410.344,-119.9993",
+      "Position": "-1507.781,6124.805,-119.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_pistol.prefab",
       "__PrefabVariables": {}
@@ -745,7 +692,7 @@
       "__guid": "c23ab155-badd-4793-8a00-20d3185bc5e2",
       "Flags": 0,
       "Name": "ammo_pistol (13)",
-      "Position": "-1315.789,4413.793,-119.9993",
+      "Position": "-1501.322,6128.254,-119.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_pistol.prefab",
       "__PrefabVariables": {}
@@ -754,7 +701,7 @@
       "__guid": "2253a8cd-8874-4480-b363-45fd35af57ac",
       "Flags": 0,
       "Name": "ammo_pistol (10)",
-      "Position": "-1299.576,4425.869,-119.9993",
+      "Position": "-1485.109,6140.33,-119.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_pistol.prefab",
       "__PrefabVariables": {}
@@ -763,7 +710,7 @@
       "__guid": "39dd39a9-17a1-478d-bf74-02f4306dd569",
       "Flags": 0,
       "Name": "ammo_pistol (9)",
-      "Position": "-1310.434,4435.075,-119.9993",
+      "Position": "-1495.967,6149.536,-119.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_pistol.prefab",
       "__PrefabVariables": {}
@@ -772,7 +719,7 @@
       "__guid": "95977a9a-f977-47c6-944c-f8cc29232df6",
       "Flags": 0,
       "Name": "ammo_pistol (6)",
-      "Position": "-1323.439,4434.634,-119.9993",
+      "Position": "-1508.971,6149.095,-119.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_pistol.prefab",
       "__PrefabVariables": {}
@@ -781,7 +728,7 @@
       "__guid": "c0e2e931-4103-4d25-a9f5-9faeee2054d2",
       "Flags": 0,
       "Name": "ammo_pistol (8)",
-      "Position": "-1316.936,4448.75,-119.9993",
+      "Position": "-1502.469,6163.211,-119.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_pistol.prefab",
       "__PrefabVariables": {}
@@ -790,7 +737,7 @@
       "__guid": "e1815f96-42a7-4cbb-9ab6-7221ba85171d",
       "Flags": 0,
       "Name": "ammo_pistol (4)",
-      "Position": "-1319.182,4423.418,-119.9993",
+      "Position": "-1504.715,6137.879,-119.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_pistol.prefab",
       "__PrefabVariables": {}
@@ -799,7 +746,7 @@
       "__guid": "6a0bf1a3-33ac-4e33-b7e1-2ca4326f4e02",
       "Flags": 0,
       "Name": "ammo_pistol (5)",
-      "Position": "-1330.359,4430.227,-119.9993",
+      "Position": "-1515.892,6144.688,-119.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_pistol.prefab",
       "__PrefabVariables": {}
@@ -808,7 +755,7 @@
       "__guid": "7dff680c-6119-4d3c-832b-f7337ed1adf3",
       "Flags": 0,
       "Name": "ammo_pistol (7)",
-      "Position": "-1323.855,4444.343,-119.9993",
+      "Position": "-1509.387,6158.804,-119.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_pistol.prefab",
       "__PrefabVariables": {}
@@ -817,7 +764,7 @@
       "__guid": "e34287e9-1571-4dd0-b2ea-82c1a6fe2cc2",
       "Flags": 0,
       "Name": "ammo_shotgun (2)",
-      "Position": "-1284.078,4436.129,-106.9993",
+      "Position": "-1469.611,6150.59,-106.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_shotgun.prefab",
       "__PrefabVariables": {}
@@ -826,7 +773,7 @@
       "__guid": "b2680dce-d9cf-4738-b1a6-2e0eb2f609b2",
       "Flags": 0,
       "Name": "ammo_shotgun (5)",
-      "Position": "-1287.514,4448.171,-106.9993",
+      "Position": "-1473.047,6162.632,-106.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_shotgun.prefab",
       "__PrefabVariables": {}
@@ -835,7 +782,7 @@
       "__guid": "30121a54-a156-4ded-92ba-0249db2facf2",
       "Flags": 0,
       "Name": "ammo_shotgun (6)",
-      "Position": "-1297.929,4452.822,-106.9993",
+      "Position": "-1483.461,6167.283,-106.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_shotgun.prefab",
       "__PrefabVariables": {}
@@ -844,7 +791,7 @@
       "__guid": "2ec5fa54-ff19-4e61-aa0a-17f3f991dbca",
       "Flags": 0,
       "Name": "ammo_shotgun (7)",
-      "Position": "-1296.739,4466.059,-106.9993",
+      "Position": "-1482.271,6180.52,-106.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_shotgun.prefab",
       "__PrefabVariables": {}
@@ -853,7 +800,7 @@
       "__guid": "44a54e40-6e23-4cad-b297-8f12e6c44f78",
       "Flags": 0,
       "Name": "ammo_shotgun (8)",
-      "Position": "-1287.509,4445.02,-102.7603",
+      "Position": "-1473.042,6159.481,-102.5114",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_shotgun.prefab",
       "__PrefabVariables": {}
@@ -862,7 +809,7 @@
       "__guid": "649e6bd6-1765-494e-9138-c0424fe21af6",
       "Flags": 0,
       "Name": "ammo_shotgun (9)",
-      "Position": "-1295.813,4455.756,-102.7603",
+      "Position": "-1481.345,6170.217,-102.5114",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_shotgun.prefab",
       "__PrefabVariables": {}
@@ -871,7 +818,7 @@
       "__guid": "ff387857-7487-4e06-b54b-e8f83ee1b811",
       "Flags": 0,
       "Name": "ammo_shotgun (10)",
-      "Position": "-1294.097,4471.682,-102.7603",
+      "Position": "-1479.63,6186.143,-102.5114",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_shotgun.prefab",
       "__PrefabVariables": {}
@@ -880,7 +827,7 @@
       "__guid": "21fcba3d-0c9a-4066-ab0b-5a33d32abcd7",
       "Flags": 0,
       "Name": "ammo_shotgun (3)",
-      "Position": "-1290.845,4444.848,-106.9993",
+      "Position": "-1476.377,6159.309,-106.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_shotgun.prefab",
       "__PrefabVariables": {}
@@ -889,7 +836,7 @@
       "__guid": "d221d3db-43d5-49d3-bb68-91e46def22af",
       "Flags": 0,
       "Name": "ammo_shotgun (4)",
-      "Position": "-1296.743,4460.778,-106.9993",
+      "Position": "-1482.276,6175.239,-106.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_shotgun.prefab",
       "__PrefabVariables": {}
@@ -898,7 +845,7 @@
       "__guid": "3b2f01a9-429f-4627-b5f9-a84eb8bd8eba",
       "Flags": 0,
       "Name": "ammo_sniper",
-      "Position": "-1228,4224,-148.9993",
+      "Position": "-1413.532,5938.461,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_sniper.prefab",
       "__PrefabVariables": {}
@@ -907,7 +854,7 @@
       "__guid": "379e31cb-f8c3-40cc-ae13-6061f718546f",
       "Flags": 0,
       "Name": "ammo_sniper (1)",
-      "Position": "-1200,4236,-148.9993",
+      "Position": "-1385.532,5950.461,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_sniper.prefab",
       "__PrefabVariables": {}
@@ -916,7 +863,7 @@
       "__guid": "e8ef2f2f-44de-42ba-b0f4-f4b6613ee7d6",
       "Flags": 0,
       "Name": "ammo_sniper (2)",
-      "Position": "-1216,4248,-148.9993",
+      "Position": "-1401.532,5962.461,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_sniper.prefab",
       "__PrefabVariables": {}
@@ -925,7 +872,7 @@
       "__guid": "6fe6149e-c405-4d33-a2d3-90aaf25bd21e",
       "Flags": 0,
       "Name": "ammo_sniper (3)",
-      "Position": "-1212,4232,-148.9993",
+      "Position": "-1397.532,5946.461,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_sniper.prefab",
       "__PrefabVariables": {}
@@ -934,7 +881,7 @@
       "__guid": "663f5d2b-5580-4942-a635-8413c664047b",
       "Flags": 0,
       "Name": "ammo_sniper (4)",
-      "Position": "-1216,4216,-148.9993",
+      "Position": "-1401.532,5930.461,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_sniper.prefab",
       "__PrefabVariables": {}
@@ -943,7 +890,7 @@
       "__guid": "b5f71808-ba69-4d3b-84ac-0f8ae2618e4b",
       "Flags": 0,
       "Name": "ammo_sniper (5)",
-      "Position": "-1204,4212,-148.9993",
+      "Position": "-1389.532,5926.461,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_sniper.prefab",
       "__PrefabVariables": {}
@@ -952,7 +899,7 @@
       "__guid": "bf2b4519-8648-406a-abc7-e76771c4afeb",
       "Flags": 0,
       "Name": "ammo_sniper (6)",
-      "Position": "-1192,4220,-148.9993",
+      "Position": "-1377.532,5934.461,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_sniper.prefab",
       "__PrefabVariables": {}
@@ -961,7 +908,7 @@
       "__guid": "06076a48-01e6-4568-9570-e7d4266dcc39",
       "Flags": 0,
       "Name": "ammo_sniper (7)",
-      "Position": "-1204,4224,-148.9993",
+      "Position": "-1389.532,5938.461,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_sniper.prefab",
       "__PrefabVariables": {}
@@ -970,7 +917,7 @@
       "__guid": "c1fe8894-fffb-48dd-a3a5-c5d7602b4f5e",
       "Flags": 0,
       "Name": "ammo_sniper (8)",
-      "Position": "-1188,4240,-148.9993",
+      "Position": "-1373.532,5954.461,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_sniper.prefab",
       "__PrefabVariables": {}
@@ -979,7 +926,7 @@
       "__guid": "08667189-edad-473d-8256-989fe78455ad",
       "Flags": 0,
       "Name": "ammo_sniper (9)",
-      "Position": "-1206.867,4225.644,-146.7759",
+      "Position": "-1392.399,5940.105,-146.527",
       "Rotation": "-0.001010001,0.0008416474,0.7694688,0.638683",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_sniper.prefab",
@@ -989,29 +936,114 @@
       "__guid": "10d83268-2482-4e26-83ce-52ccfb582027",
       "Flags": 0,
       "Name": "ammo_sniper (10)",
-      "Position": "-1220,4216,-148.9993",
+      "Position": "-1405.532,5930.461,-148.7504",
       "Enabled": true,
       "__Prefab": "prefabs/items/ammo_sniper.prefab",
       "__PrefabVariables": {}
     },
     {
-      "__guid": "c4ea1d36-cd87-45b7-ad9d-6b1515028e09",
+      "__guid": "3e6f00e1-6e1a-4012-b820-eb5b9146d0e5",
       "Flags": 0,
       "Name": "medical_box",
-      "Position": "-1260,4324,-148.9993",
-      "Rotation": "0,0,-0.5372996,0.8433914",
+      "Position": "-1360,5804,-148.9993",
+      "Rotation": "0,0,0.5372997,-0.8433914",
       "Enabled": true,
       "__Prefab": "prefabs/items/medical_box.prefab",
       "__PrefabVariables": {}
     },
     {
-      "__guid": "27484595-3c50-4c1a-a182-c7069210f05f",
+      "__guid": "ad7a297c-468d-4873-a18e-81dc4bcf59a6",
       "Flags": 0,
       "Name": "medical_box (1)",
-      "Position": "-1276,4348,-148.9993",
-      "Rotation": "0,0,-0.5372996,0.8433914",
+      "Position": "-1388,5792,-148.9993",
+      "Rotation": "0,0,0.7933533,0.6087615",
       "Enabled": true,
       "__Prefab": "prefabs/items/medical_box.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "54126693-8e3a-4be9-95e1-e26430f26f1f",
+      "Flags": 0,
+      "Name": "ak74u",
+      "Position": "-1278,5756,-64.64008",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/ak74u.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c31e7e22-c2d0-4ca4-bf01-32f85c56688a",
+      "Flags": 0,
+      "Name": "colt",
+      "Position": "-1440,6180,-97.85995",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/colt.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "2cbc702d-6bfa-4197-82f1-600efeddd0ea",
+      "Flags": 0,
+      "Name": "m110",
+      "Position": "-1224,6212,-104",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/m110.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b0ae9030-4898-4202-9eda-b6000b56e7b2",
+      "Flags": 0,
+      "Name": "geagelol",
+      "Position": "-1370,5748,-67.64008",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/geagelol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "30f3a2a4-65a1-47bb-9b79-086cd5e3842c",
+      "Flags": 0,
+      "Name": "val",
+      "Position": "-1218,5788,-61.64008",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/val.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ebee8b26-0579-498e-ab89-f5dc5303cdc0",
+      "Flags": 0,
+      "Name": "raging_bull",
+      "Position": "-1428,6208,-94.14005",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/raging_bull.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "9656bddd-f579-4268-954b-0b324147b822",
+      "Flags": 0,
+      "Name": "lr300",
+      "Position": "-1406,5760,-68.64008",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/lr300.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7f514be8-001d-4f72-88c8-e396afd56ede",
+      "Flags": 0,
+      "Name": "remington870",
+      "Position": "-1192,6248,-92",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/remington870.prefab",
       "__PrefabVariables": {}
     }
   ],
@@ -1040,7 +1072,6 @@
   "Description": "",
   "ResourceVersion": 1,
   "__references": [
-    "evilinc.instr",
     "evilinc.m_ll_lamp_halogen_01"
   ],
   "__version": 1

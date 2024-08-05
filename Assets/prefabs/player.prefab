@@ -3,7 +3,7 @@
     "__guid": "bf0f959a-8e13-4133-8fc5-edc7aa3d1b0c",
     "Flags": 0,
     "Name": "player",
-    "Tags": "noblockaudio,player",
+    "Tags": "player,noblockaudio",
     "Enabled": true,
     "Components": [
       {
@@ -837,6 +837,29 @@
                                         ]
                                       },
                                       {
+                                        "__guid": "030312c3-dad9-41f0-9c69-b80dda9a1683",
+                                        "Flags": 0,
+                                        "Name": "Light",
+                                        "Position": "-2.784268,1.364925,7.999933",
+                                        "Rotation": "-0.5000001,-0.5,-0.4999995,-0.5000005",
+                                        "Tags": "light_directional,light,light_spot",
+                                        "Enabled": true,
+                                        "Components": [
+                                          {
+                                            "__type": "Sandbox.SpotLight",
+                                            "__guid": "8ebe02c6-3707-45b0-98c5-83557bd09af2",
+                                            "Attenuation": 2.4,
+                                            "ConeInner": 60,
+                                            "ConeOuter": 60,
+                                            "FogMode": "Enabled",
+                                            "FogStrength": 1,
+                                            "LightColor": "0.31628,0.30216,0.21036,1",
+                                            "Radius": 1200,
+                                            "Shadows": true
+                                          }
+                                        ]
+                                      },
+                                      {
                                         "__guid": "87cbd926-d0b1-4fed-81dd-04b0696fc6a8",
                                         "Flags": 4,
                                         "Name": "forward",
@@ -915,7 +938,7 @@
                                                     "__guid": "b69d7f79-2f23-4df7-a8aa-0c52c045ad3f",
                                                     "Flags": 4,
                                                     "Name": "hold_L",
-                                                    "Position": "0,0,0",
+                                                    "Position": "0.0001335144,-0.000007629395,0.00003194809",
                                                     "Enabled": true
                                                   }
                                                 ]
@@ -1214,7 +1237,8 @@
                                                     "__guid": "418ab3c4-4df8-401d-9597-5bb3b2739116",
                                                     "Flags": 4,
                                                     "Name": "hold_R",
-                                                    "Position": "-0.00004959106,-0.0002365112,-0.00008630753",
+                                                    "Position": "-0.00008964539,-0.0002822876,-0.0001349449",
+                                                    "Rotation": "-0.000001012349,0.00000001490118,0.0000002458694,1",
                                                     "Enabled": true
                                                   }
                                                 ]

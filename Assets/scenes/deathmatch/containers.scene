@@ -14717,66 +14717,6 @@
       "NetworkMode": 1,
       "__Prefab": "prefabs/weapons/m110.prefab",
       "__PrefabVariables": {}
-    },
-    {
-      "__guid": "047d4437-fb96-4373-947d-264207f431ef",
-      "Flags": 0,
-      "Name": "raging_bull",
-      "Position": "1496,692,11",
-      "Enabled": true,
-      "NetworkMode": 1,
-      "__Prefab": "prefabs/weapons/raging_bull.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "d0a71983-90db-4383-b0f0-43b519ea2e0e",
-      "Flags": 0,
-      "Name": "raging_bull (1)",
-      "Position": "1684,1424,11",
-      "Enabled": true,
-      "NetworkMode": 1,
-      "__Prefab": "prefabs/weapons/raging_bull.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "29a105f0-f933-426e-9ac3-16d76eee8a6e",
-      "Flags": 0,
-      "Name": "raging_bull (2)",
-      "Position": "548,2296,11",
-      "Enabled": true,
-      "NetworkMode": 1,
-      "__Prefab": "prefabs/weapons/raging_bull.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "604c1172-659e-4ff5-8c10-66503987e8bc",
-      "Flags": 0,
-      "Name": "raging_bull (3)",
-      "Position": "-48,1200,11",
-      "Enabled": true,
-      "NetworkMode": 1,
-      "__Prefab": "prefabs/weapons/raging_bull.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "1cd2b1e8-d50c-496c-b07d-485428d28b3a",
-      "Flags": 0,
-      "Name": "raging_bull (4)",
-      "Position": "108,352,11",
-      "Enabled": true,
-      "NetworkMode": 1,
-      "__Prefab": "prefabs/weapons/raging_bull.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "7f09d0ff-6175-4b04-9adf-66bbec10c61f",
-      "Flags": 0,
-      "Name": "raging_bull (5)",
-      "Position": "1736,652,11",
-      "Enabled": true,
-      "NetworkMode": 1,
-      "__Prefab": "prefabs/weapons/raging_bull.prefab",
-      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
