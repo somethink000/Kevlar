@@ -11,8 +11,34 @@
 				[
 					{
 						_class = "DefaultMaterialGroup"
-						remaps = [  ]
-						use_global_default = true
+						remaps = 
+						[
+							{
+								from = "1911.vmat"
+								to = "weapons/coolt/1911.vmat"
+							},
+							{
+								from = "pistol_rail2.vmat"
+								to = "weapons/attachments/pistol_rail2/pistol_rail2.vmat"
+							},
+							{
+								from = "suppressor_socom.vmat"
+								to = "weapons/attachments/pistol_suppressor/suppressor_socom.vmat"
+							},
+							{
+								from = "deltapoint_d.vmat"
+								to = "weapons/attachments/delta_point/deltapoint_d.vmat"
+							},
+							{
+								from = "flashhider_pistol.vmat"
+								to = "weapons/attachments/pistol_flashhider/flashhider_pistol.vmat"
+							},
+							{
+								from = "muzzlebrake_pistol.vmat"
+								to = "weapons/attachments/pistol_muzzlebrake/muzzlebrake_pistol.vmat"
+							},
+						]
+						use_global_default = false
 						global_default_material = "weapons/coolt/1911.vmat"
 					},
 				]
@@ -22,12 +48,28 @@
 				children = 
 				[
 					{
-						_class = "PhysicsHullFromRender"
+						_class = "PhysicsHullFile"
+						name = "m1911_physics"
 						parent_bone = ""
 						surface_prop = "default"
 						collision_tags = "solid"
-						faceMergeAngle = 20.0
-						maxHullVertices = 32
+						recenter_on_parent_bone = false
+						offset_origin = [ -16.0, -4.0, 13.0 ]
+						offset_angles = [ -200.0, 0.0, 0.0 ]
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						filename = "weapons/coolt/world/m1911_physics.smd"
+						import_scale = 1.0
+						faceMergeAngle = 10.0
+						maxHullVertices = 0
+						import_mode = "SingleHull"
+						optimization_algorithm = "QEM"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
 					},
 				]
 			},
@@ -54,10 +96,139 @@
 							]
 						}
 					},
+					{
+						_class = "RenderMeshFile"
+						name = "11rnd"
+						filename = "weapons/coolt/world/11rnd.smd"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "7rnd"
+						filename = "weapons/coolt/world/7rnd.smd"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "rail"
+						filename = "weapons/coolt/world/mount.smd"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "supressor"
+						filename = "weapons/attachments/pistol_suppressor/pistol_supressor.fbx"
+						import_translation = [ -0.3, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = "muzzle"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "delta"
+						filename = "weapons/attachments/delta_point/deltapoint.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = "sight"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "flashhider"
+						filename = "weapons/attachments/pistol_flashhider/flashhider.fbx"
+						import_translation = [ -0.3, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = "muzzle"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "muzzlebrake"
+						filename = "weapons/attachments/pistol_muzzlebrake/muzzlebrake.fbx"
+						import_translation = [ -0.3, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = "muzzle"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
 				]
 			},
 			{
 				_class = "BoneMarkupList"
+				children = 
+				[
+					{
+						_class = "BoneMarkup"
+						target_bone = ""
+						ignore_Translation = false
+						ignore_rotation = false
+						do_not_discard = false
+					},
+				]
 				bone_cull_type = "None"
 			},
 			{
@@ -71,6 +242,13 @@
 						angles = [ 0.0, 0.0, 0.0 ]
 						do_not_discard = true
 					},
+					{
+						_class = "Bone"
+						name = "sight"
+						origin = [ -4.728, 0.144876, 7.29828 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						do_not_discard = true
+					},
 				]
 			},
 			{
@@ -81,10 +259,127 @@
 						_class = "Attachment"
 						name = "muzzle"
 						parent_bone = "muzzle"
-						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_origin = [ 0.0, 0.0, 0.015686 ]
+						relative_angles = [ -0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "muzzle_silenced"
+						parent_bone = "muzzle"
+						relative_origin = [ 7.160821, 0.0, 0.012005 ]
+						relative_angles = [ -0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "ejection_point"
+						parent_bone = "eject"
+						relative_origin = [ 0.0, -0.702848, -0.50154 ]
 						relative_angles = [ 0.0, 0.0, 0.0 ]
 						weight = 1.0
 						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "BodyGroupList"
+				children = 
+				[
+					{
+						_class = "BodyGroup"
+						name = "muzzle"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								meshes = [  ]
+							},
+							{
+								_class = "BodyGroupChoice"
+								meshes = 
+								[
+									"supressor",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								meshes = 
+								[
+									"flashhider",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								meshes = 
+								[
+									"muzzlebrake",
+								]
+							},
+						]
+						hidden_in_tools = false
+					},
+					{
+						_class = "BodyGroup"
+						name = "sight"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								meshes = [  ]
+							},
+							{
+								_class = "BodyGroupChoice"
+								meshes = 
+								[
+									"delta",
+								]
+							},
+						]
+						hidden_in_tools = false
+					},
+					{
+						_class = "BodyGroup"
+						name = "magazine"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								meshes = 
+								[
+									"7rnd",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								meshes = 
+								[
+									"11rnd",
+								]
+							},
+						]
+						hidden_in_tools = false
+					},
+					{
+						_class = "BodyGroup"
+						name = "rail"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								meshes = [  ]
+							},
+							{
+								_class = "BodyGroupChoice"
+								meshes = 
+								[
+									"rail",
+								]
+							},
+						]
+						hidden_in_tools = false
 					},
 				]
 			},

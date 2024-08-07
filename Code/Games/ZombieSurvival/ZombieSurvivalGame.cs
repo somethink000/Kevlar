@@ -51,6 +51,8 @@ public class ZombieSurvivalGame : BaseGame
 		{
 			GameManager.ActiveScene.LoadFromFile( "scenes/basement.scene" );
 		}
+
+		player.RespawnWithDelay( 5 );
 	}
 
 

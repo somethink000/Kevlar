@@ -5,6 +5,8 @@
     "Name": "ak74u",
     "Tags": "weapon",
     "NetworkMode": 1,
+    "NetworkOrphaned": 3,
+    "OwnerTransfer": 0,
     "Components": [
       {
         "__type": "GeneralGame.Weapon",
@@ -31,7 +33,7 @@
           "Angle": "-0.71,44.52,10",
           "Pos": "5.755,-1.2,1.592"
         },
-        "DeploySound": "sounds/swb/animations/swb_deploy.sound",
+        "DeploySound": "sounds/weapons/sources/weapon_deploy.sound",
         "DisplayName": "AK 400",
         "DrawEmptyTime": -1,
         "DrawTime": 0.6,
@@ -71,7 +73,7 @@
         "Ammo": 30,
         "AmmoType": "rifle",
         "BarrelSmokeParticle": "particles/swb/muzzle/barrel_smoke.vpcf",
-        "BulletEjectParticle": "particles/swb/bullet_hulls/5.45_shell.vpcf",
+        "BulletEjectParticle": "particles/swb/bullet_hulls/9mm.vpcf",
         "Bullets": 1,
         "BulletSize": 2,
         "BulletTracerChance": 0.33,
@@ -84,15 +86,14 @@
         "HitFlinch": 2,
         "InfiniteAmmo": "disabled",
         "MuzzleFlashParticle": "particles/swb/muzzle/flash.vpcf",
+        "ParticleScale": 1,
         "Recoil": 3,
         "RPM": 600,
         "ShootAimedAnim": "",
         "ShootAnim": "b_attack",
         "ShootEmptyAnim": "",
         "ShootSound": "weapons/ak74u/aks74u_fire1.sound",
-        "Spread": 0.08,
-        "VMParticleScale": 1,
-        "WMParticleScale": 1
+        "Spread": 0.08
       },
       {
         "__type": "Sandbox.ModelCollider",

@@ -6,7 +6,7 @@ public partial class Inventory
 {
 	[Property] public GameObject WeaponBone { get; set; }
 
-	public Weapon Deployed;
+	[Sync] public Weapon Deployed { get; private set; }
 
 	private bool toolgunActive = false;
 	public EquipSlot CurrentWeaponSlot { get; set; } = EquipSlot.FirstWeapon;
@@ -26,15 +26,14 @@ public partial class Inventory
 			Deployed = nextWeapon;
 			
 			nextWeapon.Deploy( Player );
-			Player.AnimationHelper.HoldType = nextWeapon.HoldType;
-			Player.AnimationHelper.Target.Set( "b_deploy", true );
-			
 		}
 
 	}
 
+	[Broadcast]
 	public void UpdateWeaponSlot()
 	{
+		
 		if ( Deployed != null )
 		{
 			Player.AnimationHelper.MoveStyle = Deployed.IsRunning ? HumanAnimationsHelper.MoveStyles.WeaponSprint : HumanAnimationsHelper.MoveStyles.Citizen;
@@ -45,9 +44,9 @@ public partial class Inventory
 
 			Player.AnimationHelper.HoldType = HumanAnimationsHelper.HoldTypes.None;
 		}
-		
 
 		if ( IsProxy ) return;
+
 		//if ( activeItem is null || !activeItem.CanCarryStop() ) return;
 		if ( Input.Pressed( InputButtonHelper.Slot1 ) ) Next();
 		else if ( Input.Pressed( InputButtonHelper.Slot2 ) ) Next();
@@ -59,6 +58,7 @@ public partial class Inventory
 
 	public void RemoveEquipUpdate( EquipSlot slot, bool drop = false)
 	{
+		if ( IsProxy ) return;
 		if ( CurrentWeaponSlot == slot ) { 
 			Deployed.Holster();
 			Deployed = null;
@@ -67,12 +67,15 @@ public partial class Inventory
 	}
 	public void AddEquipUpdate( EquipSlot slot )
 	{
+		if ( IsProxy ) return;
 		if ( CurrentWeaponSlot == slot ) DeployCurrent();
 	}
 
 	
 	public void Next()
 	{
+		if ( IsProxy ) return;
+
 		Deployed?.Holster();
 		Deployed = null;
 

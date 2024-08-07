@@ -4,6 +4,8 @@
     "Flags": 0,
     "Name": "geagelol",
     "NetworkMode": 1,
+    "NetworkOrphaned": 3,
+    "OwnerTransfer": 0,
     "Components": [
       {
         "__type": "Sandbox.ModelCollider",
@@ -49,7 +51,7 @@
           "Angle": "-22.88,42.22,14.4",
           "Pos": "9.19,-4.46,2.16"
         },
-        "DeploySound": "sounds/swb/animations/swb_deploy.sound",
+        "DeploySound": "sounds/weapons/sources/weapon_deploy.sound",
         "DisplayName": "Deagle",
         "DrawEmptyTime": -1,
         "DrawTime": 0.4,
@@ -81,8 +83,6 @@
         "ShellReloadStartTime": 0,
         "Slot": 1,
         "TuckRange": 30,
-        "ViewModel": "weapons/deagle/view/v_deagle357.vmdl",
-        "ViewModelHands": "weapons/handes/pmm_ref_hand_blue.vmdl",
         "WorldModel": "weapons/deagle/world/deagle357.vmdl"
       },
       {
@@ -91,7 +91,7 @@
         "Ammo": 7,
         "AmmoType": "pistol",
         "BarrelSmokeParticle": "particles/swb/muzzle/barrel_smoke.vpcf",
-        "BulletEjectParticle": "particles/swb/bullet_hulls/9mm_eject.vpcf",
+        "BulletEjectParticle": "particles/swb/bullet_hulls/9mm.vpcf",
         "Bullets": 1,
         "BulletSize": 2,
         "BulletTracerChance": 0.33,
@@ -104,15 +104,14 @@
         "HitFlinch": 1.25,
         "InfiniteAmmo": "reserve",
         "MuzzleFlashParticle": "particles/swb/muzzle/flash.vpcf",
+        "ParticleScale": 1,
         "Recoil": 10,
         "RPM": 300,
         "ShootAimedAnim": "",
         "ShootAnim": "b_attack",
         "ShootEmptyAnim": "",
         "ShootSound": "weapons/deagle/deagle357_fire1.sound",
-        "Spread": 0.08,
-        "VMParticleScale": 1,
-        "WMParticleScale": 1
+        "Spread": 0.08
       },
       {
         "__type": "GeneralGame.PistolSilencerBG",
@@ -171,7 +170,7 @@
       {
         "__type": "Sandbox.SkinnedModelRenderer",
         "__guid": "9d529283-654e-4a5b-9f49-6a3a1a778660",
-        "BodyGroups": 18446744073709551615,
+        "BodyGroups": 337,
         "CreateBoneObjects": false,
         "Model": "weapons/deagle/world/deagle357.vmdl",
         "RenderType": "On",

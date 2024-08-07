@@ -17,7 +17,7 @@ public partial class Weapon : Component
 	float playerFOVSpeed = 1;
 	float targetPlayerFOV = Preferences.FieldOfView;
 	float finalPlayerFOV = Preferences.FieldOfView;
-	
+
 	protected override void OnAwake()
 	{
 		//Tags.Add( TagsHelper.Weapon );
@@ -29,12 +29,13 @@ public partial class Weapon : Component
 		InitialSecondaryStats = StatsModifier.FromShootInfo( Primary );
 	}
 
-
 	[Broadcast]
 	public void Deploy(PlayerBase player)
 	{
 		Owner = player;
-		
+		Owner.AnimationHelper.HoldType = HoldType;
+		Owner.AnimationHelper.Target.Set( "b_deploy", true );
+
 		GameObject.Enabled = true;
 		
 		SetupModels();
@@ -76,9 +77,6 @@ public partial class Weapon : Component
 	{
 		
 		var delay = 0f;
-
-		
-		
 
 		delay = DrawTime;
 
@@ -125,12 +123,11 @@ public partial class Weapon : Component
 
 	protected override void OnUpdate()
 	{
-		if (Owner == null) return;
+		
 
-		UpdateModels();
+		if (Owner == null || IsProxy) return;
 
-
-
+		
 		Owner.ApplyFov( targetPlayerFOV - Preferences.FieldOfView );
 
 		targetPlayerFOV = Preferences.FieldOfView;
@@ -160,74 +157,63 @@ public partial class Weapon : Component
 			}
 		}
 
-		if ( !IsProxy )
+		
+		if ( IsDeploying ) return;
+
+		// Customization
+		if ( !IsScoping && !IsAiming && Input.Pressed( InputButtonHelper.Castomization ) && Attachments.Count > 0 )
 		{
-			if ( IsDeploying ) return;
+			if ( !IsCustomizing )
+				OpenCustomizationMenu();
+			else
+				CloseCustomizationMenu();
 
-			// Customization
-			if ( !IsScoping && !IsAiming && Input.Pressed( InputButtonHelper.Castomization ) && Attachments.Count > 0 )
-			{
-				if ( !IsCustomizing )
-					OpenCustomizationMenu();
-				else
-					CloseCustomizationMenu();
-
-				IsCustomizing = !IsCustomizing;
-			}
-
-			// Don't cancel reload when customizing
-			if ( IsCustomizing && !IsReloading ) return;
-
-			IsAiming = !Owner.IsRunning && Input.Down( InputButtonHelper.SecondaryAttack );
-
-			if ( IsScoping )
-				Owner.InputSensitivity = ScopeInfo.AimSensitivity;
-			else if ( IsAiming )
-				Owner.InputSensitivity = AimSensitivity;
-
-			ResetBurstFireCount( Primary, InputButtonHelper.PrimaryAttack );
-			ResetBurstFireCount( Secondary, InputButtonHelper.SecondaryAttack );
-			BarrelHeatCheck();
-
-			var shouldTuck = ShouldTuck();
-
-			if ( CanPrimaryShoot() && !shouldTuck )
-			{
-				if ( IsReloading && ShellReloading && ShellReloadingShootCancel )
-					CancelShellReload();
-
-				TimeSincePrimaryShoot = 0;
-				Shoot( Primary, true );
-			}
-			else if ( CanSecondaryShoot() && !shouldTuck )
-			{
-				TimeSinceSecondaryShoot = 0;
-				Shoot( Secondary, false );
-			}
-			else if ( Input.Down( InputButtonHelper.Reload ) )
-			{
-				if ( ShellReloading )
-					OnShellReload();
-				else
-					Reload();
-			}
-
-			if ( IsReloading && TimeSinceReload >= 0 )
-			{
-				if ( ShellReloading )
-					OnShellReloadFinish();
-				else
-					OnReloadFinish();
-			}
+			IsCustomizing = !IsCustomizing;
 		}
-	}
 
-	void UpdateModels()
-	{
+		// Don't cancel reload when customizing
+		if ( IsCustomizing && !IsReloading ) return;
 
-		if ( !IsProxy && WorldModelRenderer is not null )
+		IsAiming = !Owner.IsRunning && Input.Down( InputButtonHelper.SecondaryAttack );
+
+		if ( IsScoping )
+			Owner.InputSensitivity = ScopeInfo.AimSensitivity;
+		else if ( IsAiming )
+			Owner.InputSensitivity = AimSensitivity;
+
+		ResetBurstFireCount( Primary, InputButtonHelper.PrimaryAttack );
+		ResetBurstFireCount( Secondary, InputButtonHelper.SecondaryAttack );
+		BarrelHeatCheck();
+
+		var shouldTuck = ShouldTuck();
+
+		if ( CanPrimaryShoot() && !shouldTuck )
 		{
-			WorldModelRenderer.RenderType = Owner.IsFirstPerson ? ModelRenderer.ShadowRenderType.ShadowsOnly : ModelRenderer.ShadowRenderType.On;
+			if ( IsReloading && ShellReloading && ShellReloadingShootCancel )
+				CancelShellReload();
+
+			TimeSincePrimaryShoot = 0;
+			Shoot( Primary, true );
+		}
+		else if ( CanSecondaryShoot() && !shouldTuck )
+		{
+			TimeSinceSecondaryShoot = 0;
+			Shoot( Secondary, false );
+		}
+		else if ( Input.Down( InputButtonHelper.Reload ) )
+		{
+			if ( ShellReloading )
+				OnShellReload();
+			else
+				Reload();
+		}
+
+		if ( IsReloading && TimeSinceReload >= 0 )
+		{
+			if ( ShellReloading )
+				OnShellReloadFinish();
+			else
+				OnReloadFinish();
 		}
 	}
 
@@ -237,16 +223,6 @@ public partial class Weapon : Component
 		var sound = ResourceLibrary.Get<SoundEvent>( resourceID );
 		if ( sound is null ) return;
 
-		var isScreenSound = CanSeeViewModel;
-		sound.UI = isScreenSound;
-
-		if ( isScreenSound )
-		{
-			Sound.Play( sound );
-		}
-		else
-		{
-			Sound.Play( sound, Transform.Position );
-		}
+		Sound.Play( sound, Transform.Position );
 	}
 }

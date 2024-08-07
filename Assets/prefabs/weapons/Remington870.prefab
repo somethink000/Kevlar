@@ -5,6 +5,8 @@
     "Name": "remington870",
     "Tags": "weapon",
     "NetworkMode": 1,
+    "NetworkOrphaned": 3,
+    "OwnerTransfer": 0,
     "Components": [
       {
         "__type": "GeneralGame.Weapon",
@@ -31,7 +33,7 @@
           "Angle": "-2.31,27.25,10",
           "Pos": "4.45,0,0.61"
         },
-        "DeploySound": "sounds/swb/animations/swb_deploy.sound",
+        "DeploySound": "sounds/weapons/sources/weapon_deploy.sound",
         "DisplayName": "Remington 870",
         "DrawEmptyTime": -1,
         "DrawTime": 0.7,
@@ -84,15 +86,14 @@
         "HitFlinch": 2.5,
         "InfiniteAmmo": "disabled",
         "MuzzleFlashParticle": "particles/swb/muzzle/flash.vpcf",
+        "ParticleScale": 1,
         "Recoil": 5,
         "RPM": 100,
         "ShootAimedAnim": "",
         "ShootAnim": "fire",
         "ShootEmptyAnim": "",
         "ShootSound": "weapons/remington/rem870_tact_fire1.sound",
-        "Spread": 0.14,
-        "VMParticleScale": 1,
-        "WMParticleScale": 1
+        "Spread": 0.14
       },
       {
         "__type": "GeneralGame.ReflexSightBG",

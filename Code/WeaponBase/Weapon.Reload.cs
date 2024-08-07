@@ -118,7 +118,7 @@ public partial class Weapon
 		// Eject shell
 		await GameTask.DelaySeconds( BoltBackEjectDelay );
 		if ( !IsValid ) return;
-		var scale = CanSeeViewModel ? Primary.VMParticleScale : Primary.WMParticleScale;
+		var scale = Primary.ParticleScale;
 		CreateParticle( Primary.BulletEjectParticle, "ejection_point", scale );
 
 		// Finished

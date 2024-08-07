@@ -5,6 +5,8 @@
     "Name": "lr300",
     "Tags": "weapon",
     "NetworkMode": 1,
+    "NetworkOrphaned": 3,
+    "OwnerTransfer": 0,
     "Components": [
       {
         "__type": "GeneralGame.Weapon",
@@ -31,7 +33,7 @@
           "Angle": "-0.71,44.52,10",
           "Pos": "5.755,-1.2,1.592"
         },
-        "DeploySound": "sounds/swb/animations/swb_deploy.sound",
+        "DeploySound": "sounds/weapons/sources/weapon_deploy.sound",
         "DisplayName": "LR 300",
         "DrawEmptyTime": -1,
         "DrawTime": 0.6,
@@ -63,8 +65,6 @@
         "ShellReloadStartTime": 0,
         "Slot": 5,
         "TuckRange": 30,
-        "ViewModel": "weapons/lr300/view/v_lr300.vmdl",
-        "ViewModelHands": "weapons/handes/pmm_ref_hand_blue.vmdl",
         "WorldModel": "weapons/lr300/world/w_lr300.vmdl"
       },
       {
@@ -86,15 +86,14 @@
         "HitFlinch": 2,
         "InfiniteAmmo": "disabled",
         "MuzzleFlashParticle": "particles/swb/muzzle/flash.vpcf",
+        "ParticleScale": 1,
         "Recoil": 3,
         "RPM": 550,
         "ShootAimedAnim": "",
         "ShootAnim": "b_attack",
         "ShootEmptyAnim": "",
         "ShootSound": "weapons/lr300/lr300_fire1.sound",
-        "Spread": 0.05,
-        "VMParticleScale": 1,
-        "WMParticleScale": 1
+        "Spread": 0.05
       },
       {
         "__type": "Sandbox.ModelCollider",

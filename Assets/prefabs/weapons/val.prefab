@@ -5,6 +5,8 @@
     "Name": "val",
     "Tags": "weapon",
     "NetworkMode": 1,
+    "NetworkOrphaned": 3,
+    "OwnerTransfer": 0,
     "Components": [
       {
         "__type": "GeneralGame.Weapon",
@@ -84,15 +86,14 @@
         "HitFlinch": 2,
         "InfiniteAmmo": "disabled",
         "MuzzleFlashParticle": "particles/swb/muzzle/flash.vpcf",
+        "ParticleScale": 1,
         "Recoil": 3,
         "RPM": 700,
         "ShootAimedAnim": "",
         "ShootAnim": "b_attack",
         "ShootEmptyAnim": "",
         "ShootSound": "weapons/vss/asval_suppressed_fire1.sound",
-        "Spread": 0.08,
-        "VMParticleScale": 1,
-        "WMParticleScale": 1
+        "Spread": 0.08
       },
       {
         "__type": "Sandbox.ModelCollider",
@@ -118,15 +119,15 @@
         "__guid": "3a0c394e-c181-4618-9663-0477280e5866",
         "Count": 0,
         "Icon": {
-          "Model": "weapons/ak74u/w/w_ak74u.vmdl",
+          "Model": "weapons/vss/w/asval.vmdl",
           "MaterialGroup": "",
           "Colour": "1,1,1,1",
           "Position": "10,2,-2",
           "Rotation": "0.3265056,0.3265055,-0.6272115,0.6272113",
-          "Guid": "31da33de-3e93-4b08-8312-3e3d054fc5b8"
+          "Guid": "79987ae4-29dd-4887-81c8-4175b770f81f"
         },
         "MaxStack": 0,
-        "Name": "ASVAL",
+        "Name": "AS VAL",
         "Slots": [
           "FirstWeapon",
           "SeccondWeapon"

@@ -161,7 +161,7 @@
     private void StartGame()
     {
         if (CurrentMap == null) return;
-        if (curCategoty.entry.ClassName == "DeathmatchGame" && Scene.GetAllComponents<PlayerBase>().Count() < 2) return;
+       // if (curCategoty.entry.ClassName == "DeathmatchGame" && Scene.GetAllComponents<PlayerBase>().Count() < 2) return;
 
         Game.ActiveScene.Load(CurrentMap.map.SceneFile);
        

@@ -20,7 +20,6 @@ public class LobbyGame : BaseGame
 	{
 		base.InitPlayer( player );
 
-		Log.Info("eefef");
 	}
 
 

@@ -150,9 +150,6 @@ public partial class Weapon
 	/// <summary>If the player is crouching</summary>
 	public bool IsCrouching => Owner.IsCrouching;
 
-	/// <summary>Is the view model visible</summary>
-	public bool CanSeeViewModel => !IsProxy && Owner.IsFirstPerson;
-
 	public bool IsEmpty = false;
 
 	/// <summary>If the weapon is being reloaded</summary>

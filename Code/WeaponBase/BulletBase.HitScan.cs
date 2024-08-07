@@ -53,7 +53,7 @@ public class HitScanBullet : IBulletBase
 
 	void TracerEffects( Weapon weapon, ShootInfo shootInfo, Vector3 endPos )
 	{
-		var scale = weapon.CanSeeViewModel ? shootInfo.VMParticleScale : shootInfo.WMParticleScale;
+		var scale = shootInfo.ParticleScale;
 		var muzzleTransform = weapon.GetMuzzleTransform();
 
 		if ( !muzzleTransform.HasValue ) return;

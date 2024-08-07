@@ -158,7 +158,7 @@ public partial class Weapon
 
 		// Weapon
 		var shootInfo = GetShootInfo( isPrimary );
-		var scale = CanSeeViewModel ? shootInfo.VMParticleScale : shootInfo.WMParticleScale;
+		var scale = shootInfo.ParticleScale;
 		var muzzleTransform = GetMuzzleTransform();
 
 		// Bullet eject
@@ -195,7 +195,7 @@ public partial class Weapon
 
 		// Barrel smoke
 		if ( !IsProxy && shootInfo.BarrelSmokeParticle is not null && barrelHeat >= shootInfo.ClipSize * 0.75 )
-			CreateParticle( shootInfo.BarrelSmokeParticle, muzzleTransform.Value, shootInfo.VMParticleScale, ( particles ) => ParticleToMuzzlePos( particles ) );
+			CreateParticle( shootInfo.BarrelSmokeParticle, muzzleTransform.Value, shootInfo.ParticleScale, ( particles ) => ParticleToMuzzlePos( particles ) );
 	}
 
 	void ParticleToMuzzlePos( SceneParticles particles )
@@ -287,9 +287,7 @@ public partial class Weapon
 		particles?.SetControlPoint( 0, transform.Rotation );
 		particles?.SetNamedValue( "scale", scale );
 
-		if ( CanSeeViewModel )
-			particles.Tags.Add( TagsHelper.ViewModel );
-
+		
 		particles?.PlayUntilFinished( Task, OnFrame );
 	}
 }

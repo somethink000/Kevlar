@@ -24,12 +24,8 @@ public partial class Weapon
 			effectAttachment = activeAttachment.EffectAttachmentOrBone;
 			Transform? effectBoneTransform = null;
 
-			// Custom models will not use attachments but bones instead to position effects
-			if ( CanSeeViewModel && activeAttachment.ViewModelRenderer is not null )
-			{
-				effectBoneTransform = activeAttachment.ViewModelRenderer.SceneModel.GetBoneWorldTransform( effectAttachment );
-			}
-			else if ( !CanSeeViewModel && activeAttachment.WorldModelRenderer is not null )
+
+			if ( activeAttachment.WorldModelRenderer is not null )
 			{
 				effectBoneTransform = activeAttachment.WorldModelRenderer.SceneModel.GetBoneWorldTransform( effectAttachment );
 			}

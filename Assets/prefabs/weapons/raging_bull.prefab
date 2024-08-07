@@ -4,6 +4,8 @@
     "Flags": 0,
     "Name": "raging_bull",
     "NetworkMode": 1,
+    "NetworkOrphaned": 3,
+    "OwnerTransfer": 0,
     "Components": [
       {
         "__type": "Sandbox.ModelCollider",
@@ -55,7 +57,7 @@
           "Angle": "-20.66,61.67,14.4",
           "Pos": "7.01,-4.46,0.982"
         },
-        "DeploySound": "sounds/swb/animations/swb_deploy.sound",
+        "DeploySound": "sounds/weapons/sources/weapon_deploy.sound",
         "DisplayName": "Colt M1911",
         "DrawEmptyTime": -1,
         "DrawTime": 0.4,
@@ -87,8 +89,6 @@
         "ShellReloadStartTime": 0,
         "Slot": 1,
         "TuckRange": 30,
-        "ViewModel": "weapons/rag_bull/view/v_rag_bull.vmdl",
-        "ViewModelHands": "weapons/handes/pmm_ref_hand_blue.vmdl",
         "WorldModel": "weapons/rag_bull/world/w_rag_bull.vmdl"
       },
       {
@@ -110,15 +110,14 @@
         "HitFlinch": 1.25,
         "InfiniteAmmo": "reserve",
         "MuzzleFlashParticle": "particles/swb/muzzle/flash.vpcf",
+        "ParticleScale": 1,
         "Recoil": 6,
         "RPM": 500,
         "ShootAimedAnim": "",
         "ShootAnim": "b_attack",
         "ShootEmptyAnim": "",
         "ShootSound": "weapons/rag_bull/ragingbull_fire1.sound",
-        "Spread": 0.08,
-        "VMParticleScale": 1,
-        "WMParticleScale": 1
+        "Spread": 0.08
       },
       {
         "__type": "GeneralGame.ReflexSightBG",

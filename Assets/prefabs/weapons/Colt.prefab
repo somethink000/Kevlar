@@ -4,6 +4,8 @@
     "Flags": 0,
     "Name": "colt",
     "NetworkMode": 1,
+    "NetworkOrphaned": 3,
+    "OwnerTransfer": 0,
     "Components": [
       {
         "__type": "Sandbox.ModelCollider",
@@ -49,7 +51,7 @@
           "Angle": "-22.88,42.22,14.4",
           "Pos": "9.19,-4.46,2.16"
         },
-        "DeploySound": "sounds/swb/animations/swb_deploy.sound",
+        "DeploySound": "sounds/weapons/sources/weapon_deploy.sound",
         "DisplayName": "Colt M1911",
         "DrawEmptyTime": -1,
         "DrawTime": 0.4,
@@ -89,7 +91,7 @@
         "Ammo": 7,
         "AmmoType": "pistol",
         "BarrelSmokeParticle": "particles/swb/muzzle/barrel_smoke.vpcf",
-        "BulletEjectParticle": "particles/swb/bullet_hulls/5.45_shell.vpcf",
+        "BulletEjectParticle": "particles/swb/bullet_hulls/9mm.vpcf",
         "Bullets": 1,
         "BulletSize": 2,
         "BulletTracerChance": 0.33,
@@ -102,15 +104,14 @@
         "HitFlinch": 1.25,
         "InfiniteAmmo": "reserve",
         "MuzzleFlashParticle": "particles/swb/muzzle/flash.vpcf",
+        "ParticleScale": 1,
         "Recoil": 4,
         "RPM": 470,
         "ShootAimedAnim": "",
         "ShootAnim": "b_attack",
         "ShootEmptyAnim": "",
         "ShootSound": "weapons/coolt/1911_fire1.sound",
-        "Spread": 0.08,
-        "VMParticleScale": 1,
-        "WMParticleScale": 1
+        "Spread": 0.08
       },
       {
         "__type": "GeneralGame.PistolSilencerBG",
@@ -169,15 +170,48 @@
       {
         "__type": "Sandbox.SkinnedModelRenderer",
         "__guid": "9d529283-654e-4a5b-9f49-6a3a1a778660",
-        "BodyGroups": 18446744073709551615,
-        "CreateBoneObjects": false,
+        "BodyGroups": 1361,
+        "CreateBoneObjects": true,
         "Model": "weapons/coolt/world/w_m1911.vmdl",
         "RenderType": "On",
         "Tint": "1,1,1,1",
         "UseAnimGraph": true
       }
     ],
-    "Children": [],
+    "Children": [
+      {
+        "__guid": "4e25c89b-9dfc-47f6-a70c-e389fa6ea58a",
+        "Flags": 4,
+        "Name": "bip01_r_hand",
+        "Enabled": true,
+        "Children": [
+          {
+            "__guid": "9c3f2be0-366e-4944-a2bb-d7e54c24a30a",
+            "Flags": 4,
+            "Name": "muzzle",
+            "Enabled": true
+          },
+          {
+            "__guid": "5a5b3fbc-9222-446e-b7cb-ae73cbcc9c0d",
+            "Flags": 4,
+            "Name": "eject",
+            "Enabled": true
+          }
+        ]
+      },
+      {
+        "__guid": "8957bc01-9110-4a6e-a4d9-85e5830a84a2",
+        "Flags": 4,
+        "Name": "hold_R",
+        "Enabled": true
+      },
+      {
+        "__guid": "5f58347e-d3df-46eb-b0cd-3afc0abb7dca",
+        "Flags": 4,
+        "Name": "sight",
+        "Enabled": true
+      }
+    ],
     "__variables": []
   },
   "ShowInMenu": false,
