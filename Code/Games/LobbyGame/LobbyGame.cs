@@ -16,6 +16,16 @@ public class LobbyGame : BaseGame
 
 	}
 
+	[Broadcast]
+	public override void ChangeGame()
+	{
+		if (!IsProxy)
+		{
+			PlayerBase.Save();
+		}
+		
+	}
+
 	public override void InitPlayer( PlayerBase player )
 	{
 		base.InitPlayer( player );

@@ -4,7 +4,7 @@ namespace GeneralGame;
 
 public partial class BaseInventory : Component
 {
-	[Property] public int MAX_SLOTS { get; set; } = 9;
+	public virtual int MAX_SLOTS { get; set; } = 9;
 	public IReadOnlyList<ItemComponent> BackpackItems => _backpackItems;
 	protected readonly List<ItemComponent> _backpackItems;
 
@@ -32,7 +32,6 @@ public partial class BaseInventory : Component
 	public BaseInventory()
 	{
 		_backpackItems = new List<ItemComponent>( new ItemComponent[MAX_SLOTS] );
-			
 	}
 
 

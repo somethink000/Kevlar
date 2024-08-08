@@ -6,7 +6,7 @@ namespace GeneralGame;
 public partial class Inventory : BaseInventory
 {
 	[Property] public PlayerBase Player { get; set; }
-	
+	public override int MAX_SLOTS { get; set; } = 10;
 	public LootItem targetStorage { get; set; }
 
 	public int MAX_WEIGHT_IN_GRAMS = 30000;
@@ -262,6 +262,7 @@ public partial class Inventory : BaseInventory
 	{
 		base.GiveBackpackItem( item , index );
 		Weight = GetTotalWeightInGrams();
+		
 	}
 
 	/// <summary>
@@ -309,7 +310,7 @@ public partial class Inventory : BaseInventory
 	
 	public int GetTotalWeightInGrams()
 	{
-		
+
 		return _backpackItems.Sum( i => i?.totalWeight ?? 0 ) + _equippedItems.Sum( i => i?.totalWeight ?? 0 );
 	}
 

@@ -4,7 +4,6 @@
     "Flags": 0,
     "Name": "m110",
     "Tags": "weapon",
-    "NetworkMode": 1,
     "NetworkOrphaned": 3,
     "OwnerTransfer": 0,
     "Components": [

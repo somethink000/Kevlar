@@ -4,7 +4,6 @@
     "Flags": 0,
     "Name": "val",
     "Tags": "weapon",
-    "NetworkMode": 1,
     "NetworkOrphaned": 3,
     "OwnerTransfer": 0,
     "Components": [
@@ -79,7 +78,7 @@
         "BulletTracerChance": 0.33,
         "BulletTracerParticle": "particles/swb/tracer/tracer.vpcf",
         "ClipSize": 20,
-        "Damage": 15,
+        "Damage": 40,
         "DryShootSound": "sounds/weapons/sources/empty_sniperrifles.sound",
         "FiringType": "auto",
         "Force": 3,

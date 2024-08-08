@@ -1,5 +1,5 @@
 {
-  "__guid": "9571d333-4603-4628-8ab2-fd1649f1c05e",
+  "__guid": "4cb361c9-2b9c-494e-bae6-570bd172b67c",
   "GameObjects": [
     {
       "__guid": "056fe911-1848-492b-8745-458ea477143c",
@@ -760,6 +760,27 @@
       ]
     },
     {
+      "__guid": "205e0a72-fb6f-43ec-b5e4-fe1367d86748",
+      "Flags": 0,
+      "Name": "Text (3)",
+      "Position": "336,300,424",
+      "Rotation": "0,0,-0.7071067,-0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "36fe9b08-18b4-43cb-9825-e5bfcf38e951",
+          "Color": "0,0,0,1",
+          "FontFamily": "Zekton",
+          "FontSize": 32.58,
+          "FontWeight": 800,
+          "Scale": 0.18,
+          "Text": "Tab to open inventory",
+          "TextAlignment": "Center"
+        }
+      ]
+    },
+    {
       "__guid": "b4b89266-5a29-4f60-adb6-92d218bdd1b3",
       "Flags": 0,
       "Name": "Text (2)",
@@ -775,7 +796,7 @@
           "FontSize": 32.58,
           "FontWeight": 800,
           "Scale": 0.18,
-          "Text": "Press E on this to manage inventory or change loadout",
+          "Text": "Work in progress. I have realy crazy ideas",
           "TextAlignment": "Center"
         }
       ]
@@ -802,44 +823,22 @@
           "IsTrigger": false,
           "Model": "models/verstak.vmdl",
           "Static": false
+        },
+        {
+          "__type": "GeneralGame.EquipmentTable",
+          "__guid": "71479730-5aa3-487a-9d43-a696662f079d"
         }
       ]
     },
     {
-      "__guid": "91450b78-3d04-47cf-b74c-b1210e3cc866",
+      "__guid": "f6f6a69c-d273-4d56-8e70-dc64fe1b1e45",
       "Flags": 0,
       "Name": "glock",
-      "Position": "556,84,336",
+      "Position": "348,204,336",
       "Enabled": true,
-      "NetworkMode": 1,
       "NetworkOrphaned": 3,
       "OwnerTransfer": 0,
       "__Prefab": "prefabs/weapons/glock.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "b6ca8c33-bafb-491b-b657-a0b33c898eff",
-      "Flags": 0,
-      "Name": "pm",
-      "Position": "560,52,336",
-      "Enabled": true,
-      "NetworkMode": 1,
-      "NetworkOrphaned": 3,
-      "OwnerTransfer": 0,
-      "__Prefab": "prefabs/weapons/pm.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "11e9f084-522c-49f4-932c-0fb0f04d4a8b",
-      "Flags": 0,
-      "Name": "geagelol",
-      "Position": "549.2172,58.45071,348.2678",
-      "Rotation": "0,-0.0000001192093,0.7434301,-0.6688136",
-      "Enabled": true,
-      "NetworkMode": 1,
-      "NetworkOrphaned": 3,
-      "OwnerTransfer": 0,
-      "__Prefab": "prefabs/weapons/geagelol.prefab",
       "__PrefabVariables": {}
     }
   ],

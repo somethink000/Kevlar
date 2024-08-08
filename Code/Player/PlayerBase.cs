@@ -15,16 +15,20 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IHealthCom
 	[Property] public PanelComponent RootDisplay { get; set; }
     [Property] public Inventory Inventory { get; set; }
 	[Property] public Voice Voice { get; set; }
-
+	private float SaveDelay = 60f;
+	private TimeSince SinceSave { get; set; }
 
 	public int MaxCarryWeight { get; set; }
 	public bool IsEncumbered => Inventory.Weight > MaxCarryWeight;
 
+	public int Level;
+	public int Experience;
+	public bool DropInvent;
 	public BaseGame CurrentGame { get; set; }
 	//Guid IPlayerBase.Id { get => GameObject.Id; }
 
 
-	protected override void OnAwake()
+protected override void OnAwake()
 	{
 		CurrentGame = Scene.GetAllComponents<BaseGame>().First();
 		CurrentGame.InitPlayer( this );
@@ -44,7 +48,6 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IHealthCom
 	protected override void OnStart()
 	{
 
-
 		if ( IsProxy )
 		{
 			if ( Camera is not null )
@@ -53,6 +56,10 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IHealthCom
 
 		if ( !IsProxy )
 		{
+			Setup( this );
+			SinceSave = 0;
+			Save();
+
 			Respawn();
 		}
 
@@ -73,6 +80,13 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IHealthCom
 
 		MoveToSpawnPoint();
 		
+	}
+
+
+	public void GoodGameEnding()
+	{
+		DropInvent = false;
+		Save();
 	}
 
 	private void MoveToSpawnPoint()
@@ -122,6 +136,12 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IHealthCom
 		
 		OnCameraUpdate();
 		HandleFlinch();
+
+		if ( !IsProxy && SinceSave > SaveDelay )
+		{
+			SinceSave = 0;
+			Save();
+		}
 
 		if ( !IsProxy && IsAlive && IsFirstPerson )
 		{

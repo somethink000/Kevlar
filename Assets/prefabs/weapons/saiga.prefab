@@ -2,7 +2,7 @@
   "RootObject": {
     "__guid": "a3b668c3-acfb-4043-8f7c-93b7df84b5c8",
     "Flags": 0,
-    "Name": "ak74u",
+    "Name": "saiga",
     "Tags": "weapon",
     "NetworkOrphaned": 3,
     "OwnerTransfer": 0,
@@ -64,21 +64,21 @@
         "ShellReloadStartTime": 0,
         "Slot": 5,
         "TuckRange": 30,
-        "WorldModel": "weapons/ak74u/w/w_ak74u.vmdl"
+        "WorldModel": "weapons/saiga/w/w_saiga.vmdl"
       },
       {
         "__type": "GeneralGame.ShootInfo",
         "__guid": "ff1c8c67-10c8-4767-925a-0d606a3845ff",
-        "Ammo": 30,
+        "Ammo": 8,
         "AmmoType": "rifle",
         "BarrelSmokeParticle": "particles/swb/muzzle/barrel_smoke.vpcf",
-        "BulletEjectParticle": "particles/swb/bullet_hulls/9mm.vpcf",
-        "Bullets": 1,
+        "BulletEjectParticle": "particles/swb/bullet_hulls/buck_shot.vpcf",
+        "Bullets": 10,
         "BulletSize": 2,
         "BulletTracerChance": 0.33,
         "BulletTracerParticle": "particles/swb/tracer/tracer.vpcf",
-        "ClipSize": 30,
-        "Damage": 30,
+        "ClipSize": 8,
+        "Damage": 8,
         "DryShootSound": "sounds/swb/clip/swb_rifle.empty.sound",
         "FiringType": "auto",
         "Force": 3,
@@ -86,19 +86,19 @@
         "InfiniteAmmo": "disabled",
         "MuzzleFlashParticle": "particles/swb/muzzle/flash.vpcf",
         "ParticleScale": 1,
-        "Recoil": 3,
-        "RPM": 600,
+        "Recoil": 5,
+        "RPM": 300,
         "ShootAimedAnim": "",
         "ShootAnim": "b_attack",
         "ShootEmptyAnim": "",
-        "ShootSound": "weapons/ak74u/aks74u_fire1.sound",
-        "Spread": 0.08
+        "ShootSound": "weapons/saiga/saiga12k_fire1.sound",
+        "Spread": 0.2
       },
       {
         "__type": "Sandbox.ModelCollider",
         "__guid": "df9cf0b4-81de-4069-b711-37d180f9a241",
         "IsTrigger": false,
-        "Model": "weapons/ak74u/w/w_ak74u.vmdl",
+        "Model": "weapons/saiga/w/w_saiga.vmdl",
         "Static": false
       },
       {
@@ -126,7 +126,7 @@
           "Guid": "31da33de-3e93-4b08-8312-3e3d054fc5b8"
         },
         "MaxStack": 0,
-        "Name": "Ak74u",
+        "Name": "Saiga",
         "Slots": [
           "FirstWeapon",
           "SeccondWeapon"
@@ -137,15 +137,7 @@
         "__type": "GeneralGame.PSB5",
         "__guid": "b184ea4e-24d3-422e-9752-bc0cb36959a1",
         "EffectAttachmentOrBone": "muzzle_silenced",
-        "ShootSound": "weapons/ak74u/ak74_suppressed_fire1.sound",
-        "ViewModelScale": "1,1,1",
-        "WorldModelScale": "1,1,1"
-      },
-      {
-        "__type": "GeneralGame.Surfire",
-        "__guid": "8ef0bd52-4d3b-4604-8249-efb1876471af",
-        "EffectAttachmentOrBone": "muzzle_silenced",
-        "ShootSound": "weapons/ak74u/ak74_suppressed_fire1.sound",
+        "ShootSound": "weapons/saiga/saiga12k_suppressed_fire1.sound",
         "ViewModelScale": "1,1,1",
         "WorldModelScale": "1,1,1"
       },
@@ -174,9 +166,9 @@
       {
         "__type": "Sandbox.SkinnedModelRenderer",
         "__guid": "d41d4f52-dfb5-4751-b547-a4c1433473ea",
-        "BodyGroups": 1321,
+        "BodyGroups": 85,
         "CreateBoneObjects": false,
-        "Model": "weapons/ak74u/w/w_ak74u.vmdl",
+        "Model": "weapons/saiga/w/w_saiga.vmdl",
         "RenderType": "On",
         "Tint": "1,1,1,1",
         "UseAnimGraph": true

@@ -161,23 +161,16 @@
     private void StartGame()
     {
         if (CurrentMap == null) return;
-       // if (curCategoty.entry.ClassName == "DeathmatchGame" && Scene.GetAllComponents<PlayerBase>().Count() < 2) return;
-
+        // if (curCategoty.entry.ClassName == "DeathmatchGame" && Scene.GetAllComponents<PlayerBase>().Count() < 2) return;
+        PlayerBase.GetLocal().CurrentGame.ChangeGame();
         Game.ActiveScene.Load(CurrentMap.map.SceneFile);
-       
+        
     }
    
 
     private void OpenLobby(LobbyInformation lobby)
     {
         GameNetworkSystem.Connect(lobby.LobbyId);
-    }
-
-
-    public void NewGame(string check)
-    {
-        if (check == "none") return;
-        GameManager.ActiveScene.LoadFromFile("scenes/survival/out_of_gas.scene");
     }
 
     protected override int BuildHash() => HashCode.Combine(RealTime.Now);

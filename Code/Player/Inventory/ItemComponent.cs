@@ -49,7 +49,7 @@ public class ItemComponent : Component
 
 	private int _maxStack;
 
-	[Property, Sync, HideIf( "MaxStack", 0 )] public int Count { get; set; }
+	[Property, Sync, HideIf( "MaxStack", 0 ), TargetSave( IgnoreIf = 0 )] public int Count { get; set; }
 	[Sync] public string Prefab { get; private set; }
 
 	public Texture IconTextureEquip => Texture.Load( FileSystem.Mounted, Icon.EquipPath );
@@ -112,8 +112,8 @@ public class ItemComponent : Component
 
 	protected override void OnStart()
 	{
-		/*GameObject.SetupNetworking();*/
-
+		GameObject.SetupNetworking();
+		
 		// Pickup
 		var interactions = Components.GetOrCreate<Interactions>();
 		interactions.AddInteraction( new Interaction()

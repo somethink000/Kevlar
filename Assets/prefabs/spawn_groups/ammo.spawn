@@ -1,0 +1,10 @@
+{
+  "SpawnableItems": [
+    "prefabs/items/ammo_pistol.prefab",
+    "prefabs/items/ammo_rifle.prefab",
+    "prefabs/items/ammo_shotgun.prefab",
+    "prefabs/items/ammo_sniper.prefab"
+  ],
+  "__references": [],
+  "__version": 0
+}

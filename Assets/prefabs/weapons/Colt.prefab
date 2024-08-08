@@ -3,7 +3,6 @@
     "__guid": "75e8dbf9-98c5-4504-a879-6f6da3f32a1c",
     "Flags": 0,
     "Name": "colt",
-    "NetworkMode": 1,
     "NetworkOrphaned": 3,
     "OwnerTransfer": 0,
     "Components": [
@@ -97,7 +96,7 @@
         "BulletTracerChance": 0.33,
         "BulletTracerParticle": "particles/swb/tracer/tracer.vpcf",
         "ClipSize": 7,
-        "Damage": 30,
+        "Damage": 35,
         "DryShootSound": "sounds/swb/clip/swb_pistol.empty.sound",
         "FiringType": "semi",
         "Force": 3,

@@ -17,6 +17,12 @@ namespace GeneralGame
 		
 		}
 
+		[Broadcast]
+		public virtual void ChangeGame( )
+		{
+			
+		}
+
 		public virtual void OnPlayerDeath( PlayerBase player, PlayerBase killer = null )
 		{
 

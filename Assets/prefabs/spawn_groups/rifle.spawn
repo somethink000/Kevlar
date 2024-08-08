@@ -1,0 +1,9 @@
+{
+  "SpawnableItems": [
+    "prefabs/weapons/ak74u.prefab",
+    "prefabs/weapons/lr300.prefab",
+    "prefabs/weapons/val.prefab"
+  ],
+  "__references": [],
+  "__version": 0
+}

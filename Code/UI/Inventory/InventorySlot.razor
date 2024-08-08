@@ -88,20 +88,22 @@
     // Can the draggable (DraggableItem.Current) drop here?
     private bool CanDraggableDrop()
     {
+
         if ( CurrentDraggable == null )
             return false; // No draggable
 
         if ( BackpackSlotIndex != null )
             return true; // Backpack slots allow everything!
 
+
         if ( EquipSlotIndex != null )
         {
             if ( CurrentDraggable.ItemComponent is not ItemEquipment itemEquipment )
                 return false; // Can't drop into this equipment slot, the item isn't equipment!
 
-            
+
             return itemEquipment.Slots.Contains(EquipSlotIndex.Value);
-            
+
         }
 
         return false;
@@ -111,8 +113,8 @@
     {
 
         if ( Item is not null )
-            
-        ContextMenu.Open( Item );
+
+            ContextMenu.Open( Item );
     }
 
     private async void OnItemHover()
@@ -153,7 +155,7 @@
         StateHasChanged();
         throw new Exception( "EquipSlotIndex or BackpackSlotIndex needs to be provided to InventorySlot!" );
     }
-    
+
     /// Is mouse inside the slot bounding box?
     public bool IsHoveredByMouse() => Box.Rect.IsInside( Mouse.Position );
 
@@ -201,7 +203,7 @@
     {
         var fromSlot = this;
         var inventory = PlayerBase.GetLocal().Inventory;
-        
+
         // From backpack slot.
         if ( fromSlot.BackpackSlotIndex is not null )
         {
@@ -295,7 +297,7 @@
             _childDraggableTrashTimer = TimeUntilChildDraggableCanBeTrashed;
 
             ChildDraggable.SetClass( "can-drop", true );
-
+            
             //Check weapon slot TODO MAKE IT BETER
             if (targetSlot.EquipSlotIndex != null)
             {

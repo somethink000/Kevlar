@@ -1,6 +1,7 @@
 ﻿
 
 using Sandbox;
+using System.Numerics;
 using System.Runtime.InteropServices;
 
 namespace GeneralGame;
@@ -79,13 +80,18 @@ public class ZombieSurvivalGame : BaseGame
 	public void VaveEnd()
 	{
 		var plys = Scene.GetAllComponents<PlayerBase>().Where( x => !x.IsAlive );
-
+		bool end = CurVave >= Vaves.Count;
 		foreach ( var ply in plys )
 		{
 			ply.Respawn();
+
+			if ( end )
+			{
+				ply.GoodGameEnding();
+			}
 		}
 
-		if( CurVave >= Vaves.Count   )
+		if( end )
 		{
 			GameManager.ActiveScene.LoadFromFile( "scenes/basement.scene" );
 		}

@@ -3,7 +3,6 @@
     "__guid": "75e8dbf9-98c5-4504-a879-6f6da3f32a1c",
     "Flags": 0,
     "Name": "raging_bull",
-    "NetworkMode": 1,
     "NetworkOrphaned": 3,
     "OwnerTransfer": 0,
     "Components": [
@@ -51,7 +50,7 @@
         "BoltBackEjectDelay": 0,
         "BoltBackTime": 0,
         "BulletCocking": false,
-        "BulletsReload": true,
+        "BulletsReload": false,
         "ClassName": "swb_colt",
         "CustomizeAnimData": {
           "Angle": "-20.66,61.67,14.4",
@@ -69,7 +68,7 @@
           "component_type": "ShootInfo"
         },
         "ReloadEmptyTime": 2.2,
-        "ReloadTime": 1.8,
+        "ReloadTime": 3,
         "RunAnimData": {
           "Angle": "-34.59,-0.63,0",
           "Pos": "0.28,-2,-2.22"
