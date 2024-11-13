@@ -1,0 +1,28 @@
+{
+  "tags": [
+    "Playermodel"
+  ],
+  "publish": {
+    "Allowed": true,
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "mplayer",
+      "Type": "model",
+      "Org": "sboxmp",
+      "Ident": "mplayerbeta",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "models/player/mplayer/mplayer/mplayer.vmdl"
+      }
+    }
+  }
+}

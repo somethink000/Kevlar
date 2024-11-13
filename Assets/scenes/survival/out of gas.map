@@ -1,8 +1,0 @@
-{
-  "Title": "Out of gas",
-  "Gamemode": "ZombieSurvivalGame",
-  "SceneFile": "scenes/survival/out_of_gas.scene",
-  "Background": "ui/maps/outofgas.png",
-  "__references": [],
-  "__version": 0
-}

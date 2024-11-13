@@ -1,0 +1,29 @@
+{
+  "Title": "Far Far Away 0.1",
+  "Type": "game",
+  "Org": "evilinc",
+  "Ident": "real_fps_base",
+  "Schema": 1,
+  "IncludeSourceFiles": true,
+  "Resources": null,
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "IsWhitelistDisabled": false,
+  "Metadata": {
+    "MaxPlayers": 64,
+    "MinPlayers": 1,
+    "TickRate": 50,
+    "GameNetworkType": "Multiplayer",
+    "MapSelect": "Unrestricted",
+    "MapList": [
+      "facepunch.flatgrass"
+    ],
+    "RankType": "None",
+    "PerMapRanking": false,
+    "LeaderboardType": "None",
+    "CsProjName": "",
+    "StartupScene": "scenes/load.scene",
+    "MapStartupScene": "scenes/main.scene",
+    "LaunchMode": "Normal"
+  }
+}

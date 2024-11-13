@@ -1,8 +1,0 @@
-{
-  "SpawnableItems": [
-    "prefabs/weapons/remington870.prefab",
-    "prefabs/weapons/saiga.prefab"
-  ],
-  "__references": [],
-  "__version": 0
-}
