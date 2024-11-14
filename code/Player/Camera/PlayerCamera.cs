@@ -9,15 +9,13 @@ namespace GeneralGame;
 //Camera moves 
 public class PlayerCamera : Component
 {
-	[Property] public CameraComponent Camera { get; set; }
-	[Property] public GameObject Head { get; set; }
-	[Property] public GameObject Eye { get; set; }
+	[RequireComponent] private Player ply { get; set; }
+
 	[Property] public bool SicknessMode { get; set; }
 
 	[Sync] public Angles EyeAngles { get; set; }
 
 	private Vector3 SieatOffset => new Vector3( 0f, 0f, -40f );
-	private Player ply { get; set; }
 
 	
 	public void ResetViewAngles()
@@ -29,7 +27,6 @@ public class PlayerCamera : Component
 	protected override void OnAwake()
 	{
 		base.OnAwake();
-		ply = GameObject.Components.Get<Player>();
 
 		if ( IsProxy )
 			return;
@@ -41,24 +38,24 @@ public class PlayerCamera : Component
 	{
 		base.OnPreRender();
 
-		if ( !Scene.IsValid() || !Camera.IsValid() )
+		if ( !Scene.IsValid() || !ply.Camera.IsValid() )
 			return;
 
 		if ( IsProxy )
 			return;
 
-		if ( !Eye.IsValid() )
+		if ( !ply.Camera.IsValid() )
 			return;
 
 		if ( ply.Ragdoll.IsRagdolled )
 		{
-			Camera.Transform.Position = Camera.Transform.Position.LerpTo( Eye.Transform.Position, Time.Delta * 32f );
-			Camera.Transform.Rotation = Rotation.Lerp( Camera.Transform.Rotation, Eye.Transform.Rotation, Time.Delta * 16f );
+			ply.Camera.Transform.Position = ply.Camera.Transform.Position.LerpTo( ply.Camera.Transform.Position, Time.Delta * 32f );
+			ply.Camera.Transform.Rotation = Rotation.Lerp( ply.Camera.Transform.Rotation, ply.Camera.Transform.Rotation, Time.Delta * 16f );
 			return;
 		}
 
 
-		var idealEyePos = Eye.Transform.Position;
+		var idealEyePos = ply.Camera.Transform.Position;
 		var headPosition = Transform.Position + Vector3.Up * ply.Controller.CC.Height;
 		var headTrace = Scene.Trace.Ray( Transform.Position, headPosition )
 			.UsePhysicsWorld()
@@ -77,12 +74,12 @@ public class PlayerCamera : Component
 
 		var deployedWeapon = ply.Weapons.Deployed;
 		
-		Camera.Transform.Position = trace.Hit ? trace.EndPosition : idealEyePos;
+		ply.Camera.Transform.Position = trace.Hit ? trace.EndPosition : idealEyePos;
 
 		if ( SicknessMode )
-			Camera.Transform.Rotation = Rotation.LookAt( Eye.Transform.Rotation.Left ) * Rotation.FromPitch( -10f );
+			ply.Camera.Transform.Rotation = Rotation.LookAt( ply.Camera.Transform.Rotation.Left ) * Rotation.FromPitch( -10f );
 		else
-			Camera.Transform.Rotation = EyeAngles.ToRotation() * Rotation.FromPitch( -10f );
+			ply.Camera.Transform.Rotation = EyeAngles.ToRotation() * Rotation.FromPitch( -10f );
 
 
 		//if ( ply.Controller.IsCrouching && hasViewModel )

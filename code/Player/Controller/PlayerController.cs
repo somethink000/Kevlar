@@ -9,7 +9,7 @@ namespace GeneralGame;
 //Movement
 public class PlayerController: Component
 {
-
+	[RequireComponent] private Player ply { get; set; }
 	[Property] public float StandHeight { get; set; } = 64f;
 	[Property] public float DuckHeight { get; set; } = 28f;
 	[Property] public Vector3 Gravity { get; set; } = new( 0f, 0f, 800f );
@@ -17,7 +17,7 @@ public class PlayerController: Component
 	[Property] public CharacterController CC { get; set; }
 	[Property] public Action OnJump { get; set; }
 	
-	[Property] public HumanAnimationsHelper AnimationHelper { get; set; }
+	[Property] public CitizenAnimationHelper AnimationHelper { get; set; }
 	
 	[Sync] public bool IsRunning { get; set; }
 	[Sync] public bool IsCrouching { get; set; }
@@ -26,7 +26,7 @@ public class PlayerController: Component
 	public Vector3 WishVelocity { get; private set; }
 	private RealTimeSince LastGroundedTime { get; set; }
 	private RealTimeSince LastUngroundedTime { get; set; }
-	private Player ply { get; set; }
+	
 
 
 	//Speed {
@@ -64,7 +64,6 @@ public class PlayerController: Component
 	protected override void OnAwake()
 	{
 		base.OnAwake();
-		ply = GameObject.Components.Get<Player>();
 
 		if ( CC.IsValid() )
 		{
@@ -94,16 +93,16 @@ public class PlayerController: Component
 
 		var weapon = ply.Weapons.Deployed;
 
-		HumanAnimationsHelper animator = AnimationHelper;
+		CitizenAnimationHelper animator = AnimationHelper;
 
-		animator.HoldType = weapon.IsValid() ? weapon.HoldType : HumanAnimationsHelper.HoldTypes.None;
+		animator.HoldType = weapon.IsValid() ? weapon.HoldType : CitizenAnimationHelper.HoldTypes.None;
 		animator.WithVelocity( CC.Velocity );
 		animator.WithWishVelocity( WishVelocity );
 		animator.IsGrounded = CC.IsOnGround;
 		animator.MoveRotationSpeed = 0f;
 		animator.DuckLevel = IsCrouching ? 1f : 0f;
 		animator.WithLook( ply.CameraController.EyeAngles.Forward );
-		
+		animator.MoveStyle = (IsRunning && !IsCrouching) ? CitizenAnimationHelper.MoveStyles.Run : CitizenAnimationHelper.MoveStyles.Walk;
 	}
 
 	protected virtual void DoCrouchingInput()
@@ -178,8 +177,8 @@ public class PlayerController: Component
 		if ( IsProxy )
 			return;
 
-		if ( ply.Ragdoll.IsRagdolled || ply.LifeState == LifeState.Dead )
-			return;
+		//if ( ply.Ragdoll.IsRagdolled || ply.LifeState == LifeState.Dead )
+		//	return;
 
 		DoCrouchingInput();
 		DoMovementInput();

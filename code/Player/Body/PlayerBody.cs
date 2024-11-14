@@ -12,17 +12,13 @@ namespace GeneralGame;
 public class PlayerBody : Component
 {
 	[Property] public SkinnedModelRenderer ModelRenderer { get; private set; }
-	private Player ply { get; set; }
-	private CameraComponent Camera { get; set; }
-	private PlayerController Controller { get; set; }
+	[RequireComponent] private Player ply { get; set; }
+	private CameraComponent Camera => ply.Camera;
 
 
 	protected override void OnAwake()
 	{
 		base.OnAwake();
-		ply = GameObject.Components.Get<Player>();
-		Camera = ply.CameraController.Camera;
-		Controller = ply.Controller;
 	}
 
 	private void UpdateModelVisibility()
@@ -34,10 +30,8 @@ public class PlayerBody : Component
 		//damn this shit works
 		if ( IsProxy ) Camera.Enabled = false;
 
-		
-		//ModelRenderer.SetBodyGroup( "head", 0 );
-		//ModelRenderer.SetBodyGroup( "head", IsProxy ? 0 : 1 );
-		//ModelRenderer.Enabled = true;
+
+		ModelRenderer.SetBodyGroup( "head", IsProxy ? 0 : 1 );
 	}
 	protected override void OnPreRender()
 	{

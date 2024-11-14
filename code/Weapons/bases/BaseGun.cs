@@ -156,8 +156,8 @@ public class BaseGun : WeaponComponent, IUse
 		ApplyRecoil( Recoil );
 
 		var attachment = ModelRenderer.GetAttachment( "muzzle" );
-		var startPos = owner.CameraController.Camera.LocalPosition;
-		var direction = owner.CameraController.Camera.LocalRotation.Forward;
+		var startPos = owner.Camera.LocalPosition;
+		var direction = owner.Camera.LocalRotation.Forward;
 		direction += Vector3.Random * Spread;
 
 		var endPos = startPos + direction * 10000f;

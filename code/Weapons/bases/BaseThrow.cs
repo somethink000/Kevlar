@@ -75,9 +75,9 @@ public class BaseThrow : WeaponComponent, IUse
 	{
 		var obj = throwPrefab.Clone( this.Transform.World );
 		obj.NetworkSpawn();
-		obj.LocalPosition = owner.CameraController.Camera.LocalPosition + owner.CameraController.Camera.LocalRotation.Forward * 50;
-		obj.LocalRotation = owner.CameraController.Camera.LocalRotation;
-		obj.Components.Get<Rigidbody>().Velocity = owner.CameraController.Camera.LocalRotation.Forward * 1000;
+		obj.LocalPosition = owner.Camera.LocalPosition + owner.Camera.LocalRotation.Forward * 50;
+		obj.LocalRotation = owner.Camera.LocalRotation;
+		obj.Components.Get<Rigidbody>().Velocity = owner.Camera.LocalRotation.Forward * 1000;
 		obj.Components.Get<EntThrow>().explodeTime = imidiantly ? 0f : curPrepareTime;
 	}
 

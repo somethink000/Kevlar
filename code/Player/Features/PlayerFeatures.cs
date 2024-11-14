@@ -11,7 +11,7 @@ namespace GeneralGame;
 
 public class PlayerFeatures : Component
 {
-	
+	[RequireComponent] private Player ply { get; set; }
 
 }
 

@@ -12,7 +12,7 @@ public abstract class WeaponComponent : Component
 	[Property] public float DamageForce { get; set; } = 5f;
 	[Property] public float Damage { get; set; } = 10f;
 	[Property] public float FireRate { get; set; } = 3f;
-	[Property] public HumanAnimationsHelper.HoldTypes HoldType { get; set; } = HumanAnimationsHelper.HoldTypes.PISTOL;
+	[Property] public CitizenAnimationHelper.HoldTypes HoldType { get; set; } = CitizenAnimationHelper.HoldTypes.Pistol;
 	[Property] public SoundEvent DeploySound { get; set; }
 	[Property] public SoundEvent HolsterSound { get; set; }
 	[Property] public bool IsDeployed { get; set; }

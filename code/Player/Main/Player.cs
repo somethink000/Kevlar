@@ -90,7 +90,6 @@ public partial class Player : Component, IHealthComponent
 	protected override void OnAwake()
 	{
 		base.OnAwake();
-		Camera = CameraController.Camera;
 	}
 
 	protected override void OnStart()
@@ -100,7 +99,10 @@ public partial class Player : Component, IHealthComponent
 		{
 			Respawn();
 		}
-			
+
+		Camera.GameObject.Parent = Eye;
+		Camera.GameObject.LocalPosition = Vector3.Zero;
+
 		base.OnStart();
 	}
 

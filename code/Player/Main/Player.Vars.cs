@@ -13,13 +13,14 @@ public partial class Player
 	[RequireComponent] public PlayerController Controller { get; set; }
 	[RequireComponent] public PlayerBody Body { get; set; }
 	[RequireComponent] public PlayerCamera CameraController { get; set; }
-	[RequireComponent] public RagdollController Ragdoll { get; private set; }
-	[RequireComponent] public PlayerFeatures Features { get; private set; }
+	[RequireComponent] public RagdollController Ragdoll { get; set; }
+	[RequireComponent] public PlayerFeatures Features { get; set; }
 	
 	[RequireComponent] public AmmoContainer Ammo { get; set; }
 	[RequireComponent] public WeaponContainer Weapons { get; set; }
 
-
+	[Property] public CameraComponent Camera { get; set; }
+	[Property] public GameObject Eye { get; set; }
 	[Property] public SoundEvent HurtSound { get; set; }
 	[Property] public float HealthRegenPerSecond { get; set; } = 10f;
 
@@ -28,6 +29,5 @@ public partial class Player
 	[Sync] public float Health { get; private set; } = 100f;
 
 	private RealTimeSince TimeSinceDamaged { get; set; }
-	private CameraComponent Camera { get; set; }
 
 }
