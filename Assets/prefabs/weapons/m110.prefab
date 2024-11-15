@@ -1,0 +1,206 @@
+{
+  "RootObject": {
+    "__guid": "a3b668c3-acfb-4043-8f7c-93b7df84b5c8",
+    "Flags": 0,
+    "Name": "m110",
+    "Tags": "weapon",
+    "NetworkOrphaned": 3,
+    "OwnerTransfer": 0,
+    "Components": [
+      {
+        "__type": "GeneralGame.Weapon",
+        "__guid": "4d44110c-f7a1-4168-a9f3-dbeaa77a630a",
+        "ReloadTimes": [],
+        "AimAnimData": {
+          "Angle": "-0.2,0,-1",
+          "Pos": "-1.966,-2,1.163"
+        },
+        "AimFOV": 20,
+        "AimInFOVSpeed": 1,
+        "AimOutFOVSpeed": 1,
+        "AimPlayerFOV": -1,
+        "AimSensitivity": 1,
+        "AmmoType": "prefabs/items/ammo_sniper.prefab",
+        "AnimSpeed": 1,
+        "BoltBack": false,
+        "BoltBackEjectDelay": 0,
+        "BoltBackTime": 0,
+        "BulletCocking": true,
+        "BulletsReload": false,
+        "ClassName": "M110",
+        "CustomizeAnimData": {
+          "Angle": "-0.71,44.52,10",
+          "Pos": "5.755,-1.2,1.592"
+        },
+        "DeploySound": "sounds/weapons/sources/weapon_deploy.sound",
+        "DisplayName": "M110",
+        "DrawEmptyTime": -1,
+        "DrawTime": 0.6,
+        "HoldType": "RIFLE",
+        "Primary": {
+          "_type": "component",
+          "component_id": "ff1c8c67-10c8-4767-925a-0d606a3845ff",
+          "go": "a3b668c3-acfb-4043-8f7c-93b7df84b5c8",
+          "component_type": "ShootInfo"
+        },
+        "ReloadEmptyTime": 3.2,
+        "ReloadTime": 2.9,
+        "RunAnimData": {
+          "Angle": "25.35,43.18,0",
+          "Pos": "0.899,-3,1.137"
+        },
+        "ScopeInfo": {
+          "LensTexture": "/materials/swb/scopes/swb_lens_hunter.png",
+          "ScopeTexture": "/materials/swb/scopes/swb_scope_hunter.png",
+          "ScopeInDelay": 0.2,
+          "FOV": 8,
+          "AimSensitivity": 0.25
+        },
+        "Scoping": false,
+        "ShellEjectDelay": 0,
+        "ShellReloading": false,
+        "ShellReloadingShootCancel": true,
+        "ShellReloadInsertTime": 0,
+        "ShellReloadStartTime": 0,
+        "Slot": 5,
+        "TuckRange": 30,
+        "WorldModel": "weapons/m110/world/w_m110.vmdl"
+      },
+      {
+        "__type": "GeneralGame.ShootInfo",
+        "__guid": "ff1c8c67-10c8-4767-925a-0d606a3845ff",
+        "Ammo": 10,
+        "AmmoType": "rifle",
+        "BarrelSmokeParticle": "particles/swb/muzzle/barrel_smoke.vpcf",
+        "BulletEjectParticle": "particles/swb/bullet_hulls/20mm_eject.vpcf",
+        "Bullets": 1,
+        "BulletSize": 2,
+        "BulletTracerChance": 0.33,
+        "BulletTracerParticle": "particles/swb/tracer/tracer.vpcf",
+        "ClipSize": 10,
+        "Damage": 70,
+        "DryShootSound": "sounds/swb/clip/swb_rifle.empty.sound",
+        "FiringType": "semi",
+        "Force": 3,
+        "HitFlinch": 2,
+        "InfiniteAmmo": "disabled",
+        "MuzzleFlashParticle": "particles/swb/muzzle/flash.vpcf",
+        "ParticleScale": 1,
+        "Recoil": 3,
+        "RPM": 350,
+        "ShootAimedAnim": "",
+        "ShootAnim": "b_attack",
+        "ShootEmptyAnim": "",
+        "ShootSound": "weapons/m110/m110_fire1.sound",
+        "Spread": 0.05
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "df9cf0b4-81de-4069-b711-37d180f9a241",
+        "IsTrigger": false,
+        "Model": "weapons/m110/world/w_m110.vmdl",
+        "Static": false
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "0bb60a56-5b86-4b47-8f39-0649671dc683",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {},
+        "MassOverride": 0,
+        "MotionEnabled": true,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      },
+      {
+        "__type": "GeneralGame.ItemEquipment",
+        "__guid": "3a0c394e-c181-4618-9663-0477280e5866",
+        "Count": 0,
+        "Icon": {
+          "Model": "weapons/m110/world/w_m110.vmdl",
+          "MaterialGroup": "",
+          "Colour": "1,1,1,1",
+          "Position": "20,4,0",
+          "Rotation": "0.3265056,0.3265055,-0.6272115,0.6272113",
+          "Guid": "536ac09e-d908-43a8-8ef0-ca9c80439a42"
+        },
+        "MaxStack": 0,
+        "Name": "M110",
+        "Slots": [
+          "FirstWeapon",
+          "SeccondWeapon"
+        ],
+        "WeightInGrams": 0
+      },
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "383445c6-7b6a-4b53-9990-3b2d0850f9e1",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": true,
+        "Model": "weapons/m110/world/w_m110.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
+      },
+      {
+        "__type": "GeneralGame.Surfire",
+        "__guid": "dbdf6d45-86a9-4719-84da-4dd2c09f1fdc",
+        "EffectAttachmentOrBone": "muzzle_silenced",
+        "ShootSound": "weapons/m110/m110_suppressed_fire1.sound",
+        "ViewModelScale": "1,1,1",
+        "WorldModelScale": "1,1,1"
+      },
+      {
+        "__type": "GeneralGame.PSB5",
+        "__guid": "c866c8dd-322a-4f53-b5f5-e81c9f55d0ac",
+        "EffectAttachmentOrBone": "muzzle_silenced",
+        "ShootSound": "weapons/m110/m110_suppressed_fire1.sound",
+        "ViewModelScale": "1,1,1",
+        "WorldModelScale": "1,1,1"
+      },
+      {
+        "__type": "GeneralGame.ReflexSightBG",
+        "__guid": "3dea704b-ca8d-4d70-802f-18df5cc981b7",
+        "AimAnimData": {
+          "Angle": "-1.3,0.08,-1",
+          "Pos": "-1.948,0,0.87"
+        },
+        "AimFOV": 30,
+        "AimInFOVSpeed": -1,
+        "AimOutFOVSpeed": -1,
+        "ViewModelScale": "1,1,1",
+        "WorldModelScale": "1,1,1"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "69f872a9-c179-46ca-8122-d7ed10bfa088",
+        "Flags": 4,
+        "Name": "hold_R",
+        "Enabled": true
+      },
+      {
+        "__guid": "b7cafd51-dc0a-4a93-8191-4ceab7b7530c",
+        "Flags": 4,
+        "Name": "bip01_r_hand",
+        "Enabled": true,
+        "Children": [
+          {
+            "__guid": "6b447219-ccd7-421a-b3dd-3aa904e816f6",
+            "Flags": 4,
+            "Name": "muzzle",
+            "Enabled": true
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

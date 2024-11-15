@@ -1,0 +1,49 @@
+
+@import "../../../UI/Style.scss";
+
+
+CategoryImage {
+    width: 100%;
+
+    .img_button {
+        position: relative;
+        background-color: transparent;
+        padding: 10px;
+        cursor: pointer;
+        aspect-ratio: 1.8;
+        width: 100%;
+        flex-direction: column;
+        transition: all 0.2s ease-out;
+
+
+        .cat_icon {
+            border-radius: 5px;
+        }
+
+        .game_name {
+            font-family: zekton;
+            font-size: 26px;
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+        }
+    }
+
+    &:hover {
+        .img_button {
+
+
+            .cat_icon {
+                filter: blur(4px);
+            }
+        }
+    }
+
+    &.activate {
+        .img_button {
+            .cat_icon {
+                filter: blur(10px);
+            }
+        }
+    }
+}

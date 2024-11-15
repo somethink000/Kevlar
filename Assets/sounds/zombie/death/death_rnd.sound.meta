@@ -1,0 +1,19 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "death_rnd",
+      "Type": "sound",
+      "Org": "local",
+      "Ident": "death_rnd",
+      "Schema": 0,
+      "IncludeSourceFiles": true,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "sounds/zombie/death/death_rnd.sound"
+      }
+    }
+  }
+}

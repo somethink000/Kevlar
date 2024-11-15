@@ -1,0 +1,48 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "out_of_gas",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "out_of_gas",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "evilinc.ah_super_large_pine002#48323",
+        "evilinc.bed_motel#49083",
+        "evilinc.divan_l#48195",
+        "evilinc.floorold1#48231",
+        "evilinc.forest_4_grass#48937",
+        "evilinc.kamodic#48525",
+        "evilinc.kreslecho#48196",
+        "evilinc.kripichi#48733",
+        "evilinc.m_ll_lamp_colba_01#46931",
+        "evilinc.m_ll_lamp_small_01#46928",
+        "evilinc.metal_list_clean#48919",
+        "evilinc.milbeams002#48742",
+        "evilinc.milwall015#47095",
+        "evilinc.peches#48544",
+        "evilinc.plaster_p#48227",
+        "evilinc.plasteras2#48234",
+        "evilinc.shifetr#48235",
+        "evilinc.stol#48194",
+        "evilinc.stolbe_smd#48687",
+        "evilinc.stul2#48193",
+        "evilinc.telik#48189",
+        "evilinc.transform#49059",
+        "evilinc.woodfloor001a#47097",
+        "evilinc.woodsiding_ext_01#47103",
+        "facepunch.glass_a#19946",
+        "tesssssssssst.untitled_48417841871541#33517"
+      ],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "scenes/survival/out_of_gas.vmap",
+        "ParentPackage": "evilinc.real_fps_base"
+      }
+    }
+  }
+}

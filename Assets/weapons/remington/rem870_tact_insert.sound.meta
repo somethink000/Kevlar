@@ -1,0 +1,19 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "rem870_tact_insert",
+      "Type": "sound",
+      "Org": "local",
+      "Ident": "rem870_tact_insert",
+      "Schema": 0,
+      "IncludeSourceFiles": true,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "weapons/remington/rem870_tact_insert.sound"
+      }
+    }
+  }
+}

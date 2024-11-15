@@ -1,0 +1,26 @@
+{
+  "RootObject": {
+    "__guid": "933586e0-191a-4d8e-a4f5-84e70d5646d4",
+    "Flags": 0,
+    "Name": "zombiespawner",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "GeneralGame.ZombieSpawner",
+        "__guid": "ea3f79cb-f329-4734-9ea2-73bb8bfc99b0",
+        "ZombiePrefab": {
+          "_type": "gameobject",
+          "prefab": "prefabs/npcs/zombie.prefab"
+        }
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

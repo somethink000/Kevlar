@@ -1,0 +1,234 @@
+{
+  "RootObject": {
+    "__guid": "75e8dbf9-98c5-4504-a879-6f6da3f32a1c",
+    "Flags": 0,
+    "Name": "glock",
+    "NetworkOrphaned": 3,
+    "OwnerTransfer": 0,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "db06a5e8-81be-4e4f-8e70-3d4a79dfddec",
+        "IsTrigger": false,
+        "Model": "weapons/glock/w/w_glock.vmdl",
+        "Static": false
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "b72cd90e-ed2f-4650-a0de-d31c6c9510c9",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {},
+        "MassOverride": 0,
+        "MotionEnabled": true,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      },
+      {
+        "__type": "GeneralGame.Weapon",
+        "__guid": "3fd73b46-c377-4098-9b22-0e8ea33064c3",
+        "ReloadTimes": [],
+        "AimAnimData": {
+          "Angle": "0.04,0.07,0",
+          "Pos": "-1.84,0,1.05"
+        },
+        "AimFOV": 20,
+        "AimInFOVSpeed": 1,
+        "AimOutFOVSpeed": 1,
+        "AimPlayerFOV": -1,
+        "AimSensitivity": 0.85,
+        "AmmoType": "prefabs/items/ammo_pistol.prefab",
+        "AnimSpeed": 1,
+        "BoltBack": false,
+        "BoltBackEjectDelay": 0,
+        "BoltBackTime": 0,
+        "BulletCocking": false,
+        "BulletsReload": false,
+        "ClassName": "swb_colt",
+        "CustomizeAnimData": {
+          "Angle": "-22.88,42.22,14.4",
+          "Pos": "9.19,-4.46,2.16"
+        },
+        "DeploySound": "sounds/weapons/sources/weapon_deploy.sound",
+        "DisplayName": "Colt M1911",
+        "DrawEmptyTime": -1,
+        "DrawTime": 0.4,
+        "HoldType": "PISTOL",
+        "Primary": {
+          "_type": "component",
+          "component_id": "90aafa5d-7f73-4334-ac7f-78143bc61a57",
+          "go": "75e8dbf9-98c5-4504-a879-6f6da3f32a1c",
+          "component_type": "ShootInfo"
+        },
+        "ReloadEmptyTime": 2.2,
+        "ReloadTime": 1.8,
+        "RunAnimData": {
+          "Angle": "-34.59,-0.63,0",
+          "Pos": "2.46,-2,-4.7"
+        },
+        "ScopeInfo": {
+          "LensTexture": "/materials/swb/scopes/swb_lens_hunter.png",
+          "ScopeTexture": "/materials/swb/scopes/swb_scope_hunter.png",
+          "ScopeInDelay": 0.2,
+          "FOV": 8,
+          "AimSensitivity": 0.25
+        },
+        "Scoping": false,
+        "ShellEjectDelay": 0,
+        "ShellReloading": false,
+        "ShellReloadingShootCancel": true,
+        "ShellReloadInsertTime": 0,
+        "ShellReloadStartTime": 0,
+        "Slot": 1,
+        "TuckRange": 30,
+        "WorldModel": "weapons/glock/w/w_glock.vmdl"
+      },
+      {
+        "__type": "GeneralGame.ShootInfo",
+        "__guid": "90aafa5d-7f73-4334-ac7f-78143bc61a57",
+        "Ammo": 15,
+        "AmmoType": "pistol",
+        "BarrelSmokeParticle": "particles/swb/muzzle/barrel_smoke.vpcf",
+        "BulletEjectParticle": "particles/swb/bullet_hulls/9mm.vpcf",
+        "Bullets": 1,
+        "BulletSize": 2,
+        "BulletTracerChance": 0.33,
+        "BulletTracerParticle": "particles/swb/tracer/tracer.vpcf",
+        "ClipSize": 15,
+        "Damage": 30,
+        "DryShootSound": "sounds/swb/clip/swb_pistol.empty.sound",
+        "FiringType": "semi",
+        "Force": 3,
+        "HitFlinch": 1.25,
+        "InfiniteAmmo": "reserve",
+        "MuzzleFlashParticle": "particles/swb/muzzle/flash.vpcf",
+        "ParticleScale": 1,
+        "Recoil": 4,
+        "RPM": 570,
+        "ShootAimedAnim": "",
+        "ShootAnim": "b_attack",
+        "ShootEmptyAnim": "",
+        "ShootSound": "weapons/glock/glock20_fire1.sound",
+        "Spread": 0.08
+      },
+      {
+        "__type": "GeneralGame.PistolSilencerBG",
+        "__guid": "b47568cc-132b-4d8b-ab59-139c0021e7d0",
+        "EffectAttachmentOrBone": "muzzle_silenced",
+        "ShootSound": "weapons/glock/glock20_suppressed_fire1.sound",
+        "ViewModelScale": "1,1,1",
+        "WorldModelScale": "1,1,1"
+      },
+      {
+        "__type": "GeneralGame.ReflexSightBG",
+        "__guid": "028b2269-e020-401d-8a7f-6f0c1bfabba2",
+        "AimAnimData": {
+          "Angle": "0,0,-1",
+          "Pos": "-1.87,0,0.4"
+        },
+        "AimFOV": -1,
+        "AimInFOVSpeed": -1,
+        "AimOutFOVSpeed": -1,
+        "RequiresAttachment": {
+          "_type": "component",
+          "component_id": "e71954fa-6616-4c09-a171-34ce88d1860c",
+          "go": "75e8dbf9-98c5-4504-a879-6f6da3f32a1c",
+          "component_type": "PistolRailBG"
+        },
+        "ViewModelScale": "1,1,1",
+        "WorldModelScale": "1,1,1"
+      },
+      {
+        "__type": "GeneralGame.PistolRailBG",
+        "__guid": "e71954fa-6616-4c09-a171-34ce88d1860c",
+        "ViewModelScale": "1,1,1",
+        "WorldModelScale": "1,1,1"
+      },
+      {
+        "__type": "GeneralGame.ItemEquipment",
+        "__guid": "665cf5a5-57e4-4dff-afed-bde764974ad7",
+        "Count": 0,
+        "Description": "Cool gun",
+        "Icon": {
+          "Model": "weapons/glock/w/w_glock.vmdl",
+          "MaterialGroup": "",
+          "Colour": "1,1,1,1",
+          "Position": "7,2,-5",
+          "Rotation": "0.4055798,0.4055799,-0.5792278,0.579228",
+          "Guid": "7b6b332e-8093-4fc3-8658-3a2dce1b0405"
+        },
+        "MaxStack": 0,
+        "Name": "Glock 19",
+        "Slots": [
+          "FirstWeapon",
+          "SeccondWeapon"
+        ],
+        "WeightInGrams": 1200
+      },
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "9d529283-654e-4a5b-9f49-6a3a1a778660",
+        "BodyGroups": 1361,
+        "CreateBoneObjects": true,
+        "Model": "weapons/glock/w/w_glock.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "4e25c89b-9dfc-47f6-a70c-e389fa6ea58a",
+        "Flags": 4,
+        "Name": "bip01_r_hand",
+        "Enabled": true,
+        "Children": [
+          {
+            "__guid": "9c3f2be0-366e-4944-a2bb-d7e54c24a30a",
+            "Flags": 0,
+            "Name": "muzzle",
+            "Enabled": true
+          },
+          {
+            "__guid": "5a5b3fbc-9222-446e-b7cb-ae73cbcc9c0d",
+            "Flags": 0,
+            "Name": "eject",
+            "Enabled": true
+          }
+        ]
+      },
+      {
+        "__guid": "8957bc01-9110-4a6e-a4d9-85e5830a84a2",
+        "Flags": 4,
+        "Name": "hold_R",
+        "Enabled": true
+      },
+      {
+        "__guid": "5f58347e-d3df-46eb-b0cd-3afc0abb7dca",
+        "Flags": 4,
+        "Name": "sight",
+        "Enabled": true
+      },
+      {
+        "__guid": "08f8714b-a340-4d32-bf82-2006fffcea2e",
+        "Flags": 4,
+        "Name": "muzzle",
+        "Enabled": true
+      },
+      {
+        "__guid": "9b8b2948-56c4-487e-9881-45f70718e9bf",
+        "Flags": 4,
+        "Name": "eject",
+        "Enabled": true
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

@@ -1,0 +1,44 @@
+{
+  "Title": "Kevlar",
+  "Type": "game",
+  "Org": "evilinc",
+  "Ident": "real_fps_base",
+  "Schema": 1,
+  "IncludeSourceFiles": true,
+  "Resources": "\nui/hud/*\nui/icons/*\nui/load/*\nui/maps/*\nui/*\nui/gamemodes/*",
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "IsWhitelistDisabled": false,
+  "Metadata": {
+    "MaxPlayers": 64,
+    "MinPlayers": 1,
+    "TickRate": 50,
+    "GameNetworkType": "Multiplayer",
+    "MapSelect": "Unrestricted",
+    "MapList": [
+      "facepunch.flatgrass"
+    ],
+    "RankType": "None",
+    "PerMapRanking": false,
+    "LeaderboardType": "None",
+    "CsProjName": "",
+    "StartupScene": "scenes/basement.scene",
+    "ProjectTemplate": null,
+    "LaunchMode": "Normal",
+    "ControlModes": {},
+    "Compiler": {
+      "RootNamespace": "Sandbox",
+      "DefineConstants": "SANDBOX;ADDON;DEBUG",
+      "NoWarn": "1701;1702;1591;",
+      "WarningsAsErrors": "",
+      "Whitelist": true,
+      "ReleaseMode": "Release",
+      "AssemblyReferences": [],
+      "IgnoreFolders": [
+        "editor",
+        "unittest"
+      ],
+      "DistinctAssemblyReferences": []
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "UI": false,
+  "Volume": "1.00,1.00,0",
+  "Pitch": "1.00,1.00,0",
+  "Decibels": 70,
+  "SelectionMode": "Random",
+  "Sounds": [
+    "sounds/zombie/alert/alert13.vsnd",
+    "sounds/zombie/alert/alert16.vsnd",
+    "sounds/zombie/alert/alert22.vsnd",
+    "sounds/zombie/alert/alert23.vsnd",
+    "sounds/zombie/alert/alert25.vsnd"
+  ],
+  "Occlusion": true,
+  "AirAbsorption": true,
+  "Transmission": true,
+  "OcclusionRadius": 64,
+  "DistanceAttenuation": true,
+  "__references": [],
+  "__version": 0
+}

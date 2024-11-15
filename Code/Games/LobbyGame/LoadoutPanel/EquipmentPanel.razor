@@ -1,0 +1,87 @@
+﻿
+@using GeneralGame
+@namespace GeneralGame.UI
+@attribute [StyleSheet]
+@inherits Panel
+
+@if (PlayerBase.GetLocal() is null)
+    return;
+
+
+<root class="txt">
+       
+    <div class=left>
+
+		<div>
+			
+			<InventorySlot EquipSlotIndex=@EquipSlot.FirstWeapon Item=@PlayerBase.GetLocal().Inventory.EquippedItems[(int)EquipSlot.FirstWeapon]/>
+			<InventorySlot EquipSlotIndex=@EquipSlot.SeccondWeapon Item=@PlayerBase.GetLocal().Inventory.EquippedItems[(int)EquipSlot.SeccondWeapon]/>
+            
+		</div>
+       
+        <text class="title">Inventory</text>
+		<div class="items">
+			@for (var index = 0; index < PlayerBase.GetLocal().Inventory.BackpackItems.Count; index++)
+			{
+				var item = PlayerBase.GetLocal().Inventory.BackpackItems[index];
+				<InventorySlot Item=@item BackpackSlotIndex=@index />
+			}
+		</div>
+		<div>
+			<div class="total-weight @(PlayerBase.GetLocal().IsEncumbered ? "encumbered" : "")">
+				<text class="encumbrance">ENCUMBERED!</text>
+				<text>TOTAL WEIGHT: </text>
+				<text class="active-weight">@PlayerBase.GetLocal().Inventory.Weight.ToKilograms() kg</text>
+				<text class="max">/ @PlayerBase.GetLocal().MaxCarryWeight.ToKilograms() kg</text>
+			</div>
+		</div>
+    </div>
+	
+    <div class="right">
+        <text class="title">Storage</text>
+		<div class="items">
+            @for (var index = 0; index < Table.BackpackItems.Count; index++)
+			{
+                var item = Table.BackpackItems[index];
+				<InventorySlot Item=@item BackpackSlotIndex=@index />
+			}
+		</div>
+    </div>
+</root>
+
+@code
+{
+
+    public static EquipmentPanel Instance { get; private set; }
+    public EquipmentTable Table { get; private set; }
+
+    public EquipmentPanel(EquipmentTable table)
+    {
+        Table = table;
+        Instance = this;
+    }
+
+   
+
+    protected override void OnAfterTreeRender(bool firstTime)
+    {
+        base.OnAfterTreeRender(firstTime);
+
+        if (!firstTime) return;
+    }
+
+
+    protected override int BuildHash()
+    {
+        if (PlayerBase.GetLocal() is null)
+            return -1;
+
+        return HashCode.Combine(
+            RealTime.Now.CeilToInt(),
+            PlayerBase.GetLocal().Inventory.BackpackItems.HashCombine(i => i?.GetHashCode() ?? -1),
+            PlayerBase.GetLocal().Inventory.EquippedItems.HashCombine(i => i?.GetHashCode() ?? -1),
+
+            Table.BackpackItems.HashCombine(i => i?.GetHashCode() ?? -1)
+        );
+    }
+}

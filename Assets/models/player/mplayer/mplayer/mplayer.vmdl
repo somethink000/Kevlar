@@ -38,7 +38,7 @@
 						[
 							{
 								_class = "RenderMeshFile"
-								filename = "models/player/mplayer/mplayer/player.fbx"
+								filename = "models/player/mplayer/mplayer/REF.dmx"
 								import_translation = [ 0.0, 0.0, 0.0 ]
 								import_rotation = [ 0.0, 0.0, 0.0 ]
 								import_scale = 1.0
