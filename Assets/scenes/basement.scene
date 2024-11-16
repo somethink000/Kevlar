@@ -833,56 +833,6 @@
       "Children": []
     },
     {
-      "__guid": "33fd27ab-a105-49fa-892a-b2d1a1f5828b",
-      "Flags": 0,
-      "Name": "Text",
-      "Position": "152,60,316",
-      "Rotation": "0,0,-1,-0.00000004371139",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.TextRenderer",
-          "__guid": "ff9657c5-4007-4881-b5c9-b1a984a26c46",
-          "__version": 1,
-          "BlendMode": "Normal",
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "Scale": 0.18,
-          "TextAlignment": "Center",
-          "TextScope": {
-            "Text": "Your fps already shity cos on this map more then one light sources. ",
-            "TextColor": "0,0,0,1",
-            "FontName": "Zekton",
-            "FontSize": 32.58,
-            "FontWeight": 800,
-            "LineHeight": 1,
-            "Outline": {
-              "Size": 4,
-              "Color": "0,0,1,1"
-            },
-            "Shadow": {
-              "Size": 4,
-              "Color": "0,0,0,1",
-              "Offset": "4,4"
-            },
-            "OutlineUnder": {
-              "Size": 4,
-              "Color": "0,1,0,1"
-            },
-            "ShadowUnder": {
-              "Size": 4,
-              "Color": "0,0,0,1",
-              "Offset": "4,4"
-            }
-          }
-        }
-      ]
-    },
-    {
       "__guid": "e20ffacb-1293-424e-bcb0-ed9e1ad5bf0e",
       "Flags": 0,
       "Name": "Text (1)",
@@ -1033,54 +983,6 @@
       ]
     },
     {
-      "__guid": "d268796d-b12a-46b8-b11c-b62c8e3810b2",
-      "Flags": 0,
-      "Name": "verstak",
-      "Position": "564,68,329.5344",
-      "Rotation": "0,0,0.7071068,0.7071068",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "5c1f10d4-a334-4ec4-952b-3889f5e2373f",
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "Model": "models/verstak.vmdl",
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "cbd807e3-f203-4065-a522-7b4825cccfa1",
-          "IsTrigger": false,
-          "Model": "models/verstak.vmdl",
-          "Static": false,
-          "SurfaceVelocity": "0,0,0"
-        },
-        {
-          "__type": "GeneralGame.EquipmentTable",
-          "__guid": "71479730-5aa3-487a-9d43-a696662f079d"
-        }
-      ]
-    },
-    {
-      "__guid": "f6f6a69c-d273-4d56-8e70-dc64fe1b1e45",
-      "Flags": 0,
-      "Name": "glock",
-      "Position": "348,204,336",
-      "Enabled": true,
-      "NetworkOrphaned": 3,
-      "OwnerTransfer": 0,
-      "__Prefab": "prefabs/weapons/glock.prefab",
-      "__PrefabVariables": {}
-    },
-    {
       "__guid": "ed80bfd8-9858-4659-9130-e775ca1ed847",
       "Flags": 0,
       "Name": "ak74u",
@@ -1139,28 +1041,6 @@
       "__PrefabVariables": {}
     },
     {
-      "__guid": "20c077d7-99fd-4936-9e7d-46eb85243a0b",
-      "Flags": 0,
-      "Name": "pm",
-      "Position": "234.4161,-75.6491,298",
-      "Enabled": true,
-      "NetworkOrphaned": 3,
-      "OwnerTransfer": 0,
-      "__Prefab": "prefabs/weapons/pm.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "16059658-7b59-4479-8d5b-cb206ea5050c",
-      "Flags": 0,
-      "Name": "raging_bull",
-      "Position": "238.5788,-100.1761,303",
-      "Enabled": true,
-      "NetworkOrphaned": 3,
-      "OwnerTransfer": 0,
-      "__Prefab": "prefabs/weapons/raging_bull.prefab",
-      "__PrefabVariables": {}
-    },
-    {
       "__guid": "e09db689-7450-4572-b77f-75cd172e6f04",
       "Flags": 0,
       "Name": "remington870",
@@ -1171,30 +1051,6 @@
       "NetworkOrphaned": 3,
       "OwnerTransfer": 0,
       "__Prefab": "prefabs/weapons/remington870.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "9bb57c22-90c9-4e59-8f7f-d71ca30319d7",
-      "Flags": 0,
-      "Name": "saiga",
-      "Position": "231.7657,22.2111,315",
-      "Tags": "weapon",
-      "Enabled": true,
-      "NetworkOrphaned": 3,
-      "OwnerTransfer": 0,
-      "__Prefab": "prefabs/weapons/saiga.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "d2fe00c0-affd-4a2c-b800-bbe52a0490d7",
-      "Flags": 0,
-      "Name": "val",
-      "Position": "231.5824,-54.60488,316",
-      "Tags": "weapon",
-      "Enabled": true,
-      "NetworkOrphaned": 3,
-      "OwnerTransfer": 0,
-      "__Prefab": "prefabs/weapons/val.prefab",
       "__PrefabVariables": {}
     }
   ],

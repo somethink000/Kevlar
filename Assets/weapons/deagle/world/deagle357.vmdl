@@ -16,13 +16,6 @@
 						ignore_rotation = false
 						do_not_discard = false
 					},
-					{
-						_class = "BoneMarkup"
-						target_bone = ""
-						ignore_Translation = false
-						ignore_rotation = false
-						do_not_discard = false
-					},
 				]
 				bone_cull_type = "None"
 			},
@@ -37,26 +30,6 @@
 							{
 								from = "deagle357.vmat"
 								to = "weapons/deagle/deagle357_d.vmat"
-							},
-							{
-								from = "pistol_rail.vmat"
-								to = "weapons/attachments/pistol_rail/pistol_rail.vmat"
-							},
-							{
-								from = "deltapoint_d.vmat"
-								to = "weapons/attachments/delta_point/deltapoint_d.vmat"
-							},
-							{
-								from = "flashhider_pistol.vmat"
-								to = "weapons/attachments/pistol_flashhider/flashhider_pistol.vmat"
-							},
-							{
-								from = "muzzlebrake_pistol.vmat"
-								to = "weapons/attachments/pistol_muzzlebrake/muzzlebrake_pistol.vmat"
-							},
-							{
-								from = "suppressor_socom.vmat"
-								to = "weapons/attachments/pistol_suppressor/suppressor_socom.vmat"
 							},
 						]
 						use_global_default = false
@@ -75,8 +48,8 @@
 						surface_prop = "default"
 						collision_tags = "solid"
 						recenter_on_parent_bone = false
-						offset_origin = [ -16.0, -4.0, 3.0 ]
-						offset_angles = [ -200.0, 0.0, 0.0 ]
+						offset_origin = [ -13.0, 4.2, -5.0 ]
+						offset_angles = [ 0.0, 180.0, 0.0 ]
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
@@ -117,91 +90,6 @@
 							]
 						}
 					},
-					{
-						_class = "RenderMeshFile"
-						name = "rail"
-						filename = "weapons/attachments/pistol_rail/pistol_rail.fbx"
-						import_translation = [ 0.0, 0.0, -1.1 ]
-						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 0.7
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = "sight"
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = [  ]
-						}
-					},
-					{
-						_class = "RenderMeshFile"
-						name = "delta"
-						filename = "weapons/attachments/delta_point/deltapoint.fbx"
-						import_translation = [ 0.0, 0.05, 0.2 ]
-						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 1.0
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = "sight"
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = [  ]
-						}
-					},
-					{
-						_class = "RenderMeshFile"
-						name = "supressor"
-						filename = "weapons/attachments/pistol_suppressor/pistol_supressor.fbx"
-						import_translation = [ -0.01, 0.0, 0.0 ]
-						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 1.0
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = "muzzle"
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = [  ]
-						}
-					},
-					{
-						_class = "RenderMeshFile"
-						name = "flashider"
-						filename = "weapons/attachments/pistol_flashhider/flashhider.fbx"
-						import_translation = [ -0.01, 0.0, 0.0 ]
-						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 1.0
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = "muzzle"
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = [  ]
-						}
-					},
-					{
-						_class = "RenderMeshFile"
-						name = "muzzlebrake"
-						filename = "weapons/attachments/pistol_muzzlebrake/muzzlebrake.fbx"
-						import_translation = [ -0.01, 0.0, 0.0 ]
-						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 1.0
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = "muzzle"
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = [  ]
-						}
-					},
 				]
 			},
 			{
@@ -211,131 +99,9 @@
 					{
 						_class = "Bone"
 						name = "hold_R"
-						origin = [ -9.836223, 0.029352, -5.103771 ]
+						origin = [ -9.637894, 0.029352, 8.916166 ]
 						angles = [ 0.0, 0.0, 0.0 ]
 						do_not_discard = true
-					},
-					{
-						_class = "Bone"
-						name = "sight"
-						origin = [ -3.7669, 0.126835, -2.60785 ]
-						angles = [ 0.0, 0.0, 0.0 ]
-						do_not_discard = true
-					},
-				]
-			},
-			{
-				_class = "BodyGroupList"
-				children = 
-				[
-					{
-						_class = "BodyGroup"
-						name = "muzzle"
-						children = 
-						[
-							{
-								_class = "BodyGroupChoice"
-								meshes = [  ]
-							},
-							{
-								_class = "BodyGroupChoice"
-								meshes = 
-								[
-									"supressor",
-								]
-							},
-							{
-								_class = "BodyGroupChoice"
-								meshes = 
-								[
-									"flashider",
-								]
-							},
-							{
-								_class = "BodyGroupChoice"
-								meshes = 
-								[
-									"muzzlebrake",
-								]
-							},
-						]
-						hidden_in_tools = false
-					},
-					{
-						_class = "BodyGroup"
-						name = "sight"
-						children = 
-						[
-							{
-								_class = "BodyGroupChoice"
-								meshes = [  ]
-							},
-							{
-								_class = "BodyGroupChoice"
-								meshes = 
-								[
-									"delta",
-								]
-							},
-						]
-						hidden_in_tools = false
-					},
-					{
-						_class = "BodyGroup"
-						name = "rail"
-						children = 
-						[
-							{
-								_class = "BodyGroupChoice"
-								meshes = [  ]
-							},
-							{
-								_class = "BodyGroupChoice"
-								meshes = 
-								[
-									"rail",
-								]
-							},
-						]
-						hidden_in_tools = false
-					},
-					{
-						_class = "BodyGroup"
-						name = "under_sight"
-						hidden_in_tools = false
-					},
-				]
-			},
-			{
-				_class = "AttachmentList"
-				children = 
-				[
-					{
-						_class = "Attachment"
-						name = "muzzle"
-						parent_bone = "muzzle"
-						relative_origin = [ 0.0, 0.0, 0.0 ]
-						relative_angles = [ -0.0, 0.0, 0.0 ]
-						weight = 1.0
-						ignore_rotation = false
-					},
-					{
-						_class = "Attachment"
-						name = "muzzle_silenced"
-						parent_bone = "muzzle"
-						relative_origin = [ 7.756691, 0.0, 0.0 ]
-						relative_angles = [ -0.0, 0.0, 0.0 ]
-						weight = 1.0
-						ignore_rotation = false
-					},
-					{
-						_class = "Attachment"
-						name = "ejection_point"
-						parent_bone = "eject"
-						relative_origin = [ 0.0, 0.0, 0.0 ]
-						relative_angles = [ 0.0, 0.0, 0.0 ]
-						weight = 1.0
-						ignore_rotation = false
 					},
 				]
 			},

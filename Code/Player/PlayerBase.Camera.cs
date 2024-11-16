@@ -26,7 +26,7 @@ public partial class PlayerBase
 	public bool IsFirstPerson => Distance == 0f;
 	private float fovSpeed = 5f;
 
-	public void OnCameraAwake() 
+	public void OnCameraAwake()
 	{
 		CurFOV = Preferences.FieldOfView;
 	}
@@ -39,14 +39,14 @@ public partial class PlayerBase
 
 	private void HandleCameraRotation()
 	{
-	
+
 		Camera.Transform.Rotation = ZeroRotation;
 	}
 
 	private void HandleCameraFov()
 	{
 		CurFOV = MathX.LerpTo( CurFOV, TargetFov, fovSpeed * RealTime.Delta );
-		
+
 		TargetFov = Preferences.FieldOfView;
 
 
@@ -69,7 +69,7 @@ public partial class PlayerBase
 		eyeAngles.pitch += Input.AnalogLook.pitch;
 		eyeAngles.yaw += Input.AnalogLook.yaw;
 		eyeAngles += EyeAnglesOffset;
-		EyeAnglesOffset = Angles.Lerp( EyeAnglesOffset, Angles.Zero, 0.5f );
+		EyeAnglesOffset = Angles.Lerp( EyeAnglesOffset, Angles.Zero, 0.4f );
 		InputSensitivity = 1;
 
 		eyeAngles.roll = 0;
@@ -78,8 +78,8 @@ public partial class PlayerBase
 		EyeAngles = eyeAngles;
 
 		// Set the current camera offset
-		var targetOffset = Vector3.Zero + Vector3.Down * 4f;
-		if ( IsCrouching ) targetOffset += Vector3.Down * 22f;
+		var targetOffset = Vector3.Zero;// +Vector3.Down * 4f;
+										//if ( IsCrouching ) targetOffset += Vector3.Down * 22f;
 		EyeOffset = Vector3.Lerp( EyeOffset, targetOffset, Time.Delta * 10f );
 
 		// Set position of the camera
@@ -88,9 +88,9 @@ public partial class PlayerBase
 			var camPos = EyePos;
 			if ( !IsFirstPerson )
 			{
-				
-				var camForward = eyeAngles.ToRotation().Forward + (new Vector3( 0.2f,0.5f,0 ) * eyeAngles) ;
-				var camTrace = Scene.Trace.Ray( camPos, camPos - (camForward * Distance) )
+
+				var camForward = eyeAngles.ToRotation().Forward + (new Vector3( 0.2f, 0.5f, 0 ) * eyeAngles);
+				var camTrace = Scene.Trace.Ray( camPos, camPos - (camForward) ) //* Distance
 					.WithoutTags( TagsHelper.Player, TagsHelper.Trigger, TagsHelper.ViewModel, TagsHelper.Weapon )
 					.Run();
 
@@ -117,10 +117,10 @@ public partial class PlayerBase
 			HandleCameraFov();
 
 
-			
+
 			Camera.Transform.Position = camPos;
 
 		}
-	
+
 	}
 }

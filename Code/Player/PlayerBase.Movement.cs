@@ -24,7 +24,7 @@ public partial class PlayerBase
 	public Vector3 EyePos => Head.Transform.Position + EyeOffset;
 
 	public CharacterController CharacterController { get; set; }
-	public HumanAnimationsHelper AnimationHelper { get; set; }
+	public CitizenAnimationHelper AnimationHelper { get; set; }
 	public CapsuleCollider BodyCollider { get; set; }
 
 	TimeSince timeSinceLastFootstep = 0;
@@ -32,7 +32,7 @@ public partial class PlayerBase
 	void OnMovementAwake()
 	{
 		CharacterController = Components.Get<CharacterController>();
-		AnimationHelper = Components.Get<HumanAnimationsHelper>();
+		AnimationHelper = Components.Get<CitizenAnimationHelper>();
 		BodyCollider = Body.Components.Get<CapsuleCollider>();
 
 		if ( BodyRenderer is not null )
@@ -41,20 +41,21 @@ public partial class PlayerBase
 
 	void OnMovementUpdate()
 	{
-		
-		if ( !IsProxy )
+		if ( Vehicle == null )
 		{
-			IsRunning = Input.Down( InputButtonHelper.Run );
+			if ( !IsProxy )
+			{
+				IsRunning = Input.Down( InputButtonHelper.Run );
 
-			if ( Input.Pressed( InputButtonHelper.Jump ) )
-				Jump();
+				if ( Input.Pressed( InputButtonHelper.Jump ) )
+					Jump();
 
-			UpdateCrouch();
+				UpdateCrouch();
+			}
+
+			RotateBody();
+			UpdateAnimations();
 		}
-
-		RotateBody();
-		UpdateAnimations();
-		
 	}
 
 	void OnMovementFixedUpdate()
@@ -66,6 +67,11 @@ public partial class PlayerBase
 
 	void BuildWishVelocity()
 	{
+		if ( Vehicle != null) 
+		{
+			Vehicle.SteerCarUpdate();
+		}
+		else { 
 
 			WishVelocity = 0;
 
@@ -81,6 +87,7 @@ public partial class PlayerBase
 			if ( IsCrouching ) WishVelocity *= CrouchSpeed;
 			else if ( IsRunning ) WishVelocity *= RunSpeed;
 			else WishVelocity *= WalkSpeed;
+		}
 	}
 
 	void Move()
@@ -144,7 +151,7 @@ public partial class PlayerBase
 		AnimationHelper.AimAngle = EyeAngles.ToRotation();
 		AnimationHelper.IsGrounded = IsOnGround;
 		AnimationHelper.WithLook( EyeAngles.ToRotation().Forward, 1f, 0.75f, 0.5f );
-		//AnimationHelper.MoveStyle = HumanAnimationsHelper.MoveStyles.Run;
+		AnimationHelper.MoveStyle = CitizenAnimationHelper.MoveStyles.Run;
 		AnimationHelper.DuckLevel = IsCrouching ? 1 : 0;
 
 		

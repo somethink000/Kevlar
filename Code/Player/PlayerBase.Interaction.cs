@@ -6,14 +6,14 @@ public partial class PlayerBase
 	private const float INTERACTION_SIZE = 25f;
 
 
-	public Ray ViewRay => new( CamPos, Camera.Transform.Rotation.Forward );
+	public Ray ViewRay => new( EyePos, Camera.Transform.Rotation.Forward );
 	public GameObject TargetedGameObject { get; private set; }
 	public SceneTraceResult InteractionTrace { get; private set; }
 	public BBox? InteractionBounds { get; private set; }
 	
 	private void UpdateInteractions()
 	{
-	
+		if ( Vehicle != null ) return;
 		var thinTrace = Scene.Trace.Ray(ViewRay, INTERACTION_DISTANCE )
 					.Size( INTERACTION_SIZE )
 					.IgnoreGameObjectHierarchy(GameObject.Root)

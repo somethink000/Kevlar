@@ -14,32 +14,25 @@ public partial class Weapon
 			return;
 
 		var isEmptyReload = ReloadEmptyTime > 0 && Primary.Ammo == 0;
-
-		if ( BulletsReload )
-		{
-			TimeSinceReload = -ReloadTimes[Primary.Ammo];
-		}
-		else
-		{
-			TimeSinceReload = -(isEmptyReload ? ReloadEmptyTime : ReloadTime);
-		}
-
-		
+		TimeSinceReload = -(isEmptyReload ? ReloadEmptyTime : ReloadTime);
 
 		
 		if ( !Owner.Inventory.HasItems( AmmoType ) && !Owner.CurrentGame.InfiniteAmmo )
 			return;
 		
-		
+		if ( IsScoping )
+			OnScopeEnd();
+
 		IsReloading = true;
 
 		// Anim
 		var reloadAnim = ReloadAnim;
-		if ( isEmptyReload && !string.IsNullOrEmpty( ReloadEmptyAnim ) && !BulletsReload )
+		if ( isEmptyReload && !string.IsNullOrEmpty( ReloadEmptyAnim ) )
 		{
 			reloadAnim = ReloadEmptyAnim;
 		}
 
+		ViewModelRenderer?.Set( reloadAnim, true );
 
 		// Player anim
 		HandleReloadEffects();
@@ -78,6 +71,7 @@ public partial class Weapon
 	public virtual void CancelShellReload()
 	{
 		IsReloading = false;
+		ViewModelRenderer.Set( ReloadAnim, false );
 	}
 
 	public virtual void OnShellReload()
@@ -113,12 +107,13 @@ public partial class Weapon
 		// Start boltback
 		await GameTask.DelaySeconds( boltBackDelay );
 		if ( !IsValid ) return;
-
+		if ( !IsProxy )
+			ViewModelRenderer?.Set( BoltBackAnim, true );
 
 		// Eject shell
 		await GameTask.DelaySeconds( BoltBackEjectDelay );
 		if ( !IsValid ) return;
-		var scale = Primary.ParticleScale;
+		var scale = CanSeeViewModel ? Primary.VMParticleScale : Primary.WMParticleScale;
 		CreateParticle( Primary.BulletEjectParticle, "ejection_point", scale );
 
 		// Finished

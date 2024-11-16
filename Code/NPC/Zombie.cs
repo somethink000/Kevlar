@@ -6,7 +6,7 @@ namespace GeneralGame;
 
 public class Zombie : NPC
 {
-	[Property] public HumanAnimationsHelper animationHelper { get; set; }
+	[Property] public CitizenAnimationHelper animationHelper { get; set; }
 	[Property] public SoundEvent hitSounds { get; set; }
 	[Property] public SoundEvent rageSounds { get; set; }
 	[Property] public SoundEvent deathSounds { get; set; }
@@ -18,18 +18,10 @@ public class Zombie : NPC
 	protected override void OnFixedUpdate()
 	{
 		base.OnFixedUpdate();
-		animationHelper.MoveStyle = HumanAnimationsHelper.MoveStyles.Citizen;
-		animationHelper.MoveType = HumanAnimationsHelper.MoveTypes.Zombie;
-		
-		
-
+		animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Swing;
+		animationHelper.MoveStyle = CitizenAnimationHelper.MoveStyles.Run;
 		animationHelper.WithWishVelocity( MoveHelper.WishVelocity );
 		animationHelper.WithVelocity( MoveHelper.Velocity );
-	}
-
-	protected override void UpdateDistance( float distance )
-	{
-		_ = distance < 100f ? animationHelper.HoldType = HumanAnimationsHelper.HoldTypes.FISTS : animationHelper.HoldType = HumanAnimationsHelper.HoldTypes.None;
 	}
 
 	[Broadcast]
@@ -44,7 +36,7 @@ public class Zombie : NPC
 			damage *= 2;
 			if ( damage > MaxHealth )
 			{
-				
+				Log.Info("effe");
 				Sound.Play( headshotSounds, Transform.Position );
 				Model.SetBodyGroup( "head", 1 );
 			}

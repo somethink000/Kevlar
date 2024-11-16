@@ -4,6 +4,12 @@ namespace GeneralGame;
 
 public partial class Weapon
 {
+	/// <summary>Firstperson Model</summary>
+	[Property, Group( "Models" )] public Model ViewModel { get; set; }
+
+	/// <summary>Firstperson Hands Model</summary>
+	[Property, Group( "Models" )] public Model ViewModelHands { get; set; }
+
 	/// <summary>Thirdperson Model</summary>
 	[Property, Group( "Models" )] public Model WorldModel { get; set; }
 
@@ -14,14 +20,13 @@ public partial class Weapon
 	[Property, Group( "General" )] public string DisplayName { get; set; }
 
 	/// <summary>How the player holds the weapon in thirdperson</summary>
-	[Property, Group( "General" )] public HumanAnimationsHelper.HoldTypes HoldType { get; set; } = HumanAnimationsHelper.HoldTypes.PISTOL;
+	[Property, Group( "General" )] public CitizenAnimationHelper.HoldTypes HoldType { get; set; } = CitizenAnimationHelper.HoldTypes.Pistol;
 
 	/// <summary>Mouse sensitivity while aiming (lower is slower, 0 to disable)</summary>
 	[Property, Group( "General" )] public float AimSensitivity { get; set; } = 0.85f;
 
 	/// <summary>Can bullets be cocked in the barrel? (clip ammo + 1)</summary>
 	[Property, Group( "General" )] public bool BulletCocking { get; set; } = true;
-	
 
 	/// <summary>Range that tucking should be enabled (-1 to disable tucking)</summary>
 	[Property, Group( "General" )] public float TuckRange { get; set; } = 30f;
@@ -59,33 +64,30 @@ public partial class Weapon
 	/// <summary>Duration of the reload animation</summary>
 	[Property, Group( "Animations" )] public float ReloadTime { get; set; } = 1f;
 
-	[Property, Group( "Animations" )] public bool BulletsReload { get; set; } = false;
-	public string BulletsState { get; set; } = "ammo";
-	[Property, Group( "Animations" )] List<float> ReloadTimes;
 	/// <summary>Reloading animation</summary>
-	public string ReloadAnim { get; set; } = "b_reload";
+	[Property, Group( "Animations" )] public string ReloadAnim { get; set; } = "b_reload";
 	/// <summary>Empty state</summary>
-	public string EmptyState { get; set; } = "b_empty";
+	[Property, Group( "Animations" )] public string EmptyState { get; set; } = "b_empty";
 	/// <summary>Aiming state</summary>
-	public string AimState { get; set; } = "b_aiming";
+	[Property, Group( "Animations" )] public string AimState { get; set; } = "b_aiming";
 
 	/// <summary>Duration of the empty reload animation (-1 to disable)</summary>
 	[Property, Group( "Animations" )] public float ReloadEmptyTime { get; set; } = -1f;
 
 	/// <summary>Reloading animation when clip is empty</summary>
-	public string ReloadEmptyAnim { get; set; } = "b_reload_empty";
+	[Property, Group( "Animations" )] public string ReloadEmptyAnim { get; set; } = "b_reload_empty";
 
 	/// <summary>Duration of the draw animation</summary>
 	[Property, Group( "Animations" )] public float DrawTime { get; set; } = 0.5f;
 
 	/// <summary>Draw animation</summary>
-	public string DrawAnim { get; set; } = "deploy";
+	[Property, Group( "Animations" )] public string DrawAnim { get; set; } = "deploy";
 
 	/// <summary>Duration of the empty draw animation (-1 to disable)</summary>
 	[Property, Group( "Animations" )] public float DrawEmptyTime { get; set; } = -1f;
 
 	/// <summary>Draw animation when there is no ammo</summary>
-	public string DrawEmptyAnim { get; set; } = "";
+	[Property, Group( "Animations" )] public string DrawEmptyAnim { get; set; } = "";
 
 
 	/// <summary>Is the weapon reloading shells instead of a magazine?</summary>
@@ -111,7 +113,7 @@ public partial class Weapon
 	[Property, Group( "Bolt Action Reloading" )] public float BoltBackTime { get; set; } = 0f;
 
 	/// <summary>Boltback animation</summary>
-	public string BoltBackAnim { get; set; } = "boltback";
+	[Property, Group( "Bolt Action Reloading" )] public string BoltBackAnim { get; set; } = "boltback";
 
 	/// <summary>Bullet eject delay during the boltback animation (-1 to disable)</summary>
 	[Property, Group( "Bolt Action Reloading" )] public float BoltBackEjectDelay { get; set; } = 0f;
@@ -149,6 +151,9 @@ public partial class Weapon
 
 	/// <summary>If the player is crouching</summary>
 	public bool IsCrouching => Owner.IsCrouching;
+
+	/// <summary>Is the view model visible</summary>
+	public bool CanSeeViewModel => !IsProxy && Owner.IsFirstPerson;
 
 	public bool IsEmpty = false;
 

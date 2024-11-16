@@ -5,11 +5,7 @@
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/zombie/death/death_34.vsnd",
-    "sounds/zombie/death/death_35.vsnd",
-    "sounds/zombie/death/death_36.vsnd",
-    "sounds/zombie/death/death_37.vsnd",
-    "sounds/zombie/death/death_38.vsnd"
+    "sounds/zombie/death/death_34.vsnd"
   ],
   "Occlusion": true,
   "AirAbsorption": true,

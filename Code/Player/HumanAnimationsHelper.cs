@@ -6,9 +6,10 @@ namespace GeneralGame;
 /// Used to control the Citizen animation state. You don't have to use this to animate your citizen avatar, but our
 /// aim is to put everything you need in this class, so you can easily see what variables are available.
 /// </summary>
-[Title( "Human Animation Helper" )]
+[Title( "Citizen Animation Helper" )]
+[Category( "Citizen" )]
 [Icon( "directions_run" )]
-[Alias( "HumanAnimation" )]
+[Alias( "CitizenAnimation" )]
 public sealed class HumanAnimationsHelper : Component, Component.ExecuteInEditor
 {
 	/// <summary>
@@ -137,7 +138,6 @@ public sealed class HumanAnimationsHelper : Component, Component.ExecuteInEditor
 
 		var angle = MathF.Atan2( sideward, forward ).RadianToDegree().NormalizeDegrees();
 
-		
 		Target.Set( "move_direction", angle );
 		Target.Set( "move_speed", Velocity.Length );
 		Target.Set( "move_groundspeed", Velocity.WithZ( 0 ).Length );
@@ -301,15 +301,13 @@ public sealed class HumanAnimationsHelper : Component, Component.ExecuteInEditor
 	public enum HoldTypes
 	{
 		None,
-		PISTOL,
-		MELE_2h,
-		MELE_1h,
-		FISTS,
-		SMG,
+		Pistol,
 		RIFLE,
 		Shotgun,
-		Granade,
-		Item,
+		HoldItem,
+		Punch,
+		Swing,
+		RPG
 	}
 
 	/// <summary>
@@ -320,40 +318,6 @@ public sealed class HumanAnimationsHelper : Component, Component.ExecuteInEditor
 		get => (HoldTypes)Target.GetInt( "holdtype" );
 		set => Target.Set( "holdtype", (int)value );
 	}
-
-
-	public enum WeaponHoldes
-	{
-		Normal,
-		Relaxed,
-	}
-
-	/// <summary>
-	/// What kind of weapon are we holding?
-	/// </summary>
-	public WeaponHoldes WeaponHold
-	{
-		get => (WeaponHoldes)Target.GetInt( "weapon_pose" );
-		set => Target.Set( "weapon_pose", (int)value );
-	}
-
-
-	public enum MoveTypes
-	{
-		Citizen,
-		Zombie,
-	}
-
-	/// <summary>
-	/// What kind of weapon are we holding?
-	/// </summary>
-	public MoveTypes MoveType
-	{
-		get => (MoveTypes)Target.GetInt( "holdtype_fists" );
-		set => Target.Set( "holdtype_fists", (int)value );
-	}
-
-
 
 	public enum Hand
 	{
@@ -389,10 +353,9 @@ public sealed class HumanAnimationsHelper : Component, Component.ExecuteInEditor
 
 	public enum MoveStyles
 	{
-		Citizen,
-		WalkOnly,
-		RunOnly,
-		WeaponSprint,
+		Auto,
+		Walk,
+		Run
 	}
 
 	/// <summary>

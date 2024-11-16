@@ -53,23 +53,3 @@ namespace GeneralGame;
 
 
 //}
-
-
-//Sights
-//{
-
-[Title( "CMore Rail" )]
-public class CMoreRail : SightAttachment
-{
-	public override string Name => "CMore Rail";
-	public override string IconPath => "ui/hud/sightmark.png";
-	public override string BodyGroup { get; set; } = "sight";
-	public override int BodyGroupChoice { get; set; } = 1;
-	public override int BodyGroupDefault { get; set; } = 0;
-
-	// Sight
-	public override float AimPlayerFOV { get; set; } = 50f;
-	public override float AimSensitivity { get; set; } = 0.5f;
-}
-
-//}

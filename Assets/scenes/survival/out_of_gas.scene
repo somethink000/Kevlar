@@ -2,6 +2,21 @@
   "__guid": "edffdb4d-25e7-4262-9736-916b8a5f4a25",
   "GameObjects": [
     {
+      "__guid": "9e4634ed-a8e9-4256-a9bc-3ade5c3465fc",
+      "Flags": 0,
+      "Name": "Scene Information",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SceneInformation",
+          "__guid": "af59873c-a8ac-4fc7-a52e-50866073d768",
+          "Description": "",
+          "SceneTags": "",
+          "Title": "minimal"
+        }
+      ]
+    },
+    {
       "__guid": "c3fe7d19-05e0-4f92-9623-f8b31eec3171",
       "Flags": 0,
       "Name": "Defence",
@@ -26,7 +41,6 @@
           "__guid": "e0fbc366-1843-4b91-9a36-fecf36e72425",
           "Flags": 0,
           "Name": "Gradient Fog",
-          "Position": "0,0,0",
           "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
           "Enabled": true,
           "Components": [
@@ -46,7 +60,6 @@
           "__guid": "44599370-eab6-4d58-8834-575447b160ae",
           "Flags": 0,
           "Name": "Sound",
-          "Position": "0,0,0",
           "Rotation": "0.3210197,-0.3851179,0.5930297,-0.6300368",
           "Enabled": true,
           "Components": [
@@ -65,7 +78,6 @@
           "__guid": "4f7db652-3fe6-4a19-b76b-67dd14df30be",
           "Flags": 0,
           "Name": "Sun",
-          "Position": "0,0,0",
           "Rotation": "0.7086363,-0.4141575,0.3112621,-0.4789825",
           "Tags": "light_directional,light",
           "Enabled": true,
@@ -85,7 +97,6 @@
           "__guid": "7b507888-48d8-48ba-af9f-bab745768d22",
           "Flags": 0,
           "Name": "Envmap",
-          "Position": "0,0,0",
           "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
           "Enabled": true,
           "Components": [
@@ -101,6 +112,7 @@
               "Feathering": 0.02,
               "FrameInterval": 5,
               "MaxDistance": 16384,
+              "MultiBounce": false,
               "Projection": "Sphere",
               "RenderDynamically": true,
               "TintColor": "1,1,1,1",
@@ -114,7 +126,6 @@
           "__guid": "8b3cd142-6acb-47f1-b4e0-6b00f75f7355",
           "Flags": 0,
           "Name": "WeaponRegistry",
-          "Position": "0,0,0",
           "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
           "Enabled": true,
           "NetworkMode": 1,
@@ -140,7 +151,6 @@
           "__guid": "c988658d-a998-405a-b169-e1711fe59578",
           "Flags": 0,
           "Name": "ExampleNetworkManager",
-          "Position": "0,0,0",
           "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
           "Enabled": true,
           "Components": [
@@ -158,13 +168,13 @@
           "__guid": "d74f755b-b470-462a-bcf2-988314f90bfa",
           "Flags": 0,
           "Name": "2D Skybox",
-          "Position": "0,0,0",
           "Tags": "skybox",
           "Enabled": true,
           "Components": [
             {
               "__type": "Sandbox.SkyBox2D",
               "__guid": "440f3719-3ce8-4e08-82e4-9dfbb5afa586",
+              "SkyIndirectLighting": true,
               "SkyMaterial": "materials/sky/atmosphere_sky.vmat",
               "Tint": "0.9907,0.9907,0.9907,1"
             }
@@ -174,7 +184,6 @@
           "__guid": "65d545c0-0167-4c8b-8da5-ba561eddd43f",
           "Flags": 0,
           "Name": "Game",
-          "Position": "0,0,0",
           "Enabled": true,
           "Components": [
             {
@@ -248,6 +257,8 @@
           "EnableCollision": true,
           "MapName": "scenes/survival/out_of_gas.vmap",
           "NoOrigin": false,
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
           "UseMapFromLaunch": false
         }
       ],
@@ -325,15 +336,33 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "ed8bae48-cc53-4266-9c91-95ce3e3f4df8",
           "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
           "Model": "content/models/m_ll_lamp_halogen_01.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "Sandbox.SoundPointComponent",
           "__guid": "3c201229-34b1-438e-99bf-92162b4db7f7",
+          "Distance": 512,
           "DistanceAttenuation": false,
           "DistanceAttenuationOverride": false,
+          "Falloff": [
+            {
+              "y": 1,
+              "in": 3.1415927,
+              "out": -3.1415927
+            },
+            {
+              "x": 1
+            }
+          ],
           "Force2d": false,
           "MaxRepeatTime": 1,
           "MinRepeatTime": 1,
@@ -391,15 +420,33 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "c8be004f-3e34-4154-90a2-40adda5a89e6",
           "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
           "Model": "content/models/m_ll_lamp_halogen_01.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "Sandbox.SoundPointComponent",
           "__guid": "c2296c5d-5f2d-4315-800a-c86e39d069c0",
+          "Distance": 512,
           "DistanceAttenuation": false,
           "DistanceAttenuationOverride": false,
+          "Falloff": [
+            {
+              "y": 1,
+              "in": 3.1415927,
+              "out": -3.1415927
+            },
+            {
+              "x": 1
+            }
+          ],
           "Force2d": false,
           "MaxRepeatTime": 1,
           "MinRepeatTime": 1,
@@ -434,15 +481,33 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "0120db14-1287-4cc9-bdd9-719c09708edc",
           "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
           "Model": "content/models/m_ll_lamp_halogen_01.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "Sandbox.SoundPointComponent",
           "__guid": "0569ad61-b40b-43d0-8750-dd4919863545",
+          "Distance": 512,
           "DistanceAttenuation": false,
           "DistanceAttenuationOverride": false,
+          "Falloff": [
+            {
+              "y": 1,
+              "in": 3.1415927,
+              "out": -3.1415927
+            },
+            {
+              "x": 1
+            }
+          ],
           "Force2d": false,
           "MaxRepeatTime": 1,
           "MinRepeatTime": 1,
@@ -477,15 +542,33 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "70a206a2-d02d-4c06-bff1-22382aa62b22",
           "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
           "Model": "content/models/m_ll_lamp_halogen_01.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "Sandbox.SoundPointComponent",
           "__guid": "d399e0cd-e695-4217-bb12-eab0ad516597",
+          "Distance": 512,
           "DistanceAttenuation": false,
           "DistanceAttenuationOverride": false,
+          "Falloff": [
+            {
+              "y": 1,
+              "in": 3.1415927,
+              "out": -3.1415927
+            },
+            {
+              "x": 1
+            }
+          ],
           "Force2d": false,
           "MaxRepeatTime": 1,
           "MinRepeatTime": 1,
@@ -973,9 +1056,13 @@
     "MaxFixedUpdates": 5,
     "NetworkFrequency": 60,
     "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
     "ThreadedAnimation": true,
     "TimeScale": 1,
     "UseFixedUpdate": true,
+    "Metadata": {
+      "Title": "minimal"
+    },
     "NavMesh": {
       "Enabled": true,
       "IncludeStaticBodies": true,
@@ -989,11 +1076,12 @@
       "IncludedBodies": ""
     }
   },
+  "ResourceVersion": 2,
   "Title": "minimal",
-  "Description": "",
-  "ResourceVersion": 1,
+  "Description": null,
   "__references": [
-    "evilinc.m_ll_lamp_halogen_01"
+    "evilinc.m_ll_lamp_halogen_01#46930"
   ],
-  "__version": 1
+  "HasUnsavedChanges": false,
+  "__version": 2
 }

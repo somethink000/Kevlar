@@ -6,8 +6,12 @@ public partial class Weapon
 {
 	public virtual SkinnedModelRenderer GetEffectRenderer()
 	{
+		SkinnedModelRenderer effectModel = WorldModelRenderer;
 
-		return WorldModelRenderer;
+		if ( CanSeeViewModel )
+			effectModel = ViewModelRenderer;
+
+		return effectModel;
 	}
 
 	/// <summary>
@@ -24,8 +28,12 @@ public partial class Weapon
 			effectAttachment = activeAttachment.EffectAttachmentOrBone;
 			Transform? effectBoneTransform = null;
 
-
-			if ( activeAttachment.WorldModelRenderer is not null )
+			// Custom models will not use attachments but bones instead to position effects
+			if ( CanSeeViewModel && activeAttachment.ViewModelRenderer is not null )
+			{
+				effectBoneTransform = activeAttachment.ViewModelRenderer.SceneModel.GetBoneWorldTransform( effectAttachment );
+			}
+			else if ( !CanSeeViewModel && activeAttachment.WorldModelRenderer is not null )
 			{
 				effectBoneTransform = activeAttachment.WorldModelRenderer.SceneModel.GetBoneWorldTransform( effectAttachment );
 			}

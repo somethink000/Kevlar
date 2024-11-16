@@ -42,7 +42,6 @@ public partial class Weapon
 				// Dry fire
 				if ( shootInfo.DryShootSound is not null )
 					PlaySound( shootInfo.DryShootSound.ResourceId );
-					
 			}
 
 			return false;
@@ -88,12 +87,13 @@ public partial class Weapon
 		// Ammo
 		shootInfo.Ammo -= 1;
 
-
 		if ( shootInfo.Ammo <= 0 ) IsEmpty = true;
 
 		// Animations
 		var shootAnim = GetShootAnimation( shootInfo );
-		
+		if ( !string.IsNullOrEmpty( shootAnim ) )
+			ViewModelRenderer.Set( shootAnim, true );
+
 		// Sound
 		if ( shootInfo.ShootSound is not null )
 			PlaySound( shootInfo.ShootSound.ResourceId );
@@ -158,7 +158,7 @@ public partial class Weapon
 
 		// Weapon
 		var shootInfo = GetShootInfo( isPrimary );
-		var scale = shootInfo.ParticleScale;
+		var scale = CanSeeViewModel ? shootInfo.VMParticleScale : shootInfo.WMParticleScale;
 		var muzzleTransform = GetMuzzleTransform();
 
 		// Bullet eject
@@ -195,7 +195,7 @@ public partial class Weapon
 
 		// Barrel smoke
 		if ( !IsProxy && shootInfo.BarrelSmokeParticle is not null && barrelHeat >= shootInfo.ClipSize * 0.75 )
-			CreateParticle( shootInfo.BarrelSmokeParticle, muzzleTransform.Value, shootInfo.ParticleScale, ( particles ) => ParticleToMuzzlePos( particles ) );
+			CreateParticle( shootInfo.BarrelSmokeParticle, muzzleTransform.Value, shootInfo.VMParticleScale, ( particles ) => ParticleToMuzzlePos( particles ) );
 	}
 
 	void ParticleToMuzzlePos( SceneParticles particles )
@@ -287,7 +287,9 @@ public partial class Weapon
 		particles?.SetControlPoint( 0, transform.Rotation );
 		particles?.SetNamedValue( "scale", scale );
 
-		
+		if ( CanSeeViewModel )
+			particles.Tags.Add( TagsHelper.ViewModel );
+
 		particles?.PlayUntilFinished( Task, OnFrame );
 	}
 }

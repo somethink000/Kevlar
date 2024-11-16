@@ -1,7 +1,6 @@
 ﻿
 
 using Sandbox;
-using static Sandbox.Gizmo;
 using static Sandbox.PhysicsContact;
 
 namespace GeneralGame;
@@ -504,11 +503,6 @@ public partial class NPC : Component, IHealthComponent
 		}
 	}
 
-	protected virtual void UpdateDistance( float distance )
-	{
-
-	}
-
 	/// <summary>
 	/// Is the object within the npc's reach (AttackRange) 
 	/// </summary>
@@ -531,11 +525,7 @@ public partial class NPC : Component, IHealthComponent
 	{
 		if ( !GameObject.IsValid() ) return false;
 
-		float dist = target.Transform.Position.Distance( Transform.Position );
-
-		UpdateDistance( dist );
-
-		return dist <= range;
+		return target.Transform.Position.Distance( Transform.Position ) <= range;
 	}
 
 	/// <summary>

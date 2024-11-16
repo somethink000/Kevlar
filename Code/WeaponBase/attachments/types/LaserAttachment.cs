@@ -102,7 +102,7 @@ public abstract class LaserAttachment : Attachment
 	{
 		if ( !Equipped ) return;
 
-		var startAttachment = Weapon.WorldModelRenderer.SceneModel.GetAttachment( EffectAttachmentOrBone );
+		var startAttachment = Weapon.ViewModelRenderer.SceneModel.GetAttachment( EffectAttachmentOrBone );
 		var startPos = startAttachment.Value.Position;
 		var endPos = startAttachment.Value.Position + startAttachment.Value.Rotation.Forward * 9999;
 

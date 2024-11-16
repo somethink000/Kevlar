@@ -95,8 +95,11 @@ public class ShootInfo : Component
 
 	// Particles //
 
+	/// <summary> View Model particle scale</summary>
+	[Property, Title( "View Model Scale" ), Group( "Particles" )] public float VMParticleScale { get; set; } = 1f;
+
 	/// <summary> World Model particle scale</summary>
-	[Property, Title( "World Model Scale" ), Group( "Particles" )] public float ParticleScale { get; set; } = 1f;
+	[Property, Title( "World Model Scale" ), Group( "Particles" )] public float WMParticleScale { get; set; } = 1f;
 
 	/// <summary>Particle used for bullet ejection</summary>
 	[Property, Group( "Particles" )] public ParticleSystem BulletEjectParticle { get; set; }

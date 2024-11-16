@@ -136,24 +136,9 @@
 					{
 						_class = "Bone"
 						name = "hold_R"
-						origin = [ -9.743229, -0.203813, 5.49223 ]
+						origin = [ -10.089754, 0.235173, 2.995842 ]
 						angles = [ 0.0, 0.0, 0.0 ]
 						do_not_discard = true
-					},
-				]
-			},
-			{
-				_class = "AttachmentList"
-				children = 
-				[
-					{
-						_class = "Attachment"
-						name = "muzzle"
-						parent_bone = "muzzle"
-						relative_origin = [ 0.0, 0.0, 0.0 ]
-						relative_angles = [ 0.0, 0.0, 0.0 ]
-						weight = 1.0
-						ignore_rotation = false
 					},
 				]
 			},

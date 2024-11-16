@@ -6,7 +6,7 @@ using static Sandbox.Connection;
 namespace GeneralGame;
 
 
-public partial class PlayerBase : Component, Component.INetworkSpawn, IHealthComponent
+public partial class PlayerBase : Component, Component.INetworkSpawn, IPlayerBase, IHealthComponent
 {
 	[Property] public GameObject Head { get; set; }
 	[Property] public GameObject Body { get; set; }
@@ -14,10 +14,11 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IHealthCom
 	[Property] public CameraComponent Camera { get; set; }
 	[Property] public PanelComponent RootDisplay { get; set; }
     [Property] public Inventory Inventory { get; set; }
+	[Property] public Vehicle Vehicle { get; set; }
 	[Property] public Voice Voice { get; set; }
+
 	private float SaveDelay = 60f;
 	private TimeSince SinceSave { get; set; }
-
 	public int MaxCarryWeight { get; set; }
 	public bool IsEncumbered => Inventory.Weight > MaxCarryWeight;
 
@@ -25,10 +26,10 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IHealthCom
 	public int Experience;
 	public bool DropInvent;
 	public BaseGame CurrentGame { get; set; }
-	//Guid IPlayerBase.Id { get => GameObject.Id; }
+	Guid IPlayerBase.Id { get => GameObject.Id; }
 
 
-protected override void OnAwake()
+	protected override void OnAwake()
 	{
 		CurrentGame = Scene.GetAllComponents<BaseGame>().First();
 		CurrentGame.InitPlayer( this );
@@ -47,6 +48,7 @@ protected override void OnAwake()
 
 	protected override void OnStart()
 	{
+
 
 		if ( IsProxy )
 		{
@@ -81,7 +83,6 @@ protected override void OnAwake()
 		MoveToSpawnPoint();
 		
 	}
-
 
 	public void GoodGameEnding()
 	{
@@ -142,6 +143,7 @@ protected override void OnAwake()
 			SinceSave = 0;
 			Save();
 		}
+
 
 		if ( !IsProxy && IsAlive && IsFirstPerson )
 		{

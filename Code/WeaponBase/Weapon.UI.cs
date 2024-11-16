@@ -9,7 +9,6 @@ public partial class Weapon
 
 	private CustomizationMenu customizationMenu;
 
-	
 	/// <summary>Override this if you want custom UI elements</summary>
 	public virtual void CreateUI()
 	{
@@ -42,7 +41,6 @@ public partial class Weapon
 	{
 		customizationMenu = new CustomizationMenu( this );
 		RootPanel.Panel.AddChild( customizationMenu );
-		
 	}
 
 	void CloseCustomizationMenu()

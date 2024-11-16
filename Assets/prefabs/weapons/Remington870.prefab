@@ -5,13 +5,10 @@
     "Name": "remington870",
     "Tags": "weapon",
     "NetworkMode": 1,
-    "NetworkOrphaned": 3,
-    "OwnerTransfer": 0,
     "Components": [
       {
         "__type": "GeneralGame.Weapon",
         "__guid": "61ada1b9-4036-4907-be9e-e774c0e4154a",
-        "ReloadTimes": [],
         "AimAnimData": {
           "Angle": "-0.47,0.1,0",
           "Pos": "-1.888,0,1.428"
@@ -21,22 +18,26 @@
         "AimOutFOVSpeed": 1,
         "AimPlayerFOV": -1,
         "AimSensitivity": 0.85,
+        "AimState": "b_aiming",
         "AmmoType": "prefabs/items/ammo_shotgun.prefab",
         "AnimSpeed": 1,
         "BoltBack": true,
+        "BoltBackAnim": "boltback",
         "BoltBackEjectDelay": 0.8,
         "BoltBackTime": 0.8,
         "BulletCocking": false,
-        "BulletsReload": false,
         "ClassName": "remington",
         "CustomizeAnimData": {
           "Angle": "-2.31,27.25,10",
           "Pos": "4.45,0,0.61"
         },
-        "DeploySound": "sounds/weapons/sources/weapon_deploy.sound",
+        "DeploySound": "sounds/swb/animations/swb_deploy.sound",
         "DisplayName": "Remington 870",
+        "DrawAnim": "deploy",
+        "DrawEmptyAnim": "",
         "DrawEmptyTime": -1,
         "DrawTime": 0.7,
+        "EmptyState": "b_empty",
         "HoldType": "Shotgun",
         "Primary": {
           "_type": "component",
@@ -44,6 +45,8 @@
           "go": "90e1f323-4483-4cab-a02f-56d0ccf3fead",
           "component_type": "ShootInfo"
         },
+        "ReloadAnim": "reload",
+        "ReloadEmptyAnim": "",
         "ReloadEmptyTime": -1,
         "ReloadTime": 3.67,
         "RunAnimData": {
@@ -65,6 +68,8 @@
         "ShellReloadStartTime": 0.62,
         "Slot": 3,
         "TuckRange": 30,
+        "ViewModel": "weapons/remington/view/v_remington870_tact.vmdl",
+        "ViewModelHands": "weapons/handes/pmm_ref_hand_blue.vmdl",
         "WorldModel": "weapons/remington/world/w_remington870_tact.vmdl"
       },
       {
@@ -73,7 +78,7 @@
         "Ammo": 6,
         "AmmoType": "shotgun",
         "BarrelSmokeParticle": "particles/swb/muzzle/barrel_smoke.vpcf",
-        "BulletEjectParticle": "particles/swb/bullet_hulls/12gauge_eject.vpcf",
+        "BulletEjectParticle": "particles/swb/bullet_hulls/buck_shot.vpcf",
         "Bullets": 10,
         "BulletSize": 2,
         "BulletTracerChance": 0.33,
@@ -86,14 +91,15 @@
         "HitFlinch": 2.5,
         "InfiniteAmmo": "disabled",
         "MuzzleFlashParticle": "particles/swb/muzzle/flash.vpcf",
-        "ParticleScale": 1,
         "Recoil": 5,
         "RPM": 100,
         "ShootAimedAnim": "",
         "ShootAnim": "fire",
         "ShootEmptyAnim": "",
         "ShootSound": "weapons/remington/rem870_tact_fire1.sound",
-        "Spread": 0.14
+        "Spread": 0.14,
+        "VMParticleScale": 2,
+        "WMParticleScale": 2.5
       },
       {
         "__type": "GeneralGame.ReflexSightBG",
@@ -142,7 +148,8 @@
         "__guid": "3eb285fb-3a8b-456d-b4d1-7ce3b56268d4",
         "IsTrigger": false,
         "Model": "weapons/remington/world/w_remington870_tact.vmdl",
-        "Static": false
+        "Static": false,
+        "SurfaceVelocity": "0,0,0"
       },
       {
         "__type": "Sandbox.Rigidbody",
@@ -151,8 +158,10 @@
         "Gravity": true,
         "LinearDamping": 0,
         "Locking": {},
+        "MassCenterOverride": "0,0,0",
         "MassOverride": 0,
         "MotionEnabled": true,
+        "OverrideMassCenter": false,
         "RigidbodyFlags": 0,
         "StartAsleep": false
       },
@@ -160,20 +169,63 @@
         "__type": "Sandbox.SkinnedModelRenderer",
         "__guid": "f60bd105-2df7-406f-937a-a3ac18ec7d68",
         "BodyGroups": 18446744073709551615,
+        "CreateAttachments": false,
         "CreateBoneObjects": false,
         "Model": "weapons/remington/world/w_remington870_tact.vmdl",
+        "Morphs": {},
+        "Parameters": {
+          "bools": {},
+          "ints": {},
+          "floats": {},
+          "vectors": {},
+          "rotations": {}
+        },
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
         "RenderType": "On",
+        "Sequence": {
+          "Name": null
+        },
         "Tint": "1,1,1,1",
         "UseAnimGraph": true
       }
     ],
     "Children": [],
-    "__variables": []
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
   },
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
+  "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
+  "HasUnsavedChanges": false,
   "__version": 1
 }

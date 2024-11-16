@@ -5,7 +5,7 @@ namespace GeneralGame;
 
 public class Crosshair : Panel
 {
-	PlayerBase player => weapon.Owner;
+	IPlayerBase player => weapon.Owner;
 	Weapon weapon;
 
 	Panel centerDot;
