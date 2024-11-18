@@ -41,21 +41,20 @@ public partial class PlayerBase
 
 	void OnMovementUpdate()
 	{
-		if ( Vehicle == null )
+		
+		if ( !IsProxy )
 		{
-			if ( !IsProxy )
-			{
-				IsRunning = Input.Down( InputButtonHelper.Run );
+			IsRunning = Input.Down( InputButtonHelper.Run );
 
-				if ( Input.Pressed( InputButtonHelper.Jump ) )
-					Jump();
+			if ( Input.Pressed( InputButtonHelper.Jump ) )
+				Jump();
 
-				UpdateCrouch();
-			}
-
-			RotateBody();
-			UpdateAnimations();
+			UpdateCrouch();
 		}
+
+		RotateBody();
+		UpdateAnimations();
+		
 	}
 
 	void OnMovementFixedUpdate()
@@ -67,27 +66,24 @@ public partial class PlayerBase
 
 	void BuildWishVelocity()
 	{
-		if ( Vehicle != null) 
-		{
-			Vehicle.SteerCarUpdate();
-		}
-		else { 
 
-			WishVelocity = 0;
+		
 
-			var rot = EyeAngles.ToRotation();
-			if ( Input.Down( InputButtonHelper.Forward ) ) WishVelocity += rot.Forward;
-			if ( Input.Down( InputButtonHelper.Backward ) ) WishVelocity += rot.Backward;
-			if ( Input.Down( InputButtonHelper.Left ) ) WishVelocity += rot.Left;
-			if ( Input.Down( InputButtonHelper.Right ) ) WishVelocity += rot.Right;
+		WishVelocity = 0;
 
-			WishVelocity = WishVelocity.WithZ( 0 );
-			if ( !WishVelocity.IsNearZeroLength ) WishVelocity = WishVelocity.Normal;
+		var rot = EyeAngles.ToRotation();
+		if ( Input.Down( InputButtonHelper.Forward ) ) WishVelocity += rot.Forward;
+		if ( Input.Down( InputButtonHelper.Backward ) ) WishVelocity += rot.Backward;
+		if ( Input.Down( InputButtonHelper.Left ) ) WishVelocity += rot.Left;
+		if ( Input.Down( InputButtonHelper.Right ) ) WishVelocity += rot.Right;
 
-			if ( IsCrouching ) WishVelocity *= CrouchSpeed;
-			else if ( IsRunning ) WishVelocity *= RunSpeed;
-			else WishVelocity *= WalkSpeed;
-		}
+		WishVelocity = WishVelocity.WithZ( 0 );
+		if ( !WishVelocity.IsNearZeroLength ) WishVelocity = WishVelocity.Normal;
+
+		if ( IsCrouching ) WishVelocity *= CrouchSpeed;
+		else if ( IsRunning ) WishVelocity *= RunSpeed;
+		else WishVelocity *= WalkSpeed;
+		
 	}
 
 	void Move()

@@ -24,15 +24,8 @@ public partial class Weapon
 			OnScopeEnd();
 
 		IsReloading = true;
-
-		// Anim
-		var reloadAnim = ReloadAnim;
-		if ( isEmptyReload && !string.IsNullOrEmpty( ReloadEmptyAnim ) )
-		{
-			reloadAnim = ReloadEmptyAnim;
-		}
-
-		ViewModelRenderer?.Set( reloadAnim, true );
+	
+		ViewModelRenderer?.Set( ReloadAnim, true );
 
 		// Player anim
 		HandleReloadEffects();

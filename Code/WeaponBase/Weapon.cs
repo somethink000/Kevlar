@@ -275,7 +275,6 @@ public partial class Weapon : Component
 		}
 
 		ViewModelRenderer?.Set( ReloadAnim, false );
-		ViewModelRenderer?.Set( ReloadEmptyAnim, false );
 		ViewModelRenderer?.Set( DrawAnim, false );
 		ViewModelRenderer?.Set( DrawEmptyAnim, false );
 	}
@@ -283,6 +282,8 @@ public partial class Weapon : Component
 	[Broadcast]
 	void PlaySound( int resourceID )
 	{
+		if ( !IsValid ) return;
+
 		var sound = ResourceLibrary.Get<SoundEvent>( resourceID );
 		if ( sound is null ) return;
 
@@ -291,6 +292,7 @@ public partial class Weapon : Component
 
 		if ( isScreenSound )
 		{
+			sound.Volume = 0.3f;
 			Sound.Play( sound );
 		}
 		else

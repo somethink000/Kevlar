@@ -14,7 +14,6 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IPlayerBas
 	[Property] public CameraComponent Camera { get; set; }
 	[Property] public PanelComponent RootDisplay { get; set; }
     [Property] public Inventory Inventory { get; set; }
-	[Property] public Vehicle Vehicle { get; set; }
 	[Property] public Voice Voice { get; set; }
 
 	private float SaveDelay = 60f;

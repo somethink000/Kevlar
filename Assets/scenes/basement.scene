@@ -155,6 +155,9 @@
                 "AfterUILayer": false
               },
               "RenderType": "On",
+              "Sequence": {
+                "Name": null
+              },
               "Tint": "1,1,1,1",
               "UseAnimGraph": true
             },
@@ -261,50 +264,6 @@
           "RenderType": "On",
           "Tint": "1,1,1,1"
         }
-      ],
-      "Children": [
-        {
-          "__guid": "a1e556dc-b0a1-4bdb-913d-222d723f0e4d",
-          "Flags": 0,
-          "Name": "Point Light (8)",
-          "Position": "-11.50001,14.5,8.000187",
-          "Rotation": "-0.4999999,-0.5000001,-0.5000001,-0.5000001",
-          "Tags": "light_point,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "a7654aa1-36bb-4b81-89b0-d4533dc58a10",
-              "Attenuation": 0.62,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "1,0.95814,0.74884,1",
-              "Radius": 382.80063,
-              "Shadows": false
-            }
-          ]
-        },
-        {
-          "__guid": "38d40c6e-3519-4af4-8fc1-09e60e958600",
-          "Flags": 0,
-          "Name": "Point Light (7)",
-          "Position": "-12.49997,-14.50001,8.000191",
-          "Rotation": "-0.4999999,-0.5000001,-0.5000001,-0.5000001",
-          "Tags": "light_point,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "67ef31f0-880d-41b3-b3ad-0c435b9258e1",
-              "Attenuation": 0.37,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "1,0.95814,0.74884,1",
-              "Radius": 2000,
-              "Shadows": false
-            }
-          ]
-        }
       ]
     },
     {
@@ -329,50 +288,6 @@
           },
           "RenderType": "On",
           "Tint": "1,1,1,1"
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "ead2ebb1-7b96-48d8-8138-9c0b467dfa97",
-          "Flags": 0,
-          "Name": "Point Light (8)",
-          "Position": "-11.50001,14.5,8.000213",
-          "Rotation": "-0.4999999,-0.5000001,-0.5000001,-0.5000001",
-          "Tags": "light_point,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "2fddb4f0-dafe-4087-a499-522c98151b0a",
-              "Attenuation": 0.62,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "1,0.95814,0.74884,1",
-              "Radius": 382.80063,
-              "Shadows": false
-            }
-          ]
-        },
-        {
-          "__guid": "3f75a778-2782-464f-8ea4-485c57de99a6",
-          "Flags": 0,
-          "Name": "Point Light (7)",
-          "Position": "-12.49997,-14.50001,8.000187",
-          "Rotation": "-0.4999999,-0.5000001,-0.5000001,-0.5000001",
-          "Tags": "light_point,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "3a612031-cc47-4b56-9228-d1924b256afe",
-              "Attenuation": 0.37,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "1,0.95814,0.74884,1",
-              "Radius": 2000,
-              "Shadows": false
-            }
-          ]
         }
       ]
     },
@@ -399,57 +314,13 @@
           "RenderType": "On",
           "Tint": "1,1,1,1"
         }
-      ],
-      "Children": [
-        {
-          "__guid": "524f0b39-84db-49c2-9c64-af7f715de676",
-          "Flags": 0,
-          "Name": "Point Light (8)",
-          "Position": "-11.50001,14.5,8.000187",
-          "Rotation": "-0.4999999,-0.5000001,-0.5000001,-0.5000001",
-          "Tags": "light_point,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "c81c5445-1852-4e5b-ae60-0496130914d4",
-              "Attenuation": 0.62,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "1,0.95814,0.74884,1",
-              "Radius": 382.80063,
-              "Shadows": false
-            }
-          ]
-        },
-        {
-          "__guid": "1229c645-0ad7-454c-9d1d-37c9143c0ba4",
-          "Flags": 0,
-          "Name": "Point Light (7)",
-          "Position": "-12.49997,-14.50001,8.000191",
-          "Rotation": "-0.4999999,-0.5000001,-0.5000001,-0.5000001",
-          "Tags": "light_point,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "9317c347-f92b-47e0-8681-0246160742ac",
-              "Attenuation": 0.37,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "1,0.95814,0.74884,1",
-              "Radius": 2000,
-              "Shadows": false
-            }
-          ]
-        }
       ]
     },
     {
       "__guid": "0b41673e-6f50-4c33-93a7-fec1abc3f3fa",
       "Flags": 0,
       "Name": "m_ll_lamp_industrt_01",
-      "Position": "332.7502,170,446",
+      "Position": "332.7502,170.0001,446.2525",
       "Rotation": "-0.5,0.4999999,0.5,-0.4999999",
       "Enabled": true,
       "Components": [
@@ -494,7 +365,7 @@
               "FogStrength": 1,
               "LightColor": "0.74884,1,0.96233,1",
               "Radius": 800,
-              "Shadows": false
+              "Shadows": true
             }
           ]
         },
@@ -515,7 +386,7 @@
               "FogStrength": 1,
               "LightColor": "0.74884,1,0.96233,1",
               "Radius": 800,
-              "Shadows": false
+              "Shadows": true
             }
           ]
         },
@@ -616,7 +487,7 @@
               "FogStrength": 1,
               "LightColor": "0.74884,1,0.96233,1",
               "Radius": 800,
-              "Shadows": false
+              "Shadows": true
             }
           ]
         },
@@ -637,7 +508,7 @@
               "FogStrength": 1,
               "LightColor": "0.74884,1,0.96233,1",
               "Radius": 800,
-              "Shadows": false
+              "Shadows": true
             }
           ]
         },
@@ -652,128 +523,6 @@
             {
               "__type": "Sandbox.SoundPointComponent",
               "__guid": "0a4a5fae-da24-4e46-9245-94a170399af9",
-              "Distance": 512,
-              "DistanceAttenuation": false,
-              "DistanceAttenuationOverride": false,
-              "Falloff": [
-                {
-                  "y": 1,
-                  "in": 3.1415927,
-                  "out": -3.1415927
-                },
-                {
-                  "x": 1
-                }
-              ],
-              "Force2d": false,
-              "MaxRepeatTime": 1,
-              "MinRepeatTime": 1,
-              "Occlusion": false,
-              "OcclusionOverride": false,
-              "OcclusionRadius": 32,
-              "Pitch": 1,
-              "PlayOnStart": true,
-              "ReflectionOverride": false,
-              "Reflections": false,
-              "Repeat": false,
-              "SoundEvent": "sounds/ambient/lamp_zzzz1.sound",
-              "SoundOverride": false,
-              "StopOnNew": false,
-              "TargetMixer": {
-                "Name": "unknown",
-                "Id": "00000000-0000-0000-0000-000000000000"
-              },
-              "Volume": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "__guid": "7bf45ed4-1484-441c-9ddb-8f3a73fcb75f",
-      "Flags": 0,
-      "Name": "m_ll_lamp_industrt_01 (2)",
-      "Position": "332.7502,80,280",
-      "Rotation": "-0.5,0.4999999,0.5,-0.4999999",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "bf6d9505-a11c-4281-b67f-e2f3e93b3637",
-          "IsTrigger": false,
-          "Static": false,
-          "SurfaceVelocity": "0,0,0"
-        },
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "f717f377-5637-4e0e-b90e-0a1368c1b89a",
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "Model": "content/models/m_ll_lamp_industrt_01.vmdl",
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "605809b3-40cd-4c71-8b9c-9f6cfb0e2f1c",
-          "Flags": 0,
-          "Name": "Point Light (4)",
-          "Position": "0,-9.212095,15.0001",
-          "Rotation": "-0.0000001043081,0,-1,0.0000002235174",
-          "Tags": "light_point,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "5a14eb01-ab0e-4c33-be61-4939755a6c77",
-              "Attenuation": 1,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.74884,1,0.96233,1",
-              "Radius": 800,
-              "Shadows": false
-            }
-          ]
-        },
-        {
-          "__guid": "a64ff074-e493-45b8-85d2-bda466cae8a7",
-          "Flags": 0,
-          "Name": "Point Light (4)",
-          "Position": "0.000001553044,-9.212094,-17.24979",
-          "Rotation": "-0.0000001043081,0,-1,0.0000002235174",
-          "Tags": "light_point,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "b6a609d9-2042-4da4-b4f4-64a3c321cd0f",
-              "Attenuation": 1,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.74884,1,0.96233,1",
-              "Radius": 800,
-              "Shadows": false
-            }
-          ]
-        },
-        {
-          "__guid": "ab7996d2-f195-4bc7-a7a8-7ee002ad4ce1",
-          "Flags": 0,
-          "Name": "Object",
-          "Position": "-0.2914963,-6.720033,-0.1421814",
-          "Rotation": "-0.5000001,0.5,-0.5,0.5000001",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SoundPointComponent",
-              "__guid": "bde97ee7-a4db-489d-89de-7fb6ee97a4c3",
               "Distance": 512,
               "DistanceAttenuation": false,
               "DistanceAttenuationOverride": false,
@@ -983,74 +732,80 @@
       ]
     },
     {
-      "__guid": "ed80bfd8-9858-4659-9130-e775ca1ed847",
+      "__guid": "90a6fab5-4eff-4c67-9525-aee301be6b8d",
       "Flags": 0,
-      "Name": "ak74u",
-      "Position": "234.6955,65.98802,313",
-      "Tags": "weapon",
+      "Name": "doorframe_wood",
+      "Position": "509.1094,-175.9999,292",
+      "Rotation": "0,0,-0.7071067,0.7071068",
       "Enabled": true,
-      "NetworkOrphaned": 3,
-      "OwnerTransfer": 0,
-      "__Prefab": "prefabs/weapons/ak74u.prefab",
-      "__PrefabVariables": {}
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "ab31c10e-8f0a-4e17-8e56-99cfbd8d5053",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "Model": "models/world/doors/doorframe_wood/doorframe_wood.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "51bcf901-80bf-44e1-a3e9-c6faaa6fd61a",
+          "IsTrigger": false,
+          "Model": "models/world/doors/doorframe_wood/doorframe_wood.vmdl",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ]
     },
     {
-      "__guid": "8c603cf6-f04e-49d2-aeb7-576157ce2637",
+      "__guid": "76e27f85-88c9-4ac6-8100-e788823724b3",
       "Flags": 0,
-      "Name": "colt",
-      "Position": "233.6827,8.934601,299",
+      "Name": "door_wood",
+      "Position": "532,-175.9999,292",
+      "Rotation": "0,0,-0.7071067,0.7071068",
       "Enabled": true,
-      "NetworkOrphaned": 3,
-      "OwnerTransfer": 0,
-      "__Prefab": "prefabs/weapons/colt.prefab",
-      "__PrefabVariables": {}
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "1b147396-2da9-4190-8e06-0fd3521f64fb",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "Model": "models/world/doors/door_wood/door_wood.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "765f51c5-8345-4a7f-bc40-2971a69ba585",
+          "IsTrigger": false,
+          "Model": "models/world/doors/door_wood/door_wood.vmdl",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ]
     },
     {
-      "__guid": "f25e853b-f368-42bf-b5d7-e285055ee37a",
+      "__guid": "c84165c8-a7b9-4a3a-8e8b-7179d15f4b0a",
       "Flags": 0,
-      "Name": "geagelol",
-      "Position": "240.3165,-36.23769,310",
-      "Enabled": true,
-      "NetworkOrphaned": 3,
-      "OwnerTransfer": 0,
-      "__Prefab": "prefabs/weapons/geagelol.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "d088fa81-4507-4f44-8f10-d9f73901af9e",
-      "Flags": 0,
-      "Name": "lr300",
-      "Position": "233.5662,37.12688,309",
-      "Tags": "weapon",
-      "Enabled": true,
-      "NetworkOrphaned": 3,
-      "OwnerTransfer": 0,
-      "__Prefab": "prefabs/weapons/lr300.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "4fe1d69c-5a62-4bee-9327-3051e9dbfc2b",
-      "Flags": 0,
-      "Name": "m110",
-      "Position": "234.3522,101.6554,320",
-      "Tags": "weapon",
-      "Enabled": true,
-      "NetworkOrphaned": 3,
-      "OwnerTransfer": 0,
-      "__Prefab": "prefabs/weapons/m110.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "e09db689-7450-4572-b77f-75cd172e6f04",
-      "Flags": 0,
-      "Name": "remington870",
-      "Position": "226.836,-10.51153,330",
+      "Name": "vss",
+      "Position": "371.9999,0,313",
       "Tags": "weapon",
       "Enabled": true,
       "NetworkMode": 1,
-      "NetworkOrphaned": 3,
-      "OwnerTransfer": 0,
-      "__Prefab": "prefabs/weapons/remington870.prefab",
+      "__Prefab": "prefabs/weapons/vss.prefab",
       "__PrefabVariables": {}
     }
   ],
