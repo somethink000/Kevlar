@@ -84,9 +84,9 @@ public partial class Weapon : Component
 			ViewModelRenderer?.Set( DrawEmptyAnim, true );
 			delay = DrawEmptyTime;
 		}
-		else if ( !string.IsNullOrEmpty( DrawAnim ) )
+		else if ( !string.IsNullOrEmpty( DeployAnim ) )
 		{
-			ViewModelRenderer?.Set( DrawAnim, true );
+			ViewModelRenderer?.Set( DeployAnim, true );
 			delay = DrawTime;
 		}
 
@@ -125,7 +125,6 @@ public partial class Weapon : Component
 			{
 				// Prevent flickering when enabling the component, this is controlled by the ViewModelHandler
 				ViewModelRenderer.RenderType = ModelRenderer.ShadowRenderType.ShadowsOnly;
-				ResetViewModelAnimations();
 				OnDeploy();
 			};
 
@@ -196,6 +195,16 @@ public partial class Weapon : Component
 				IsCustomizing = !IsCustomizing;
 			}
 
+			if ( !IsScoping && !IsAiming && Input.Pressed( InputButtonHelper.Inspect ) )
+			{
+				ViewModelRenderer?.Set( Inspect, true );
+			}
+
+			if ( !IsScoping && !IsAiming && Input.Pressed( InputButtonHelper.Mode ) )
+			{
+				ViewModelRenderer?.Set( Mode, true );
+			}
+
 			// Don't cancel reload when customizing
 			if ( IsCustomizing && !IsReloading ) return;
 
@@ -257,26 +266,6 @@ public partial class Weapon : Component
 		{
 			WorldModelRenderer.RenderType = Owner.IsFirstPerson ? ModelRenderer.ShadowRenderType.ShadowsOnly : ModelRenderer.ShadowRenderType.On;
 		}
-	}
-
-	
-	// Temp fix until https://github.com/Facepunch/sbox-issues/issues/5247 is fixed
-	void ResetViewModelAnimations()
-	{
-		ViewModelRenderer?.Set( Primary.ShootAnim, false );
-		ViewModelRenderer?.Set( Primary.ShootEmptyAnim, false );
-		ViewModelRenderer?.Set( Primary.ShootAimedAnim, false );
-
-		if ( Secondary is not null )
-		{
-			ViewModelRenderer?.Set( Secondary.ShootAnim, false );
-			ViewModelRenderer?.Set( Secondary.ShootEmptyAnim, false );
-			ViewModelRenderer?.Set( Secondary.ShootAimedAnim, false );
-		}
-
-		ViewModelRenderer?.Set( ReloadAnim, false );
-		ViewModelRenderer?.Set( DrawAnim, false );
-		ViewModelRenderer?.Set( DrawEmptyAnim, false );
 	}
 
 	[Broadcast]

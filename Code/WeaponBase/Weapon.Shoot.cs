@@ -89,10 +89,8 @@ public partial class Weapon
 
 		if ( shootInfo.Ammo <= 0 ) IsEmpty = true;
 
-		// Animations
-		var shootAnim = GetShootAnimation( shootInfo );
-		if ( !string.IsNullOrEmpty( shootAnim ) )
-			ViewModelRenderer.Set( shootAnim, true );
+
+		ViewModelRenderer.Set( ShootAnim, true );
 
 		// Sound
 		if ( shootInfo.ShootSound is not null )

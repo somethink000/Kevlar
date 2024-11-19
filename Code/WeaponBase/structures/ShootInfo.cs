@@ -71,20 +71,6 @@ public class ShootInfo : Component
 	/// <summary>Weapon firing type</summary>
 	[Property, Group( "Bullets" )] public FiringType FiringType { get; set; } = FiringType.semi;
 
-	/// <summary>Screenshake per shot</summary>
-	// public ScreenShake ScreenShake { get; set; }
-
-	// Animations //
-
-	/// <summary>Animation used for shooting</summary>
-	[Property, Group( "Animations" )] public string ShootAnim { get; set; } = "fire";
-
-	/// <summary>Animation used for shooting the last bullet</summary>
-	[Property, Group( "Animations" )] public string ShootEmptyAnim { get; set; } = "";
-
-	/// <summary>Animation used for shooting while aiming</summary>
-	[Property, Group( "Animations" )] public string ShootAimedAnim { get; set; }
-
 	// Sounds //
 
 	/// <summary>Firing sound when clip is empty</summary>

@@ -2,21 +2,6 @@
   "__guid": "4cb361c9-2b9c-494e-bae6-570bd172b67c",
   "GameObjects": [
     {
-      "__guid": "1af6b83b-2db6-401d-812c-f71a1982a355",
-      "Flags": 0,
-      "Name": "Scene Information",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.SceneInformation",
-          "__guid": "8aeaa261-d4ee-4edf-a0e3-c3e5ad688d21",
-          "Description": "",
-          "SceneTags": "",
-          "Title": "minimal"
-        }
-      ]
-    },
-    {
       "__guid": "056fe911-1848-492b-8745-458ea477143c",
       "Flags": 0,
       "Name": "Logic",
@@ -197,8 +182,8 @@
       "__guid": "56d7c94d-cd40-46a3-9fd2-0d06f114d6eb",
       "Flags": 0,
       "Name": "Spawnpoint",
-      "Position": "342,130,302",
-      "Rotation": "0,0,-0.7071069,-0.7071066",
+      "Position": "342,86.28441,301.9999",
+      "Rotation": "0,0,0.7071065,-0.707107",
       "Enabled": true,
       "Components": [
         {
@@ -818,9 +803,7 @@
     "ThreadedAnimation": true,
     "TimeScale": 1,
     "UseFixedUpdate": true,
-    "Metadata": {
-      "Title": "minimal"
-    },
+    "Metadata": {},
     "NavMesh": {
       "Enabled": true,
       "IncludeStaticBodies": true,
@@ -835,7 +818,7 @@
     }
   },
   "ResourceVersion": 2,
-  "Title": "minimal",
+  "Title": null,
   "Description": null,
   "__references": [
     "evilinc.m_ll_lamp_halogen_01#46930",

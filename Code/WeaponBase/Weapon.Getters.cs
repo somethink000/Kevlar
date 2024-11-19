@@ -46,25 +46,6 @@ public partial class Weapon
 	}
 
 	/// <summary>
-	/// Gets the correct shoot animation
-	/// </summary>
-	/// <param name="shootInfo">Info used for the current attack</param>
-	/// <returns></returns>
-	public virtual string GetShootAnimation( ShootInfo shootInfo )
-	{
-		if ( IsAiming && (!string.IsNullOrEmpty( shootInfo.ShootAimedAnim )) )
-		{
-			return shootInfo.ShootAimedAnim;
-		}
-		else if ( shootInfo.Ammo == 0 && !string.IsNullOrEmpty( shootInfo.ShootEmptyAnim ) )
-		{
-			return shootInfo.ShootEmptyAnim;
-		}
-
-		return shootInfo.ShootAnim;
-	}
-
-	/// <summary>
 	/// If there is usable ammo left
 	/// </summary>
 	public bool HasAmmo()

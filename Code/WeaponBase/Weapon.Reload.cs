@@ -24,9 +24,9 @@ public partial class Weapon
 			OnScopeEnd();
 
 		IsReloading = true;
-	
-		ViewModelRenderer?.Set( ReloadAnim, true );
 
+		ViewModelRenderer?.Set( ReloadAnim, true );
+		
 		// Player anim
 		HandleReloadEffects();
 

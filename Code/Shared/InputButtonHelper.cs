@@ -35,6 +35,7 @@ public partial class InputButtonHelper
 	public static string Castomization => "Castomization";
 	public static string Chat => "Chat";
 	public static string ChatLocal => "ChatLocal";
-	public static string Undo => "Undo";
+	public static string Inspect => "Inspect";
+	public static string Mode => "Mode";
 	
 }

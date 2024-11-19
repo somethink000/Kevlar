@@ -13,11 +13,13 @@ public partial class PlayerBase
 	[Property] public float CrouchSpeed { get; set; } = 90f;
 	[Property] public float JumpForce { get; set; } = 350f;
 
+	[Sync] public Vector3 SlideVelocity { get; set; } = Vector3.Zero;
 	[Sync] public Vector3 WishVelocity { get; set; } = Vector3.Zero;
 	[Sync] public Angles EyeAngles { get; set; }
 	[Sync] public Vector3 EyeOffset { get; set; } = Vector3.Zero;
 	[Sync] public bool IsCrouching { get; set; } = false;
 	[Sync] public bool IsRunning { get; set; } = false;
+	[Sync] public bool IsSlide { get; set; } = false;
 
 	public bool IsOnGround => CharacterController.IsOnGround;
 	public Vector3 Velocity => CharacterController.Velocity;
@@ -67,23 +69,35 @@ public partial class PlayerBase
 	void BuildWishVelocity()
 	{
 
-		
+		if ( !IsSlide )
+		{
 
-		WishVelocity = 0;
+			WishVelocity = 0;
 
-		var rot = EyeAngles.ToRotation();
-		if ( Input.Down( InputButtonHelper.Forward ) ) WishVelocity += rot.Forward;
-		if ( Input.Down( InputButtonHelper.Backward ) ) WishVelocity += rot.Backward;
-		if ( Input.Down( InputButtonHelper.Left ) ) WishVelocity += rot.Left;
-		if ( Input.Down( InputButtonHelper.Right ) ) WishVelocity += rot.Right;
+			var rot = EyeAngles.ToRotation();
+			if ( Input.Down( InputButtonHelper.Forward ) ) WishVelocity += rot.Forward;
+			if ( Input.Down( InputButtonHelper.Backward ) ) WishVelocity += rot.Backward;
+			if ( Input.Down( InputButtonHelper.Left ) ) WishVelocity += rot.Left;
+			if ( Input.Down( InputButtonHelper.Right ) ) WishVelocity += rot.Right;
 
-		WishVelocity = WishVelocity.WithZ( 0 );
-		if ( !WishVelocity.IsNearZeroLength ) WishVelocity = WishVelocity.Normal;
+			WishVelocity = WishVelocity.WithZ( 0 );
+			if ( !WishVelocity.IsNearZeroLength ) WishVelocity = WishVelocity.Normal;
 
-		if ( IsCrouching ) WishVelocity *= CrouchSpeed;
-		else if ( IsRunning ) WishVelocity *= RunSpeed;
-		else WishVelocity *= WalkSpeed;
-		
+			if ( IsCrouching ) WishVelocity *= CrouchSpeed;
+			else if ( IsRunning ) WishVelocity *= RunSpeed;
+			else WishVelocity *= WalkSpeed;
+		}
+		else
+		{
+			Log.Info( SlideVelocity.Length );
+			SlideVelocity = Vector3.Lerp( SlideVelocity, Vector3.Zero, Time.Delta * 0.5f );
+			WishVelocity = SlideVelocity;
+			
+			if ( SlideVelocity.Length < 300 ) IsSlide = false; 
+
+		}
+
+
 	}
 
 	void Move()
@@ -155,11 +169,23 @@ public partial class PlayerBase
 
 	void UpdateCrouch()
 	{
+		if ( IsSlide ) return;
 		if ( Input.Down( InputButtonHelper.Duck ) && !IsCrouching && IsOnGround )
 		{
-			IsCrouching = true;
-			CharacterController.Height /= 2f;
-			BodyCollider.End = BodyCollider.End.WithZ( BodyCollider.End.z / 2f );
+			
+			if ( Velocity.Length <= 200 )
+			{
+				IsCrouching = true;
+				CharacterController.Height /= 2f;
+				BodyCollider.End = BodyCollider.End.WithZ( BodyCollider.End.z / 2f );
+			} else
+			{
+				SlideVelocity = Velocity * 1.5f;
+				IsSlide = true;
+				CharacterController.Height /= 2f;
+				BodyCollider.End = BodyCollider.End.WithZ( BodyCollider.End.z / 2f );
+				
+			}	
 		}
 
 		if ( IsCrouching && (!Input.Down( InputButtonHelper.Duck ) || !IsOnGround) )

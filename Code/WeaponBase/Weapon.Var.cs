@@ -82,17 +82,16 @@ public partial class Weapon
 	[Property, Group( "Firing" ), Title( "Secondary ShootInfo (component)" )] public ShootInfo Secondary { get; set; }
 
 	[Property] public PrefabFile AmmoType { get; set; }
-	/// <summary>Reloading animation</summary>
-	public string ReloadAnim { get; set; } = "b_reload";
-	/// <summary>Empty state</summary>
-	public string EmptyState { get; set; } = "b_empty";
-	/// <summary>Aiming state</summary>
-	public string AimState { get; set; } = "b_aiming";
-	/// <summary>Draw animation</summary>
-	public string DrawAnim { get; set; } = "deploy";
-	/// <summary>Boltback animation</summary>
+	public string ShootAnim { get; set; } = "shoot";
+	public string ReloadAnim { get; set; } = "reload";
+	public string EmptyState { get; set; } = "empty";
+	public string AimState { get; set; } = "aiming";
+	public string Inspect { get; set; } = "inspect";
+	public string DeployAnim { get; set; } = "deploy";
+	public string HolsterAnim { get; set; } = "holste";
 	public string BoltBackAnim { get; set; } = "boltback";
-
+	public string Mode { get; set; } = "mode";
+	public string Fix { get; set; } = "mode";
 	/// <summary>Time since the last primary attack</summary>
 	public TimeSince TimeSincePrimaryShoot { get; set; }
 
