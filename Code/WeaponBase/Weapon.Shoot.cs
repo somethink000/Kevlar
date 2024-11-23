@@ -134,27 +134,11 @@ public partial class Weapon
 		// Bullet eject
 		if ( BulletEjectParticle is not null )
 		{
-			if ( !BoltBack )
+			if ( BoltBack && Ammo > 0 )
 			{
-				if ( !ShellReloading || (ShellReloading && ShellEjectDelay == 0) )
-				{
-					CreateParticle( BulletEjectParticle, "ejection_point", scale );
-				}
-				else
-				{
-					var delayedEject = async () =>
-					{
-						await GameTask.DelaySeconds( ShellEjectDelay );
-						if ( !IsValid ) return;
-						CreateParticle( BulletEjectParticle, "ejection_point", scale );
-					};
-					delayedEject();
-				}
+				ViewModelRenderer?.Set( BoltBackAnim, true );
+				InBoltBack = true;
 			}
-			//else if ( Ammo > 0 )
-			//{
-			//	AsyncBoltBack( GetRealRPM( RPM ) );
-			//}
 		}
 
 		if ( !muzzleTransform.HasValue ) return;

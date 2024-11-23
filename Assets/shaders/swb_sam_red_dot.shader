@@ -95,7 +95,7 @@ PS
     // Blur and Refraction Settings
     //
     float g_flBlurAmount < Default(0.0f); Range(0.0f, 1.0f); UiGroup("Glass,10/10"); > ;
-    float g_flRefractionStrength < Default(1.005); Range(1.0, 1.1); UiGroup("Glass,10/20"); > ;
+    float g_flRefractionStrength < Default(1.005); Range(1.0, 10); UiGroup("Glass,10/20"); > ;
     float g_flIridescence < Default(600.0); Range(0.0f, 1000.0); UiGroup("Glass,10/30"); > ;
     float g_flIridescenceScale < Default(1.0); Range(0.0f, 10.0); UiGroup("Glass,10/30"); > ;
 

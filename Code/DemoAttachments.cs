@@ -16,8 +16,6 @@ public class ReflexSightBG : SightAttachment
 	public override int BodyGroupChoice { get; set; } = 1;
 	public override int BodyGroupDefault { get; set; } = 0;
 
-	// Sight
-	public override float AimPlayerFOV { get; set; } = 50f;
 	public override float AimSensitivity { get; set; } = 0.5f;
 }
 

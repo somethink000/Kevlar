@@ -41,9 +41,6 @@ public abstract class Attachment : Component, IComparable<Attachment>
 	/// <summary>List of negative attributes</summary>
 	public virtual string[] Negatives => Array.Empty<string>();
 
-	/// <summary>Weapon stats changer</summary>
-	public virtual StatsModifier StatsModifier { get; set; }
-
 	/// <summary>Path to an image that represent the attachment on the HUD</summary>
 	public virtual string IconPath => "";
 
@@ -189,9 +186,7 @@ public abstract class Attachment : Component, IComparable<Attachment>
 		// Models
 		CreateModels();
 
-		// Stats
-		StatsModifier?.Apply( Weapon );
-
+		
 		if ( !IsProxy )
 			CreateHudElements();
 
@@ -210,9 +205,6 @@ public abstract class Attachment : Component, IComparable<Attachment>
 
 			// Models
 			CreateModels();
-
-			// Stats
-			StatsModifier?.Apply( Weapon );
 
 			if ( !IsProxy )
 				CreateHudElements();
@@ -247,9 +239,6 @@ public abstract class Attachment : Component, IComparable<Attachment>
 		// Model
 		ViewModelRenderer?.GameObject.Destroy();
 		WorldModelRenderer?.GameObject.Destroy();
-
-		// Stats
-		StatsModifier?.Remove( Weapon );
 
 		if ( !IsProxy )
 			DestroyHudElements();

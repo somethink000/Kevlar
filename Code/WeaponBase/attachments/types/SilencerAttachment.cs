@@ -16,11 +16,6 @@ public abstract class SilencerAttachment : Attachment
 	{
 	};
 
-	public override StatsModifier StatsModifier { get; set; } = new()
-	{
-		Spread = -0.05f,
-	};
-
 	/// <summary>New muzzle flash effect point</summary>
 	[Property, Group( "Silencer" )] public override string EffectAttachmentOrBone { get; set; } = "muzzle_silenced";
 

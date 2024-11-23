@@ -21,7 +21,6 @@ public partial class Weapon : Component
 
 		WorldModelRenderer = Components.GetInDescendantsOrSelf<SkinnedModelRenderer>();
 		Settings = WeaponSettings.Instance;
-		InitialPrimaryStats = StatsModifier.FromShootInfo( this );
 	}
 
 	protected override void OnStart()
@@ -144,10 +143,16 @@ public partial class Weapon : Component
 			{
 				OnReloadFinish();
 			}
-			else if ( t == "shoot_end" )
+			else if ( t == "pump_end" )
 			{
-				
+				InBoltBack = false;
+
 			}
+			else if ( t == "eject_shell" )
+			{
+				CreateParticle( BulletEjectParticle, "ejection_point", VMParticleScale );
+			}
+			
 		};
 	}
 
@@ -257,7 +262,7 @@ public partial class Weapon : Component
 
 		if ( isScreenSound )
 		{
-			sound.Volume = 0.3f;
+			sound.Volume = 0.7f;
 			Sound.Play( sound );
 		}
 		else

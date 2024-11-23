@@ -30,7 +30,7 @@ public partial class Weapon
 		HandleReloadEffects();
 
 		//Boltback
-		//if ( !isEmptyReload && Primary.Ammo == 0 && BoltBack )
+		//if ( !isEmptyReload && Ammo == 0 && BoltBack )
 		//{
 		//	TimeSinceReload -= BoltBackTime;
 		//	AsyncBoltBack( ReloadTime );
@@ -92,27 +92,7 @@ public partial class Weapon
 		}
 	}
 
-	async void AsyncBoltBack( float boltBackDelay )
-	{
-		InBoltBack = true;
-
-		// Start boltback
-		await GameTask.DelaySeconds( boltBackDelay );
-		if ( !IsValid ) return;
-		if ( !IsProxy )
-			ViewModelRenderer?.Set( BoltBackAnim, true );
-
-		// Eject shell
-		await GameTask.DelaySeconds( BoltBackEjectDelay );
-		if ( !IsValid ) return;
-		var scale = VMParticleScale;
-		CreateParticle( BulletEjectParticle, "ejection_point", scale );
-
-		// Finished
-		await GameTask.DelaySeconds( BoltBackTime - BoltBackEjectDelay );
-		if ( !IsValid ) return;
-		InBoltBack = false;
-	}
+	
 
 	[Broadcast]
 	public virtual void HandleReloadEffects()

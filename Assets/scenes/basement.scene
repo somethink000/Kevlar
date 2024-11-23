@@ -391,12 +391,18 @@
               "DistanceAttenuationOverride": false,
               "Falloff": [
                 {
+                  "x": 0,
                   "y": 1,
                   "in": 3.1415927,
-                  "out": -3.1415927
+                  "out": -3.1415927,
+                  "mode": "Mirrored"
                 },
                 {
-                  "x": 1
+                  "x": 1,
+                  "y": 0,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
                 }
               ],
               "Force2d": false,
@@ -513,12 +519,18 @@
               "DistanceAttenuationOverride": false,
               "Falloff": [
                 {
+                  "x": 0,
                   "y": 1,
                   "in": 3.1415927,
-                  "out": -3.1415927
+                  "out": -3.1415927,
+                  "mode": "Mirrored"
                 },
                 {
-                  "x": 1
+                  "x": 1,
+                  "y": 0,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
                 }
               ],
               "Force2d": false,
@@ -593,21 +605,28 @@
             "FontName": "Zekton",
             "FontSize": 32.58,
             "FontWeight": 800,
+            "FontItalic": false,
             "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
             "Outline": {
+              "Enabled": false,
               "Size": 4,
               "Color": "0,0,1,1"
             },
             "Shadow": {
+              "Enabled": false,
               "Size": 4,
               "Color": "0,0,0,1",
               "Offset": "4,4"
             },
             "OutlineUnder": {
+              "Enabled": false,
               "Size": 4,
               "Color": "0,1,0,1"
             },
             "ShadowUnder": {
+              "Enabled": false,
               "Size": 4,
               "Color": "0,0,0,1",
               "Offset": "4,4"
@@ -643,21 +662,28 @@
             "FontName": "Zekton",
             "FontSize": 32.58,
             "FontWeight": 800,
+            "FontItalic": false,
             "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
             "Outline": {
+              "Enabled": false,
               "Size": 4,
               "Color": "0,0,1,1"
             },
             "Shadow": {
+              "Enabled": false,
               "Size": 4,
               "Color": "0,0,0,1",
               "Offset": "4,4"
             },
             "OutlineUnder": {
+              "Enabled": false,
               "Size": 4,
               "Color": "0,1,0,1"
             },
             "ShadowUnder": {
+              "Enabled": false,
               "Size": 4,
               "Color": "0,0,0,1",
               "Offset": "4,4"
@@ -693,21 +719,28 @@
             "FontName": "Zekton",
             "FontSize": 32.58,
             "FontWeight": 800,
+            "FontItalic": false,
             "LineHeight": 1,
+            "LetterSpacing": 0,
+            "WordSpacing": 0,
             "Outline": {
+              "Enabled": false,
               "Size": 4,
               "Color": "0,0,1,1"
             },
             "Shadow": {
+              "Enabled": false,
               "Size": 4,
               "Color": "0,0,0,1",
               "Offset": "4,4"
             },
             "OutlineUnder": {
+              "Enabled": false,
               "Size": 4,
               "Color": "0,1,0,1"
             },
             "ShadowUnder": {
+              "Enabled": false,
               "Size": 4,
               "Color": "0,0,0,1",
               "Offset": "4,4"
@@ -811,6 +844,17 @@
       "Enabled": true,
       "__Prefab": "prefabs/npcs/zombie.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "046b36f8-e4d4-4766-9ac3-3ba2e2f2603e",
+      "Flags": 0,
+      "Name": "reming870",
+      "Position": "312.069,3.528562,315",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/reming870.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
@@ -845,6 +889,5 @@
     "evilinc.shitok#48533",
     "tesssssssssst.untitled_48417841871541#33517"
   ],
-  "HasUnsavedChanges": false,
   "__version": 2
 }

@@ -112,8 +112,6 @@ public partial class Weapon
 	[Sync] public bool IsDeploying { get; set; }
 
 	public TimeSince TimeSinceShoot { get; set; }
-	public StatsModifier InitialPrimaryStats { get; private set; }
-	public StatsModifier InitialSecondaryStats { get; private set; }
 
 
 	// Private

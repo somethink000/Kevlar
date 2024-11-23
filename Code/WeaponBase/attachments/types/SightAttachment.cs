@@ -15,12 +15,6 @@ public abstract class SightAttachment : Attachment
 	{
 	};
 
-	public override StatsModifier StatsModifier { get; set; } = new()
-	{
-		Spread = -0.05f,
-	};
-
-
 	/// <summary>The new aim position offset</summary>
 	[Property, Group( "Sight" )] public AngPos AimAnimData { get; set; }
 	AngPos oldAimAnimData;
@@ -28,10 +22,6 @@ public abstract class SightAttachment : Attachment
 	/// <summary>Weapon FOV while aiming (-1 to use default)</summary>
 	[Property, Group( "Sight" )] public virtual float AimFOV { get; set; } = -1f;
 	float oldAimFOV;
-
-	/// <summary>Player FOV while aiming (-1 to use default)</summary>
-	[Property, Group( "Sight" )] public virtual float AimPlayerFOV { get; set; } = -1f;
-	float oldAimPlayerFOV;
 
 	/// <summary>FOV aim in speed (-1 to use default)</summary>
 	[Property, Group( "Sight" ), Title( "Aim in FOV speed" )] public virtual float AimInFOVSpeed { get; set; } = -1f;
@@ -49,7 +39,6 @@ public abstract class SightAttachment : Attachment
 	{
 		oldAimAnimData = Weapon.AimAnimData;
 		oldAimFOV = Weapon.AimFOV;
-		oldAimPlayerFOV = Weapon.AimFOV;
 		oldAimInFOVSpeed = Weapon.AimInFOVSpeed;
 		oldAimOutFOVSpeed = Weapon.AimOutFOVSpeed;
 		oldAimSensitivity = Weapon.AimSensitivity;
@@ -57,7 +46,6 @@ public abstract class SightAttachment : Attachment
 		Weapon.AimAnimData = AimAnimData;
 
 		if ( AimFOV > -1 ) Weapon.AimFOV = AimFOV;
-		if ( AimPlayerFOV > -1 ) Weapon.AimFOV = AimPlayerFOV;
 		if ( AimInFOVSpeed > -1 ) Weapon.AimInFOVSpeed = AimInFOVSpeed;
 		if ( AimOutFOVSpeed > -1 ) Weapon.AimOutFOVSpeed = AimOutFOVSpeed;
 		if ( AimSensitivity > -1 ) Weapon.AimSensitivity = AimSensitivity;

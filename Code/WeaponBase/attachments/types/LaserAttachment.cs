@@ -22,10 +22,7 @@ public abstract class LaserAttachment : Attachment
 		"Visibible to enemies"
 	};
 
-	public override StatsModifier StatsModifier { get; set; } = new()
-	{
-		Spread = -0.05f,
-	};
+
 
 	/// <summary>New muzzle flash effect point</summary>
 	[Property, Group( "Laser" )] public override string EffectAttachmentOrBone { get; set; } = "laser_start";
