@@ -201,7 +201,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -1040.0, -336.0 ]
+					m_vecPosition = [ -1024.0, -336.0 ]
 					m_nNodeID = 
 					{
 						m_id = 922719377
@@ -590,7 +590,7 @@
 					}
 					m_sNote = ""
 					m_tagSpans = [  ]
-					m_sequenceName = "deploy"
+					m_sequenceName = "draw"
 					m_playbackSpeed = 1.0
 					m_bLoop = false
 				}
@@ -699,7 +699,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -1040.0, -384.0 ]
+					m_vecPosition = [ -1024.0, -384.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1631504389
@@ -720,7 +720,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -1040.0, -288.0 ]
+					m_vecPosition = [ -1024.0, -288.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1676178107

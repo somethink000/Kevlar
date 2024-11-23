@@ -12,7 +12,7 @@
 
     @if ( PlayerBase.GetLocal().Inventory.Deployed != null )
     {
-        <div class="ammo">@PlayerBase.GetLocal().Inventory.Deployed.Primary.Ammo</div>
+        <div class="ammo">@PlayerBase.GetLocal().Inventory.Deployed.Ammo</div>
     }
     
   
@@ -33,5 +33,5 @@
 
     }
 
-    protected override int BuildHash() => HashCode.Combine(PlayerBase.GetLocal().Inventory.Deployed, PlayerBase.GetLocal().Inventory.Deployed?.Primary.Ammo);
+    protected override int BuildHash() => HashCode.Combine(PlayerBase.GetLocal().Inventory.Deployed, PlayerBase.GetLocal().Inventory.Deployed?.Ammo);
 }

@@ -34,19 +34,19 @@ public abstract class SilencerAttachment : Attachment
 
 	public override void OnEquip()
 	{
-		oldMuzzleFlashParticle = Weapon.Primary.MuzzleFlashParticle;
-		oldShootSound = Weapon.Primary.ShootSound;
+		oldMuzzleFlashParticle = Weapon.MuzzleFlashParticle;
+		oldShootSound = Weapon.ShootSound;
 
 		if ( MuzzleFlashParticle is not null )
-			Weapon.Primary.MuzzleFlashParticle = MuzzleFlashParticle;
+			Weapon.MuzzleFlashParticle = MuzzleFlashParticle;
 
 		if ( ShootSound is not null )
-			Weapon.Primary.ShootSound = ShootSound;
+			Weapon.ShootSound = ShootSound;
 	}
 
 	public override void OnUnequip()
 	{
-		Weapon.Primary.MuzzleFlashParticle = oldMuzzleFlashParticle;
-		Weapon.Primary.ShootSound = oldShootSound;
+		Weapon.MuzzleFlashParticle = oldMuzzleFlashParticle;
+		Weapon.ShootSound = oldShootSound;
 	}
 }

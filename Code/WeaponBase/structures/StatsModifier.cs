@@ -15,15 +15,15 @@ public class StatsModifier
 
 	private bool applied;
 
-	public static StatsModifier FromShootInfo( ShootInfo shootInfo )
+	public static StatsModifier FromShootInfo( Weapon wpn )
 	{
 		return new()
 		{
-			Damage = shootInfo.Damage,
-			Recoil = shootInfo.Recoil,
-			Spread = shootInfo.Spread,
-			RPM = shootInfo.RPM,
-			Force = shootInfo.Force,
+			Damage = wpn.Damage,
+			Recoil = wpn.Recoil,
+			Spread = wpn.Spread,
+			RPM = wpn.RPM,
+			Force = wpn.Force,
 		};
 	}
 
@@ -31,46 +31,44 @@ public class StatsModifier
 	{
 		if ( applied ) return;
 
-		if ( onPrimary )
-			Apply( weapon.Primary, weapon.InitialPrimaryStats );
-		else
-			Apply( weapon.Secondary, weapon.InitialSecondaryStats );
+		
+			Apply( weapon.InitialPrimaryStats );
+	
 
 		applied = true;
 	}
 
-	private void Apply( ShootInfo shootInfo, StatsModifier initialStats )
+	private void Apply( StatsModifier initialStats )
 	{
-		if ( shootInfo is null || initialStats is null ) return;
+		if (  initialStats is null ) return;
 
-		shootInfo.Damage += initialStats.Damage * Damage;
-		shootInfo.Recoil += initialStats.Recoil * Recoil;
-		shootInfo.Spread += initialStats.Spread * Spread;
-		shootInfo.RPM += (int)(initialStats.RPM * RPM);
+		Damage += initialStats.Damage * Damage;
+		Recoil += initialStats.Recoil * Recoil;
+		Spread += initialStats.Spread * Spread;
+		RPM += (int)(initialStats.RPM * RPM);
 
 		//weapon.BulletVelocityMod += BulletVelocity;
 	}
 
-	public void Remove( Weapon weapon, bool onPrimary = true )
+	public void Remove( Weapon weapon )
 	{
 		if ( !applied ) return;
 
-		if ( onPrimary )
-			Remove( weapon.Primary, weapon.InitialPrimaryStats );
-		else
-			Remove( weapon.Secondary, weapon.InitialSecondaryStats );
+		
+			Remove( weapon );
+		
 
 		//weapon.BulletVelocityMod -= BulletVelocity;
 		applied = false;
 	}
 
-	private void Remove( ShootInfo shootInfo, StatsModifier initialStats )
+	private void Remove( StatsModifier initialStats )
 	{
-		if ( shootInfo is null || initialStats is null ) return;
+		if ( initialStats is null ) return;
 
-		shootInfo.Damage -= initialStats.Damage * Damage;
-		shootInfo.Recoil -= initialStats.Recoil * Recoil;
-		shootInfo.Spread -= initialStats.Spread * Spread;
-		shootInfo.RPM -= (int)(initialStats.RPM * RPM);
+		Damage -= initialStats.Damage * Damage;
+		Recoil -= initialStats.Recoil * Recoil;
+		Spread -= initialStats.Spread * Spread;
+		RPM -= (int)(initialStats.RPM * RPM);
 	}
 }

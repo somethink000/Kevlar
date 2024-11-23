@@ -6,7 +6,7 @@ namespace GeneralGame;
 
 public class HitScanBullet : IBulletBase
 {
-	public void Shoot( Weapon weapon, ShootInfo shootInfo, Vector3 spreadOffset )
+	public void Shoot( Weapon weapon, Vector3 spreadOffset )
 	{
 		var player = weapon.Owner;
 		var forward = player.EyeAngles.Forward + spreadOffset;
@@ -21,13 +21,13 @@ public class HitScanBullet : IBulletBase
 		weapon.CreateBulletImpact( bulletTr );
 
 		// Tracer
-		if ( shootInfo.BulletTracerParticle is not null )
+		if ( weapon.BulletTracerParticle is not null )
 		{
 			var random = new Random();
 			var randVal = random.NextDouble();
 
-			if ( randVal < shootInfo.BulletTracerChance )
-				TracerEffects( weapon, shootInfo, bulletTr.HitPosition );
+			if ( randVal < weapon.BulletTracerChance )
+				TracerEffects( weapon, bulletTr.HitPosition );
 		}
 
 		// Damage
@@ -42,7 +42,7 @@ public class HitScanBullet : IBulletBase
 				hitTags = bulletTr.Hitbox.Tags.TryGetAll().ToArray();
 
 			//var dmgInfo = TakeDamage( DamageType.Bullet, weapon.ClassName, shootInfo.Damage, bulletTr.HitPosition, forward * 100 * shootInfo.Force, hitTags );
-			damageable?.TakeDamage( DamageType.Bullet, shootInfo.Damage, bulletTr.HitPosition, forward * 100 * shootInfo.Force, weapon.Owner.GameObject.Id, hitTags );
+			damageable?.TakeDamage( DamageType.Bullet, weapon.Damage, bulletTr.HitPosition, forward * 100 * weapon.Force, weapon.Owner.GameObject.Id, hitTags );
 		}
 	}
 
@@ -51,17 +51,17 @@ public class HitScanBullet : IBulletBase
 		return (Vector3.Random + Vector3.Random + Vector3.Random + Vector3.Random) * spread * 0.25f;
 	}
 
-	void TracerEffects( Weapon weapon, ShootInfo shootInfo, Vector3 endPos )
+	void TracerEffects( Weapon weapon, Vector3 endPos )
 	{
-		var scale = weapon.CanSeeViewModel ? shootInfo.VMParticleScale : shootInfo.WMParticleScale;
+		//var scale = weapon.CanSeeViewModel ? shootInfo.VMParticleScale : shootInfo.WMParticleScale;
 		var muzzleTransform = weapon.GetMuzzleTransform();
 
 		if ( !muzzleTransform.HasValue ) return;
 
-		SceneParticles particles = new( weapon.Scene.SceneWorld, shootInfo.BulletTracerParticle );
+		SceneParticles particles = new( weapon.Scene.SceneWorld, weapon.BulletTracerParticle );
 		particles?.SetControlPoint( 1, muzzleTransform.Value );
 		particles?.SetControlPoint( 2, endPos );
-		particles?.SetNamedValue( "scale", scale );
+		//particles?.SetNamedValue( "scale", scale );
 		particles?.PlayUntilFinished( TaskSource.Create() );
 	}
 }

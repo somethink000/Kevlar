@@ -4,82 +4,87 @@ namespace GeneralGame;
 
 public partial class Weapon
 {
-	/// <summary>Firstperson Model</summary>
+	public enum FiringType
+	{
+		/// <summary>Single fire</summary>
+		semi,
+		/// <summary>Automatic fire</summary>
+		auto,
+		/// <summary>3-Burst fire</summary>
+		burst
+	}
+
+	public enum InfiniteAmmoType
+	{
+		/// <summary>No infinite ammo</summary>
+		disabled = 0,
+		/// <summary>Infinite clip ammo, no need to reload</summary>
+		clip = 1,
+		/// <summary>Infinite reserve ammo, can always reload</summary>
+		reserve = 2
+	}
+
+
+	[Property, Group( "Ammo" ), Sync] public int Ammo { get; set; } = 10;
+	[Property, Group( "Ammo" )] public int ClipSize { get; set; } = 10;
+	[Property, Group( "Ammo" )] public InfiniteAmmoType InfiniteAmmo { get; set; } = InfiniteAmmoType.disabled;
+	[Property, Group( "Bullets" )] public int Bullets { get; set; } = 1;
+	[Property, Group( "Bullets" )] public float BulletSize { get; set; } = 0.1f;
+	public IBulletBase BulletType { get; set; } = new HitScanBullet();
+	[Property, Group( "Bullets" )] public float BulletTracerChance { get; set; } = 0.33f;
+	[Property, Group( "Bullets" )] public float Damage { get; set; } = 5;
+	[Property, Group( "Bullets" )] public float Force { get; set; } = 0.1f;
+	[Property, Group( "Bullets" )] public float HitFlinch { get; set; } = 1.25f;
+	[Property, Group( "Bullets" )] public float Spread { get; set; } = 0.1f;
+	[Property, Group( "Bullets" )] public float Recoil { get; set; } = 0.1f;
+	[Property, Group( "Bullets" )] public int RPM { get; set; } = 200;
+	[Property, Group( "Bullets" )] public FiringType FireMod { get; set; } = FiringType.semi;
+	[Property, Group( "Sounds" )] public SoundEvent DryShootSound { get; set; }
+	[Property, Group( "Sounds" )] public SoundEvent ShootSound { get; set; }
+	[Property, Group( "Particles" )] public float VMParticleScale { get; set; } = 1f;
+	[Property, Group( "Particles" )] public ParticleSystem BulletEjectParticle { get; set; }
+	[Property, Group( "Particles" )] public ParticleSystem MuzzleFlashParticle { get; set; }
+	[Property, Group( "Particles" )] public ParticleSystem BarrelSmokeParticle { get; set; }
+	[Property, Group( "Particles" )] public ParticleSystem BulletTracerParticle { get; set; }
+
+
+
+
+
+
 	[Property, Group( "Models" )] public Model ViewModel { get; set; }
-	/// <summary>Firstperson Hands Model</summary>
 	[Property, Group( "Models" )] public Model ViewModelHands { get; set; }
-	/// <summary>Thirdperson Model</summary>
 	[Property, Group( "Models" )] public Model WorldModel { get; set; }
-	/// <summary>Unique name that identifies the weapon</summary>
-	[Property, Group( "General" )] public string ClassName { get; set; }
-	[Property, Group( "General" )] public string DisplayName { get; set; }
-	/// <summary>How the player holds the weapon in thirdperson</summary>
+
 	[Property, Group( "General" )] public CitizenAnimationHelper.HoldTypes HoldType { get; set; } = CitizenAnimationHelper.HoldTypes.Pistol;
-	/// <summary>Mouse sensitivity while aiming (lower is slower, 0 to disable)</summary>
 	[Property, Group( "General" )] public float AimSensitivity { get; set; } = 0.85f;
-	/// <summary>Can bullets be cocked in the barrel? (clip ammo + 1)</summary>
 	[Property, Group( "General" )] public bool BulletCocking { get; set; } = true;
-	/// <summary>Range that tucking should be enabled (-1 to disable tucking)</summary>
 	[Property, Group( "General" )] public float TuckRange { get; set; } = 30f;
-	[Property, Group( "General" )] public int Slot { get; set; } = 0;
-	/// <summary>Firing sound when clip is empty</summary>
-	[Property, Group( "Sounds" )] public SoundEvent DeploySound { get; set; }
-	/// <summary>Weapon FOV while aiming (-1 to use default weapon fov)</summary>
-	[Property, Group( "FOV" )] public float AimFOV { get; set; } = -1f;
-	/// <summary>Player FOV while aiming (-1 to use default player fov)</summary>
-	[Property, Group( "FOV" )] public float AimPlayerFOV { get; set; } = -1f;
-	/// <summary>FOV aim in speed</summary>
+	
+	[Property, Group( "FOV" )] public float AimFOV { get; set; } = 0f;
 	[Property, Group( "FOV" ), Title( "Aim in FOV speed" )] public float AimInFOVSpeed { get; set; } = 1f;
-	/// <summary>FOV aim out speed</summary>
 	[Property, Group( "FOV" ), Title( "Aim out FOV speed" )] public float AimOutFOVSpeed { get; set; } = 1f;
-	/// <summary>Procedural animation speed (lower is slower)</summary>
+
 	[Property, Group( "Animations" )] public float AnimSpeed { get; set; } = 1;
-	/// <summary>Offset used for setting the weapon to its aim position</summary>
-	[Property, Group( "Animations" ), Title( "Aim Offset (swb_editor_offsets)" )] public AngPos AimAnimData { get; set; }
-	/// <summary>Offset used for setting the weapon to its run position</summary>
-	[Property, Group( "Animations" ), Title( "Run Offset (swb_editor_offsets)" )] public AngPos RunAnimData { get; set; }
-	/// <summary>Offset used for setting the weapon to its run position</summary>
-	[Property, Group( "Animations" ), Title( "Customizing Offset (swb_editor_offsets)" )] public AngPos CustomizeAnimData { get; set; }
-	/// <summary>Duration of the reload animation</summary>
-	[Property, Group( "Animations" )] public float ReloadTime { get; set; } = 1f;
-	/// <summary>Duration of the empty reload animation (-1 to disable)</summary>
-	[Property, Group( "Animations" )] public float ReloadEmptyTime { get; set; } = -1f;
-	/// <summary>Duration of the draw animation</summary>
-	[Property, Group( "Animations" )] public float DrawTime { get; set; } = 0.5f;
-	/// <summary>Duration of the empty draw animation (-1 to disable)</summary>
-	[Property, Group( "Animations" )] public float DrawEmptyTime { get; set; } = -1f;
-	/// <summary>Draw animation when there is no ammo</summary>
-	[Property, Group( "Animations" )] public string DrawEmptyAnim { get; set; } = "";
-	/// <summary>Is the weapon reloading shells instead of a magazine?</summary>
+	[Property, Group( "Animations" ), Title( "Aim Offset" )] public AngPos AimAnimData { get; set; }
+	[Property, Group( "Animations" ), Title( "Run Offset" )] public AngPos RunAnimData { get; set; }
+	[Property, Group( "Animations" ), Title( "Customizing Offset" )] public AngPos CustomizeAnimData { get; set; }
+	[Property, Group( "Animations" )] public float ReloadTScale { get; set; } = 1f;
+	[Property, Group( "Animations" )] public float ReloadEmptyTScale { get; set; } = 1f;
+	[Property, Group( "Animations" )] public float DrawTScale { get; set; } = 1f;
+
 	[Property, Group( "Shell Reloading" )] public bool ShellReloading { get; set; } = false;
-	/// <summary>Can the weapon shoot while reloading to cancel the reload?</summary>
 	[Property, Group( "Shell Reloading" )] public bool ShellReloadingShootCancel { get; set; } = true;
-	/// <summary>Delay in fire animation to eject the shell</summary>
 	[Property, Group( "Shell Reloading" )] public float ShellEjectDelay { get; set; } = 0;
-	/// <summary>Duration of the shell reload start animation (animation is set with ReloadAnim)</summary>
 	[Property, Group( "Shell Reloading" )] public float ShellReloadStartTime { get; set; } = 0;
-	/// <summary>Duration of the shell reload insert animation (animation is set in animgraph)</summary>
 	[Property, Group( "Shell Reloading" )] public float ShellReloadInsertTime { get; set; } = 0;
-	/// <summary>Is this a bolt action weapon?</summary>
-	[Property, Group( "Bolt Action Reloading" ), Title( "Bolt Action" )] public bool BoltBack { get; set; } = false;
 
-	/// <summary>Duration of the boltback animation</summary>
+	[Property, Group( "Bolt Action Reloading" )] public bool BoltBack { get; set; } = false;
 	[Property, Group( "Bolt Action Reloading" )] public float BoltBackTime { get; set; } = 0f;
-
-	/// <summary>Bullet eject delay during the boltback animation (-1 to disable)</summary>
 	[Property, Group( "Bolt Action Reloading" )] public float BoltBackEjectDelay { get; set; } = 0f;
 
-	/// <summary>Enable scoping, renders a 2D scope on ADS</summary>
 	[Property, Group( "Scoping" )] public bool Scoping { get; set; } = false;
-
-	/// <summary>Scope Information</summary>
 	[Property, Group( "Scoping" )] public ScopeInfo ScopeInfo { get; set; } = new();
-
-	/// <summary>Primary attack data</summary>
-	[Property, Group( "Firing" ), Title( "Primary ShootInfo (component)" )] public ShootInfo Primary { get; set; } = new();
-
-	/// <summary>Secondary attack data (setting this will disable weapon aiming)</summary>
-	[Property, Group( "Firing" ), Title( "Secondary ShootInfo (component)" )] public ShootInfo Secondary { get; set; }
 
 	[Property] public PrefabFile AmmoType { get; set; }
 	public string ShootAnim { get; set; } = "shoot";
@@ -88,51 +93,28 @@ public partial class Weapon
 	public string AimState { get; set; } = "aiming";
 	public string Inspect { get; set; } = "inspect";
 	public string DeployAnim { get; set; } = "deploy";
-	public string HolsterAnim { get; set; } = "holste";
+	public string HolsterAnim { get; set; } = "holster";
 	public string BoltBackAnim { get; set; } = "boltback";
 	public string Mode { get; set; } = "mode";
-	public string Fix { get; set; } = "mode";
-	/// <summary>Time since the last primary attack</summary>
-	public TimeSince TimeSincePrimaryShoot { get; set; }
-
-	/// <summary>Time since the last secondary attack</summary>
-	public TimeSince TimeSinceSecondaryShoot { get; set; }
-
-	/// <summary>Time since deployment</summary>
-	public TimeSince TimeSinceDeployed { get; set; }
-
-	/// <summary>Time since the last reload</summary>
-	public TimeSince TimeSinceReload { get; set; }
+	public string Fix { get; set; } = "fix";
 
 	public bool IsCustomizing { get; set; }
-
-	/// <summary>If the player is running</summary>
 	public bool IsRunning => Owner!=null && Owner.IsRunning && Owner.IsOnGround && Owner.Velocity.Length >= 200;
-
-	/// <summary>If the player is crouching</summary>
 	public bool IsCrouching => Owner.IsCrouching;
-
-	/// <summary>Is the view model visible</summary>
 	public bool CanSeeViewModel => !IsProxy && Owner.IsFirstPerson;
 
 	public bool IsEmpty = false;
 
-	/// <summary>If the weapon is being reloaded</summary>
 	[Sync] public bool IsReloading { get; set; }
-
-	/// <summary>If the weapon is being aimed</summary>
 	[Sync] public bool IsAiming { get; set; }
-
-	/// <summary>If the weapon is being scoped</summary>
 	[Sync] public bool IsScoping { get; set; }
-
-	/// <summary>If the weapon is being bolt back reloaded</summary>
 	[Sync] public bool InBoltBack { get; set; }
+	[Sync] public bool IsDeploying { get; set; }
 
+	public TimeSince TimeSinceShoot { get; set; }
 	public StatsModifier InitialPrimaryStats { get; private set; }
 	public StatsModifier InitialSecondaryStats { get; private set; }
 
-	public bool IsDeploying => TimeSinceDeployed < 0;
 
 	// Private
 	int burstCount = 0;

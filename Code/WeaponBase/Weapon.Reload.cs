@@ -8,13 +8,12 @@ public partial class Weapon
 		if ( IsReloading || InBoltBack || IsShooting() )
 			return;
 
-		var maxClipSize = BulletCocking ? Primary.ClipSize + 1 : Primary.ClipSize;
+		var maxClipSize = BulletCocking ? ClipSize + 1 : ClipSize;
 
-		if ( Primary.Ammo >= maxClipSize || Primary.ClipSize == -1 )
+		if ( Ammo >= maxClipSize || ClipSize == -1 )
 			return;
 
-		var isEmptyReload = ReloadEmptyTime > 0 && Primary.Ammo == 0;
-		TimeSinceReload = -(isEmptyReload ? ReloadEmptyTime : ReloadTime);
+		var isEmptyReload = Ammo == 0;
 
 		
 		if ( !Owner.Inventory.HasItems( AmmoType ) && !Owner.CurrentGame.InfiniteAmmo )
@@ -31,34 +30,34 @@ public partial class Weapon
 		HandleReloadEffects();
 
 		//Boltback
-		if ( !isEmptyReload && Primary.Ammo == 0 && BoltBack )
-		{
-			TimeSinceReload -= BoltBackTime;
-			AsyncBoltBack( ReloadTime );
-		}
+		//if ( !isEmptyReload && Primary.Ammo == 0 && BoltBack )
+		//{
+		//	TimeSinceReload -= BoltBackTime;
+		//	AsyncBoltBack( ReloadTime );
+		//}
 	}
 
 	public virtual void OnReloadFinish()
 	{
 		IsReloading = false;
-		var maxClipSize = BulletCocking && Primary.Ammo > 0 ? Primary.ClipSize + 1 : Primary.ClipSize;
+		var maxClipSize = BulletCocking && Ammo > 0 ? ClipSize + 1 : ClipSize;
 
 		if ( Owner.CurrentGame.InfiniteAmmo )
 		{
-			Primary.Ammo = maxClipSize;
+			Ammo = maxClipSize;
 			IsEmpty = false;
 			return;
 		}
 
 
 
-		var ammo = Owner.Inventory.TryTake( AmmoType, maxClipSize - Primary.Ammo ); //Owner.TakeAmmo( Primary.AmmoType, maxClipSize - Primary.Ammo );
+		var ammo = Owner.Inventory.TryTake( AmmoType, maxClipSize - Ammo ); //Owner.TakeAmmo( Primary.AmmoType, maxClipSize - Primary.Ammo );
 
 		if ( ammo == 0 )
 			return;
 
 		IsEmpty = false;
-		Primary.Ammo += ammo;
+		Ammo += ammo;
 	}
 
 	public virtual void CancelShellReload()
@@ -69,22 +68,22 @@ public partial class Weapon
 
 	public virtual void OnShellReload()
 	{
-		ReloadTime = ShellReloadStartTime + ShellReloadInsertTime;
-		Reload();
+		//ReloadTime = ShellReloadStartTime + ShellReloadInsertTime;
+		//Reload();
 	}
 
 	public virtual void OnShellReloadFinish()
 	{
 		IsReloading = false;
 
-		var hasInfiniteReserve = Primary.InfiniteAmmo == InfiniteAmmoType.reserve;
+		var hasInfiniteReserve = InfiniteAmmo == InfiniteAmmoType.reserve;
 		var ammo = Owner.Inventory.TryTake( AmmoType, 1 );
 
-		Primary.Ammo += 1;
+		Ammo += 1;
 
-		if ( ammo != 0 && Primary.Ammo < Primary.ClipSize )
+		if ( ammo != 0 && Ammo < ClipSize )
 		{
-			ReloadTime = ShellReloadInsertTime;
+			//ReloadTime = ShellReloadInsertTime;
 			Reload();
 		}
 		else
@@ -106,8 +105,8 @@ public partial class Weapon
 		// Eject shell
 		await GameTask.DelaySeconds( BoltBackEjectDelay );
 		if ( !IsValid ) return;
-		var scale = CanSeeViewModel ? Primary.VMParticleScale : Primary.WMParticleScale;
-		CreateParticle( Primary.BulletEjectParticle, "ejection_point", scale );
+		var scale = VMParticleScale;
+		CreateParticle( BulletEjectParticle, "ejection_point", scale );
 
 		// Finished
 		await GameTask.DelaySeconds( BoltBackTime - BoltBackEjectDelay );

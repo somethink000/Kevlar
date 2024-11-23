@@ -48,7 +48,7 @@ public class SniperScope : Panel
 		SetClass( "hide", !weapon.IsScoping );
 
 		// Check if ADS & firing
-		if ( weapon.IsAiming && weapon.TimeSincePrimaryShoot < 0.1f )
+		if ( weapon.IsAiming && weapon.TimeSinceShoot < 0.1f )
 			return;
 
 		// Movement impact

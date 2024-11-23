@@ -779,6 +779,15 @@
           "Model": "models/world/doors/door_wood/door_wood.vmdl",
           "Static": false,
           "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "GeneralGame.DoorComponent",
+          "__guid": "bb9f08ac-69d2-4326-99c8-db2eccf571ba",
+          "Angle": 100,
+          "BothSides": true,
+          "OpenTime": 0.25,
+          "Pivot": "0,0,0",
+          "State": "Close"
         }
       ]
     },
@@ -791,6 +800,16 @@
       "Enabled": true,
       "NetworkMode": 1,
       "__Prefab": "prefabs/weapons/vss.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "a45f4522-250b-4434-a553-d36c21fbad85",
+      "Flags": 0,
+      "Name": "zombie",
+      "Position": "-652.0555,-515.9424,136",
+      "Tags": "bad",
+      "Enabled": true,
+      "__Prefab": "prefabs/npcs/zombie.prefab",
       "__PrefabVariables": {}
     }
   ],

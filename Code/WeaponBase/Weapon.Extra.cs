@@ -3,9 +3,9 @@
 public partial class Weapon
 {
 	// Burst Fire
-	public void ResetBurstFireCount( ShootInfo shootInfo, string inputButton )
+	public void ResetBurstFireCount( string inputButton )
 	{
-		if ( shootInfo is null || shootInfo.FiringType != FiringType.burst ) return;
+		if ( FireMod != FiringType.burst ) return;
 
 		if ( Input.Released( inputButton ) )
 		{
@@ -13,14 +13,6 @@ public partial class Weapon
 		}
 	}
 
-	// Barrel heat
-	public void BarrelHeatCheck()
-	{
-		if ( TimeSincePrimaryShoot > 3 && TimeSinceSecondaryShoot > 0 )
-		{
-			barrelHeat = 0;
-		}
-	}
 
 	// Tucking
 	public virtual float GetTuckDist()

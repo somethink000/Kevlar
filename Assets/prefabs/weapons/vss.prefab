@@ -10,38 +10,43 @@
         "__type": "GeneralGame.Weapon",
         "__guid": "4d44110c-f7a1-4168-a9f3-dbeaa77a630a",
         "AimAnimData": {
+          "Angle": "0,0,0",
           "Pos": "-2.216,-3,1.232"
         },
         "AimFOV": 20,
         "AimInFOVSpeed": 1,
         "AimOutFOVSpeed": 1,
-        "AimPlayerFOV": -1,
         "AimSensitivity": 0.85,
+        "Ammo": 10,
         "AmmoType": "prefabs/items/ammo_rifle.prefab",
         "AnimSpeed": 1,
+        "BarrelSmokeParticle": "particles/swb/muzzle/barrel_smoke.vpcf",
         "BoltBack": false,
         "BoltBackEjectDelay": 0,
         "BoltBackTime": 0,
         "BulletCocking": true,
-        "ClassName": "asval",
+        "BulletEjectParticle": "particles/swb/bullet_hulls/5.45_shell.vpcf",
+        "Bullets": 1,
+        "BulletSize": 0.1,
+        "BulletTracerChance": 0.33,
+        "BulletTracerParticle": "particles/swb/tracer/tracer.vpcf",
+        "ClipSize": 10,
         "CustomizeAnimData": {
           "Angle": "-0.71,44.52,10",
           "Pos": "5.755,-1.2,1.592"
         },
-        "DeploySound": "sounds/swb/animations/swb_deploy.sound",
-        "DisplayName": "AS VAL",
-        "DrawEmptyAnim": "",
-        "DrawEmptyTime": -1,
-        "DrawTime": 0.6,
+        "Damage": 5,
+        "DrawTScale": 1,
+        "FireMod": "auto",
+        "Force": 0.1,
+        "HitFlinch": 1.25,
         "HoldType": "Rifle",
-        "Primary": {
-          "_type": "component",
-          "component_id": "ff1c8c67-10c8-4767-925a-0d606a3845ff",
-          "go": "a3b668c3-acfb-4043-8f7c-93b7df84b5c8",
-          "component_type": "ShootInfo"
-        },
-        "ReloadEmptyTime": 2.1,
-        "ReloadTime": 1.5,
+        "InfiniteAmmo": "disabled",
+        "MuzzleFlashParticle": "particles/swb/muzzle/flash_silenced.vpcf",
+        "Recoil": 0.1,
+        "ReloadEmptyTScale": 1,
+        "ReloadTScale": 1,
+        "RPM": 500,
         "RunAnimData": {
           "Angle": "19.18,34.46,0",
           "Pos": "1.443,-2.56,1.717"
@@ -50,6 +55,8 @@
           "LensTexture": "/materials/swb/scopes/swb_lens_hunter.png",
           "ScopeTexture": "/materials/swb/scopes/swb_scope_hunter.png",
           "ScopeInDelay": 0.2,
+          "ScopeInSound": null,
+          "ScopeOutSound": null,
           "FOV": 8,
           "AimSensitivity": 0.25
         },
@@ -59,40 +66,13 @@
         "ShellReloadingShootCancel": true,
         "ShellReloadInsertTime": 0,
         "ShellReloadStartTime": 0,
-        "Slot": 5,
+        "ShootSound": "weapons/sounds/wpns/9mm/fire-sup-01.sound",
+        "Spread": 0.1,
         "TuckRange": 30,
         "ViewModel": "weapons/vss/vss.vmdl",
         "ViewModelHands": "weapons/hands_l/hands_l.vmdl",
-        "WorldModel": "weapons/vss/w_vss.vmdl"
-      },
-      {
-        "__type": "GeneralGame.ShootInfo",
-        "__guid": "ff1c8c67-10c8-4767-925a-0d606a3845ff",
-        "Ammo": 10,
-        "AmmoType": "rifle",
-        "BarrelSmokeParticle": "particles/swb/muzzle/barrel_smoke.vpcf",
-        "BulletEjectParticle": "particles/swb/bullet_hulls/5.45_shell.vpcf",
-        "Bullets": 1,
-        "BulletSize": 2,
-        "BulletTracerChance": 0.33,
-        "BulletTracerParticle": "particles/swb/tracer/tracer.vpcf",
-        "ClipSize": 10,
-        "Damage": 30,
-        "DryShootSound": "sounds/swb/clip/swb_rifle.empty.sound",
-        "FiringType": "auto",
-        "Force": 3,
-        "HitFlinch": 2,
-        "InfiniteAmmo": "disabled",
-        "MuzzleFlashParticle": "particles/swb/muzzle/flash.vpcf",
-        "Recoil": 3,
-        "RPM": 600,
-        "ShootAimedAnim": "",
-        "ShootAnim": "b_attack",
-        "ShootEmptyAnim": "",
-        "ShootSound": "weapons/sounds/wpns/9mm/fire-sup-01.sound",
-        "Spread": 0.08,
         "VMParticleScale": 1,
-        "WMParticleScale": 1
+        "WorldModel": "weapons/vss/w_vss.vmdl"
       },
       {
         "__type": "Sandbox.ModelCollider",
@@ -108,7 +88,14 @@
         "AngularDamping": 0,
         "Gravity": true,
         "LinearDamping": 0,
-        "Locking": {},
+        "Locking": {
+          "X": false,
+          "Y": false,
+          "Z": false,
+          "Pitch": false,
+          "Yaw": false,
+          "Roll": false
+        },
         "MassCenterOverride": "0,0,0",
         "MassOverride": 0,
         "MotionEnabled": true,
@@ -163,6 +150,31 @@
         },
         "Tint": "1,1,1,1",
         "UseAnimGraph": true
+      },
+      {
+        "__type": "GeneralGame.RifleRail",
+        "__guid": "057703a8-403b-4332-ac69-28439d7a0223",
+        "ViewModelScale": "1,1,1",
+        "WorldModelScale": "1,1,1"
+      },
+      {
+        "__type": "GeneralGame.ReflexSightBG",
+        "__guid": "0f99e705-db15-4278-aaa8-073a5104601c",
+        "AimAnimData": {
+          "Angle": "0,0,0",
+          "Pos": "-2.233,-3,0.614"
+        },
+        "AimFOV": -1,
+        "AimInFOVSpeed": -1,
+        "AimOutFOVSpeed": -1,
+        "RequiresAttachment": {
+          "_type": "component",
+          "component_id": "057703a8-403b-4332-ac69-28439d7a0223",
+          "go": "a3b668c3-acfb-4043-8f7c-93b7df84b5c8",
+          "component_type": "RifleRail"
+        },
+        "ViewModelScale": "1,1,1",
+        "WorldModelScale": "1,1,1"
       }
     ],
     "Children": [],
@@ -197,6 +209,5 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
-  "HasUnsavedChanges": false,
   "__version": 1
 }

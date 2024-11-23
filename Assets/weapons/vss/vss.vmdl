@@ -39,6 +39,10 @@
 								from = "lowpoly_plastic.vmat"
 								to = "weapons/pallete_wood.vmat"
 							},
+							{
+								from = "glass.vmat"
+								to = "glass.vmat"
+							},
 						]
 						use_global_default = false
 						global_default_material = "materials/default.vmat"
@@ -84,7 +88,25 @@
 				[
 					{
 						_class = "RenderMeshFile"
+						name = "mount"
 						filename = "weapons/vss/compile/dc def.smd"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "mount_pec"
+						filename = "weapons/vss/compile/dc vssm.smd"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -148,6 +170,7 @@
 					},
 					{
 						_class = "RenderMeshFile"
+						name = "mag10"
 						filename = "weapons/vss/compile/mag 10.smd"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
@@ -156,6 +179,57 @@
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
 						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "mag20"
+						filename = "weapons/vss/compile/mag 20.smd"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "mag30"
+						filename = "weapons/vss/compile/mag 30.smd"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "optic_t1"
+						filename = "weapons/attachments/optic_t1/optic_t1.smd"
+						import_translation = [ 0.05, -0.8, 1.5 ]
+						import_rotation = [ 90.0, 0.0, -90.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = "body"
 						import_filter = 
 						{
 							exclude_by_default = false
@@ -282,6 +356,19 @@
 											stop_on_seq_change = false
 											use_layer_sequence = false
 											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 47
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
 										}
 									},
 								]
@@ -415,6 +502,19 @@
 											stop_on_seq_change = false
 											use_layer_sequence = false
 											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 65
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
 										}
 									},
 								]
@@ -708,6 +808,22 @@
 							{
 								_class = "AnimFile"
 								name = "draw"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 34
+										event_keys = 
+										{
+											TypeName = "deployed"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -861,52 +977,21 @@
 								_class = "BodyGroupChoice"
 								meshes = 
 								[
-									"30rnd",
+									"mag10",
 								]
 							},
 							{
 								_class = "BodyGroupChoice"
 								meshes = 
 								[
-									"45rnd",
+									"mag20",
 								]
 							},
 							{
 								_class = "BodyGroupChoice"
 								meshes = 
 								[
-									"60rnd",
-								]
-							},
-						]
-						hidden_in_tools = false
-					},
-					{
-						_class = "BodyGroup"
-						name = "muzzle"
-						children = 
-						[
-							{
-								_class = "BodyGroupChoice"
-								meshes = 
-								[
-									"default_dtk",
-								]
-							},
-							{
-								_class = "BodyGroupChoice"
-								name = "psb5"
-								meshes = 
-								[
-									"psb5",
-								]
-							},
-							{
-								_class = "BodyGroupChoice"
-								name = "rifle_silence"
-								meshes = 
-								[
-									"surfire",
+									"mag30",
 								]
 							},
 						]
@@ -921,7 +1006,7 @@
 								_class = "BodyGroupChoice"
 								meshes = 
 								[
-									"handguard",
+									"mount",
 								]
 							},
 							{
@@ -929,7 +1014,7 @@
 								name = "zenit"
 								meshes = 
 								[
-									"handguard_zenit",
+									"mount_pec",
 								]
 							},
 						]
@@ -948,26 +1033,7 @@
 								_class = "BodyGroupChoice"
 								meshes = 
 								[
-									"sight",
-								]
-							},
-						]
-						hidden_in_tools = false
-					},
-					{
-						_class = "BodyGroup"
-						name = "grip"
-						children = 
-						[
-							{
-								_class = "BodyGroupChoice"
-								meshes = [  ]
-							},
-							{
-								_class = "BodyGroupChoice"
-								meshes = 
-								[
-									"foregrip",
+									"optic_t1",
 								]
 							},
 						]

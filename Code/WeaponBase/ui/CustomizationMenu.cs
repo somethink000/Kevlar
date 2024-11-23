@@ -26,7 +26,6 @@ public class CustomizationMenu : Panel
 		StyleSheet.Load( "/WeaponBase/ui/CustomizationMenu.cs.scss" );
 
 		categoryWrapper = Add.Panel( "categoryWrapper" );
-		categoryWrapper.Add.Label( weapon.DisplayName, "weaponName" );
 		attachmentWrapper = Add.Panel( "attachmentWrapper" );
 		descriptionWrapper = Add.Panel( "descriptionWrapper" );
 

@@ -178,7 +178,7 @@ public class ViewModelHandler : Component
 			yaw = 3.0f * (localVel.x / maxWalkSpeed);
 
 		// Check if ADS & firing
-		if ( isAiming && Weapon.TimeSincePrimaryShoot < 0.1f )
+		if ( isAiming && Weapon.TimeSinceShoot < 0.1f )
 		{
 			targetVectorRot -= new Vector3( 0, 0, roll );
 			return;
@@ -233,8 +233,8 @@ public class ViewModelHandler : Component
 			targetVectorPos += Weapon.AimAnimData.Pos;
 			targetVectorRot += MathUtil.ToVector3( Weapon.AimAnimData.Angle );
 
-			if ( Weapon.AimPlayerFOV > 0 )
-				targetPlayerFOV = Weapon.AimPlayerFOV;
+			if ( Weapon.AimFOV > 0 )
+				targetPlayerFOV = Weapon.AimFOV;
 
 			if ( Weapon.IsScoping && Weapon.ScopeInfo.FOV > 0 )
 				targetPlayerFOV = Weapon.ScopeInfo.FOV;
@@ -249,7 +249,7 @@ public class ViewModelHandler : Component
 			aimTime = 0;
 			targetPlayerFOV = Preferences.FieldOfView;
 
-			if ( finalPlayerFOV != Weapon.AimPlayerFOV )
+			if ( finalPlayerFOV != Weapon.AimFOV )
 			{
 				playerFOVSpeed = Weapon.AimOutFOVSpeed;
 			}

@@ -89,7 +89,7 @@ public partial class PlayerBase
 		}
 		else
 		{
-			Log.Info( SlideVelocity.Length );
+			//Log.Info( SlideVelocity.Length );
 			SlideVelocity = Vector3.Lerp( SlideVelocity, Vector3.Zero, Time.Delta * 0.5f );
 			WishVelocity = SlideVelocity;
 			

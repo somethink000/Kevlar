@@ -13,46 +13,31 @@ public partial class Weapon
 	/// <param name="lastAttackTime">Time since this attack</param>
 	/// <param name="inputButton">The input button for this attack</param>
 	/// <returns></returns>
-	public virtual bool CanShoot( ShootInfo shootInfo, TimeSince lastAttackTime, string inputButton )
+	public virtual bool CanShoot( )
 	{
 		
-		if ( (IsReloading && !ShellReloading) || (IsReloading && ShellReloading && !ShellReloadingShootCancel) || InBoltBack ) return false;
-		if ( shootInfo is null || !Owner.IsValid() || !Input.Down( inputButton ) || (IsRunning && Secondary is null) || !Owner.IsAlive ) return false;
+		if ( IsShooting() || (IsReloading && !ShellReloading) || (IsReloading && ShellReloading && !ShellReloadingShootCancel) || InBoltBack ) return false;
+		if ( !Owner.IsValid() || IsRunning || !Owner.IsAlive ) return false;
 		
 		if ( !HasAmmo() )
 		{
-			if ( Input.Pressed( inputButton ) )
-			{
-				
-				// Check for auto reloading
-				if ( lastAttackTime > GetRealRPM( shootInfo.RPM ) )
-				{
-					
-					TimeSincePrimaryShoot = 999;
-					TimeSinceSecondaryShoot = 999;
-					
-					if ( ShellReloading )
-						OnShellReload();
-					else
-						Reload();
+			//if ( shootInfo.DryShootSound is not null )
+			//	PlaySound( shootInfo.DryShootSound.ResourceId );
 
-					return false;
-				}
-
-				// Dry fire
-				if ( shootInfo.DryShootSound is not null )
-					PlaySound( shootInfo.DryShootSound.ResourceId );
-			}
+			if ( ShellReloading )
+				OnShellReload();
+			else
+				Reload();
 
 			return false;
 		}
-
-		if ( shootInfo.FiringType == FiringType.semi && !Input.Pressed( inputButton ) ) return false;
-		if ( shootInfo.FiringType == FiringType.burst )
+	
+		if ( FireMod == FiringType.semi && !Input.Pressed( InputButtonHelper.PrimaryAttack ) ) return false;
+		if ( FireMod == FiringType.burst )
 		{
 			if ( burstCount > 2 ) return false;
 
-			if ( Input.Down( inputButton ) && lastAttackTime > GetRealRPM( shootInfo.RPM ) )
+			if ( TimeSinceShoot > GetRealRPM( RPM ) )
 			{
 				burstCount++;
 				return true;
@@ -60,60 +45,48 @@ public partial class Weapon
 
 			return false;
 		};
-
-		if ( shootInfo.RPM <= 0 ) return true;
-
-		return lastAttackTime > GetRealRPM( shootInfo.RPM );
+		
+		if ( RPM <= 0 ) return true;
+		
+		return TimeSinceShoot > GetRealRPM( RPM );
 	}
 
-	/// <summary>
-	/// Checks if weapon can do the primary attack
-	/// </summary>
-	public virtual bool CanPrimaryShoot()
+	public virtual void Shoot(  )
 	{
-		return CanShoot( Primary, TimeSincePrimaryShoot, InputButtonHelper.PrimaryAttack );
-	}
+		if ( !CanShoot() ) return;
+		
+		TimeSinceShoot = 0;
 
-	/// <summary>
-	/// Checks if weapon can do the secondary attack
-	/// </summary>
-	public virtual bool CanSecondaryShoot()
-	{
-		return CanShoot( Secondary, TimeSinceSecondaryShoot, InputButtonHelper.SecondaryAttack );
-	}
-
-	public virtual void Shoot( ShootInfo shootInfo, bool isPrimary )
-	{
 		// Ammo
-		shootInfo.Ammo -= 1;
+		Ammo -= 1;
 
-		if ( shootInfo.Ammo <= 0 ) IsEmpty = true;
+		if ( Ammo <= 0 ) IsEmpty = true;
 
 
 		ViewModelRenderer.Set( ShootAnim, true );
 
 		// Sound
-		if ( shootInfo.ShootSound is not null )
-			PlaySound( shootInfo.ShootSound.ResourceId );
+		if ( ShootSound is not null )
+			PlaySound( ShootSound.ResourceId );
 
 		// Particles
-		HandleShootEffects( isPrimary );
+		HandleShootEffects( );
 
 		// Barrel smoke
 		barrelHeat += 1;
 
 		// Recoil
-		Owner.EyeAnglesOffset += GetRecoilAngles( shootInfo );
+		Owner.EyeAnglesOffset += GetRecoilAngles( );
 
 		// UI
-		BroadcastUIEvent( "shoot", GetRealRPM( shootInfo.RPM ) );
+		BroadcastUIEvent( "shoot", 100 );
 
 		// Bullet
-		for ( int i = 0; i < shootInfo.Bullets; i++ )
+		for ( int i = 0; i < Bullets; i++ )
 		{
-			var realSpread = IsScoping ? 0 : GetRealSpread( shootInfo.Spread );
-			var spreadOffset = shootInfo.BulletType.GetRandomSpread( realSpread );
-			ShootBullet( isPrimary, spreadOffset );
+			var realSpread = IsScoping ? 0 : GetRealSpread( Spread );
+			var spreadOffset = BulletType.GetRandomSpread( realSpread );
+			ShootBullet( spreadOffset );
 		}
 
 		Owner.ApplyFov( 10 );
@@ -121,10 +94,10 @@ public partial class Weapon
 	}
 
 	[Broadcast]
-	public virtual void ShootBullet( bool isPrimary, Vector3 spreadOffset )
+	public virtual void ShootBullet( Vector3 spreadOffset )
 	{
-		var shootInfo = GetShootInfo( isPrimary );
-		shootInfo.BulletType.Shoot( this, shootInfo, spreadOffset );
+		
+		BulletType.Shoot( this, spreadOffset );
 	}
 
 	/// <summary> A single bullet trace from start to end with a certain radius.</summary>
@@ -149,24 +122,23 @@ public partial class Weapon
 	}
 
 	[Broadcast]
-	public virtual void HandleShootEffects( bool isPrimary )
+	public virtual void HandleShootEffects(  )
 	{
 		// Player
 		Owner.BodyRenderer.Set( "b_attack", true );
 
 		// Weapon
-		var shootInfo = GetShootInfo( isPrimary );
-		var scale = CanSeeViewModel ? shootInfo.VMParticleScale : shootInfo.WMParticleScale;
+		var scale = VMParticleScale;
 		var muzzleTransform = GetMuzzleTransform();
 
 		// Bullet eject
-		if ( shootInfo.BulletEjectParticle is not null )
+		if ( BulletEjectParticle is not null )
 		{
 			if ( !BoltBack )
 			{
 				if ( !ShellReloading || (ShellReloading && ShellEjectDelay == 0) )
 				{
-					CreateParticle( shootInfo.BulletEjectParticle, "ejection_point", scale );
+					CreateParticle( BulletEjectParticle, "ejection_point", scale );
 				}
 				else
 				{
@@ -174,26 +146,26 @@ public partial class Weapon
 					{
 						await GameTask.DelaySeconds( ShellEjectDelay );
 						if ( !IsValid ) return;
-						CreateParticle( shootInfo.BulletEjectParticle, "ejection_point", scale );
+						CreateParticle( BulletEjectParticle, "ejection_point", scale );
 					};
 					delayedEject();
 				}
 			}
-			else if ( shootInfo.Ammo > 0 )
-			{
-				AsyncBoltBack( GetRealRPM( shootInfo.RPM ) );
-			}
+			//else if ( Ammo > 0 )
+			//{
+			//	AsyncBoltBack( GetRealRPM( RPM ) );
+			//}
 		}
 
 		if ( !muzzleTransform.HasValue ) return;
 
 		// Muzzle flash
-		if ( shootInfo.MuzzleFlashParticle is not null )
-			CreateParticle( shootInfo.MuzzleFlashParticle, muzzleTransform.Value, scale, ( particles ) => ParticleToMuzzlePos( particles ) );
+		if ( MuzzleFlashParticle is not null )
+			CreateParticle( MuzzleFlashParticle, muzzleTransform.Value, scale, ( particles ) => ParticleToMuzzlePos( particles ) );
 
 		// Barrel smoke
-		if ( !IsProxy && shootInfo.BarrelSmokeParticle is not null && barrelHeat >= shootInfo.ClipSize * 0.75 )
-			CreateParticle( shootInfo.BarrelSmokeParticle, muzzleTransform.Value, shootInfo.VMParticleScale, ( particles ) => ParticleToMuzzlePos( particles ) );
+		if ( !IsProxy && BarrelSmokeParticle is not null && barrelHeat >= ClipSize * 0.75 )
+			CreateParticle( BarrelSmokeParticle, muzzleTransform.Value, VMParticleScale, ( particles ) => ParticleToMuzzlePos( particles ) );
 	}
 
 	void ParticleToMuzzlePos( SceneParticles particles )

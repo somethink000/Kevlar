@@ -20,20 +20,20 @@ public class WeaponRegistry : Component
 		}
 	}
 
-	protected override void OnAwake()
-	{
-		WeaponPrefabs.ForEach( weaponPrefab =>
-		{
-			var weaponGO = weaponPrefab.Clone();
-			weaponGO.SetParent( this.GameObject );
-			weaponGO.Enabled = false;
+	//protected override void OnAwake()
+	//{
+	//	WeaponPrefabs.ForEach( weaponPrefab =>
+	//	{
+	//		var weaponGO = weaponPrefab.Clone();
+	//		weaponGO.SetParent( this.GameObject );
+	//		weaponGO.Enabled = false;
 
-			var weapon = weaponGO.Components.Get<Weapon>( true );
-			Weapons.TryAdd( weapon.ClassName, weaponGO );
+	//		var weapon = weaponGO.Components.Get<Weapon>( true );
+	//		Weapons.TryAdd( weapon.ClassName, weaponGO );
 
-			weaponGO.Name = weapon.ClassName;
-		} );
-	}
+	//		weaponGO.Name = weapon.ClassName;
+	//	} );
+	//}
 
 	public GameObject Get( string className )
 	{

@@ -52,32 +52,27 @@ public partial class Weapon
 	{
 		
 
-		if ( Primary.InfiniteAmmo == InfiniteAmmoType.clip )
+		if ( InfiniteAmmo == InfiniteAmmoType.clip )
 			return true;
 
-		if ( Primary.ClipSize == -1 )
+		if ( ClipSize == -1 )
 		{
-			return Owner.Inventory.HasItems(AmmoType);//Owner.AmmoCount( Primary.AmmoType ) > 0;
+			return Owner.Inventory.HasItems(AmmoType);
 		}
 
-		if ( Primary.Ammo == 0 )
+		if ( Ammo == 0 )
 			return false;
 
 		return true;
 	}
 
-	public ShootInfo GetShootInfo( bool isPrimary )
-	{
-		return isPrimary ? Primary : Secondary;
-	}
-
 	public bool IsShooting()
 	{
-		if ( Secondary is null )
-			return GetRealRPM( Primary.RPM ) > TimeSincePrimaryShoot;
+		
+		return GetRealRPM( RPM ) > TimeSinceShoot;
 
-		return GetRealRPM( Primary.RPM ) > TimeSincePrimaryShoot || GetRealRPM( Secondary.RPM ) > TimeSinceSecondaryShoot;
 	}
+
 
 	public static float GetRealRPM( int rpm )
 	{
@@ -88,7 +83,7 @@ public partial class Weapon
 	{
 		if ( !Owner.IsValid() ) return 0;
 
-		float spread = baseSpread != -1 ? baseSpread : Primary.Spread;
+		float spread = baseSpread != -1 ? baseSpread : Spread;
 		float floatMod = 1f;
 
 		// Ducking
@@ -96,7 +91,7 @@ public partial class Weapon
 			floatMod -= 0.25f;
 
 		// Aiming
-		if ( IsAiming && Primary.Bullets == 1 )
+		if ( IsAiming && Bullets == 1 )
 			floatMod /= 4;
 
 		if ( !Owner.IsOnGround )
@@ -113,9 +108,9 @@ public partial class Weapon
 		return spread * floatMod;
 	}
 
-	public virtual Angles GetRecoilAngles( ShootInfo shootInfo )
+	public virtual Angles GetRecoilAngles( )
 	{
-		var recoilX = IsAiming ? -shootInfo.Recoil * 0.4f : -shootInfo.Recoil;
+		var recoilX = IsAiming ? -Recoil * 0.4f : -Recoil;
 		var recoilY = Game.Random.NextFloat( -0.2f, 0.2f ) * recoilX;
 		var recoilAngles = new Angles( recoilX, recoilY, 0 );
 		return recoilAngles;

@@ -49,7 +49,7 @@ public abstract class SightAttachment : Attachment
 	{
 		oldAimAnimData = Weapon.AimAnimData;
 		oldAimFOV = Weapon.AimFOV;
-		oldAimPlayerFOV = Weapon.AimPlayerFOV;
+		oldAimPlayerFOV = Weapon.AimFOV;
 		oldAimInFOVSpeed = Weapon.AimInFOVSpeed;
 		oldAimOutFOVSpeed = Weapon.AimOutFOVSpeed;
 		oldAimSensitivity = Weapon.AimSensitivity;
@@ -57,7 +57,7 @@ public abstract class SightAttachment : Attachment
 		Weapon.AimAnimData = AimAnimData;
 
 		if ( AimFOV > -1 ) Weapon.AimFOV = AimFOV;
-		if ( AimPlayerFOV > -1 ) Weapon.AimPlayerFOV = AimPlayerFOV;
+		if ( AimPlayerFOV > -1 ) Weapon.AimFOV = AimPlayerFOV;
 		if ( AimInFOVSpeed > -1 ) Weapon.AimInFOVSpeed = AimInFOVSpeed;
 		if ( AimOutFOVSpeed > -1 ) Weapon.AimOutFOVSpeed = AimOutFOVSpeed;
 		if ( AimSensitivity > -1 ) Weapon.AimSensitivity = AimSensitivity;
@@ -67,7 +67,6 @@ public abstract class SightAttachment : Attachment
 	{
 		Weapon.AimAnimData = oldAimAnimData;
 		Weapon.AimFOV = oldAimFOV;
-		Weapon.AimPlayerFOV = oldAimPlayerFOV;
 		Weapon.AimInFOVSpeed = oldAimInFOVSpeed;
 		Weapon.AimOutFOVSpeed = oldAimOutFOVSpeed;
 		Weapon.AimSensitivity = oldAimSensitivity;

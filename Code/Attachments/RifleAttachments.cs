@@ -41,10 +41,10 @@ namespace GeneralGame;
 
 //Rails
 //{
-	[Title( "Rail Zenit" )]
-	public class ZenitRail : RailAttachment
+	[Title( "Rail" )]
+	public class RifleRail : RailAttachment
 	{
-		public override string Name => "Rail Zenit";
+		public override string Name => "Rail Rifle";
 		public override string IconPath => "";
 		public override string BodyGroup { get; set; } = "rail";
 		public override int BodyGroupChoice { get; set; } = 1;
