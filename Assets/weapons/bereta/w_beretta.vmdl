@@ -85,7 +85,7 @@
 						align_origin_z_type = "None"
 						filename = "weapons/bereta/w/berettalod.smd"
 						import_scale = 1.0
-						faceMergeAngle = 10.0
+						faceMergeAngle = 35.919998
 						maxHullVertices = 0
 						import_mode = "SingleHull"
 						optimization_algorithm = "QEM"
@@ -126,7 +126,7 @@
 					{
 						_class = "Attachment"
 						name = "muzzle"
-						parent_bone = "bip01_r_hand"
+						parent_bone = ""
 						relative_origin = [ 26.045731, -0.709611, -6.821875 ]
 						relative_angles = [ -0.0, 0.0, -0.000087 ]
 						weight = 1.0
@@ -135,7 +135,7 @@
 					{
 						_class = "Attachment"
 						name = "hold_R"
-						parent_bone = "bip01_r_hand"
+						parent_bone = ""
 						relative_origin = [ 0.0, 0.0, 0.0 ]
 						relative_angles = [ 0.0, 0.0, 0.0 ]
 						weight = 1.0

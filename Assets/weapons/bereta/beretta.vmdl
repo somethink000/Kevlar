@@ -287,6 +287,22 @@
 							{
 								_class = "AnimFile"
 								name = "ready"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 35
+										event_keys = 
+										{
+											TypeName = "deployed"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -310,6 +326,22 @@
 							{
 								_class = "AnimFile"
 								name = "draw"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 15
+										event_keys = 
+										{
+											TypeName = "deployed"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -333,6 +365,22 @@
 							{
 								_class = "AnimFile"
 								name = "holster"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 12
+										event_keys = 
+										{
+											TypeName = "holstered"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -356,6 +404,22 @@
 							{
 								_class = "AnimFile"
 								name = "draw_empty"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 15
+										event_keys = 
+										{
+											TypeName = "deployed"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -379,6 +443,22 @@
 							{
 								_class = "AnimFile"
 								name = "holster_empty"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 12
+										event_keys = 
+										{
+											TypeName = "holstered"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -570,6 +650,22 @@
 							{
 								_class = "AnimFile"
 								name = "reload"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 42
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -593,6 +689,22 @@
 							{
 								_class = "AnimFile"
 								name = "reload_empty"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 45
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -616,6 +728,22 @@
 							{
 								_class = "AnimFile"
 								name = "reload_empty_iron"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 45
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -639,6 +767,22 @@
 							{
 								_class = "AnimFile"
 								name = "reload_empty_ext"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 50
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -662,6 +806,22 @@
 							{
 								_class = "AnimFile"
 								name = "reload_ext"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 48
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -685,6 +845,22 @@
 							{
 								_class = "AnimFile"
 								name = "reload_iron_ext"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 48
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -708,6 +884,22 @@
 							{
 								_class = "AnimFile"
 								name = "reload_iron"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 42
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -731,6 +923,22 @@
 							{
 								_class = "AnimFile"
 								name = "reload_empty_iron_ext"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 50
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -895,7 +1103,7 @@
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
-		anim_graph_name = "weapons/vss/vss.vanmgrph"
+		anim_graph_name = "weapons/bereta/beretta.vanmgrph"
 		base_model_name = ""
 	}
 }
