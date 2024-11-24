@@ -17,7 +17,7 @@
         "AimInFOVSpeed": 1,
         "AimOutFOVSpeed": 1,
         "AimSensitivity": 0.85,
-        "Ammo": 5,
+        "Ammo": 10,
         "AmmoType": "prefabs/items/ammo_rifle.prefab",
         "AnimSpeed": 1,
         "BarrelSmokeParticle": "particles/swb/muzzle/barrel_smoke.vpcf",
@@ -30,12 +30,12 @@
         "BulletSize": 0.1,
         "BulletTracerChance": 0.33,
         "BulletTracerParticle": "particles/swb/tracer/tracer.vpcf",
-        "ClipSize": 5,
+        "ClipSize": 10,
         "CustomizeAnimData": {
           "Angle": "-0.71,44.52,10",
           "Pos": "5.755,-1.2,1.592"
         },
-        "Damage": 5,
+        "Damage": 10,
         "DrawTScale": 1,
         "FireMod": "auto",
         "Force": 0.1,

@@ -40,7 +40,11 @@
 								to = "weapons/pallete_wood.vmat"
 							},
 							{
-								from = "glass.vmat"
+								from = "reflex_mat.vmat"
+								to = "attachments/swb/sight/reflex/textures/reflex.vmat"
+							},
+							{
+								from = "reflex_glass.vmat"
 								to = "attachments/swb/sight/reflex/textures/reflex_dot_shader.vmat"
 							},
 						]
@@ -233,6 +237,26 @@
 						import_filter = 
 						{
 							exclude_by_default = false
+							exception_list = 
+							[
+								"optic_t1",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "optic_t2"
+						filename = "attachments/swb/sight/reflex/w_reflex_sight.smd"
+						import_translation = [ 0.05, -1.0, 0.0 ]
+						import_rotation = [ -90.0, 0.0, -90.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = "body"
+						import_filter = 
+						{
+							exclude_by_default = false
 							exception_list = [  ]
 						}
 					},
@@ -395,6 +419,82 @@
 							{
 								_class = "AnimFile"
 								name = "reload_10_iron"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 1
+										event_keys = 
+										{
+											name = "weapons/sounds/common/magpouch/magpouch.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 5
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/reload_start.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 9
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/magrelease.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 12
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/magout.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 22
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/magin.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 47
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -541,6 +641,106 @@
 							{
 								_class = "AnimFile"
 								name = "reload_empty_10_iron"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 2
+										event_keys = 
+										{
+											name = "weapons/sounds/common/magpouch/magpouch.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 6
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/reload_start.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 10
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/magrelease.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 14
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/magout.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 24
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/magin.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 40
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/chback_9.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 45
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/chamber_9.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 65
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -813,7 +1013,7 @@
 									{
 										_class = "AnimEvent"
 										event_class = "AE_GENERIC_EVENT"
-										event_frame = 34
+										event_frame = 14
 										event_keys = 
 										{
 											TypeName = "deployed"
@@ -846,30 +1046,23 @@
 							},
 							{
 								_class = "AnimFile"
-								name = "draw_iron"
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = ""
-								fade_in_time = 0.2
-								fade_out_time = 0.2
-								looping = false
-								delta = false
-								worldSpace = false
-								hidden = false
-								anim_markup_ordered = false
-								disable_compression = false
-								disable_interpolation = false
-								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/draw_iron.smd"
-								start_frame = -1
-								end_frame = -1
-								framerate = -1.0
-								take = 0
-								reverse = false
-							},
-							{
-								_class = "AnimFile"
 								name = "holster"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 12
+										event_keys = 
+										{
+											TypeName = "holstered"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -884,29 +1077,6 @@
 								disable_interpolation = false
 								enable_scale = false
 								source_filename = "weapons/vss/compile/anims/holster.smd"
-								start_frame = -1
-								end_frame = -1
-								framerate = -1.0
-								take = 0
-								reverse = false
-							},
-							{
-								_class = "AnimFile"
-								name = "holster_iron"
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = ""
-								fade_in_time = 0.2
-								fade_out_time = 0.2
-								looping = false
-								delta = false
-								worldSpace = false
-								hidden = false
-								anim_markup_ordered = false
-								disable_compression = false
-								disable_interpolation = false
-								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/holster_iron.smd"
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
@@ -1031,10 +1201,7 @@
 							},
 							{
 								_class = "BodyGroupChoice"
-								meshes = 
-								[
-									"optic_t1",
-								]
+								meshes = [  ]
 							},
 						]
 						hidden_in_tools = false

@@ -104,12 +104,14 @@ public partial class Weapon
 	public bool CanSeeViewModel => !IsProxy && Owner.IsFirstPerson;
 
 	public bool IsEmpty = false;
+	public bool ShellReloadReady = false;
 
 	[Sync] public bool IsReloading { get; set; }
 	[Sync] public bool IsAiming { get; set; }
 	[Sync] public bool IsScoping { get; set; }
 	[Sync] public bool InBoltBack { get; set; }
 	[Sync] public bool IsDeploying { get; set; }
+	[Sync] public bool IsHolstering { get; set; }
 
 	public TimeSince TimeSinceShoot { get; set; }
 

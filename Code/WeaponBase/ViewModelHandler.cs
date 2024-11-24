@@ -213,7 +213,7 @@ public class ViewModelHandler : Component
 
 	void HandleIronAnimation()
 	{
-		if ( isAiming && !Weapon.IsReloading && Weapon.AimAnimData != AngPos.Zero )
+		if ( isAiming && Weapon.AimAnimData != AngPos.Zero )
 		{
 			var speedMod = 1f;
 			if ( aimTime == 0 )

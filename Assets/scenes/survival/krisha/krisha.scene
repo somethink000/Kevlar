@@ -1,0 +1,386 @@
+{
+  "__guid": "edffdb4d-25e7-4262-9736-916b8a5f4a25",
+  "GameObjects": [
+    {
+      "__guid": "c3fe7d19-05e0-4f92-9623-f8b31eec3171",
+      "Flags": 0,
+      "Name": "Defence",
+      "Position": "-28.82959,5370.101,9.022205",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.DefenceObject",
+          "__guid": "626440bd-49fc-4a7f-bae2-64e2c253539a",
+          "MaxHealth": 100
+        }
+      ]
+    },
+    {
+      "__guid": "759629fa-ac1e-41d8-be90-ac659883fc3e",
+      "Flags": 0,
+      "Name": "Logic",
+      "Position": "-253.4116,6944.063,44.7504",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "f7e4d723-96ea-4d55-acca-34a5417b3e6b",
+          "Flags": 0,
+          "Name": "Gradient Fog (1)",
+          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.GradientFog",
+              "__guid": "0449c051-548a-4bb5-a87c-496f0fdf526e",
+              "Color": "0.11334,0.11334,0.14419,1",
+              "EndDistance": 10000,
+              "FalloffExponent": 1,
+              "Height": 3000,
+              "StartDistance": 0,
+              "VerticalFalloffExponent": 2
+            }
+          ]
+        },
+        {
+          "__guid": "44599370-eab6-4d58-8834-575447b160ae",
+          "Flags": 0,
+          "Name": "Sound",
+          "Rotation": "0.3210197,-0.3851179,0.5930297,-0.6300368",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SoundscapeTrigger",
+              "__guid": "76319fe7-6e09-481e-8b2e-c190988bbdd0",
+              "BoxSize": "50,50,50",
+              "Radius": 5000,
+              "Soundscape": "sounds/ambient/construct_outside.sndscape",
+              "StayActiveOnExit": true,
+              "Type": "Sphere"
+            }
+          ]
+        },
+        {
+          "__guid": "4f7db652-3fe6-4a19-b76b-67dd14df30be",
+          "Flags": 0,
+          "Name": "Sun",
+          "Rotation": "0.6322964,-0.5195425,0.3600717,-0.4479121",
+          "Tags": "light_directional,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.DirectionalLight",
+              "__guid": "86920de1-dec8-4acf-bd34-51aed89ee1cd",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.26977,0.19365,0.10665,1",
+              "Shadows": false,
+              "SkyColor": "0.08372,0.07082,0.05607,1"
+            }
+          ]
+        },
+        {
+          "__guid": "7b507888-48d8-48ba-af9f-bab745768d22",
+          "Flags": 0,
+          "Name": "Envmap",
+          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "9988890c-542b-4803-9d43-369c393bf7a5",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-16384,-16384,-16384",
+                "Maxs": "16384,16384,16384"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 16384,
+              "MultiBounce": false,
+              "Projection": "Sphere",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 16384,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "8b3cd142-6acb-47f1-b4e0-6b00f75f7355",
+          "Flags": 0,
+          "Name": "WeaponRegistry",
+          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
+          "Enabled": true,
+          "NetworkMode": 1,
+          "Components": [
+            {
+              "__type": "GeneralGame.WeaponRegistry",
+              "__guid": "f328f8ca-7b21-4aa6-9bdd-e7bee1635e5e",
+              "WeaponPrefabs": []
+            },
+            {
+              "__type": "GeneralGame.WeaponSettings",
+              "__guid": "48a4c454-4b38-44d3-9b1b-c1750fa5441f",
+              "AutoReload": true,
+              "Customization": true
+            },
+            {
+              "__type": "GeneralGame.PrefabInitializer",
+              "__guid": "d6defc57-ba33-4862-a195-c8483ca27ec4"
+            }
+          ]
+        },
+        {
+          "__guid": "c988658d-a998-405a-b169-e1711fe59578",
+          "Flags": 0,
+          "Name": "ExampleNetworkManager",
+          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.DemoNetworkManager",
+              "__guid": "e2d36775-e195-461c-9fa6-154ca128be43",
+              "PlayerPrefab": {
+                "_type": "gameobject",
+                "prefab": "prefabs/player.prefab"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "d74f755b-b470-462a-bcf2-988314f90bfa",
+          "Flags": 0,
+          "Name": "2D Skybox",
+          "Tags": "skybox",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkyBox2D",
+              "__guid": "440f3719-3ce8-4e08-82e4-9dfbb5afa586",
+              "SkyIndirectLighting": true,
+              "SkyMaterial": "materials/sky/atmosphere_sky.vmat",
+              "Tint": "0.9907,0.9907,0.9907,1"
+            }
+          ]
+        },
+        {
+          "__guid": "65d545c0-0167-4c8b-8da5-ba561eddd43f",
+          "Flags": 0,
+          "Name": "Game",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ZombieSurvivalGame",
+              "__guid": "264d3249-4e60-49d6-b982-63a06c3fdaaf",
+              "DefendObject": {
+                "_type": "gameobject",
+                "go": "c3fe7d19-05e0-4f92-9623-f8b31eec3171"
+              },
+              "Vaves": [
+                60,
+                100,
+                140
+              ],
+              "VaveStartColdown": 40,
+              "ZombieSpawnDelay": 3,
+              "InfiniteAmmo": false
+            }
+          ]
+        },
+        {
+          "__guid": "db65e736-55ea-4dea-86ec-89e334392f80",
+          "Flags": 0,
+          "Name": "Target2",
+          "Position": "-2710.588,-2984.063,-128.2637",
+          "Enabled": true
+        }
+      ]
+    },
+    {
+      "__guid": "aa5203dc-8cce-4adc-a896-0278204d6df5",
+      "Flags": 0,
+      "Name": "Map",
+      "Position": "312,1588,-180.9993",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "229b1fc7-d1a2-4f63-be11-15dc86f69f20",
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "scenes/survival/krisha/new map.vmap",
+          "NoOrigin": false,
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "4a3dd7de-34bd-4b11-a1b6-b86a09e3451e",
+      "Flags": 0,
+      "Name": "spawners",
+      "Position": "-1530.975,6126.837,-142.0694",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "d1e7ba29-b09e-45a4-bf8f-12d14b17d697",
+          "Flags": 0,
+          "Name": "Itemspawner",
+          "Position": "5412.249,-4031.221,1988.23",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ItemSpawn",
+              "__guid": "5f47a264-a866-4a88-8719-8d46dac4b127",
+              "SpawnableGroup": "prefabs/spawn_groups/rifle.spawn"
+            }
+          ]
+        },
+        {
+          "__guid": "b96667f3-0aad-4c13-8fe4-72b51351a327",
+          "Flags": 0,
+          "Name": "Itemspawner",
+          "Position": "5421.778,-4020.496,1988.23",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ItemSpawn",
+              "__guid": "51d90320-de9f-4f23-95c9-754c715f2b23",
+              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+            }
+          ]
+        },
+        {
+          "__guid": "63b6cdb2-d3fb-4954-b0fd-0fa68377f1ff",
+          "Flags": 0,
+          "Name": "Itemspawner",
+          "Position": "5440.382,-3957.876,1988.23",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ItemSpawn",
+              "__guid": "7235bed4-2576-4233-89e9-68692f4d0039",
+              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+            }
+          ]
+        },
+        {
+          "__guid": "413b6a72-56eb-4c2c-a408-861e4722c98d",
+          "Flags": 0,
+          "Name": "Itemspawner",
+          "Position": "5444.358,-3942.745,1988.23",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ItemSpawn",
+              "__guid": "556d486a-8f62-47de-90b6-207aa12273a9",
+              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+            }
+          ]
+        },
+        {
+          "__guid": "26046f65-a185-4316-b1ed-3707822a84b2",
+          "Flags": 0,
+          "Name": "Itemspawner",
+          "Position": "5459.563,-3949.04,1988.23",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ItemSpawn",
+              "__guid": "04d3d11c-7057-4392-9e51-1c201012aa12",
+              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+            }
+          ]
+        },
+        {
+          "__guid": "08665520-c5f9-4af3-a76d-1b4708a657fd",
+          "Flags": 0,
+          "Name": "Itemspawner",
+          "Position": "5426.802,-4036.438,1988.23",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ItemSpawn",
+              "__guid": "4712690b-aab4-44ad-9637-e54a5e8d1d94",
+              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+            }
+          ]
+        },
+        {
+          "__guid": "15621b75-4aba-477c-860c-e13c533c25c3",
+          "Flags": 0,
+          "Name": "Itemspawner",
+          "Position": "5459.093,-3967.279,1988.08",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ItemSpawn",
+              "__guid": "cb3514b3-82ff-4f94-8131-83da23835e90",
+              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+            }
+          ]
+        },
+        {
+          "__guid": "0ed34810-30b0-4c43-8ef9-0eb96755fa75",
+          "Flags": 0,
+          "Name": "Itemspawner",
+          "Position": "5412.473,-4045.195,1988.23",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ItemSpawn",
+              "__guid": "1e140218-f27b-40d2-914c-117df18e458d",
+              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+            }
+          ]
+        },
+        {
+          "__guid": "a067e945-362f-43c9-97d4-d38327800ae9",
+          "Flags": 0,
+          "Name": "Itemspawner",
+          "Position": "5439.717,-3974.396,1988.23",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ItemSpawn",
+              "__guid": "eeb495e8-fd9f-404e-8591-035d85cbbb27",
+              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 60,
+    "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "Metadata": {},
+    "NavMesh": {
+      "Enabled": true,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": false,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "ResourceVersion": 2,
+  "Title": null,
+  "Description": null,
+  "__references": [],
+  "__version": 2
+}

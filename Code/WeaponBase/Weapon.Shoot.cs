@@ -25,7 +25,7 @@ public partial class Weapon
 			//	PlaySound( shootInfo.DryShootSound.ResourceId );
 
 			if ( ShellReloading )
-				OnShellReload();
+				StartShellReload();
 			else
 				Reload();
 

@@ -11,7 +11,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "weapons/attachments/optic_t1/optic_t1.smd"
+						filename = "weapons/attachments/optic_t1/optoc_1t.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -45,7 +45,7 @@
 							},
 							{
 								from = "glass.vmat"
-								to = "attachments/swb/sight/reflex/textures/reflex_dot_shader_remington.vmat"
+								to = "attachments/swb/sight/reflex/textures/reflex_dot_shader.vmat"
 							},
 						]
 						use_global_default = false

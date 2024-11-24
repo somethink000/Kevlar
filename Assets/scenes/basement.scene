@@ -828,21 +828,11 @@
       "__guid": "c84165c8-a7b9-4a3a-8e8b-7179d15f4b0a",
       "Flags": 0,
       "Name": "vss",
-      "Position": "371.9999,0,313",
+      "Position": "375.0569,4.360403,323.9545",
       "Tags": "weapon",
       "Enabled": true,
       "NetworkMode": 1,
       "__Prefab": "prefabs/weapons/vss.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "a45f4522-250b-4434-a553-d36c21fbad85",
-      "Flags": 0,
-      "Name": "zombie",
-      "Position": "-652.0555,-515.9424,136",
-      "Tags": "bad",
-      "Enabled": true,
-      "__Prefab": "prefabs/npcs/zombie.prefab",
       "__PrefabVariables": {}
     },
     {
@@ -854,6 +844,17 @@
       "Enabled": true,
       "NetworkMode": 1,
       "__Prefab": "prefabs/weapons/reming870.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "4c487af8-05f7-4a23-97aa-c83ed049963b",
+      "Flags": 0,
+      "Name": "beretta",
+      "Position": "276.1219,-16.47894,301",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/beretta.prefab",
       "__PrefabVariables": {}
     }
   ],

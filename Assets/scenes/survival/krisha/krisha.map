@@ -1,0 +1,8 @@
+{
+  "Title": "Out of gas",
+  "Gamemode": "ZombieSurvivalGame",
+  "SceneFile": "scenes/survival/krisha/krisha.scene",
+  "Background": "ui/maps/outofgas.png",
+  "__references": [],
+  "__version": 0
+}

@@ -46,8 +46,11 @@ public partial class Weapon : Component
 		Owner.AnimationHelper.HoldType = HoldType;
 
 		ViewModelRenderer?.Set( EmptyState, IsEmpty );
-		ViewModelRenderer?.Set( AimState, IsAiming );
 
+		if ( !IsReloading )
+		{
+			ViewModelRenderer?.Set( AimState, IsAiming );
+		}
 
 		if ( !IsProxy )
 		{
@@ -100,7 +103,7 @@ public partial class Weapon : Component
 			if ( Input.Down( InputButtonHelper.Reload ) )
 			{
 				if ( ShellReloading )
-					OnShellReload();
+					StartShellReload();
 				else
 					Reload();
 			}
@@ -119,7 +122,7 @@ public partial class Weapon : Component
 	public void Deploy(PlayerBase player)
 	{
 		Owner = player;
-
+		IsDeploying = true;
 		GameObject.Enabled = true;
 
 		SetupModels();
@@ -141,26 +144,48 @@ public partial class Weapon : Component
 			string t = a.Type;
 			if ( t == "reload_end" )
 			{
-				OnReloadFinish();
+				if ( !ShellReloading )
+				{
+					OnReloadFinish();
+				} else
+				{
+					IsReloading = false;
+				}
+				
 			}
 			else if ( t == "pump_end" )
 			{
 				InBoltBack = false;
-
 			}
 			else if ( t == "eject_shell" )
 			{
 				CreateParticle( BulletEjectParticle, "ejection_point", VMParticleScale );
 			}
-			
+			else if ( t == "shell_insert" )
+			{
+				ShellReload();
+			}
+			else if ( t == "deployed" )
+			{
+				IsDeploying = false;
+			}
+			else if ( t == "holstered" )
+			{
+				EndHolster();
+			}
+
 		};
 	}
 
-
-	[Broadcast]
 	public void Holster()
 	{
-		
+		ViewModelRenderer?.Set( HolsterAnim, true );
+	}
+
+	[Broadcast]
+	public void EndHolster()
+	{
+
 		GameObject.Enabled = false;
 
 		if ( !IsProxy ) { 
@@ -180,7 +205,9 @@ public partial class Weapon : Component
 			DestroyUI();
 		}
 
+		Owner.Inventory.ChangeSlot();
 		Owner = null;
+
 	}
 
 

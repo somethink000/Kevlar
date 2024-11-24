@@ -8,7 +8,7 @@ public partial class Inventory
 
 	public Weapon Deployed;
 
-	private bool toolgunActive = false;
+	private bool Delayed = false;
 	public EquipSlot CurrentWeaponSlot { get; set; } = EquipSlot.FirstWeapon;
 
 	public void DeployCurrent()
@@ -33,8 +33,8 @@ public partial class Inventory
 
 	public void UpdateWeaponSlot()
 	{
-		if ( IsProxy ) return;
-		//if ( activeItem is null || !activeItem.CanCarryStop() ) return;
+		if ( IsProxy || Delayed ) return;
+
 		if ( Input.Pressed( InputButtonHelper.Slot1 ) ) Next();
 		else if ( Input.Pressed( InputButtonHelper.Slot2 ) ) Next();
 		else if ( Input.MouseWheel.y > 0 ) Next();
@@ -57,7 +57,21 @@ public partial class Inventory
 	
 	public void Next()
 	{
-		Deployed?.Holster();
+		Delayed = true;
+		if ( Deployed != null )
+		{
+			Deployed.Holster();
+		}
+		else
+		{
+			ChangeSlot();
+		}
+		
+	}
+
+	public void ChangeSlot()
+	{
+		Delayed = false;
 		Deployed = null;
 
 
@@ -71,7 +85,6 @@ public partial class Inventory
 		}
 
 		DeployCurrent();
-
 	}
 
 }

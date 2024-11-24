@@ -29,12 +29,6 @@ public partial class Weapon
 		// Player anim
 		HandleReloadEffects();
 
-		//Boltback
-		//if ( !isEmptyReload && Ammo == 0 && BoltBack )
-		//{
-		//	TimeSinceReload -= BoltBackTime;
-		//	AsyncBoltBack( ReloadTime );
-		//}
 	}
 
 	public virtual void OnReloadFinish()
@@ -62,17 +56,16 @@ public partial class Weapon
 
 	public virtual void CancelShellReload()
 	{
-		IsReloading = false;
 		ViewModelRenderer.Set( ReloadAnim, false );
 	}
 
-	public virtual void OnShellReload()
+	public virtual void StartShellReload()
 	{
-		//ReloadTime = ShellReloadStartTime + ShellReloadInsertTime;
-		//Reload();
+		IsReloading = true;
+		ViewModelRenderer.Set( ReloadAnim, true );
 	}
 
-	public virtual void OnShellReloadFinish()
+	public virtual void ShellReload()
 	{
 		IsReloading = false;
 
@@ -83,7 +76,6 @@ public partial class Weapon
 
 		if ( ammo != 0 && Ammo < ClipSize )
 		{
-			//ReloadTime = ShellReloadInsertTime;
 			Reload();
 		}
 		else
