@@ -162,9 +162,9 @@
         "__guid": "0f99e705-db15-4278-aaa8-073a5104601c",
         "AimAnimData": {
           "Angle": "0,0,0",
-          "Pos": "-2.233,-3,0.614"
+          "Pos": "-2.236,-3,0.518"
         },
-        "AimFOV": -1,
+        "AimFOV": -20,
         "AimInFOVSpeed": -1,
         "AimOutFOVSpeed": -1,
         "RequiresAttachment": {

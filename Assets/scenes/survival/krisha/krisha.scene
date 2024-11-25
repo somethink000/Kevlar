@@ -353,6 +353,24 @@
           ]
         }
       ]
+    },
+    {
+      "__guid": "dfc10c3c-2c54-4a6a-b387-39bebc2e4dce",
+      "Flags": 0,
+      "Name": "zombiespawner",
+      "Position": "4224.682,3700.01,1980.101",
+      "Enabled": true,
+      "__Prefab": "prefabs/npcs/zombiespawner.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "611f46c0-edb5-40b3-a6f2-33e78d8150ab",
+      "Flags": 0,
+      "Name": "zombiespawner (1)",
+      "Position": "4210.291,496.7482,1741.14",
+      "Enabled": true,
+      "__Prefab": "prefabs/npcs/zombiespawner.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

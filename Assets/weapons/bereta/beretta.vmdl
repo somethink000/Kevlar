@@ -32,20 +32,12 @@
 								to = "weapons/pallete_metal.vmat"
 							},
 							{
-								from = "lowpoly_overheat.vmat"
-								to = "weapons/pallete.vmat"
-							},
-							{
 								from = "lowpoly_plastic.vmat"
 								to = "weapons/pallete_wood.vmat"
 							},
 							{
-								from = "reflex_mat.vmat"
-								to = "attachments/swb/sight/reflex/textures/reflex.vmat"
-							},
-							{
-								from = "reflex_glass.vmat"
-								to = "attachments/swb/sight/reflex/textures/reflex_dot_shader.vmat"
+								from = "lowpoly_glow.vmat"
+								to = "weapons/emission.vmat"
 							},
 						]
 						use_global_default = false
