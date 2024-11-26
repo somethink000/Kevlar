@@ -856,6 +856,28 @@
       "NetworkMode": 1,
       "__Prefab": "prefabs/weapons/beretta.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "12616eee-4a8e-4371-855a-13d9f9911d15",
+      "Flags": 0,
+      "Name": "mp7",
+      "Position": "397.8552,-4.601234,303",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/mp7.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6a837526-fc6f-42b5-a0de-db55bcb3bc84",
+      "Flags": 0,
+      "Name": "awp",
+      "Position": "442.6396,3.676819,326",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/awp.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

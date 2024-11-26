@@ -17,7 +17,7 @@
         "AimInFOVSpeed": 1,
         "AimOutFOVSpeed": 1,
         "AimSensitivity": 0.85,
-        "Ammo": 10,
+        "Ammo": 5,
         "AmmoType": "prefabs/items/ammo_rifle.prefab",
         "AnimSpeed": 1,
         "BarrelSmokeParticle": "particles/swb/muzzle/barrel_smoke.vpcf",

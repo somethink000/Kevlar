@@ -32,16 +32,16 @@
 								to = "weapons/pallete_metal.vmat"
 							},
 							{
-								from = "lowpoly_overheat.vmat"
-								to = "weapons/pallete.vmat"
-							},
-							{
 								from = "lowpoly_plastic.vmat"
 								to = "weapons/pallete_wood.vmat"
 							},
 							{
 								from = "material.vmat"
 								to = "weapons/attachments/sight_texture.vmat"
+							},
+							{
+								from = "lowpoly_glow.vmat"
+								to = "weapons/emission.vmat"
 							},
 						]
 						use_global_default = false
@@ -88,15 +88,15 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						name = "mount"
-						filename = "weapons/vss/compile/dc def.smd"
-						import_translation = [ 0.0, 0.0, 0.0 ]
-						import_rotation = [ 0.0, 0.0, 0.0 ]
+						name = "optic_t1"
+						filename = "weapons/attachments/optic_t1/optoc_1t.fbx"
+						import_translation = [ 0.0, 1.0, 0.5 ]
+						import_rotation = [ -90.0, 0.0, -90.0 ]
 						import_scale = 1.0
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
-						parent_bone = ""
+						parent_bone = "body"
 						import_filter = 
 						{
 							exclude_by_default = false
@@ -105,73 +105,7 @@
 					},
 					{
 						_class = "RenderMeshFile"
-						name = "mount_pec"
-						filename = "weapons/vss/compile/dc vssm.smd"
-						import_translation = [ 0.0, 0.0, 0.0 ]
-						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 1.0
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = ""
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = [  ]
-						}
-					},
-					{
-						_class = "RenderMeshFile"
-						filename = "weapons/vss/compile/brl def.smd"
-						import_translation = [ 0.0, 0.0, 0.0 ]
-						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 1.0
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = ""
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = [  ]
-						}
-					},
-					{
-						_class = "RenderMeshFile"
-						filename = "weapons/vss/compile/reciever.smd"
-						import_translation = [ 0.0, 0.0, 0.0 ]
-						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 1.0
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = ""
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = [  ]
-						}
-					},
-					{
-						_class = "RenderMeshFile"
-						filename = "weapons/vss/compile/stock fold.smd"
-						import_translation = [ 0.0, 0.0, 0.0 ]
-						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 1.0
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = ""
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = [  ]
-						}
-					},
-					{
-						_class = "RenderMeshFile"
-						name = "mag10"
-						filename = "weapons/vss/compile/mag 10.smd"
+						filename = "weapons/mp7/compil/mp7.smd"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -188,7 +122,7 @@
 					{
 						_class = "RenderMeshFile"
 						name = "mag20"
-						filename = "weapons/vss/compile/mag 20.smd"
+						filename = "weapons/mp7/compil/mag20.smd"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -204,8 +138,8 @@
 					},
 					{
 						_class = "RenderMeshFile"
-						name = "mag30"
-						filename = "weapons/vss/compile/mag 30.smd"
+						name = "mag40"
+						filename = "weapons/mp7/compil/magdef.smd"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -221,15 +155,32 @@
 					},
 					{
 						_class = "RenderMeshFile"
-						name = "optic_t1"
-						filename = "weapons/attachments/optic_t1/optoc_1t.fbx"
-						import_translation = [ 0.05, -0.7, 1.5 ]
-						import_rotation = [ -90.0, 0.0, -90.0 ]
+						name = "sight_def_down"
+						filename = "weapons/mp7/compil/ironsdown.smd"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
-						parent_bone = "body"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "sight_def"
+						filename = "weapons/mp7/compil/irons.smd"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
 						import_filter = 
 						{
 							exclude_by_default = false
@@ -244,7 +195,49 @@
 				[
 					{
 						_class = "AnimFile"
-						name = "idle"
+						name = "example"
+						children = 
+						[
+							{
+								_class = "AnimEvent"
+								event_class = "AE_GENERIC_EVENT"
+								event_frame = 47
+								event_keys = 
+								{
+									TypeName = "reload_end"
+									Int = 0
+									Float = 0.0
+									Vector = [ 0.0, 0.0, 0.0 ]
+									StringData = ""
+								}
+							},
+							{
+								_class = "AnimEvent"
+								event_class = "AE_GENERIC_EVENT"
+								event_frame = 14
+								event_keys = 
+								{
+									TypeName = "deployed"
+									Int = 0
+									Float = 0.0
+									Vector = [ 0.0, 0.0, 0.0 ]
+									StringData = ""
+								}
+							},
+							{
+								_class = "AnimEvent"
+								event_class = "AE_GENERIC_EVENT"
+								event_frame = 12
+								event_keys = 
+								{
+									TypeName = "holstered"
+									Int = 0
+									Float = 0.0
+									Vector = [ 0.0, 0.0, 0.0 ]
+									StringData = ""
+								}
+							},
+						]
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -266,579 +259,13 @@
 						reverse = false
 					},
 					{
-						_class = "AnimFile"
-						name = "idle_iron"
-						activity_name = ""
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = true
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						disable_interpolation = false
-						enable_scale = false
-						source_filename = "weapons/vss/compile/anims/idle_iron.smd"
-						start_frame = -1
-						end_frame = -1
-						framerate = -1.0
-						take = 0
-						reverse = false
-					},
-					{
-						_class = "Folder"
-						name = "reload"
-						children = 
-						[
-							{
-								_class = "AnimFile"
-								name = "reload_10"
-								children = 
-								[
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 1
-										event_keys = 
-										{
-											name = "weapons/sounds/common/magpouch/magpouch.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 5
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/reload_start.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 9
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/magrelease.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 12
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/magout.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 22
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/magin.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_GENERIC_EVENT"
-										event_frame = 47
-										event_keys = 
-										{
-											TypeName = "reload_end"
-											Int = 0
-											Float = 0.0
-											Vector = [ 0.0, 0.0, 0.0 ]
-											StringData = ""
-										}
-									},
-								]
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = ""
-								fade_in_time = 0.2
-								fade_out_time = 0.2
-								looping = false
-								delta = false
-								worldSpace = false
-								hidden = false
-								anim_markup_ordered = false
-								disable_compression = false
-								disable_interpolation = false
-								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/reload_10.smd"
-								start_frame = -1
-								end_frame = -1
-								framerate = -1.0
-								take = 0
-								reverse = false
-							},
-							{
-								_class = "AnimFile"
-								name = "reload_10_iron"
-								children = 
-								[
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 1
-										event_keys = 
-										{
-											name = "weapons/sounds/common/magpouch/magpouch.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 5
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/reload_start.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 9
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/magrelease.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 12
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/magout.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 22
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/magin.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_GENERIC_EVENT"
-										event_frame = 47
-										event_keys = 
-										{
-											TypeName = "reload_end"
-											Int = 0
-											Float = 0.0
-											Vector = [ 0.0, 0.0, 0.0 ]
-											StringData = ""
-										}
-									},
-								]
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = ""
-								fade_in_time = 0.2
-								fade_out_time = 0.2
-								looping = false
-								delta = false
-								worldSpace = false
-								hidden = false
-								anim_markup_ordered = false
-								disable_compression = false
-								disable_interpolation = false
-								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/reload_10_iron.smd"
-								start_frame = -1
-								end_frame = -1
-								framerate = -1.0
-								take = 0
-								reverse = false
-							},
-							{
-								_class = "AnimFile"
-								name = "reload_empty_10"
-								children = 
-								[
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 1
-										event_keys = 
-										{
-											name = "weapons/sounds/common/magpouch/magpouch.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 5
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/reload_start.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 9
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/magrelease.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 13
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/magout.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 23
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/magin.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 35
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/chback_9.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 42
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/chamber_9.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_GENERIC_EVENT"
-										event_frame = 65
-										event_keys = 
-										{
-											TypeName = "reload_end"
-											Int = 0
-											Float = 0.0
-											Vector = [ 0.0, 0.0, 0.0 ]
-											StringData = ""
-										}
-									},
-								]
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = ""
-								fade_in_time = 0.2
-								fade_out_time = 0.2
-								looping = false
-								delta = false
-								worldSpace = false
-								hidden = false
-								anim_markup_ordered = false
-								disable_compression = false
-								disable_interpolation = false
-								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/reload_empty_10.smd"
-								start_frame = -1
-								end_frame = -1
-								framerate = -1.0
-								take = 0
-								reverse = false
-							},
-							{
-								_class = "AnimFile"
-								name = "reload_empty_10_iron"
-								children = 
-								[
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 2
-										event_keys = 
-										{
-											name = "weapons/sounds/common/magpouch/magpouch.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 6
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/reload_start.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 10
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/magrelease.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 14
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/magout.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 24
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/magin.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 40
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/chback_9.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_CL_PLAYSOUND"
-										event_frame = 45
-										event_keys = 
-										{
-											name = "weapons/sounds/wpns/chamber_9.sound"
-											stop_on_seq_change = false
-											use_layer_sequence = false
-											tags = ""
-										}
-									},
-									{
-										_class = "AnimEvent"
-										event_class = "AE_GENERIC_EVENT"
-										event_frame = 65
-										event_keys = 
-										{
-											TypeName = "reload_end"
-											Int = 0
-											Float = 0.0
-											Vector = [ 0.0, 0.0, 0.0 ]
-											StringData = ""
-										}
-									},
-								]
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = ""
-								fade_in_time = 0.2
-								fade_out_time = 0.2
-								looping = false
-								delta = false
-								worldSpace = false
-								hidden = false
-								anim_markup_ordered = false
-								disable_compression = false
-								disable_interpolation = false
-								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/reload_empty_10_iron.smd"
-								start_frame = -1
-								end_frame = -1
-								framerate = -1.0
-								take = 0
-								reverse = false
-							},
-							{
-								_class = "AnimFile"
-								name = "reload_30"
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = ""
-								fade_in_time = 0.2
-								fade_out_time = 0.2
-								looping = false
-								delta = false
-								worldSpace = false
-								hidden = false
-								anim_markup_ordered = false
-								disable_compression = false
-								disable_interpolation = false
-								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/reload_30.smd"
-								start_frame = -1
-								end_frame = -1
-								framerate = -1.0
-								take = 0
-								reverse = false
-							},
-							{
-								_class = "AnimFile"
-								name = "reload_30_iron"
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = ""
-								fade_in_time = 0.2
-								fade_out_time = 0.2
-								looping = false
-								delta = false
-								worldSpace = false
-								hidden = false
-								anim_markup_ordered = false
-								disable_compression = false
-								disable_interpolation = false
-								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/reload_30_iron.smd"
-								start_frame = -1
-								end_frame = -1
-								framerate = -1.0
-								take = 0
-								reverse = false
-							},
-							{
-								_class = "AnimFile"
-								name = "reload_empty_30"
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = ""
-								fade_in_time = 0.2
-								fade_out_time = 0.2
-								looping = false
-								delta = false
-								worldSpace = false
-								hidden = false
-								anim_markup_ordered = false
-								disable_compression = false
-								disable_interpolation = false
-								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/reload_empty_30.smd"
-								start_frame = -1
-								end_frame = -1
-								framerate = -1.0
-								take = 0
-								reverse = false
-							},
-							{
-								_class = "AnimFile"
-								name = "reload_empty_30_iron"
-								activity_name = ""
-								activity_weight = 1
-								weight_list_name = ""
-								fade_in_time = 0.2
-								fade_out_time = 0.2
-								looping = false
-								delta = false
-								worldSpace = false
-								hidden = false
-								anim_markup_ordered = false
-								disable_compression = false
-								disable_interpolation = false
-								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/reload_empty_30_iron.smd"
-								start_frame = -1
-								end_frame = -1
-								framerate = -1.0
-								take = 0
-								reverse = false
-							},
-						]
-					},
-					{
 						_class = "Folder"
 						name = "fire"
 						children = 
 						[
 							{
 								_class = "AnimFile"
-								name = "fire_01"
+								name = "fire"
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -852,7 +279,7 @@
 								disable_compression = false
 								disable_interpolation = false
 								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/fire_01.smd"
+								source_filename = "weapons/mp7/compil/anims/fire.smd"
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
@@ -861,7 +288,7 @@
 							},
 							{
 								_class = "AnimFile"
-								name = "fire_02"
+								name = "fire_empty"
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -875,7 +302,7 @@
 								disable_compression = false
 								disable_interpolation = false
 								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/fire_02.smd"
+								source_filename = "weapons/mp7/compil/anims/fire_empty.smd"
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
@@ -884,7 +311,7 @@
 							},
 							{
 								_class = "AnimFile"
-								name = "fire_03"
+								name = "fire_empty_iron"
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -898,7 +325,7 @@
 								disable_compression = false
 								disable_interpolation = false
 								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/fire_03.smd"
+								source_filename = "weapons/mp7/compil/anims/fire_empty_iron.smd"
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
@@ -921,7 +348,7 @@
 								disable_compression = false
 								disable_interpolation = false
 								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/fire_iron.smd"
+								source_filename = "weapons/mp7/compil/anims/fire_iron.smd"
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
@@ -951,7 +378,7 @@
 								disable_compression = false
 								disable_interpolation = false
 								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/inspect.smd"
+								source_filename = "weapons/mp7/compil/anims/inspect.smd"
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
@@ -960,7 +387,7 @@
 							},
 							{
 								_class = "AnimFile"
-								name = "fix"
+								name = "inspect_empty"
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -974,7 +401,7 @@
 								disable_compression = false
 								disable_interpolation = false
 								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/fix.smd"
+								source_filename = "weapons/mp7/compil/anims/inspect_empty.smd"
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
@@ -989,7 +416,7 @@
 									{
 										_class = "AnimEvent"
 										event_class = "AE_GENERIC_EVENT"
-										event_frame = 14
+										event_frame = 21
 										event_keys = 
 										{
 											TypeName = "deployed"
@@ -1013,7 +440,46 @@
 								disable_compression = false
 								disable_interpolation = false
 								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/draw.smd"
+								source_filename = "weapons/mp7/compil/anims/draw.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "draw_empty"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 21
+										event_keys = 
+										{
+											TypeName = "deployed"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/mp7/compil/anims/draw_empty.smd"
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
@@ -1028,7 +494,7 @@
 									{
 										_class = "AnimEvent"
 										event_class = "AE_GENERIC_EVENT"
-										event_frame = 12
+										event_frame = 14
 										event_keys = 
 										{
 											TypeName = "holstered"
@@ -1052,7 +518,7 @@
 								disable_compression = false
 								disable_interpolation = false
 								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/holster.smd"
+								source_filename = "weapons/mp7/compil/anims/holster.smd"
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
@@ -1061,7 +527,23 @@
 							},
 							{
 								_class = "AnimFile"
-								name = "modeswitch"
+								name = "holster_empty"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 14
+										event_keys = 
+										{
+											TypeName = "holstered"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -1075,7 +557,99 @@
 								disable_compression = false
 								disable_interpolation = false
 								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/modeswitch.smd"
+								source_filename = "weapons/mp7/compil/anims/holster_empty.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "switch"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/mp7/compil/anims/switch.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "switch_empty"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/mp7/compil/anims/switch_empty.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "switch_empty_iron"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/mp7/compil/anims/switch_empty_iron.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "switch_iron"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/mp7/compil/anims/switch_iron.smd"
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
@@ -1085,6 +659,22 @@
 							{
 								_class = "AnimFile"
 								name = "ready"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 33
+										event_keys = 
+										{
+											TypeName = "deployed"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -1098,7 +688,7 @@
 								disable_compression = false
 								disable_interpolation = false
 								enable_scale = false
-								source_filename = "weapons/vss/compile/anims/ready.smd"
+								source_filename = "weapons/mp7/compil/anims/ready.smd"
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
@@ -1106,6 +696,417 @@
 								reverse = false
 							},
 						]
+					},
+					{
+						_class = "Folder"
+						name = "reload"
+						children = 
+						[
+							{
+								_class = "AnimFile"
+								name = "reload"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 49
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/mp7/compil/anims/reload.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "reload_iron"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 49
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/mp7/compil/anims/reload_iron.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "reload_empty"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 53
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/mp7/compil/anims/reload_empty.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "reload_empty_iron"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 53
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/mp7/compil/anims/reload_empty_iron.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "reload_empty20"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 46
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/mp7/compil/anims/reload_empty20.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "reload_empty20_iron"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 46
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/mp7/compil/anims/reload_empty20_iron.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "reload20"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 41
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/mp7/compil/anims/reload20.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "reload20_iron"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 41
+										event_keys = 
+										{
+											TypeName = "reload_end"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/mp7/compil/anims/reload20_iron.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+						]
+					},
+					{
+						_class = "AnimFile"
+						name = "idle"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "weapons/mp7/compil/anims/idle.smd"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "idle_empty"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "weapons/mp7/compil/anims/idle_empty.smd"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "idle_empty_iron"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "weapons/mp7/compil/anims/idle_empty_iron.smd"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "idle_iron"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "weapons/mp7/compil/anims/idle_iron.smd"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
 					},
 				]
 				default_root_bone_name = ""
@@ -1123,7 +1124,7 @@
 								_class = "BodyGroupChoice"
 								meshes = 
 								[
-									"mag10",
+									"mag40",
 								]
 							},
 							{
@@ -1131,36 +1132,6 @@
 								meshes = 
 								[
 									"mag20",
-								]
-							},
-							{
-								_class = "BodyGroupChoice"
-								meshes = 
-								[
-									"mag30",
-								]
-							},
-						]
-						hidden_in_tools = false
-					},
-					{
-						_class = "BodyGroup"
-						name = "rail"
-						children = 
-						[
-							{
-								_class = "BodyGroupChoice"
-								meshes = 
-								[
-									"mount",
-								]
-							},
-							{
-								_class = "BodyGroupChoice"
-								name = "zenit"
-								meshes = 
-								[
-									"mount_pec",
 								]
 							},
 						]
@@ -1173,7 +1144,17 @@
 						[
 							{
 								_class = "BodyGroupChoice"
-								meshes = [  ]
+								meshes = 
+								[
+									"sight_def",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								meshes = 
+								[
+									"sight_def_down",
+								]
 							},
 							{
 								_class = "BodyGroupChoice"
@@ -1190,7 +1171,7 @@
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
-		anim_graph_name = "weapons/vss/vss.vanmgrph"
+		anim_graph_name = "weapons/mp7/mp7.vanmgrph"
 		base_model_name = ""
 	}
 }

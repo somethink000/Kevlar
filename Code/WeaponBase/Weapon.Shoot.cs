@@ -134,8 +134,10 @@ public partial class Weapon
 		// Bullet eject
 		if ( BulletEjectParticle is not null )
 		{
+			
 			if ( BoltBack && Ammo > 0 )
 			{
+				
 				ViewModelRenderer?.Set( BoltBackAnim, true );
 				InBoltBack = true;
 			}
