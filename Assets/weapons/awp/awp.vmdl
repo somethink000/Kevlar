@@ -762,12 +762,12 @@
 								[
 									{
 										_class = "AnimEvent"
-										name = "eject_shell1"
+										name = "pump_end1"
 										event_class = "AE_GENERIC_EVENT"
-										event_frame = 13
+										event_frame = 31
 										event_keys = 
 										{
-											TypeName = "eject_shell"
+											TypeName = "pump_end"
 											Int = 0
 											Float = 0.0
 											Vector = [ 0.0, 0.0, 0.0 ]
@@ -776,12 +776,12 @@
 									},
 									{
 										_class = "AnimEvent"
-										name = "pump_end1"
+										name = "eject_shell3"
 										event_class = "AE_GENERIC_EVENT"
-										event_frame = 31
+										event_frame = 13
 										event_keys = 
 										{
-											TypeName = "pump_end"
+											TypeName = "eject_shell"
 											Int = 0
 											Float = 0.0
 											Vector = [ 0.0, 0.0, 0.0 ]
@@ -1376,7 +1376,10 @@
 							},
 							{
 								_class = "BodyGroupChoice"
-								meshes = [  ]
+								meshes = 
+								[
+									"optic_t1",
+								]
 							},
 						]
 						hidden_in_tools = false

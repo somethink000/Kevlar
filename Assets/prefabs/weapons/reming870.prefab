@@ -23,7 +23,7 @@
         "BarrelSmokeParticle": "particles/swb/muzzle/barrel_smoke.vpcf",
         "BoltBack": true,
         "BoltBackEjectDelay": 0,
-        "BoltBackTime": 0,
+        "BoltBackTime": 2,
         "BulletCocking": true,
         "BulletEjectParticle": "particles/swb/bullet_hulls/5.45_shell.vpcf",
         "Bullets": 1,
@@ -46,7 +46,7 @@
         "Recoil": 0.1,
         "ReloadEmptyTScale": 1,
         "ReloadTScale": 1,
-        "RPM": 100,
+        "RPM": 200,
         "RunAnimData": {
           "Angle": "19.18,34.46,0",
           "Pos": "1.443,-2.56,1.717"
@@ -223,5 +223,6 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
+  "IsValid": true,
   "__version": 1
 }

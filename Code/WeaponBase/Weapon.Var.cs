@@ -87,16 +87,21 @@ public partial class Weapon
 	[Property, Group( "Scoping" )] public ScopeInfo ScopeInfo { get; set; } = new();
 
 	[Property] public PrefabFile AmmoType { get; set; }
+
+	//Basic Anims
 	public string ShootAnim { get; set; } = "shoot";
 	public string ReloadAnim { get; set; } = "reload";
-	public string EmptyState { get; set; } = "empty";
-	public string AimState { get; set; } = "aiming";
-	public string Inspect { get; set; } = "inspect";
+	public string BoltBackAnim { get; set; } = "boltback";
+	//Features  Anims
 	public string DeployAnim { get; set; } = "deploy";
 	public string HolsterAnim { get; set; } = "holster";
-	public string BoltBackAnim { get; set; } = "boltback";
-	public string Mode { get; set; } = "mode";
-	public string Fix { get; set; } = "fix";
+	public string InspectAnim { get; set; } = "inspect";
+	public string ReadyAnim { get; set; } = "ready";
+	public string ModeAnim { get; set; } = "mode";
+	public string FixAnim { get; set; } = "fix";
+	//Anim states
+	public string EmptyState { get; set; } = "empty";
+	public string AimState { get; set; } = "aiming";
 
 	public bool IsCustomizing { get; set; }
 	public bool IsRunning => Owner!=null && Owner.IsRunning && Owner.IsOnGround && Owner.Velocity.Length >= 200;
@@ -104,6 +109,7 @@ public partial class Weapon
 	public bool CanSeeViewModel => !IsProxy && Owner.IsFirstPerson;
 
 	public bool IsEmpty = false;
+	public bool IsReady = false;
 	public bool ShellReloadReady = false;
 
 	[Sync] public bool IsReloading { get; set; }

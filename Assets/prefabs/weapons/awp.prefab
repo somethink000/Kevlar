@@ -11,13 +11,13 @@
         "__guid": "4d44110c-f7a1-4168-a9f3-dbeaa77a630a",
         "AimAnimData": {
           "Angle": "0,0,0",
-          "Pos": "-2.216,-3,1.232"
+          "Pos": "-2.314,-3,1.139"
         },
         "AimFOV": 20,
         "AimInFOVSpeed": 1,
         "AimOutFOVSpeed": 1,
         "AimSensitivity": 0.85,
-        "Ammo": 10,
+        "Ammo": 5,
         "AmmoType": "prefabs/items/ammo_rifle.prefab",
         "AnimSpeed": 1,
         "BarrelSmokeParticle": "particles/swb/muzzle/barrel_smoke.vpcf",
@@ -46,7 +46,7 @@
         "Recoil": 0.1,
         "ReloadEmptyTScale": 1,
         "ReloadTScale": 1,
-        "RPM": 100,
+        "RPM": 250,
         "RunAnimData": {
           "Angle": "19.18,34.46,0",
           "Pos": "1.443,-2.56,1.717"
@@ -184,5 +184,6 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
+  "IsValid": true,
   "__version": 1
 }

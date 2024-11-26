@@ -1,6 +1,8 @@
 ﻿
+using GeneralGame.UI;
 using System.Collections.Generic;
 using System.Linq;
+using static GeneralGame.UI.FullScreenManager;
 
 namespace GeneralGame;
 
@@ -47,7 +49,7 @@ public partial class Weapon : Component
 
 		ViewModelRenderer?.Set( EmptyState, IsEmpty );
 
-		if ( !IsReloading )
+		if ( !IsReloading && !InBoltBack )
 		{
 			ViewModelRenderer?.Set( AimState, IsAiming );
 		}
@@ -69,12 +71,12 @@ public partial class Weapon : Component
 
 			if ( !IsScoping && !IsAiming && Input.Pressed( InputButtonHelper.Inspect ) )
 			{
-				ViewModelRenderer?.Set( Inspect, true );
+				ViewModelRenderer?.Set( InspectAnim, true );
 			}
 
 			if ( !IsScoping && !IsAiming && Input.Pressed( InputButtonHelper.Mode ) )
 			{
-				ViewModelRenderer?.Set( Mode, true );
+				ViewModelRenderer?.Set( ModeAnim, true );
 			}
 
 			// Don't cancel reload when customizing
@@ -133,8 +135,9 @@ public partial class Weapon : Component
 
 		SetupAnimEvents();
 
-		ViewModelRenderer?.Set( DeployAnim, true );
 
+		ViewModelRenderer?.Set( IsReady ? DeployAnim : ReadyAnim, true );
+		
 	}
 
 	private void SetupAnimEvents()
@@ -142,36 +145,53 @@ public partial class Weapon : Component
 		ViewModelRenderer.OnGenericEvent = ( a ) =>
 		{
 			string t = a.Type;
-			if ( t == "reload_end" )
+
+			switch( t )
 			{
+			case "reload_end":
+
 				if ( !ShellReloading )
 				{
 					OnReloadFinish();
-				} else
+				}
+				else
 				{
 					IsReloading = false;
 				}
-				
-			}
-			else if ( t == "pump_end" )
-			{
+
+				break;
+
+			case "pump_end":
+
 				InBoltBack = false;
-			}
-			else if ( t == "eject_shell" )
-			{
+
+				break;
+
+			case "eject_shell":
+
 				CreateParticle( BulletEjectParticle, "ejection_point", VMParticleScale );
-			}
-			else if ( t == "shell_insert" )
-			{
+
+				break;
+
+			case "shell_insert":
+
 				ShellReload();
-			}
-			else if ( t == "deployed" )
-			{
+
+				break;
+
+			case "deployed":
+
+				if ( !IsReady ) IsReady = true;
 				IsDeploying = false;
-			}
-			else if ( t == "holstered" )
-			{
+
+				break;
+
+			case "holstered":
+
 				EndHolster();
+
+				break;
+
 			}
 
 		};

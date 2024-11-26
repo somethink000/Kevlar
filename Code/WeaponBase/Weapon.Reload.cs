@@ -84,7 +84,17 @@ public partial class Weapon
 		}
 	}
 
-	
+	async void AsyncBoltBack( float boltBackDelay )
+	{
+		InBoltBack = true;
+		// Start boltback
+		await GameTask.DelaySeconds( boltBackDelay );
+		if ( !IsValid ) return;
+		if ( !IsProxy )
+			ViewModelRenderer?.Set( BoltBackAnim, true );
+
+	}
+
 
 	[Broadcast]
 	public virtual void HandleReloadEffects()

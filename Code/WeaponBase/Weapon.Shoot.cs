@@ -81,6 +81,7 @@ public partial class Weapon
 		// UI
 		BroadcastUIEvent( "shoot", 100 );
 
+
 		// Bullet
 		for ( int i = 0; i < Bullets; i++ )
 		{
@@ -131,16 +132,9 @@ public partial class Weapon
 		var scale = VMParticleScale;
 		var muzzleTransform = GetMuzzleTransform();
 
-		// Bullet eject
-		if ( BulletEjectParticle is not null )
+		if ( BoltBack && Ammo > 0 )
 		{
-			
-			if ( BoltBack && Ammo > 0 )
-			{
-				
-				ViewModelRenderer?.Set( BoltBackAnim, true );
-				InBoltBack = true;
-			}
+			AsyncBoltBack( GetRealRPM( RPM ) );
 		}
 
 		if ( !muzzleTransform.HasValue ) return;

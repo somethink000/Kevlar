@@ -839,6 +839,22 @@
 							{
 								_class = "AnimFile"
 								name = "fire_01"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 2
+										event_keys = 
+										{
+											TypeName = "eject_shell"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -862,6 +878,22 @@
 							{
 								_class = "AnimFile"
 								name = "fire_02"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 2
+										event_keys = 
+										{
+											TypeName = "eject_shell"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -885,6 +917,22 @@
 							{
 								_class = "AnimFile"
 								name = "fire_03"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 2
+										event_keys = 
+										{
+											TypeName = "eject_shell"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -908,6 +956,22 @@
 							{
 								_class = "AnimFile"
 								name = "fire_iron"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 2
+										event_keys = 
+										{
+											TypeName = "eject_shell"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -938,6 +1002,93 @@
 							{
 								_class = "AnimFile"
 								name = "inspect"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 7
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 14
+										event_keys = 
+										{
+											name = "weapons/sounds/common/movement/mov-rifle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 72
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 82
+										event_keys = 
+										{
+											name = "weapons/sounds/common/movement/mov-rifle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 97
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/presscheck_1.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 119
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/chamber_9.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 127
+										event_keys = 
+										{
+											name = "weapons/sounds/common/movement/mov-rifle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -960,7 +1111,118 @@
 							},
 							{
 								_class = "AnimFile"
+								name = "inspect_sr3"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/vss/compile/anims/inspect_sr3.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
 								name = "fix"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 56
+										event_keys = 
+										{
+											TypeName = "fixed"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 6
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 13
+										event_keys = 
+										{
+											name = "weapons/sounds/common/movement/mov-rifle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 28
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/chback_9.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 33
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/chamber_9.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 40
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 47
+										event_keys = 
+										{
+											name = "weapons/sounds/common/movement/mov-rifle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -983,6 +1245,81 @@
 							},
 							{
 								_class = "AnimFile"
+								name = "draw_sr3"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 15
+										event_keys = 
+										{
+											TypeName = "deployed"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 0
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 3
+										event_keys = 
+										{
+											name = "weapons/sounds/common/raise.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 10
+										event_keys = 
+										{
+											name = "weapons/sounds/awp/boltdown.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/vss/compile/anims/draw_sr3.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
 								name = "draw"
 								children = 
 								[
@@ -997,6 +1334,30 @@
 											Float = 0.0
 											Vector = [ 0.0, 0.0, 0.0 ]
 											StringData = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 0
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 3
+										event_keys = 
+										{
+											name = "weapons/sounds/common/raise.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
 										}
 									},
 								]
@@ -1085,6 +1446,82 @@
 							{
 								_class = "AnimFile"
 								name = "ready"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 34
+										event_keys = 
+										{
+											TypeName = "deployed"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 1
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 3
+										event_keys = 
+										{
+											name = "weapons/sounds/awp/boltdown.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 6
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/chback_9.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 11
+										event_keys = 
+										{
+											name = "weapons/sounds/wpns/chamber_9.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 21
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -1099,6 +1536,29 @@
 								disable_interpolation = false
 								enable_scale = false
 								source_filename = "weapons/vss/compile/anims/ready.smd"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "ready_sr3"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "weapons/vss/compile/anims/ready_sr3.smd"
 								start_frame = -1
 								end_frame = -1
 								framerate = -1.0
