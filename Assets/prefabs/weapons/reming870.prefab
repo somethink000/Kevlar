@@ -17,7 +17,7 @@
         "AimInFOVSpeed": 1,
         "AimOutFOVSpeed": 1,
         "AimSensitivity": 0.85,
-        "Ammo": 5,
+        "Ammo": 8,
         "AmmoType": "prefabs/items/ammo_rifle.prefab",
         "AnimSpeed": 1,
         "BarrelSmokeParticle": "particles/swb/muzzle/barrel_smoke.vpcf",
@@ -30,7 +30,7 @@
         "BulletSize": 0.1,
         "BulletTracerChance": 0.33,
         "BulletTracerParticle": "particles/swb/tracer/tracer.vpcf",
-        "ClipSize": 10,
+        "ClipSize": 8,
         "CustomizeAnimData": {
           "Angle": "-0.71,44.52,10",
           "Pos": "5.755,-1.2,1.592"
@@ -66,7 +66,7 @@
         "ShellReloadingShootCancel": false,
         "ShellReloadInsertTime": 0,
         "ShellReloadStartTime": 0,
-        "ShootSound": "weapons/reming870/sounds/fire-01.sound",
+        "ShootSound": "weapons/sounds/870/fire-06.sound",
         "Spread": 0.1,
         "TuckRange": 30,
         "ViewModel": "weapons/reming870/870.vmdl",

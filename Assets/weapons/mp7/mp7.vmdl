@@ -365,6 +365,69 @@
 							{
 								_class = "AnimFile"
 								name = "inspect"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 3
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 8
+										event_keys = 
+										{
+											name = "weapons/sounds/common/movement/mov-smg.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 59
+										event_keys = 
+										{
+											name = "weapons/sounds/common/movement/mov-rifle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 117
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 126
+										event_keys = 
+										{
+											name = "weapons/sounds/common/movement/mov-rifle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -388,6 +451,69 @@
 							{
 								_class = "AnimFile"
 								name = "inspect_empty"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 3
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 8
+										event_keys = 
+										{
+											name = "weapons/sounds/common/movement/mov-smg.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 59
+										event_keys = 
+										{
+											name = "weapons/sounds/common/movement/mov-rifle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 117
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 126
+										event_keys = 
+										{
+											name = "weapons/sounds/common/movement/mov-rifle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""
@@ -424,6 +550,30 @@
 											Float = 0.0
 											Vector = [ 0.0, 0.0, 0.0 ]
 											StringData = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 0
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 10
+										event_keys = 
+										{
+											name = "weapons/sounds/common/raise.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
 										}
 									},
 								]
@@ -465,6 +615,30 @@
 											StringData = ""
 										}
 									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 0
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 9
+										event_keys = 
+										{
+											name = "weapons/sounds/common/raise.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
 								]
 								activity_name = ""
 								activity_weight = 1
@@ -504,6 +678,18 @@
 											StringData = ""
 										}
 									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 0
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
 								]
 								activity_name = ""
 								activity_weight = 1
@@ -541,6 +727,18 @@
 											Float = 0.0
 											Vector = [ 0.0, 0.0, 0.0 ]
 											StringData = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 0
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
 										}
 									},
 								]
@@ -674,6 +872,54 @@
 											StringData = ""
 										}
 									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 0
+										event_keys = 
+										{
+											name = "weapons/sounds/common/raise.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 6
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/chback.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 12
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/chamber.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 15
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
 								]
 								activity_name = ""
 								activity_weight = 1
@@ -720,6 +966,66 @@
 											StringData = ""
 										}
 									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 1
+										event_keys = 
+										{
+											name = "weapons/sounds/common/rattle/rattle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 4
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magout.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 12
+										event_keys = 
+										{
+											name = "weapons/sounds/common/magpouch/magpouch_pull_small.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 22
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magin.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 35
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
 								]
 								activity_name = ""
 								activity_weight = 1
@@ -757,6 +1063,66 @@
 											Float = 0.0
 											Vector = [ 0.0, 0.0, 0.0 ]
 											StringData = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 1
+										event_keys = 
+										{
+											name = "weapons/sounds/common/rattle/rattle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 4
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magout.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 11
+										event_keys = 
+										{
+											name = "weapons/sounds/common/magpouch/magpouch_pull_small.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 22
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magin.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 35
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
 										}
 									},
 								]
@@ -798,6 +1164,78 @@
 											StringData = ""
 										}
 									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 1
+										event_keys = 
+										{
+											name = "weapons/sounds/common/rattle/rattle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 4
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magout.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 11
+										event_keys = 
+										{
+											name = "weapons/sounds/common/magpouch/magpouch_pull_small.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 22
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magin.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 34
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/chamber.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 39
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
 								]
 								activity_name = ""
 								activity_weight = 1
@@ -835,6 +1273,78 @@
 											Float = 0.0
 											Vector = [ 0.0, 0.0, 0.0 ]
 											StringData = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 1
+										event_keys = 
+										{
+											name = "weapons/sounds/common/rattle/rattle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 4
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magout.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 11
+										event_keys = 
+										{
+											name = "weapons/sounds/common/magpouch/magpouch_pull_small.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 22
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magin.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 34
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/chamber.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 40
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
 										}
 									},
 								]
@@ -876,6 +1386,78 @@
 											StringData = ""
 										}
 									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 1
+										event_keys = 
+										{
+											name = "weapons/sounds/common/rattle/rattle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 4
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magout.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 12
+										event_keys = 
+										{
+											name = "weapons/sounds/common/magpouch/magpouch_pull_small.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 19
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magin.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 30
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/chamber.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 34
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
 								]
 								activity_name = ""
 								activity_weight = 1
@@ -913,6 +1495,78 @@
 											Float = 0.0
 											Vector = [ 0.0, 0.0, 0.0 ]
 											StringData = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 1
+										event_keys = 
+										{
+											name = "weapons/sounds/common/rattle/rattle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 4
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magout.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 12
+										event_keys = 
+										{
+											name = "weapons/sounds/common/magpouch/magpouch_pull_small.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 19
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magin.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 30
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/chamber.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 34
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
 										}
 									},
 								]
@@ -954,6 +1608,66 @@
 											StringData = ""
 										}
 									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 1
+										event_keys = 
+										{
+											name = "weapons/sounds/common/rattle/rattle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 4
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magout.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 11
+										event_keys = 
+										{
+											name = "weapons/sounds/common/magpouch/magpouch_pull_small.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 19
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magin.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 29
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
 								]
 								activity_name = ""
 								activity_weight = 1
@@ -991,6 +1705,66 @@
 											Float = 0.0
 											Vector = [ 0.0, 0.0, 0.0 ]
 											StringData = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 1
+										event_keys = 
+										{
+											name = "weapons/sounds/common/rattle/rattle.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 4
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magout.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 11
+										event_keys = 
+										{
+											name = "weapons/sounds/common/magpouch/magpouch_pull_small.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 19
+										event_keys = 
+										{
+											name = "weapons/sounds/mp7/magin.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 30
+										event_keys = 
+										{
+											name = "weapons/sounds/common/cloth/cloth.sound"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = ""
 										}
 									},
 								]
