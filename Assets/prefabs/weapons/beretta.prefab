@@ -66,7 +66,7 @@
         "ShellReloadingShootCancel": false,
         "ShellReloadInsertTime": 0,
         "ShellReloadStartTime": 0,
-        "ShootSound": "weapons/sounds/wpns/9mm/fire-sup-01.sound",
+        "ShootSound": "weapons/sounds/wpns/9mm/fire-9.sound",
         "Spread": 0.1,
         "TuckRange": 30,
         "ViewModel": "weapons/bereta/beretta.vmdl",
@@ -184,5 +184,6 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
+  "IsValid": true,
   "__version": 1
 }
