@@ -1,5 +1,6 @@
 ﻿
 using GeneralGame.UI;
+using Sandbox;
 using System.Collections.Generic;
 using System.Linq;
 using static GeneralGame.UI.FullScreenManager;
@@ -142,6 +143,7 @@ public partial class Weapon : Component
 
 	private void SetupAnimEvents()
 	{
+		
 		ViewModelRenderer.OnGenericEvent = ( a ) =>
 		{
 			string t = a.Type;

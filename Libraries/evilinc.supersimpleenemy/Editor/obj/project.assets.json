@@ -48,19 +48,6 @@
           "bin/placeholder/hammer.dll": {}
         }
       },
-      "real_fps_base/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "Base Library": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/real_fps_base.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/real_fps_base.dll": {}
-        }
-      },
       "shadergraph/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -73,39 +60,52 @@
         "runtime": {
           "bin/placeholder/shadergraph.dll": {}
         }
+      },
+      "supersimpleenemy/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Base Library": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/supersimpleenemy.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/supersimpleenemy.dll": {}
+        }
       }
     }
   },
   "libraries": {
     "actiongraph/1.0.0": {
       "type": "project",
-      "path": "../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/editor/ActionGraph/Code/actiongraph.csproj",
-      "msbuildProject": "../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/editor/ActionGraph/Code/actiongraph.csproj"
+      "path": "../../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/editor/ActionGraph/Code/actiongraph.csproj",
+      "msbuildProject": "../../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/editor/ActionGraph/Code/actiongraph.csproj"
     },
     "Base Editor Library/1.0.0": {
       "type": "project",
-      "path": "../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/addons/tools/Code/Base Editor Library.csproj",
-      "msbuildProject": "../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/addons/tools/Code/Base Editor Library.csproj"
+      "path": "../../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/addons/tools/Code/Base Editor Library.csproj",
+      "msbuildProject": "../../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/addons/tools/Code/Base Editor Library.csproj"
     },
     "Base Library/1.0.0": {
       "type": "project",
-      "path": "../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/addons/base/Code/Base Library.csproj",
-      "msbuildProject": "../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/addons/base/Code/Base Library.csproj"
+      "path": "../../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/addons/base/Code/Base Library.csproj",
+      "msbuildProject": "../../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/addons/base/Code/Base Library.csproj"
     },
     "hammer/1.0.0": {
       "type": "project",
-      "path": "../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/editor/Hammer/Code/hammer.csproj",
-      "msbuildProject": "../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/editor/Hammer/Code/hammer.csproj"
-    },
-    "real_fps_base/1.0.0": {
-      "type": "project",
-      "path": "../Code/real_fps_base.csproj",
-      "msbuildProject": "../Code/real_fps_base.csproj"
+      "path": "../../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/editor/Hammer/Code/hammer.csproj",
+      "msbuildProject": "../../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/editor/Hammer/Code/hammer.csproj"
     },
     "shadergraph/1.0.0": {
       "type": "project",
-      "path": "../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/editor/ShaderGraph/Code/shadergraph.csproj",
-      "msbuildProject": "../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/editor/ShaderGraph/Code/shadergraph.csproj"
+      "path": "../../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/editor/ShaderGraph/Code/shadergraph.csproj",
+      "msbuildProject": "../../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/editor/ShaderGraph/Code/shadergraph.csproj"
+    },
+    "supersimpleenemy/1.0.0": {
+      "type": "project",
+      "path": "../Code/supersimpleenemy.csproj",
+      "msbuildProject": "../Code/supersimpleenemy.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -113,8 +113,8 @@
       "Base Editor Library >= 1.0.0",
       "actiongraph >= 1.0.0",
       "hammer >= 1.0.0",
-      "real_fps_base >= 1.0.0",
-      "shadergraph >= 1.0.0"
+      "shadergraph >= 1.0.0",
+      "supersimpleenemy >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -124,11 +124,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Editor\\real_fps_base.editor.csproj",
-      "projectName": "real_fps_base.editor",
-      "projectPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Editor\\real_fps_base.editor.csproj",
+      "projectUniqueName": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Editor\\supersimpleenemy.editor.csproj",
+      "projectName": "supersimpleenemy.editor",
+      "projectPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Editor\\supersimpleenemy.editor.csproj",
       "packagesPath": "C:\\Users\\susan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Editor\\obj\\",
+      "outputPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Editor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -161,8 +161,8 @@
             "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\editor\\ShaderGraph\\Code\\shadergraph.csproj": {
               "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\editor\\ShaderGraph\\Code\\shadergraph.csproj"
             },
-            "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Code\\real_fps_base.csproj": {
-              "projectPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Code\\real_fps_base.csproj"
+            "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Code\\supersimpleenemy.csproj": {
+              "projectPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Code\\supersimpleenemy.csproj"
             }
           }
         }

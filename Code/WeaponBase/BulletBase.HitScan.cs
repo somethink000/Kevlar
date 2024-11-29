@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Linq;
+using static Sandbox.Component;
 
 namespace GeneralGame;
 
@@ -33,16 +34,25 @@ public class HitScanBullet : IBulletBase
 		// Damage
 		if ( !weapon.IsProxy && hitObj is not null  )
 		{
-			IHealthComponent damageable;
-			damageable = hitObj.Components.GetInAncestorsOrSelf<IHealthComponent>();
+			var damage = new DamageInfo( 10, weapon.Owner.GameObject, weapon.Owner.GameObject, bulletTr.Hitbox );
+			damage.Position = bulletTr.HitPosition;
+			damage.Shape = bulletTr.Shape;
 
-			var hitTags = Array.Empty<string>();
+			foreach ( var damageable in bulletTr.GameObject.Components.GetAll<IDamageable>() )
+			{
+				damageable.OnDamage( damage );
+			}
+
+			//IHealthComponent damageable;
+			//damageable = hitObj.Components.GetInAncestorsOrSelf<IHealthComponent>();
+
+			//var hitTags = Array.Empty<string>();
 			
-			if ( bulletTr.Hitbox is not null )
-				hitTags = bulletTr.Hitbox.Tags.TryGetAll().ToArray();
+			//if ( bulletTr.Hitbox is not null )
+			//	hitTags = bulletTr.Hitbox.Tags.TryGetAll().ToArray();
 
-			//var dmgInfo = TakeDamage( DamageType.Bullet, weapon.ClassName, shootInfo.Damage, bulletTr.HitPosition, forward * 100 * shootInfo.Force, hitTags );
-			damageable?.TakeDamage( DamageType.Bullet, weapon.Damage, bulletTr.HitPosition, forward * 100 * weapon.Force, weapon.Owner.GameObject.Id, hitTags );
+			////var dmgInfo = TakeDamage( DamageType.Bullet, weapon.ClassName, shootInfo.Damage, bulletTr.HitPosition, forward * 100 * shootInfo.Force, hitTags );
+			//damageable?.TakeDamage( DamageType.Bullet, weapon.Damage, bulletTr.HitPosition, forward * 100 * weapon.Force, weapon.Owner.GameObject.Id, hitTags );
 		}
 	}
 

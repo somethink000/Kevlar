@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Editor\\real_fps_base.editor.csproj": {}
+    "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Editor\\supersimpleenemy.editor.csproj": {}
   },
   "projects": {
     "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\addons\\base\\Code\\Base Library.csproj": {
@@ -328,14 +328,14 @@
         }
       }
     },
-    "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Code\\real_fps_base.csproj": {
+    "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Code\\supersimpleenemy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Code\\real_fps_base.csproj",
-        "projectName": "real_fps_base",
-        "projectPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Code\\real_fps_base.csproj",
+        "projectUniqueName": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Code\\supersimpleenemy.csproj",
+        "projectName": "supersimpleenemy",
+        "projectPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Code\\supersimpleenemy.csproj",
         "packagesPath": "C:\\Users\\susan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Code\\obj\\",
+        "outputPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Code\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -392,14 +392,14 @@
         }
       }
     },
-    "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Editor\\real_fps_base.editor.csproj": {
+    "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Editor\\supersimpleenemy.editor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Editor\\real_fps_base.editor.csproj",
-        "projectName": "real_fps_base.editor",
-        "projectPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Editor\\real_fps_base.editor.csproj",
+        "projectUniqueName": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Editor\\supersimpleenemy.editor.csproj",
+        "projectName": "supersimpleenemy.editor",
+        "projectPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Editor\\supersimpleenemy.editor.csproj",
         "packagesPath": "C:\\Users\\susan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Editor\\obj\\",
+        "outputPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Editor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -432,8 +432,8 @@
               "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\editor\\ShaderGraph\\Code\\shadergraph.csproj": {
                 "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\editor\\ShaderGraph\\Code\\shadergraph.csproj"
               },
-              "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Code\\real_fps_base.csproj": {
-                "projectPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Code\\real_fps_base.csproj"
+              "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Code\\supersimpleenemy.csproj": {
+                "projectPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Code\\supersimpleenemy.csproj"
               }
             }
           }

@@ -277,6 +277,27 @@
       ]
     },
     {
+      "__guid": "856ada1a-7a2d-45e7-8d5e-3896217ff3f9",
+      "Flags": 0,
+      "Name": "m_ll_lamp_halogen_01 (4)",
+      "Position": "180,-453.4662,431.4285",
+      "Rotation": "0.7071066,0.7071067,0.0000001490116,-0.00000005960464",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.PointLight",
+          "__guid": "158cad80-561f-425f-92c7-6322fe78b3c8",
+          "Attenuation": 1,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "1,0.88713,0.73953,1",
+          "Radius": 1000,
+          "Shadows": true
+        }
+      ]
+    },
+    {
       "__guid": "d9103d0e-0dcb-4bc1-953c-052e3aa5a466",
       "Flags": 0,
       "Name": "m_ll_lamp_halogen_01 (3)",
@@ -452,6 +473,7 @@
             {
               "__type": "Sandbox.PointLight",
               "__guid": "23a5014a-2fbb-43a0-82df-943e72983c14",
+              "__enabled": false,
               "Attenuation": 1,
               "FogMode": "Enabled",
               "FogStrength": 1,
@@ -836,6 +858,381 @@
       "NetworkMode": 1,
       "__Prefab": "prefabs/weapons/awp.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "9283d06c-c692-4e3e-b679-b14bc372dbc1",
+      "Flags": 0,
+      "Name": "enemy",
+      "Position": "459.4648,70.41043,296",
+      "Tags": "ignorenav",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.Zombie",
+          "__guid": "9a5d7206-4b0c-4c84-88d8-a721d1d0acee",
+          "IsMale": false,
+          "IsRunner": false,
+          "MaxHealth": 100
+        },
+        {
+          "__type": "Sandbox.NavMeshAgent",
+          "__guid": "347fb00b-c2b1-4f9d-a5f6-db400f6abf65",
+          "Acceleration": 500,
+          "Height": 64,
+          "MaxSpeed": 210,
+          "Radius": 5.0000033,
+          "Separation": 0,
+          "UpdatePosition": true,
+          "UpdateRotation": false
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "1425bb6b-941a-4d06-86e5-83e87b0a68a6",
+          "IsTrigger": false,
+          "Model": "models/citizen_human/citizen_human_female.vmdl",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "GeneralGame.Dresser",
+          "__guid": "cf479cb0-115e-4758-8b07-1246f16d85bd",
+          "ApplyHeightScale": true,
+          "ApplyLocalUserClothes": false,
+          "BodyTarget": {
+            "_type": "component",
+            "component_id": "722c41d6-8c20-45ac-b5bd-eed01bef07fb",
+            "go": "9283d06c-c692-4e3e-b679-b14bc372dbc1",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "Clothing": [
+            {
+              "Clothing": "models/citizen_clothes/jacket/biker_jacket/biker_jacket.clothing",
+              "Tint": null
+            },
+            {
+              "Clothing": "models/citizen_clothes/trousers/cargopants/cargo_pants_army.clothing",
+              "Tint": null
+            }
+          ]
+        },
+        {
+          "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+          "__guid": "5ad757a4-c2ff-4b40-bf79-7e105e93d655",
+          "BodyWeight": 1,
+          "EyesWeight": 1,
+          "HeadWeight": 1,
+          "LookAtEnabled": false,
+          "Target": {
+            "_type": "component",
+            "component_id": "722c41d6-8c20-45ac-b5bd-eed01bef07fb",
+            "go": "9283d06c-c692-4e3e-b679-b14bc372dbc1",
+            "component_type": "SkinnedModelRenderer"
+          }
+        },
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "722c41d6-8c20-45ac-b5bd-eed01bef07fb",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "CreateBoneObjects": false,
+          "MaterialGroup": "default",
+          "Model": "models/citizen_human/citizen_human_female.vmdl",
+          "Morphs": {},
+          "Parameters": {
+            "bools": {},
+            "ints": {
+              "holdtype": 0
+            },
+            "floats": {},
+            "vectors": {},
+            "rotations": {}
+          },
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Sequence": {
+            "Name": null
+          },
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
+        },
+        {
+          "__type": "Sandbox.ModelHitboxes",
+          "__guid": "3dab4636-ee2b-49ce-bf0c-9630df8a4170",
+          "Renderer": {
+            "_type": "component",
+            "component_id": "722c41d6-8c20-45ac-b5bd-eed01bef07fb",
+            "go": "9283d06c-c692-4e3e-b679-b14bc372dbc1",
+            "component_type": "SkinnedModelRenderer"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "cd2eb3cc-fb4c-438f-bf95-1c5f4b853253",
+          "Flags": 0,
+          "Name": "Clothing - biker_jacket",
+          "Tags": "clothing",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "7f5916d6-6dd3-4810-8ef0-f1db4bf9b606",
+              "BodyGroups": 18446744073709551615,
+              "BoneMergeTarget": {
+                "_type": "component",
+                "component_id": "722c41d6-8c20-45ac-b5bd-eed01bef07fb",
+                "go": "9283d06c-c692-4e3e-b679-b14bc372dbc1",
+                "component_type": "SkinnedModelRenderer"
+              },
+              "CreateAttachments": false,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen_clothes/jacket/biker_jacket/models/biker_jacket_m_human.vmdl",
+              "Morphs": {},
+              "Parameters": {
+                "bools": {},
+                "ints": {},
+                "floats": {},
+                "vectors": {},
+                "rotations": {}
+              },
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Sequence": {
+                "Name": null
+              },
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
+            }
+          ]
+        },
+        {
+          "__guid": "aad86d4c-7ecd-47c1-897e-20e81e2b93b2",
+          "Flags": 0,
+          "Name": "Clothing - cargo_pants_army",
+          "Tags": "clothing",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "74b5ac59-9bf7-4ab3-80c2-2800ff6f72e6",
+              "BodyGroups": 18446744073709551615,
+              "BoneMergeTarget": {
+                "_type": "component",
+                "component_id": "722c41d6-8c20-45ac-b5bd-eed01bef07fb",
+                "go": "9283d06c-c692-4e3e-b679-b14bc372dbc1",
+                "component_type": "SkinnedModelRenderer"
+              },
+              "CreateAttachments": false,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen_clothes/trousers/cargopants/models/cargo_pants_m_human.vmdl",
+              "Morphs": {},
+              "Parameters": {
+                "bools": {},
+                "ints": {},
+                "floats": {},
+                "vectors": {},
+                "rotations": {}
+              },
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Sequence": {
+                "Name": null
+              },
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "e66953b0-d44b-46f1-9512-c459574be8b2",
+      "Flags": 0,
+      "Name": "Other (3)",
+      "Position": "468.934,0.00004099553,300.3647",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.Dresser",
+          "__guid": "c376cfc7-e648-4c73-a540-ceb15cf5e16b",
+          "ApplyHeightScale": true,
+          "ApplyLocalUserClothes": false,
+          "BodyTarget": {
+            "_type": "component",
+            "component_id": "8abe845b-bf34-4177-bdcb-7f97591ae328",
+            "go": "e66953b0-d44b-46f1-9512-c459574be8b2",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "Clothing": [
+            {
+              "Clothing": "models/citizen_clothes/jacket/biker_jacket/biker_jacket.clothing",
+              "Tint": null
+            },
+            {
+              "Clothing": "models/citizen_clothes/trousers/cargopants/cargo_pants_army.clothing",
+              "Tint": null
+            },
+            {
+              "Clothing": "models/citizen_clothes/hat/chefs_skull_cap/chefs_skull_cap.clothing",
+              "Tint": null
+            }
+          ]
+        },
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "8abe845b-bf34-4177-bdcb-7f97591ae328",
+          "BodyGroups": 649,
+          "CreateAttachments": false,
+          "CreateBoneObjects": false,
+          "MaterialGroup": "default",
+          "Model": "models/citizen_human/citizen_human_male.vmdl",
+          "Morphs": {},
+          "Parameters": {
+            "bools": {
+              "b_grounded": true,
+              "b_long_idle": false,
+              "b_attack": true
+            },
+            "ints": {
+              "move_style": 0,
+              "special_idle_states": 0,
+              "special_movement_states": 0
+            },
+            "floats": {
+              "aim_body_pitch": 0.8999999,
+              "move_speed": 562.8,
+              "move_groundspeed": 577.29,
+              "move_direction": 120.87,
+              "skid": 0,
+              "wish_x": 811.59,
+              "wish_speed": 1000,
+              "wish_groundspeed": 577.29,
+              "wish_direction": 173.04,
+              "voice": 0
+            },
+            "vectors": {
+              "aim_body": "0,0,0"
+            },
+            "rotations": {}
+          },
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Sequence": {
+            "Name": null
+          },
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "d92fe24f-03af-4dde-acd0-282ee5baf8c6",
+          "Flags": 0,
+          "Name": "Clothing - biker_jacket",
+          "Tags": "clothing",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "032669b4-9307-454f-b1dc-f9b3031ca3e3",
+              "BodyGroups": 18446744073709551615,
+              "BoneMergeTarget": {
+                "_type": "component",
+                "component_id": "8abe845b-bf34-4177-bdcb-7f97591ae328",
+                "go": "e66953b0-d44b-46f1-9512-c459574be8b2",
+                "component_type": "SkinnedModelRenderer"
+              },
+              "CreateAttachments": false,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen_clothes/jacket/biker_jacket/models/biker_jacket_m_human.vmdl",
+              "Morphs": {},
+              "Parameters": {
+                "bools": {},
+                "ints": {},
+                "floats": {},
+                "vectors": {},
+                "rotations": {}
+              },
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Sequence": {
+                "Name": null
+              },
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
+            }
+          ]
+        },
+        {
+          "__guid": "05af9a2e-f700-4c65-9e86-eed0f5c04ae3",
+          "Flags": 0,
+          "Name": "Clothing - cargo_pants_army",
+          "Tags": "clothing",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "ecf96f4e-198f-49d8-ac20-1bfe39fb076d",
+              "BodyGroups": 18446744073709551615,
+              "BoneMergeTarget": {
+                "_type": "component",
+                "component_id": "8abe845b-bf34-4177-bdcb-7f97591ae328",
+                "go": "e66953b0-d44b-46f1-9512-c459574be8b2",
+                "component_type": "SkinnedModelRenderer"
+              },
+              "CreateAttachments": false,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen_clothes/trousers/cargopants/models/cargo_pants_m_human.vmdl",
+              "Morphs": {},
+              "Parameters": {
+                "bools": {},
+                "ints": {},
+                "floats": {},
+                "vectors": {},
+                "rotations": {}
+              },
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Sequence": {
+                "Name": null
+              },
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
+            }
+          ]
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -867,9 +1264,7 @@
   "__references": [
     "evilinc.m_ll_lamp_halogen_01#46930",
     "evilinc.m_ll_lamp_industrt_01#46929",
-    "evilinc.shitok#48533",
     "tesssssssssst.untitled_48417841871541#33517"
   ],
-  "IsValid": true,
   "__version": 2
 }

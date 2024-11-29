@@ -78,7 +78,7 @@ public partial class PlayerBase
 		EyeAngles = eyeAngles;
 
 		// Set the current camera offset
-		var targetOffset = Vector3.Zero;// +Vector3.Down * 4f;
+		var targetOffset = Vector3.Zero + Vector3.Down * 10f;
 		if ( IsCrouching || IsSlide ) targetOffset += Vector3.Down * 32f;
 		EyeOffset = Vector3.Lerp( EyeOffset, targetOffset, Time.Delta * 10f );
 

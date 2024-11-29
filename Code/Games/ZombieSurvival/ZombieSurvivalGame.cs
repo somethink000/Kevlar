@@ -43,7 +43,7 @@ public class ZombieSurvivalGame : BaseGame
 	public async void RespawnWithDelay( float delay )
 	{
 		await GameTask.DelaySeconds( delay );
-		DefendObject = Scene.GetAllComponents<PlayerBase>().First().GameObject;
+		//DefendObject = Scene.GetAllComponents<PlayerBase>().First().GameObject;
 	}
 
 	public override void OnPlayerDeath( PlayerBase player, PlayerBase killer )

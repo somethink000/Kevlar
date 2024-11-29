@@ -5,7 +5,7 @@
       "__guid": "c3fe7d19-05e0-4f92-9623-f8b31eec3171",
       "Flags": 0,
       "Name": "Defence",
-      "Position": "-28.82959,5370.101,9.022205",
+      "Position": "3955.372,2300.474,1806.213",
       "Enabled": true,
       "Components": [
         {
@@ -19,7 +19,7 @@
       "__guid": "759629fa-ac1e-41d8-be90-ac659883fc3e",
       "Flags": 0,
       "Name": "Logic",
-      "Position": "-253.4116,6944.063,44.7504",
+      "Position": "3884.122,2083.155,1914.61",
       "Enabled": true,
       "Children": [
         {
@@ -184,18 +184,11 @@
                 100,
                 140
               ],
-              "VaveStartColdown": 40,
+              "VaveStartColdown": 10,
               "ZombieSpawnDelay": 3,
               "InfiniteAmmo": false
             }
           ]
-        },
-        {
-          "__guid": "db65e736-55ea-4dea-86ec-89e334392f80",
-          "Flags": 0,
-          "Name": "Target2",
-          "Position": "-2710.588,-2984.063,-128.2637",
-          "Enabled": true
         }
       ]
     },
@@ -373,7 +366,7 @@
       "__guid": "dfc10c3c-2c54-4a6a-b387-39bebc2e4dce",
       "Flags": 0,
       "Name": "zombiespawner",
-      "Position": "4233.422,3712.07,1912.924",
+      "Position": "4233.422,3712.07,1891.075",
       "Enabled": true,
       "__Prefab": "prefabs/npcs/zombiespawner.prefab",
       "__PrefabVariables": {}
@@ -383,85 +376,10 @@
       "Flags": 0,
       "Name": "zombiespawner (1)",
       "Position": "4218.623,166.5181,1778.498",
+      "Tags": "ignorenav",
       "Enabled": true,
       "__Prefab": "prefabs/npcs/zombiespawner.prefab",
       "__PrefabVariables": {}
-    },
-    {
-      "__guid": "5c755036-6bb9-4b9a-9774-e26c4e857156",
-      "Flags": 0,
-      "Name": "enemy",
-      "Position": "3941.039,3390.325,1864.001",
-      "Tags": "ignorenav",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.NavMeshAgent",
-          "__guid": "6ffcdf43-c10b-4682-9f80-af5aa102fda6",
-          "Acceleration": 500,
-          "Height": 64,
-          "MaxSpeed": 210,
-          "Radius": 5.0000033,
-          "Separation": 0,
-          "UpdatePosition": true,
-          "UpdateRotation": false
-        },
-        {
-          "__type": "Enemy",
-          "__guid": "7cf82476-aabe-446d-9fe2-e8ce8748fe3d"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "1747b21f-ffa9-4453-b48a-178c0aca8a1e",
-          "IsTrigger": false,
-          "Model": "models/citizen_human/citizen_human_female.vmdl",
-          "Static": false,
-          "SurfaceVelocity": "0,0,0"
-        },
-        {
-          "__type": "Sandbox.Citizen.CitizenAnimationHelper",
-          "__guid": "e3b18468-1e4b-4cf1-b598-884ecd60bd67",
-          "BodyWeight": 1,
-          "EyesWeight": 1,
-          "HeadWeight": 1,
-          "LookAtEnabled": false,
-          "Target": {
-            "_type": "component",
-            "component_id": "b1a0a91b-1447-4d30-94e6-ce2fbbb0cad3",
-            "go": "5c755036-6bb9-4b9a-9774-e26c4e857156",
-            "component_type": "SkinnedModelRenderer"
-          }
-        },
-        {
-          "__type": "Sandbox.SkinnedModelRenderer",
-          "__guid": "b1a0a91b-1447-4d30-94e6-ce2fbbb0cad3",
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "CreateBoneObjects": false,
-          "MaterialOverride": "models/citizen/skin/citizen_skin_zombie_02.vmat",
-          "Model": "models/citizen_human/citizen_human_female.vmdl",
-          "Morphs": {},
-          "Parameters": {
-            "bools": {},
-            "ints": {},
-            "floats": {},
-            "vectors": {},
-            "rotations": {}
-          },
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Sequence": {
-            "Name": null
-          },
-          "Tint": "1,1,1,1",
-          "UseAnimGraph": true
-        }
-      ]
     }
   ],
   "SceneProperties": {
