@@ -1,0 +1,15 @@
+{
+  "Title": "Super Simple Enemy",
+  "Type": "library",
+  "Org": "evilinc",
+  "Ident": "supersimpleenemy",
+  "Schema": 1,
+  "IncludeSourceFiles": true,
+  "Resources": null,
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "IsWhitelistDisabled": false,
+  "Metadata": {
+    "CsProjName": ""
+  }
+}

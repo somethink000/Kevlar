@@ -1,16 +1,10 @@
 {
   "SpawnableItems": [
-    "prefabs/weapons/ak74u.prefab",
-    "prefabs/weapons/colt.prefab",
-    "prefabs/weapons/geagelol.prefab",
-    "prefabs/weapons/glock.prefab",
-    "prefabs/weapons/lr300.prefab",
-    "prefabs/weapons/m110.prefab",
-    "prefabs/weapons/pm.prefab",
-    "prefabs/weapons/raging_bull.prefab",
-    "prefabs/weapons/remington870.prefab",
-    "prefabs/weapons/saiga.prefab",
-    "prefabs/weapons/val.prefab"
+    "prefabs/weapons/vss.prefab",
+    "prefabs/weapons/reming870.prefab",
+    "prefabs/weapons/mp7.prefab",
+    "prefabs/weapons/beretta.prefab",
+    "prefabs/weapons/awp.prefab"
   ],
   "__references": [],
   "__version": 0

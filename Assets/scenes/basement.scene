@@ -337,7 +337,7 @@
           "__guid": "3eb28e5c-3a8f-436e-a1bb-9da1ff079820",
           "Flags": 0,
           "Name": "Point Light (4)",
-          "Position": "0,-9.212095,15.0001",
+          "Position": "0.000002145767,-9.212099,-1.817932",
           "Rotation": "-0.0000001043081,0,-1,0.0000002235174",
           "Tags": "light_point,light",
           "Enabled": true,
@@ -345,27 +345,6 @@
             {
               "__type": "Sandbox.PointLight",
               "__guid": "f71844fc-8837-456d-8906-867af1d06690",
-              "Attenuation": 1,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.74884,1,0.96233,1",
-              "Radius": 800,
-              "Shadows": true
-            }
-          ]
-        },
-        {
-          "__guid": "29de6533-5d05-4aed-b98e-c8578392f40d",
-          "Flags": 0,
-          "Name": "Point Light (4)",
-          "Position": "0.000001553044,-9.212094,-17.24979",
-          "Rotation": "-0.0000001043081,0,-1,0.0000002235174",
-          "Tags": "light_point,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "bcbeb780-6cf0-404f-86fb-c8f02ecc43a7",
               "Attenuation": 1,
               "FogMode": "Enabled",
               "FogStrength": 1,
@@ -462,31 +441,10 @@
       ],
       "Children": [
         {
-          "__guid": "206e9f93-3a17-46f0-9d11-9ecfbfa03eea",
-          "Flags": 0,
-          "Name": "Point Light (4)",
-          "Position": "0,-9.212095,15.0001",
-          "Rotation": "-0.0000001043081,0,-1,0.0000002235174",
-          "Tags": "light_point,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.PointLight",
-              "__guid": "eed11b55-d5ed-406e-9e47-d73c33a30675",
-              "Attenuation": 1,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.74884,1,0.96233,1",
-              "Radius": 800,
-              "Shadows": true
-            }
-          ]
-        },
-        {
           "__guid": "8b322e44-119f-4b8f-8a0f-307b47fa6a1c",
           "Flags": 0,
           "Name": "Point Light (4)",
-          "Position": "0.000001553044,-9.212094,-17.24979",
+          "Position": "0.000002145767,-9.212099,0.2155459",
           "Rotation": "-0.0000001043081,0,-1,0.0000002235174",
           "Tags": "light_point,light",
           "Enabled": true,

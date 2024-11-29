@@ -52,7 +52,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "Base Library": "1.0.0"
+          "Base Library": "1.0.0",
+          "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Code\\supersimpleenemy.csproj": "1.0.0"
         },
         "compile": {
           "bin/placeholder/real_fps_base.dll": {}
@@ -196,5 +197,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Не удалось найти сведения о проекте для \"C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Code\\supersimpleenemy.csproj\". Если вы используете Visual Studio, причина может заключаться в том, что проект выгружен или не является частью текущего решения. В этом случае выполните восстановление из командной строки. В противном случае причина может быть связана с тем, что файл проекта является недопустимым или отсутствуют целевые объекты, необходимые для восстановления.",
+      "libraryId": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Code\\supersimpleenemy.csproj",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

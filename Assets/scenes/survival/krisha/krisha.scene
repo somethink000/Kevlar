@@ -63,7 +63,8 @@
           "__guid": "4f7db652-3fe6-4a19-b76b-67dd14df30be",
           "Flags": 0,
           "Name": "Sun",
-          "Rotation": "0.6322964,-0.5195425,0.3600717,-0.4479121",
+          "Position": "0.003158569,0.0009765625,0.0008201599",
+          "Rotation": "0.5908522,-0.5489478,0.3134204,-0.501316",
           "Tags": "light_directional,light",
           "Enabled": true,
           "Components": [
@@ -72,9 +73,9 @@
               "__guid": "86920de1-dec8-4acf-bd34-51aed89ee1cd",
               "FogMode": "Enabled",
               "FogStrength": 1,
-              "LightColor": "0.26977,0.19365,0.10665,1",
+              "LightColor": "0.30233,0.22424,0.13499,1",
               "Shadows": false,
-              "SkyColor": "0.08372,0.07082,0.05607,1"
+              "SkyColor": "0.21395,0.18005,0.14131,1"
             }
           ]
         },
@@ -230,13 +231,27 @@
           "__guid": "d1e7ba29-b09e-45a4-bf8f-12d14b17d697",
           "Flags": 0,
           "Name": "Itemspawner",
-          "Position": "5412.249,-4031.221,1988.23",
+          "Position": "5441.256,-3960.9,1996.76",
           "Enabled": true,
           "Components": [
             {
               "__type": "GeneralGame.ItemSpawn",
               "__guid": "5f47a264-a866-4a88-8719-8d46dac4b127",
-              "SpawnableGroup": "prefabs/spawn_groups/rifle.spawn"
+              "SpawnableGroup": "prefabs/spawn_groups/weapon.spawn"
+            }
+          ]
+        },
+        {
+          "__guid": "de7c86ed-569e-4441-81ef-79005bf31fa5",
+          "Flags": 0,
+          "Name": "Itemspawner",
+          "Position": "5411.402,-4045.948,1975.263",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ItemSpawn",
+              "__guid": "5c8213a5-ad0b-4007-8f98-1e06809bf49f",
+              "SpawnableGroup": "prefabs/spawn_groups/weapon.spawn"
             }
           ]
         },
@@ -244,7 +259,7 @@
           "__guid": "b96667f3-0aad-4c13-8fe4-72b51351a327",
           "Flags": 0,
           "Name": "Itemspawner",
-          "Position": "5421.778,-4020.496,1988.23",
+          "Position": "5419.756,-4019.649,1991.646",
           "Enabled": true,
           "Components": [
             {
@@ -258,7 +273,7 @@
           "__guid": "63b6cdb2-d3fb-4954-b0fd-0fa68377f1ff",
           "Flags": 0,
           "Name": "Itemspawner",
-          "Position": "5440.382,-3957.876,1988.23",
+          "Position": "5451.367,-3921.448,1987.175",
           "Enabled": true,
           "Components": [
             {
@@ -272,7 +287,7 @@
           "__guid": "413b6a72-56eb-4c2c-a408-861e4722c98d",
           "Flags": 0,
           "Name": "Itemspawner",
-          "Position": "5444.358,-3942.745,1988.23",
+          "Position": "5434.634,-3907.818,1986.871",
           "Enabled": true,
           "Components": [
             {
@@ -286,7 +301,7 @@
           "__guid": "26046f65-a185-4316-b1ed-3707822a84b2",
           "Flags": 0,
           "Name": "Itemspawner",
-          "Position": "5459.563,-3949.04,1988.23",
+          "Position": "5459.563,-3941.924,1988.23",
           "Enabled": true,
           "Components": [
             {
@@ -300,7 +315,7 @@
           "__guid": "08665520-c5f9-4af3-a76d-1b4708a657fd",
           "Flags": 0,
           "Name": "Itemspawner",
-          "Position": "5426.802,-4036.438,1988.23",
+          "Position": "5415.612,-4006.539,1991.646",
           "Enabled": true,
           "Components": [
             {
@@ -314,7 +329,7 @@
           "__guid": "15621b75-4aba-477c-860c-e13c533c25c3",
           "Flags": 0,
           "Name": "Itemspawner",
-          "Position": "5459.093,-3967.279,1988.08",
+          "Position": "5459.093,-3969.358,1988.08",
           "Enabled": true,
           "Components": [
             {
@@ -328,7 +343,7 @@
           "__guid": "0ed34810-30b0-4c43-8ef9-0eb96755fa75",
           "Flags": 0,
           "Name": "Itemspawner",
-          "Position": "5412.473,-4045.195,1988.23",
+          "Position": "5400.813,-4015.687,1991.646",
           "Enabled": true,
           "Components": [
             {
@@ -342,7 +357,7 @@
           "__guid": "a067e945-362f-43c9-97d4-d38327800ae9",
           "Flags": 0,
           "Name": "Itemspawner",
-          "Position": "5439.717,-3974.396,1988.23",
+          "Position": "5456.345,-3906.876,1987.566",
           "Enabled": true,
           "Components": [
             {
@@ -358,7 +373,7 @@
       "__guid": "dfc10c3c-2c54-4a6a-b387-39bebc2e4dce",
       "Flags": 0,
       "Name": "zombiespawner",
-      "Position": "4224.682,3700.01,1980.101",
+      "Position": "4233.422,3712.07,1912.924",
       "Enabled": true,
       "__Prefab": "prefabs/npcs/zombiespawner.prefab",
       "__PrefabVariables": {}
@@ -367,10 +382,86 @@
       "__guid": "611f46c0-edb5-40b3-a6f2-33e78d8150ab",
       "Flags": 0,
       "Name": "zombiespawner (1)",
-      "Position": "4210.291,496.7482,1741.14",
+      "Position": "4218.623,166.5181,1778.498",
       "Enabled": true,
       "__Prefab": "prefabs/npcs/zombiespawner.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "5c755036-6bb9-4b9a-9774-e26c4e857156",
+      "Flags": 0,
+      "Name": "enemy",
+      "Position": "3941.039,3390.325,1864.001",
+      "Tags": "ignorenav",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.NavMeshAgent",
+          "__guid": "6ffcdf43-c10b-4682-9f80-af5aa102fda6",
+          "Acceleration": 500,
+          "Height": 64,
+          "MaxSpeed": 210,
+          "Radius": 5.0000033,
+          "Separation": 0,
+          "UpdatePosition": true,
+          "UpdateRotation": false
+        },
+        {
+          "__type": "Enemy",
+          "__guid": "7cf82476-aabe-446d-9fe2-e8ce8748fe3d"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "1747b21f-ffa9-4453-b48a-178c0aca8a1e",
+          "IsTrigger": false,
+          "Model": "models/citizen_human/citizen_human_female.vmdl",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+          "__guid": "e3b18468-1e4b-4cf1-b598-884ecd60bd67",
+          "BodyWeight": 1,
+          "EyesWeight": 1,
+          "HeadWeight": 1,
+          "LookAtEnabled": false,
+          "Target": {
+            "_type": "component",
+            "component_id": "b1a0a91b-1447-4d30-94e6-ce2fbbb0cad3",
+            "go": "5c755036-6bb9-4b9a-9774-e26c4e857156",
+            "component_type": "SkinnedModelRenderer"
+          }
+        },
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "b1a0a91b-1447-4d30-94e6-ce2fbbb0cad3",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "CreateBoneObjects": false,
+          "MaterialOverride": "models/citizen/skin/citizen_skin_zombie_02.vmat",
+          "Model": "models/citizen_human/citizen_human_female.vmdl",
+          "Morphs": {},
+          "Parameters": {
+            "bools": {},
+            "ints": {},
+            "floats": {},
+            "vectors": {},
+            "rotations": {}
+          },
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Sequence": {
+            "Name": null
+          },
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -392,7 +483,7 @@
       "AgentRadius": 16,
       "AgentStepSize": 18,
       "AgentMaxSlope": 40,
-      "ExcludedBodies": "",
+      "ExcludedBodies": "ignorenav",
       "IncludedBodies": ""
     }
   },

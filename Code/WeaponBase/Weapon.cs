@@ -196,7 +196,12 @@ public partial class Weapon : Component
 
 		};
 	}
+	public bool CanHolster()
+	{
 
+		if ( IsShooting() || InBoltBack ) return false;
+		return true;
+	}
 	public void Holster()
 	{
 		ViewModelRenderer?.Set( HolsterAnim, true );

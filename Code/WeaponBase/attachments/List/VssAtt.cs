@@ -13,20 +13,20 @@ public class VssModernRail : MagazinAttachment
 	public override int BodyGroupDefault { get; set; } = 0;
 }
 
-[Title( "Magazin 20rnd" )]
-public class VssMag20 : MagazinAttachment
+[Title( "Magazin 30rnd" )]
+public class VssMag10 : MagazinAttachment
 {
-	public override string Name => "Magazin 20rnd";
+	public override string Name => "Magazin 30rnd";
 	public override string IconPath => "ui/hud/supressor.png";
 	public override string BodyGroup { get; set; } = "magazin";
 	public override int BodyGroupChoice { get; set; } = 1;
 	public override int BodyGroupDefault { get; set; } = 0;
 }
 
-[Title( "Magazin 30rnd" )]
+[Title( "Magazin 10rnd" )]
 public class VssMag30 : MagazinAttachment
 {
-	public override string Name => "Magazin 30rnd";
+	public override string Name => "Magazin 10rnd";
 	public override string IconPath => "ui/hud/supressor.png";
 	public override string BodyGroup { get; set; } = "magazin";
 	public override int BodyGroupChoice { get; set; } = 2;

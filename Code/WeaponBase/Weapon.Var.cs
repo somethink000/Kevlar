@@ -74,14 +74,8 @@ public partial class Weapon
 	[Property, Group( "Animations" )] public float DrawTScale { get; set; } = 1f;
 
 	[Property, Group( "Shell Reloading" )] public bool ShellReloading { get; set; } = false;
-	[Property, Group( "Shell Reloading" )] public bool ShellReloadingShootCancel { get; set; } = true;
-	[Property, Group( "Shell Reloading" )] public float ShellEjectDelay { get; set; } = 0;
-	[Property, Group( "Shell Reloading" )] public float ShellReloadStartTime { get; set; } = 0;
-	[Property, Group( "Shell Reloading" )] public float ShellReloadInsertTime { get; set; } = 0;
 
 	[Property, Group( "Bolt Action Reloading" )] public bool BoltBack { get; set; } = false;
-	[Property, Group( "Bolt Action Reloading" )] public float BoltBackTime { get; set; } = 0f;
-	[Property, Group( "Bolt Action Reloading" )] public float BoltBackEjectDelay { get; set; } = 0f;
 
 	[Property, Group( "Scoping" )] public bool Scoping { get; set; } = false;
 	[Property, Group( "Scoping" )] public ScopeInfo ScopeInfo { get; set; } = new();

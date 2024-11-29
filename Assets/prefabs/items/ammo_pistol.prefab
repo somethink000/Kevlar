@@ -9,7 +9,14 @@
         "__type": "Sandbox.ModelRenderer",
         "__guid": "db730de9-4587-4812-b470-a5974dd1ac6f",
         "BodyGroups": 18446744073709551615,
+        "CreateAttachments": false,
         "Model": "weapons/ammos/9x18.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
         "RenderType": "On",
         "Tint": "1,1,1,1"
       },
@@ -18,7 +25,8 @@
         "__guid": "73ec5144-983d-4fd4-98ab-d3bffed1e13e",
         "IsTrigger": false,
         "Model": "weapons/ammos/9x18.vmdl",
-        "Static": false
+        "Static": false,
+        "SurfaceVelocity": "0,0,0"
       },
       {
         "__type": "GeneralGame.ItemComponent",
@@ -34,7 +42,7 @@
           "Guid": "83e3a4a7-2702-4446-97a9-fe13980a4b80"
         },
         "MaxStack": 160,
-        "Name": "9x18 ammo",
+        "Name": "Pistol Ammo",
         "WeightInGrams": 10
       },
       {
@@ -43,20 +51,54 @@
         "AngularDamping": 0,
         "Gravity": true,
         "LinearDamping": 0,
-        "Locking": {},
+        "Locking": {
+          "X": false,
+          "Y": false,
+          "Z": false,
+          "Pitch": false,
+          "Yaw": false,
+          "Roll": false
+        },
+        "MassCenterOverride": "0,0,0",
         "MassOverride": 0,
         "MotionEnabled": true,
+        "OverrideMassCenter": false,
         "RigidbodyFlags": 0,
         "StartAsleep": false
       }
     ],
     "Children": [],
-    "__variables": []
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
   },
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
+  "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
+  "IsValid": true,
   "__version": 1
 }

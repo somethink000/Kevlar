@@ -9,7 +9,7 @@ public partial class ItemSpawnGroup : GameResource
 {
 	[Property] public List<PrefabFile> SpawnableItems { get; set; }
 }
-//ResourceLibrary.GetAll<MapDefinition>()
+
 
 public sealed class ItemSpawn : Component
 {

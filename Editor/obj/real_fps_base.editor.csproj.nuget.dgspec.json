@@ -358,6 +358,9 @@
             "projectReferences": {
               "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\addons\\base\\Code\\Base Library.csproj": {
                 "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\addons\\base\\Code\\Base Library.csproj"
+              },
+              "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Code\\supersimpleenemy.csproj": {
+                "projectPath": "C:\\Users\\susan\\Documents\\GitHub\\Kevlar\\Libraries\\evilinc.supersimpleenemy\\Code\\supersimpleenemy.csproj"
               }
             }
           }

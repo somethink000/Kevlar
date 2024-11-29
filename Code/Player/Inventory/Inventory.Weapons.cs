@@ -57,13 +57,20 @@ public partial class Inventory
 	
 	public void Next()
 	{
-		Delayed = true;
+		
+
+		
 		if ( Deployed != null )
 		{
+			
+			if ( !Deployed.CanHolster() ) return;
+			Delayed = true;
 			Deployed.Holster();
+
 		}
 		else
 		{
+			Delayed = true;
 			ChangeSlot();
 		}
 		

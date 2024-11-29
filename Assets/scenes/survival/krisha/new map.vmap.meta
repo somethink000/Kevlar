@@ -10,7 +10,11 @@
       "IncludeSourceFiles": false,
       "Resources": null,
       "PackageReferences": [],
-      "EditorReferences": [],
+      "EditorReferences": [
+        "evilinc.bricks_white#48915",
+        "evilinc.metal_list_clean#48919",
+        "evilinc.woodfloor01c_lfw#47099"
+      ],
       "IsWhitelistDisabled": false,
       "Metadata": {
         "SingleAssetSource": "scenes/survival/krisha/new map.vmap",

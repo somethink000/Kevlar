@@ -1583,13 +1583,6 @@
 								_class = "BodyGroupChoice"
 								meshes = 
 								[
-									"mag10",
-								]
-							},
-							{
-								_class = "BodyGroupChoice"
-								meshes = 
-								[
 									"mag20",
 								]
 							},
@@ -1598,6 +1591,13 @@
 								meshes = 
 								[
 									"mag30",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								meshes = 
+								[
+									"mag10",
 								]
 							},
 						]
