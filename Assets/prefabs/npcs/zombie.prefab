@@ -2,16 +2,33 @@
   "RootObject": {
     "__guid": "5c755036-6bb9-4b9a-9774-e26c4e857156",
     "Flags": 0,
-    "Name": "enemy",
-    "Position": "3941.039,3390.325,1864.001",
-    "Rotation": "0,0,-0.7933533,0.6087615",
+    "Name": "zombie",
     "Tags": "ignorenav",
     "Enabled": true,
     "Components": [
       {
+        "__type": "GeneralGame.Dresser",
+        "__guid": "402d6d75-d304-46d4-9959-c54890cf8bce",
+        "ApplyHeightScale": true,
+        "ApplyLocalUserClothes": false,
+        "BodyTarget": {
+          "_type": "component",
+          "component_id": "b1a0a91b-1447-4d30-94e6-ce2fbbb0cad3",
+          "go": "5c755036-6bb9-4b9a-9774-e26c4e857156",
+          "component_type": "SkinnedModelRenderer"
+        },
+        "Clothing": []
+      },
+      {
         "__type": "GeneralGame.Zombie",
         "__guid": "92fee72e-d0be-4e4a-9e80-7e95afd5472f",
-        "MaxHealth": 100
+        "Cloths": "prefabs/spawn_groups/cloth/zombcloth.grpclths",
+        "FemModel": "models/citizen_human/citizen_human_female.vmdl",
+        "IsMale": false,
+        "IsRunner": false,
+        "MalModel": "models/citizen_human/citizen_human_male.vmdl",
+        "MaxHealth": 100,
+        "ZombTexture": "models/citizen/skin/citizen_skin_zombie_02.vmat"
       },
       {
         "__type": "Sandbox.NavMeshAgent",
@@ -28,7 +45,6 @@
         "__type": "Sandbox.ModelCollider",
         "__guid": "1747b21f-ffa9-4453-b48a-178c0aca8a1e",
         "IsTrigger": false,
-        "Model": "models/citizen_human/citizen_human_female.vmdl",
         "Static": false,
         "SurfaceVelocity": "0,0,0"
       },
@@ -52,8 +68,7 @@
         "BodyGroups": 18446744073709551615,
         "CreateAttachments": false,
         "CreateBoneObjects": false,
-        "MaterialOverride": "models/citizen/skin/citizen_skin_zombie_02.vmat",
-        "Model": "models/citizen_human/citizen_human_female.vmdl",
+        "MaterialGroup": "default",
         "Morphs": {},
         "Parameters": {
           "bools": {},
@@ -87,7 +102,32 @@
           "component_type": "SkinnedModelRenderer"
         }
       }
-    ]
+    ],
+    "Children": [],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
   },
   "ShowInMenu": false,
   "MenuPath": null,

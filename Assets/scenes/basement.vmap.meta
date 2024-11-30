@@ -11,9 +11,7 @@
       "Resources": null,
       "PackageReferences": [],
       "EditorReferences": [
-        "evilinc.metal_list_clean#48919",
-        "evilinc.milbeams002#48742",
-        "evilinc.woodfloor002#49071"
+        "evilinc.metal_list_clean#48919"
       ],
       "IsWhitelistDisabled": false,
       "Metadata": {

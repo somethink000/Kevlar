@@ -2,6 +2,36 @@ using Sandbox;
 
 namespace GeneralGame;
 
+public enum DressGender
+{
+	Mal,
+	Fem,
+	All
+}
+
+public struct ClothStruct
+{
+	public ClothStruct( ClothingContainer.ClothingEntry cloth, DressGender gender )
+	{
+		Cloth = cloth;
+		Gender = gender;
+	}
+
+	public ClothingContainer.ClothingEntry Cloth { get; set; }
+	public DressGender Gender { get; set; }
+}
+
+[GameResource( "GroupedCloth", "grpclths", "Clothes" )]
+public partial class GroupedCloth : GameResource
+{
+	[Property] public List<ClothStruct> Jackets { get; set; }
+	[Property] public List<ClothStruct> Shirts { get; set; }
+	[Property] public List<ClothStruct> Trousers { get; set; }
+	[Property] public List<ClothStruct> Shoes { get; set; }
+}
+
+
+
 
 public sealed class Dresser : Component, Component.ExecuteInEditor
 {
@@ -17,15 +47,15 @@ public sealed class Dresser : Component, Component.ExecuteInEditor
 	[Property]
 	public List<ClothingContainer.ClothingEntry> Clothing { get; set; }
 
-	protected override void OnAwake()
-	{
-		if ( IsProxy )
-			return;
+	//protected override void OnAwake()
+	//{
+	//	if ( IsProxy )
+	//		return;
 
-		Apply();
-	}
+	//	Apply();
+	//}
 
-	void Apply()
+	public void Apply()
 	{
 		if ( !BodyTarget.IsValid() )
 			return;

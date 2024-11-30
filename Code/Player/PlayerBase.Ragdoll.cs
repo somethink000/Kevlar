@@ -31,11 +31,11 @@ public partial class PlayerBase
 		}
 	}
 
-	[Broadcast]
+	[Rpc.Broadcast]
 	public virtual void Unragdoll()
 	{
-		RagdollPhysics.Renderer.Transform.LocalPosition = Vector3.Zero;
-		RagdollPhysics.Renderer.Transform.LocalRotation = Rotation.Identity;
+		RagdollPhysics.Renderer.LocalPosition = Vector3.Zero;
+		RagdollPhysics.Renderer.LocalRotation = Rotation.Identity;
 		RagdollPhysics.Enabled = false;
 		ToggleColliders( true );
 	}

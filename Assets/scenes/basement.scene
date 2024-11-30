@@ -182,7 +182,7 @@
       "__guid": "56d7c94d-cd40-46a3-9fd2-0d06f114d6eb",
       "Flags": 0,
       "Name": "Spawnpoint",
-      "Position": "342,86.28441,301.9999",
+      "Position": "309.6025,-40.25035,301.1627",
       "Rotation": "0,0,0.7071065,-0.707107",
       "Enabled": true,
       "Components": [
@@ -190,39 +190,6 @@
           "__type": "Sandbox.SpawnPoint",
           "__guid": "8af25799-0126-4e7d-8a56-57c2f9cad474",
           "Color": "0.8902,0.31765,0.05098,1"
-        }
-      ]
-    },
-    {
-      "__guid": "6e427f6a-0541-4893-aa4c-52e35c4b55ce",
-      "Flags": 0,
-      "Name": "shitok",
-      "Position": "239.9999,-304.9999,56.99997",
-      "Rotation": "-0.9999998,0.0000001043081,-0.00000005960465,0.00000000000001376677",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "e973d7bb-625f-4b06-a590-a57e55d0be46",
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "Model": "content/models/shitok/shitok.vmdl",
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "bc31a395-8d11-4015-a421-a3190940a8bc",
-          "IsTrigger": false,
-          "Model": "content/models/shitok/shitok.vmdl",
-          "Static": false,
-          "SurfaceVelocity": "0,0,0"
         }
       ]
     },
@@ -562,7 +529,7 @@
       "__guid": "e20ffacb-1293-424e-bcb0-ed9e1ad5bf0e",
       "Flags": 0,
       "Name": "Text (1)",
-      "Position": "336,300,412",
+      "Position": "336,300,365.0249",
       "Rotation": "0,0,-0.7071067,-0.7071068",
       "Enabled": true,
       "Components": [
@@ -574,14 +541,14 @@
           "RenderOptions": {
             "GameLayer": true,
             "OverlayLayer": false,
-            "BloomLayer": false,
+            "BloomLayer": true,
             "AfterUILayer": false
           },
           "Scale": 0.18,
           "TextAlignment": "Center",
           "TextScope": {
             "Text": "Press E on this to start game",
-            "TextColor": "0,0,0,1",
+            "TextColor": "1,1,1,1",
             "FontName": "Zekton",
             "FontSize": 32.58,
             "FontWeight": 800,
@@ -616,116 +583,588 @@
       ]
     },
     {
-      "__guid": "205e0a72-fb6f-43ec-b5e4-fe1367d86748",
+      "__guid": "1fa50667-be87-4265-88cd-1a06bec7af37",
       "Flags": 0,
-      "Name": "Text (3)",
-      "Position": "336,300,424",
-      "Rotation": "0,0,-0.7071067,-0.7071068",
+      "Name": "tutor",
+      "Position": "274.0124,-164.8458,344.6107",
+      "Rotation": "0,0,0.7071068,-0.7071068",
       "Enabled": true,
-      "Components": [
+      "Children": [
         {
-          "__type": "Sandbox.TextRenderer",
-          "__guid": "36fe9b08-18b4-43cb-9825-e5bfcf38e951",
-          "__version": 1,
-          "BlendMode": "Normal",
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "Scale": 0.18,
-          "TextAlignment": "Center",
-          "TextScope": {
-            "Text": "Tab to open inventory",
-            "TextColor": "0,0,0,1",
-            "FontName": "Zekton",
-            "FontSize": 32.58,
-            "FontWeight": 800,
-            "FontItalic": false,
-            "LineHeight": 1,
-            "LetterSpacing": 0,
-            "WordSpacing": 0,
-            "Outline": {
-              "Enabled": false,
-              "Size": 4,
-              "Color": "0,0,1,1"
+          "__guid": "13781d47-bac3-4afe-968d-46a18b3c7cf5",
+          "Flags": 0,
+          "Name": "en",
+          "Position": "9.834319,9.202392,-21.51816",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "205e0a72-fb6f-43ec-b5e4-fe1367d86748",
+              "Flags": 0,
+              "Name": "Text (3)",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "36fe9b08-18b4-43cb-9825-e5bfcf38e951",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u0022Tab\u0022  inventory",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
             },
-            "Shadow": {
-              "Enabled": false,
-              "Size": 4,
-              "Color": "0,0,0,1",
-              "Offset": "4,4"
+            {
+              "__guid": "ea6d7dc3-488a-4529-8264-23c36dcb5c48",
+              "Flags": 0,
+              "Name": "Text (2)",
+              "Position": "0,0,13.13782",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "92bc3948-a0c6-4466-a3a9-860863502b5d",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u0022Enter\u0022  chat",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
             },
-            "OutlineUnder": {
-              "Enabled": false,
-              "Size": 4,
-              "Color": "0,1,0,1"
+            {
+              "__guid": "611ab3ba-1a7c-47ae-a1b9-9b8707ebe27d",
+              "Flags": 0,
+              "Name": "Text (4)",
+              "Position": "0.0001068115,0,27.06491",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "179c08b5-42fb-4d5f-b5d3-b5eac2b90834",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u0022Run \u002B Ctrl\u0022 slide",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
             },
-            "ShadowUnder": {
-              "Enabled": false,
-              "Size": 4,
-              "Color": "0,0,0,1",
-              "Offset": "4,4"
+            {
+              "__guid": "847343f3-572b-4d4c-b80f-e858d455dec2",
+              "Flags": 0,
+              "Name": "Text (5)",
+              "Position": "0.0001068115,0.0001220703,39.47913",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "2edacb56-80fc-4d2a-841b-8a07780937e6",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u0022G\u0022 inspect weapon",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "e289453e-551d-4aca-b642-53eb66655a0f",
+              "Flags": 0,
+              "Name": "Text (6)",
+              "Position": "0.0001068115,0.0001220703,53.22333",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "6d99dde1-5dd5-479f-a3a2-f1e4ef339895",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u0022B\u0022 change fire mod",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
             }
-          }
-        }
-      ]
-    },
-    {
-      "__guid": "b4b89266-5a29-4f60-adb6-92d218bdd1b3",
-      "Flags": 0,
-      "Name": "Text (2)",
-      "Position": "576,68,356",
-      "Rotation": "0,0,0.00000006705523,-1",
-      "Enabled": true,
-      "Components": [
+          ]
+        },
         {
-          "__type": "Sandbox.TextRenderer",
-          "__guid": "5f03139e-8694-492f-a843-14f2698bd2bf",
-          "__version": 1,
-          "BlendMode": "Normal",
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "Scale": 0.18,
-          "TextAlignment": "Center",
-          "TextScope": {
-            "Text": "Work in progress. I have realy crazy ideas",
-            "TextColor": "0,0,0,1",
-            "FontName": "Zekton",
-            "FontSize": 32.58,
-            "FontWeight": 800,
-            "FontItalic": false,
-            "LineHeight": 1,
-            "LetterSpacing": 0,
-            "WordSpacing": 0,
-            "Outline": {
-              "Enabled": false,
-              "Size": 4,
-              "Color": "0,0,1,1"
+          "__guid": "117dcbf7-ea9d-405c-8333-5683d2144689",
+          "Flags": 0,
+          "Name": "ru",
+          "Position": "9.834366,85.2229,-21.51816",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "e9ae45c3-8e76-4a36-88f4-3808d1a0271a",
+              "Flags": 0,
+              "Name": "Text (3)",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "7478ae8e-fdc3-47f0-8225-a12c8a0a9717",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u0022Tab\u0022 \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
             },
-            "Shadow": {
-              "Enabled": false,
-              "Size": 4,
-              "Color": "0,0,0,1",
-              "Offset": "4,4"
+            {
+              "__guid": "b7f92f28-2821-4d98-ad9b-9d88fd513cec",
+              "Flags": 0,
+              "Name": "Text (2)",
+              "Position": "0,0,13.13782",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "5e6bb5d2-e594-496c-ad5c-2a6db5258b06",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u0022Enter\u0022 \u0447\u0430\u0442",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
             },
-            "OutlineUnder": {
-              "Enabled": false,
-              "Size": 4,
-              "Color": "0,1,0,1"
+            {
+              "__guid": "c4d571be-c0a2-4e5b-8f5b-6b584b741536",
+              "Flags": 0,
+              "Name": "Text (4)",
+              "Position": "0.0001068115,0,27.06491",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "e88a65f8-7266-4728-82f2-9e974d53e9e2",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u0022Run \u002B Ctrl\u0022 \u043F\u043E\u0434\u043A\u0430\u0442",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
             },
-            "ShadowUnder": {
-              "Enabled": false,
-              "Size": 4,
-              "Color": "0,0,0,1",
-              "Offset": "4,4"
+            {
+              "__guid": "fcbc6637-ba14-491d-bcc6-482b23919ba0",
+              "Flags": 0,
+              "Name": "Text (5)",
+              "Position": "0.0001068115,0.0001220703,39.47913",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "bb81b6af-8442-4fad-99c4-9d2532a69d2e",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u0022G\u0022 \u0440\u0430\u0441\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C \u043E\u0440\u0443\u0436\u0438\u0435",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "78d74895-e09c-4705-bd48-08a24d1293dc",
+              "Flags": 0,
+              "Name": "Text (6)",
+              "Position": "0.0001068115,0.0001220703,53.22333",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "edc45267-5de8-440b-9e79-197c14369379",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u0022B\u0022 \u0441\u043C\u0435\u043D\u0438\u0442\u044C \u0440\u0435\u0436\u0438\u043C \u043E\u0433\u043D\u044F",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
             }
-          }
+          ]
         }
       ]
     },
@@ -830,7 +1269,8 @@
       "__guid": "4c487af8-05f7-4a23-97aa-c83ed049963b",
       "Flags": 0,
       "Name": "beretta",
-      "Position": "359.8715,38.72683,332.1674",
+      "Position": "401.2905,55.03163,337.0892",
+      "Rotation": "0.5,0.4999999,0.5,0.5000001",
       "Tags": "weapon",
       "Enabled": true,
       "NetworkMode": 1,
@@ -860,23 +1300,332 @@
       "__PrefabVariables": {}
     },
     {
-      "__guid": "9283d06c-c692-4e3e-b679-b14bc372dbc1",
+      "__guid": "fd9baf92-52b7-4d0f-8ddd-26ca3aa03c86",
       "Flags": 0,
-      "Name": "enemy",
-      "Position": "459.4648,70.41043,296",
+      "Name": "introduce",
+      "Position": "719.3495,67.95895,375.0424",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "bf1f0f83-fc35-45ac-a954-a34f0f653a62",
+          "Flags": 0,
+          "Name": "ru",
+          "Position": "-143.0409,-123.4494,29.99783",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "a5dc3563-7b06-4d4c-8385-d3c44acb6fbc",
+              "Flags": 0,
+              "Name": "Text (1)",
+              "Rotation": "0,0,0.00000006705523,-1",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "bf3e6cf9-2c59-4b23-b6a1-1940cd7f4ca7",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u041D\u043E\u0432\u043E\u0435 \u043E\u0440\u0443\u0436\u0438\u0435 \u0431\u0443\u0434\u0435\u0442 \u043F\u043E\u0441\u043B\u0435 \u0442\u043E\u0433\u043E \u043A\u0430\u043A \u0441\u0434\u0435\u043B\u0430\u044E \u043E\u0440\u0443\u0436\u0435\u0439\u043D\u0443\u044E \u0431\u0430\u0437\u0443 \u0438\u0434\u0435\u0430\u043B\u044C\u043D\u043E\u0439",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "1,1,1,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "47df1d59-c91c-41c5-8c65-5e36978e51a2",
+              "Flags": 0,
+              "Name": "Text (2)",
+              "Position": "0,0,-14.84177",
+              "Rotation": "0,0,0.00000006705523,-1",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "cd6cde22-dc20-4217-94c4-1cac7b189933",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u0414\u043E\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043E\u0440\u0443\u0436\u0435\u0439\u043D\u043E\u0439 \u0431\u0430\u0437\u044B \u0438 \u043E\u0431\u0432\u0435\u0441\u043E\u0432 \u043D\u0430 \u043F\u0435\u0440\u0432\u043E\u043C \u043C\u0435\u0441\u0442\u0435",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "1,1,1,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "b6a10e91-4cc1-4934-b12b-f0873f4b735b",
+              "Flags": 0,
+              "Name": "Text (2)",
+              "Position": "0,0,-30.57507",
+              "Rotation": "0,0,0.00000006705523,-1",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "e2804fa2-83b2-4633-b97f-850f01c1ab8d",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u041D\u0430 \u043E\u043D\u043B\u0430\u0439\u043D \u0440\u0435\u0436\u0438\u043C\u0430\u0445 \u043A\u043E\u043D\u0446\u0435\u043D\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F \u043F\u043E\u043A\u0430 \u0447\u0442\u043E \u043D\u0435\u0442 \u0441\u043C\u044B\u0441\u043B\u0430 \u043D\u043E \u043E\u043D\u0438 \u0431\u0443\u0434\u0443\u0442",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "1,1,1,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "8c0ada22-a279-4ca0-b7f6-d72d251a9e1a",
+              "Flags": 0,
+              "Name": "Text (2)",
+              "Position": "0,0,-45.00644",
+              "Rotation": "0,0,0.00000006705523,-1",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "abc069ce-eb3d-41d2-a24b-4f266db72cf8",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u0411\u043B\u0438\u0437\u0436\u0430\u0439\u0448\u0438\u0439 \u043E\u043D\u043B\u0430\u0439\u043D \u0440\u0435\u0436\u0438\u043C 1 / 1 ",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "1,1,1,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "713574d9-1791-41d8-981f-6797226356a0",
+              "Flags": 0,
+              "Name": "Text (2)",
+              "Position": "0,0,-58.52878",
+              "Rotation": "0,0,0.00000006705523,-1",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "c1d685ef-c8f9-41e8-bfd9-0a7fc523fda3",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u0417\u0430\u043F\u043B\u043E\u043D\u0438\u0440\u043E\u0432\u0430\u043D\u044B \u043E\u0447\u0435\u043D\u044C \u043A\u0430\u0437\u0443\u0430\u043B\u044C\u043D\u044B\u0435 \u044D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0445\u0440\u0430\u043D\u0435\u043D\u0438\u044F \u0432\u0435\u0449\u0435\u0439",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "1,1,1,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "0a82704e-d21f-4046-879d-f1a87152c226",
+      "Flags": 0,
+      "Name": "chill",
+      "Position": "-677.9458,212.3118,132.4768",
+      "Rotation": "0,0,0.3826838,-0.9238794",
       "Tags": "ignorenav",
       "Enabled": true,
       "Components": [
         {
-          "__type": "GeneralGame.Zombie",
-          "__guid": "9a5d7206-4b0c-4c84-88d8-a721d1d0acee",
-          "IsMale": false,
-          "IsRunner": false,
-          "MaxHealth": 100
+          "__type": "GeneralGame.Dresser",
+          "__guid": "4baf7490-61fd-40d9-851e-f665c2d020b8",
+          "ApplyHeightScale": true,
+          "ApplyLocalUserClothes": false,
+          "BodyTarget": {
+            "_type": "component",
+            "component_id": "01165170-10bc-4830-90ec-0d3fa8fce6d9",
+            "go": "0a82704e-d21f-4046-879d-f1a87152c226",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "Clothing": []
         },
         {
           "__type": "Sandbox.NavMeshAgent",
-          "__guid": "347fb00b-c2b1-4f9d-a5f6-db400f6abf65",
+          "__guid": "884ee862-3f2f-4e3e-906e-3951c4ee4bb3",
           "Acceleration": 500,
           "Height": 64,
           "MaxSpeed": 210,
@@ -887,61 +1636,44 @@
         },
         {
           "__type": "Sandbox.ModelCollider",
-          "__guid": "1425bb6b-941a-4d06-86e5-83e87b0a68a6",
+          "__guid": "8045c69a-37b2-4783-9bea-1bf791719407",
           "IsTrigger": false,
-          "Model": "models/citizen_human/citizen_human_female.vmdl",
+          "Model": "models/citizen/citizen.vmdl",
           "Static": false,
           "SurfaceVelocity": "0,0,0"
         },
         {
-          "__type": "GeneralGame.Dresser",
-          "__guid": "cf479cb0-115e-4758-8b07-1246f16d85bd",
-          "ApplyHeightScale": true,
-          "ApplyLocalUserClothes": false,
-          "BodyTarget": {
-            "_type": "component",
-            "component_id": "722c41d6-8c20-45ac-b5bd-eed01bef07fb",
-            "go": "9283d06c-c692-4e3e-b679-b14bc372dbc1",
-            "component_type": "SkinnedModelRenderer"
-          },
-          "Clothing": [
-            {
-              "Clothing": "models/citizen_clothes/jacket/biker_jacket/biker_jacket.clothing",
-              "Tint": null
-            },
-            {
-              "Clothing": "models/citizen_clothes/trousers/cargopants/cargo_pants_army.clothing",
-              "Tint": null
-            }
-          ]
-        },
-        {
           "__type": "Sandbox.Citizen.CitizenAnimationHelper",
-          "__guid": "5ad757a4-c2ff-4b40-bf79-7e105e93d655",
+          "__guid": "dcc8a01f-3921-47de-a20a-59bdd5ddeea6",
           "BodyWeight": 1,
           "EyesWeight": 1,
           "HeadWeight": 1,
           "LookAtEnabled": false,
           "Target": {
             "_type": "component",
-            "component_id": "722c41d6-8c20-45ac-b5bd-eed01bef07fb",
-            "go": "9283d06c-c692-4e3e-b679-b14bc372dbc1",
+            "component_id": "01165170-10bc-4830-90ec-0d3fa8fce6d9",
+            "go": "0a82704e-d21f-4046-879d-f1a87152c226",
             "component_type": "SkinnedModelRenderer"
           }
         },
         {
           "__type": "Sandbox.SkinnedModelRenderer",
-          "__guid": "722c41d6-8c20-45ac-b5bd-eed01bef07fb",
-          "BodyGroups": 18446744073709551615,
+          "__guid": "01165170-10bc-4830-90ec-0d3fa8fce6d9",
+          "BodyGroups": 341,
           "CreateAttachments": false,
           "CreateBoneObjects": false,
           "MaterialGroup": "default",
-          "Model": "models/citizen_human/citizen_human_female.vmdl",
+          "Model": "models/citizen/citizen.vmdl",
           "Morphs": {},
           "Parameters": {
             "bools": {},
             "ints": {
-              "holdtype": 0
+              "holdtype": 0,
+              "special_movement_states": 0,
+              "special_idle_states": 1,
+              "move_style": 0,
+              "holdtype_handedness": 0,
+              "face_override": 1
             },
             "floats": {},
             "vectors": {},
@@ -962,273 +1694,84 @@
         },
         {
           "__type": "Sandbox.ModelHitboxes",
-          "__guid": "3dab4636-ee2b-49ce-bf0c-9630df8a4170",
+          "__guid": "6508584e-063d-4fe4-a335-e38539d8d026",
           "Renderer": {
             "_type": "component",
-            "component_id": "722c41d6-8c20-45ac-b5bd-eed01bef07fb",
-            "go": "9283d06c-c692-4e3e-b679-b14bc372dbc1",
+            "component_id": "01165170-10bc-4830-90ec-0d3fa8fce6d9",
+            "go": "0a82704e-d21f-4046-879d-f1a87152c226",
             "component_type": "SkinnedModelRenderer"
           }
+        },
+        {
+          "__type": "GeneralGame.ChillGuy",
+          "__guid": "6ff727fa-ac82-4c6d-a542-f925961cac59",
+          "Cloths": "prefabs/spawn_groups/cloth/zombcloth.grpclths"
+        },
+        {
+          "__type": "Sandbox.SoundscapeTrigger",
+          "__guid": "21f65a2b-3345-4258-98a5-9ad7ddc33fd8",
+          "BoxSize": "50,50,50",
+          "Radius": 300,
+          "Soundscape": "sounds/new soundscape.sndscape",
+          "StayActiveOnExit": false,
+          "Type": "Sphere"
         }
       ],
       "Children": [
         {
-          "__guid": "cd2eb3cc-fb4c-438f-bf95-1c5f4b853253",
+          "__guid": "424929ec-cf41-4f2e-b314-e6381a9e4884",
           "Flags": 0,
-          "Name": "Clothing - biker_jacket",
-          "Tags": "clothing",
+          "Name": "wer",
+          "Position": "1.137934,1.080233,74.74821",
+          "Rotation": "0,0,1,-0.0000005662441",
           "Enabled": true,
           "Components": [
             {
-              "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "7f5916d6-6dd3-4810-8ef0-f1db4bf9b606",
-              "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": {
-                "_type": "component",
-                "component_id": "722c41d6-8c20-45ac-b5bd-eed01bef07fb",
-                "go": "9283d06c-c692-4e3e-b679-b14bc372dbc1",
-                "component_type": "SkinnedModelRenderer"
-              },
-              "CreateAttachments": false,
-              "CreateBoneObjects": false,
-              "Model": "models/citizen_clothes/jacket/biker_jacket/models/biker_jacket_m_human.vmdl",
-              "Morphs": {},
-              "Parameters": {
-                "bools": {},
-                "ints": {},
-                "floats": {},
-                "vectors": {},
-                "rotations": {}
-              },
+              "__type": "Sandbox.TextRenderer",
+              "__guid": "4348d191-f4af-4654-a47d-f0d6a53a5b98",
+              "__version": 1,
+              "BlendMode": "Normal",
               "RenderOptions": {
                 "GameLayer": true,
                 "OverlayLayer": false,
-                "BloomLayer": false,
+                "BloomLayer": true,
                 "AfterUILayer": false
               },
-              "RenderType": "On",
-              "Sequence": {
-                "Name": null
-              },
-              "Tint": "1,1,1,1",
-              "UseAnimGraph": true
-            }
-          ]
-        },
-        {
-          "__guid": "aad86d4c-7ecd-47c1-897e-20e81e2b93b2",
-          "Flags": 0,
-          "Name": "Clothing - cargo_pants_army",
-          "Tags": "clothing",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "74b5ac59-9bf7-4ab3-80c2-2800ff6f72e6",
-              "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": {
-                "_type": "component",
-                "component_id": "722c41d6-8c20-45ac-b5bd-eed01bef07fb",
-                "go": "9283d06c-c692-4e3e-b679-b14bc372dbc1",
-                "component_type": "SkinnedModelRenderer"
-              },
-              "CreateAttachments": false,
-              "CreateBoneObjects": false,
-              "Model": "models/citizen_clothes/trousers/cargopants/models/cargo_pants_m_human.vmdl",
-              "Morphs": {},
-              "Parameters": {
-                "bools": {},
-                "ints": {},
-                "floats": {},
-                "vectors": {},
-                "rotations": {}
-              },
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Sequence": {
-                "Name": null
-              },
-              "Tint": "1,1,1,1",
-              "UseAnimGraph": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "__guid": "e66953b0-d44b-46f1-9512-c459574be8b2",
-      "Flags": 0,
-      "Name": "Other (3)",
-      "Position": "468.934,0.00004099553,300.3647",
-      "Rotation": "0,0,1,-0.00000004371139",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "GeneralGame.Dresser",
-          "__guid": "c376cfc7-e648-4c73-a540-ceb15cf5e16b",
-          "ApplyHeightScale": true,
-          "ApplyLocalUserClothes": false,
-          "BodyTarget": {
-            "_type": "component",
-            "component_id": "8abe845b-bf34-4177-bdcb-7f97591ae328",
-            "go": "e66953b0-d44b-46f1-9512-c459574be8b2",
-            "component_type": "SkinnedModelRenderer"
-          },
-          "Clothing": [
-            {
-              "Clothing": "models/citizen_clothes/jacket/biker_jacket/biker_jacket.clothing",
-              "Tint": null
-            },
-            {
-              "Clothing": "models/citizen_clothes/trousers/cargopants/cargo_pants_army.clothing",
-              "Tint": null
-            },
-            {
-              "Clothing": "models/citizen_clothes/hat/chefs_skull_cap/chefs_skull_cap.clothing",
-              "Tint": null
-            }
-          ]
-        },
-        {
-          "__type": "Sandbox.SkinnedModelRenderer",
-          "__guid": "8abe845b-bf34-4177-bdcb-7f97591ae328",
-          "BodyGroups": 649,
-          "CreateAttachments": false,
-          "CreateBoneObjects": false,
-          "MaterialGroup": "default",
-          "Model": "models/citizen_human/citizen_human_male.vmdl",
-          "Morphs": {},
-          "Parameters": {
-            "bools": {
-              "b_grounded": true,
-              "b_long_idle": false,
-              "b_attack": true
-            },
-            "ints": {
-              "move_style": 0,
-              "special_idle_states": 0,
-              "special_movement_states": 0
-            },
-            "floats": {
-              "aim_body_pitch": 0.8999999,
-              "move_speed": 562.8,
-              "move_groundspeed": 577.29,
-              "move_direction": 120.87,
-              "skid": 0,
-              "wish_x": 811.59,
-              "wish_speed": 1000,
-              "wish_groundspeed": 577.29,
-              "wish_direction": 173.04,
-              "voice": 0
-            },
-            "vectors": {
-              "aim_body": "0,0,0"
-            },
-            "rotations": {}
-          },
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Sequence": {
-            "Name": null
-          },
-          "Tint": "1,1,1,1",
-          "UseAnimGraph": true
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "d92fe24f-03af-4dde-acd0-282ee5baf8c6",
-          "Flags": 0,
-          "Name": "Clothing - biker_jacket",
-          "Tags": "clothing",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "032669b4-9307-454f-b1dc-f9b3031ca3e3",
-              "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": {
-                "_type": "component",
-                "component_id": "8abe845b-bf34-4177-bdcb-7f97591ae328",
-                "go": "e66953b0-d44b-46f1-9512-c459574be8b2",
-                "component_type": "SkinnedModelRenderer"
-              },
-              "CreateAttachments": false,
-              "CreateBoneObjects": false,
-              "Model": "models/citizen_clothes/jacket/biker_jacket/models/biker_jacket_m_human.vmdl",
-              "Morphs": {},
-              "Parameters": {
-                "bools": {},
-                "ints": {},
-                "floats": {},
-                "vectors": {},
-                "rotations": {}
-              },
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Sequence": {
-                "Name": null
-              },
-              "Tint": "1,1,1,1",
-              "UseAnimGraph": true
-            }
-          ]
-        },
-        {
-          "__guid": "05af9a2e-f700-4c65-9e86-eed0f5c04ae3",
-          "Flags": 0,
-          "Name": "Clothing - cargo_pants_army",
-          "Tags": "clothing",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "ecf96f4e-198f-49d8-ac20-1bfe39fb076d",
-              "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": {
-                "_type": "component",
-                "component_id": "8abe845b-bf34-4177-bdcb-7f97591ae328",
-                "go": "e66953b0-d44b-46f1-9512-c459574be8b2",
-                "component_type": "SkinnedModelRenderer"
-              },
-              "CreateAttachments": false,
-              "CreateBoneObjects": false,
-              "Model": "models/citizen_clothes/trousers/cargopants/models/cargo_pants_m_human.vmdl",
-              "Morphs": {},
-              "Parameters": {
-                "bools": {},
-                "ints": {},
-                "floats": {},
-                "vectors": {},
-                "rotations": {}
-              },
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Sequence": {
-                "Name": null
-              },
-              "Tint": "1,1,1,1",
-              "UseAnimGraph": true
+              "Scale": 0.11,
+              "TextAlignment": "Center",
+              "TextScope": {
+                "Text": "Just a chill guy",
+                "TextColor": "0.33333,1,0,1",
+                "FontName": "Zekton",
+                "FontSize": 26.33,
+                "FontWeight": 800,
+                "FontItalic": false,
+                "LineHeight": 1,
+                "LetterSpacing": 0,
+                "WordSpacing": 0,
+                "Outline": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "1,1,1,1"
+                },
+                "Shadow": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,0,0,1",
+                  "Offset": "4,4"
+                },
+                "OutlineUnder": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,1,0,1"
+                },
+                "ShadowUnder": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,0,0,1",
+                  "Offset": "4,4"
+                }
+              }
             }
           ]
         }
