@@ -34,20 +34,20 @@ public class HitScanBullet : IBulletBase
 		// Damage
 		if ( !weapon.IsProxy && hitObj is not null  )
 		{
-			var damage = new DamageInfo( 10, weapon.Owner.GameObject, weapon.Owner.GameObject, bulletTr.Hitbox );
+			
+			var damage = new DamageInfo( weapon.Damage, weapon.Owner.GameObject, weapon.GameObject, bulletTr.Hitbox );
 			damage.Position = bulletTr.HitPosition;
 			damage.Shape = bulletTr.Shape;
 
 			foreach ( var damageable in bulletTr.GameObject.Components.GetAll<IDamageable>() )
 			{
+				
 				damageable.OnDamage( damage );
 			}
 
-			//IHealthComponent damageable;
-			//damageable = hitObj.Components.GetInAncestorsOrSelf<IHealthComponent>();
-
-			//var hitTags = Array.Empty<string>();
 			
+			//var hitTags = Array.Empty<string>();
+
 			//if ( bulletTr.Hitbox is not null )
 			//	hitTags = bulletTr.Hitbox.Tags.TryGetAll().ToArray();
 

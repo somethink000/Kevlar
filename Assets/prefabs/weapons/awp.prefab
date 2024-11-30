@@ -102,12 +102,12 @@
         "__guid": "3a0c394e-c181-4618-9663-0477280e5866",
         "Count": 0,
         "Icon": {
-          "Model": "weapons/ak74u/w/w_ak74u.vmdl",
+          "Model": "weapons/awp/w_awp.vmdl",
           "MaterialGroup": "",
           "Colour": "1,1,1,1",
-          "Position": "10,2,-2",
-          "Rotation": "0.3265056,0.3265055,-0.6272115,0.6272113",
-          "Guid": "31da33de-3e93-4b08-8312-3e3d054fc5b8"
+          "Position": "32,1,-2",
+          "Rotation": "0.3535534,0.3535534,-0.6123725,0.6123723",
+          "Guid": "2f3cd506-febc-40db-9bda-236da970135b"
         },
         "MaxStack": 0,
         "Name": "AWP",

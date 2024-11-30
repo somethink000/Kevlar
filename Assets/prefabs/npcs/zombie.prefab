@@ -13,21 +13,52 @@
         "ApplyLocalUserClothes": false,
         "BodyTarget": {
           "_type": "component",
-          "component_id": "b1a0a91b-1447-4d30-94e6-ce2fbbb0cad3",
-          "go": "5c755036-6bb9-4b9a-9774-e26c4e857156",
+          "component_id": "388310b3-d9f1-4a1a-bc1f-5dd069d99ca3",
+          "go": "48c1e19f-144e-46f4-a404-4ee51df123b0",
           "component_type": "SkinnedModelRenderer"
         },
         "Clothing": []
       },
       {
+        "__type": "Sandbox.ModelPhysics",
+        "__guid": "3cbe5526-6a51-492d-ae22-ad5bf69eeff6",
+        "__enabled": false,
+        "Locking": {
+          "X": false,
+          "Y": false,
+          "Z": false,
+          "Pitch": false,
+          "Yaw": false,
+          "Roll": false
+        },
+        "MotionEnabled": true,
+        "Renderer": {
+          "_type": "component",
+          "component_id": "388310b3-d9f1-4a1a-bc1f-5dd069d99ca3",
+          "go": "48c1e19f-144e-46f4-a404-4ee51df123b0",
+          "component_type": "SkinnedModelRenderer"
+        },
+        "RigidbodyFlags": 0
+      },
+      {
         "__type": "GeneralGame.Zombie",
         "__guid": "92fee72e-d0be-4e4a-9e80-7e95afd5472f",
+        "AlertOthers": true,
+        "AttackDelay": 1,
         "Cloths": "prefabs/spawn_groups/cloth/zombcloth.grpclths",
+        "DeleteTime": 10,
+        "DetectRange": 256,
+        "EnemyTags": "player",
         "FemModel": "models/citizen_human/citizen_human_female.vmdl",
-        "IsMale": false,
-        "IsRunner": false,
         "MalModel": "models/citizen_human/citizen_human_male.vmdl",
         "MaxHealth": 100,
+        "Model": {
+          "_type": "component",
+          "component_id": "388310b3-d9f1-4a1a-bc1f-5dd069d99ca3",
+          "go": "48c1e19f-144e-46f4-a404-4ee51df123b0",
+          "component_type": "SkinnedModelRenderer"
+        },
+        "VisionRange": 512,
         "ZombTexture": "models/citizen/skin/citizen_skin_zombie_02.vmat"
       },
       {
@@ -57,53 +88,60 @@
         "LookAtEnabled": false,
         "Target": {
           "_type": "component",
-          "component_id": "b1a0a91b-1447-4d30-94e6-ce2fbbb0cad3",
-          "go": "5c755036-6bb9-4b9a-9774-e26c4e857156",
+          "component_id": "388310b3-d9f1-4a1a-bc1f-5dd069d99ca3",
+          "go": "48c1e19f-144e-46f4-a404-4ee51df123b0",
           "component_type": "SkinnedModelRenderer"
         }
-      },
-      {
-        "__type": "Sandbox.SkinnedModelRenderer",
-        "__guid": "b1a0a91b-1447-4d30-94e6-ce2fbbb0cad3",
-        "BodyGroups": 18446744073709551615,
-        "CreateAttachments": false,
-        "CreateBoneObjects": false,
-        "MaterialGroup": "default",
-        "Morphs": {},
-        "Parameters": {
-          "bools": {},
-          "ints": {
-            "holdtype": 0
-          },
-          "floats": {},
-          "vectors": {},
-          "rotations": {}
-        },
-        "RenderOptions": {
-          "GameLayer": true,
-          "OverlayLayer": false,
-          "BloomLayer": false,
-          "AfterUILayer": false
-        },
-        "RenderType": "On",
-        "Sequence": {
-          "Name": null
-        },
-        "Tint": "1,1,1,1",
-        "UseAnimGraph": true
       },
       {
         "__type": "Sandbox.ModelHitboxes",
         "__guid": "23b6199c-936a-4aaf-b793-aa94a3bec91d",
         "Renderer": {
           "_type": "component",
-          "component_id": "b1a0a91b-1447-4d30-94e6-ce2fbbb0cad3",
-          "go": "5c755036-6bb9-4b9a-9774-e26c4e857156",
+          "component_id": "388310b3-d9f1-4a1a-bc1f-5dd069d99ca3",
+          "go": "48c1e19f-144e-46f4-a404-4ee51df123b0",
           "component_type": "SkinnedModelRenderer"
         }
       }
     ],
-    "Children": [],
+    "Children": [
+      {
+        "__guid": "48c1e19f-144e-46f4-a404-4ee51df123b0",
+        "Flags": 0,
+        "Name": "body",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "388310b3-d9f1-4a1a-bc1f-5dd069d99ca3",
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "default",
+            "Morphs": {},
+            "Parameters": {
+              "bools": {},
+              "ints": {},
+              "floats": {},
+              "vectors": {},
+              "rotations": {}
+            },
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Sequence": {
+              "Name": null
+            },
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
+          }
+        ]
+      }
+    ],
     "__variables": [],
     "__properties": {
       "FixedUpdateFrequency": 50,

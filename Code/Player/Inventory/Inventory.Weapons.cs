@@ -43,8 +43,8 @@ public partial class Inventory
 
 	public void RemoveEquipUpdate( EquipSlot slot, bool drop = false)
 	{
-		if ( CurrentWeaponSlot == slot ) { 
-			Deployed.Holster();
+		if ( CurrentWeaponSlot == slot && !Delayed ) {
+			Deployed.EndHolster();
 			Deployed = null;
 		}
 		

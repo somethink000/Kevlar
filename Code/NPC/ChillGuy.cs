@@ -25,8 +25,6 @@ public class ChillGuy : Component
 	{
 		Random rnd = new Random();
 
-
-
 		List<ClothStruct> ClothStructs = new List<ClothStruct>();
 		ClothStructs.Add( rnd.FromList( Cloths.Jackets ) );
 		ClothStructs.Add( rnd.FromList( Cloths.Shirts ) );

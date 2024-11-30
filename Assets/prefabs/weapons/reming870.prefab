@@ -102,12 +102,12 @@
         "__guid": "3a0c394e-c181-4618-9663-0477280e5866",
         "Count": 0,
         "Icon": {
-          "Model": "weapons/ak74u/w/w_ak74u.vmdl",
+          "Model": "weapons/reming870/w_870.vmdl",
           "MaterialGroup": "",
           "Colour": "1,1,1,1",
-          "Position": "10,2,-2",
-          "Rotation": "0.3265056,0.3265055,-0.6272115,0.6272113",
-          "Guid": "31da33de-3e93-4b08-8312-3e3d054fc5b8"
+          "Position": "14,3,0.5",
+          "Rotation": "0.3535534,0.3535534,-0.6123725,0.6123723",
+          "Guid": "bb20e6a3-8283-4f25-b06d-f7f5d8094b8f"
         },
         "MaxStack": 0,
         "Name": "Remington 870",
@@ -167,20 +167,6 @@
           "go": "a3b668c3-acfb-4043-8f7c-93b7df84b5c8",
           "component_type": "RifleRail"
         },
-        "ViewModelScale": "1,1,1",
-        "WorldModelScale": "1,1,1"
-      },
-      {
-        "__type": "GeneralGame.VssMag20",
-        "__guid": "87d3a675-2ad1-4813-8106-93e162d734eb",
-        "ClipSize": 20,
-        "ViewModelScale": "1,1,1",
-        "WorldModelScale": "1,1,1"
-      },
-      {
-        "__type": "GeneralGame.VssMag30",
-        "__guid": "41996d82-4d09-4990-a5bc-50d4fcf87b77",
-        "ClipSize": 30,
         "ViewModelScale": "1,1,1",
         "WorldModelScale": "1,1,1"
       }

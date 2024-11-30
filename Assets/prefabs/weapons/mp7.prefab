@@ -102,12 +102,12 @@
         "__guid": "3a0c394e-c181-4618-9663-0477280e5866",
         "Count": 0,
         "Icon": {
-          "Model": "weapons/ak74u/w/w_ak74u.vmdl",
+          "Model": "weapons/mp7/w_mp7.vmdl",
           "MaterialGroup": "",
           "Colour": "1,1,1,1",
-          "Position": "10,2,-2",
-          "Rotation": "0.3265056,0.3265055,-0.6272115,0.6272113",
-          "Guid": "31da33de-3e93-4b08-8312-3e3d054fc5b8"
+          "Position": "3,0,-5",
+          "Rotation": "0.2988363,0.2988362,-0.6408564,0.6408563",
+          "Guid": "b66c0953-15e1-4fee-b643-27527c0eaa11"
         },
         "MaxStack": 0,
         "Name": "MP7",
