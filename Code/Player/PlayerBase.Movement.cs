@@ -73,7 +73,7 @@ public partial class PlayerBase
 		{
 
 			WishVelocity = 0;
-
+			
 			var rot = EyeAngles.ToRotation();
 			if ( Input.Down( InputButtonHelper.Forward ) ) WishVelocity += rot.Forward;
 			if ( Input.Down( InputButtonHelper.Backward ) ) WishVelocity += rot.Backward;
@@ -90,10 +90,11 @@ public partial class PlayerBase
 		else
 		{
 			//Log.Info( SlideVelocity.Length );
+			//CharacterController.ApplyFriction(-3f);
 			SlideVelocity = Vector3.Lerp( SlideVelocity, Vector3.Zero, Time.Delta * 0.5f );
 			WishVelocity = SlideVelocity;
-			
-			if ( SlideVelocity.Length < 300 ) IsSlide = false; 
+		
+			if ( Velocity.Length < 200 ) IsSlide = false; 
 
 		}
 

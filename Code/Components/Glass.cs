@@ -1,3 +1,4 @@
+using GeneralGame;
 using Sandbox;
 using Sandbox.Diagnostics;
 using System;
@@ -5,8 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 
-public sealed class Glass : Component, Component.ExecuteInEditor, Component.IDamageable
+public sealed class Glass : Component, Component.ExecuteInEditor, IHealthComponent
 {
+	public LifeState LifeState { get; private set; } = LifeState.Alive;
+
 	private sealed class Shard : IValid
 	{
 		public SceneObject SceneObject { get; private set; }

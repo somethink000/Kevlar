@@ -121,7 +121,7 @@ public partial class Weapon : Component
 		}
 	}
 
-	[Broadcast]
+	[Rpc.Broadcast]
 	public void Deploy(PlayerBase player)
 	{
 		Owner = player;
@@ -206,13 +206,14 @@ public partial class Weapon : Component
 	}
 	public void Holster()
 	{
+		IsHolstering = true;
 		ViewModelRenderer?.Set( HolsterAnim, true );
 	}
 
-	[Broadcast]
+	[Rpc.Broadcast]
 	public void EndHolster()
 	{
-
+		IsHolstering = false;
 		GameObject.Enabled = false;
 
 		if ( !IsProxy ) { 

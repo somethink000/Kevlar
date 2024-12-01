@@ -46,10 +46,12 @@
         "AlertOthers": true,
         "AttackDelay": 1,
         "Cloths": "prefabs/spawn_groups/cloth/zombcloth.grpclths",
+        "Damage": 10,
         "DeleteTime": 10,
-        "DetectRange": 256,
+        "DetectRange": 456,
         "EnemyTags": "player",
         "FemModel": "models/citizen_human/citizen_human_female.vmdl",
+        "hitSounds": "sounds/effects/hit/hit_rnd.sound",
         "MalModel": "models/citizen_human/citizen_human_male.vmdl",
         "MaxHealth": 100,
         "Model": {

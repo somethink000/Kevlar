@@ -1,10 +1,15 @@
-
+using Sandbox;
 namespace GeneralGame;
+public enum LifeState
+{
+	Dead,
+	Alive
+}
+
 
 public interface IHealthComponent
 {
 	public LifeState LifeState { get; }
-	public float MaxHealth { get; }
-	public float Health { get; }
-	public void TakeDamage( DamageType type, float damage, Vector3 position, Vector3 force, Guid attackerId, string[] hitboxes = null );
+	void OnDamage( in DamageInfo damage );
+
 }

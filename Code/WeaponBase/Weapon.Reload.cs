@@ -5,7 +5,7 @@ public partial class Weapon
 	public virtual void Reload()
 	{
 		
-		if ( IsReloading || InBoltBack || IsShooting() )
+		if ( IsReloading || InBoltBack || IsShooting() || IsHolstering )
 			return;
 
 		var maxClipSize = BulletCocking ? ClipSize + 1 : ClipSize;
@@ -61,6 +61,21 @@ public partial class Weapon
 
 	public virtual void StartShellReload()
 	{
+		if ( IsReloading || InBoltBack || IsShooting() || IsHolstering )
+			return;
+
+		var maxClipSize = BulletCocking ? ClipSize + 1 : ClipSize;
+
+		if ( Ammo >= maxClipSize || ClipSize == -1 )
+			return;
+
+		var isEmptyReload = Ammo == 0;
+
+
+		if ( !Owner.Inventory.HasItems( AmmoType ) && !Owner.CurrentGame.InfiniteAmmo )
+			return;
+
+
 		IsReloading = true;
 		ViewModelRenderer.Set( ReloadAnim, true );
 	}

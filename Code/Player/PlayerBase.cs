@@ -97,29 +97,31 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IPlayerBas
 		var spawnpoints = Scene.GetAllComponents<SpawnPoint>();
 		var randomSpawnpoint = Game.Random.FromList( spawnpoints.ToList() );
 		Network.ClearInterpolation();
-		Transform.Position = randomSpawnpoint.Transform.Position;
-		Transform.Rotation = Rotation.FromYaw( randomSpawnpoint.Transform.Rotation.Yaw() );
+		WorldPosition = randomSpawnpoint.WorldPosition;
+		WorldRotation = Rotation.FromYaw( randomSpawnpoint.WorldRotation.Yaw() );
 		
-		EyeAngles = Transform.Rotation;
+		EyeAngles = WorldRotation;
 	}
 
 	
 
-	[Broadcast]
-	public virtual void OnDeath( Vector3 force, Vector3 origin, Guid killerid )
+	[Rpc.Broadcast]
+	public virtual void OnDeath( DamageInfo damage )
 	{
-		
+
+		var force = damage.Weapon.WorldRotation.Forward * 10 * damage.Damage;
 
 		if ( IsProxy ) return;
 
 		Deaths += 1;
 		CharacterController.Velocity = 0;
-		Ragdoll( force, origin );
+		Ragdoll( force, damage.Attacker.WorldPosition );
 
 		
-		var ply = Scene.Directory.FindByGuid( killerid ).Components.GetInAncestorsOrSelf<PlayerBase>();
+		//var ply = damage.Attacker.Components.GetInAncestorsOrSelf<PlayerBase>();
 
-		CurrentGame.OnPlayerDeath( this, ply );
+		
+		CurrentGame.OnPlayerDeath( this );
 
 		
 	}

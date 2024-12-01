@@ -39,20 +39,11 @@ public class HitScanBullet : IBulletBase
 			damage.Position = bulletTr.HitPosition;
 			damage.Shape = bulletTr.Shape;
 
-			foreach ( var damageable in bulletTr.GameObject.Components.GetAll<IDamageable>() )
+			foreach ( var damageable in bulletTr.GameObject.Components.GetAll<IHealthComponent>() )
 			{
-				
 				damageable.OnDamage( damage );
 			}
 
-			
-			//var hitTags = Array.Empty<string>();
-
-			//if ( bulletTr.Hitbox is not null )
-			//	hitTags = bulletTr.Hitbox.Tags.TryGetAll().ToArray();
-
-			////var dmgInfo = TakeDamage( DamageType.Bullet, weapon.ClassName, shootInfo.Damage, bulletTr.HitPosition, forward * 100 * shootInfo.Force, hitTags );
-			//damageable?.TakeDamage( DamageType.Bullet, weapon.Damage, bulletTr.HitPosition, forward * 100 * weapon.Force, weapon.Owner.GameObject.Id, hitTags );
 		}
 	}
 

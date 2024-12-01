@@ -2,6 +2,7 @@
 
 using Sandbox;
 using Sandbox.Citizen;
+using static Sandbox.Connection;
 using static Sandbox.Diagnostics.PerformanceStats;
 using static Sandbox.PhysicsContact;
 using static Sandbox.VertexLayout;
@@ -9,7 +10,7 @@ using static Sandbox.VertexLayout;
 namespace GeneralGame;
 
 
-public class Zombie : Component, Component.IDamageable
+public class Zombie : Component, IHealthComponent
 {
 
 
@@ -28,6 +29,7 @@ public class Zombie : Component, Component.IDamageable
 	[Property] public Material ZombTexture { get; set; }
 	[Property] public TagSet EnemyTags { get; set; }
 	[Property] public float AttackDelay { get; set; } = 1;
+	[Property] public float Damage { get; set; } = 10;
 	[Property] public int DeleteTime { get; set; } = 10;
 	[Property] public float DetectRange { get; set; } = 256f;
 	[Property] public float MaxHealth { get; set; } = 100f;
@@ -47,9 +49,10 @@ public class Zombie : Component, Component.IDamageable
 	private bool IsRunner { get; set; }
 	public bool IsRagdolled => RagdollPhysics.Enabled;
 
-	private TimeSince timeSinceHit = 0;
+	private TimeUntil timeUntilLastDrawHeands = 0;
 	private TimeSince timeSinceDead = 0;
 
+	[HostSync] public TimeUntil NextAttack { get; set; }
 	[HostSync] public bool ReachedDestination { get; set; } = true;
 	[HostSync] public Vector3 TargetPosition { get; set; }
 	[HostSync] public bool FollowingTargetObject { get; set; } = false;
@@ -96,10 +99,16 @@ public class Zombie : Component, Component.IDamageable
 	}
 	protected override void OnStart()
 	{
-	
+
 		Model.MaterialOverride = ZombTexture;
 
 		NpcId = Scene.GetAllComponents<Zombie>().OrderByDescending( x => x.NpcId ).First().NpcId + 1;
+
+		if ( IsRunner )
+		{
+			agent.MaxSpeed = 100;
+		}
+		else { agent.MaxSpeed = 200; }
 	}
 
 	//if (Vector3.DistanceBetween(target, GameObject.Transform.Position) < 80f)
@@ -109,7 +118,7 @@ public class Zombie : Component, Component.IDamageable
 			return;
 
 		
-		//animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Punch;
+
 		//animationHelper.MoveStyle = CitizenAnimationHelper.MoveStyles.Run;
 		animationHelper.WithWishVelocity( agent.WishVelocity );
 		animationHelper.WithVelocity( agent.Velocity );
@@ -120,7 +129,7 @@ public class Zombie : Component, Component.IDamageable
 		//}
 		//if ( !IsRunner )
 		//{
-			
+		
 			CheckNewTargetPos();
 			Model.Set( "wish_x", 360 );
 			DetectAround();
@@ -146,6 +155,9 @@ public class Zombie : Component, Component.IDamageable
 			
 			return;
 		}
+
+	
+		animationHelper.HoldType = timeUntilLastDrawHeands > 0 ? CitizenAnimationHelper.HoldTypes.Punch : CitizenAnimationHelper.HoldTypes.None;
 		
 		//if ( TargetPrimaryObject != null )
 		//{
@@ -171,6 +183,13 @@ public class Zombie : Component, Component.IDamageable
 			Ragdoll( damage.Weapon.WorldRotation.Forward * 10 * damage.Damage );
 			timeSinceDead = 0;
 			LifeState = LifeState.Dead;
+
+
+			if ( damage.Attacker.Components.GetInAncestorsOrSelf<PlayerBase>() is PlayerBase ply )
+			{
+				ply.CurrentGame.OnZombieKilled( ply );
+			}
+
 		}
 			
 
@@ -233,7 +252,7 @@ public class Zombie : Component, Component.IDamageable
 		BroadcastOnEscape();
 
 		TargetObject = null;
-		TargetPosition = Transform.Position;
+		TargetPosition = WorldPosition;
 		ReachedDestination = true;
 	}
 
@@ -241,29 +260,38 @@ public class Zombie : Component, Component.IDamageable
 	{
 		if ( TargetObject != null )
 		{
+
 			if ( IsWithinRange( TargetObject ) )
 			{
-				//if ( NextAttack )
-				//{
-				//	BroadcastOnAttack();
-				//	NextAttack = AttackCooldown;
-				//}
+
+				if ( NextAttack )
+				{
+					BroadcastOnAttack();
+					NextAttack = AttackDelay;
+				}
+			}
+
+			if ( IsWithinRange( TargetObject, 150 ) )
+			{
+				timeUntilLastDrawHeands = 1;
 			}
 		}
-
+		
 		var currentTick = (int)(Time.Now / Time.Delta);
 		if ( currentTick % 20 != NpcId % 20 ) return; // Check every 20 ticks
 
-		var foundAround = Scene.FindInPhysics( new Sphere( Transform.Position, DetectRange * Scale ) ) // Find gameobjects nearby
+		var foundAround = Scene.FindInPhysics( new Sphere( WorldPosition, DetectRange * Scale ) ) // Find gameobjects nearby
 			.Where( x => x.Enabled )
 			.Where( x => EnemyTags != null && x.Tags.HasAny( EnemyTags ) ) // Do they have any of our enemy tags
 			.Where( x => x.Components.GetInAncestorsOrSelf<IHealthComponent>()?.LifeState == LifeState.Alive ); // Are they dead or undead
 
+		
 		if ( TargetObject == null || TargetPrimaryObject == TargetObject )
 		{
+			
 			if ( foundAround.Any() )
 			{
-
+				
 				Detected( foundAround.First(), true ); // If we don't have any target yet, pick the first one around us
 			}
 			else
@@ -398,5 +426,23 @@ public class Zombie : Component, Component.IDamageable
 	private void BroadcastOnEscape()
 	{
 
+	}
+	[Rpc.Broadcast]
+	protected virtual void BroadcastOnAttack()
+	{
+		
+		animationHelper.Target.Set( "b_attack", true );
+		Sound.Play( hitSounds, WorldPosition );
+		//GameObject.PlaySound( rageSounds );
+
+		var damage = new DamageInfo( Damage, GameObject, GameObject );
+	
+		foreach ( var damageable in TargetObject.Components.GetAll<IHealthComponent>() )
+		{
+
+			damageable.OnDamage( damage );
+
+
+		}
 	}
 }

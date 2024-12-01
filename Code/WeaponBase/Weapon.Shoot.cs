@@ -16,7 +16,7 @@ public partial class Weapon
 	public virtual bool CanShoot( )
 	{
 		
-		if ( IsShooting() || (IsReloading && !ShellReloading) || InBoltBack ) return false;
+		if ( IsShooting() || (IsReloading && !ShellReloading) || InBoltBack || IsHolstering ) return false;
 		if ( !Owner.IsValid() || IsRunning || !Owner.IsAlive ) return false;
 		
 		if ( !HasAmmo() )

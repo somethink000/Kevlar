@@ -5,13 +5,36 @@
       "__guid": "c3fe7d19-05e0-4f92-9623-f8b31eec3171",
       "Flags": 0,
       "Name": "Defence",
-      "Position": "3955.372,2300.474,1806.213",
+      "Position": "4010.465,2114.263,1820.765",
       "Enabled": true,
       "Components": [
         {
           "__type": "GeneralGame.DefenceObject",
           "__guid": "626440bd-49fc-4a7f-bae2-64e2c253539a",
           "MaxHealth": 100
+        },
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "69faf17e-7d0f-42bf-9714-512c34abd7fe",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "Model": "models/world/boxes/mediumbox/mediumbox.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "5a8c4e4a-8ff4-4ef6-833a-a7c7b6ebdf22",
+          "IsTrigger": false,
+          "Model": "models/world/boxes/mediumbox/mediumbox.vmdl",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
         }
       ]
     },
@@ -184,7 +207,7 @@
                 100,
                 140
               ],
-              "VaveStartColdown": 10,
+              "VaveStartColdown": 30,
               "ZombieSpawnDelay": 3,
               "InfiniteAmmo": false
             }
@@ -214,159 +237,18 @@
       "Children": []
     },
     {
-      "__guid": "4a3dd7de-34bd-4b11-a1b6-b86a09e3451e",
+      "__guid": "8b6ba3d7-b4ec-4d17-90b8-034a913c484e",
       "Flags": 0,
       "Name": "spawners",
-      "Position": "-1530.975,6126.837,-142.0694",
-      "Enabled": true,
-      "Children": [
-        {
-          "__guid": "d1e7ba29-b09e-45a4-bf8f-12d14b17d697",
-          "Flags": 0,
-          "Name": "Itemspawner",
-          "Position": "5441.256,-3960.9,1996.76",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "GeneralGame.ItemSpawn",
-              "__guid": "5f47a264-a866-4a88-8719-8d46dac4b127",
-              "SpawnableGroup": "prefabs/spawn_groups/weapon.spawn"
-            }
-          ]
-        },
-        {
-          "__guid": "de7c86ed-569e-4441-81ef-79005bf31fa5",
-          "Flags": 0,
-          "Name": "Itemspawner",
-          "Position": "5411.402,-4045.948,1975.263",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "GeneralGame.ItemSpawn",
-              "__guid": "5c8213a5-ad0b-4007-8f98-1e06809bf49f",
-              "SpawnableGroup": "prefabs/spawn_groups/weapon.spawn"
-            }
-          ]
-        },
-        {
-          "__guid": "b96667f3-0aad-4c13-8fe4-72b51351a327",
-          "Flags": 0,
-          "Name": "Itemspawner",
-          "Position": "5419.756,-4019.649,1991.646",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "GeneralGame.ItemSpawn",
-              "__guid": "51d90320-de9f-4f23-95c9-754c715f2b23",
-              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
-            }
-          ]
-        },
-        {
-          "__guid": "63b6cdb2-d3fb-4954-b0fd-0fa68377f1ff",
-          "Flags": 0,
-          "Name": "Itemspawner",
-          "Position": "5451.367,-3921.448,1987.175",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "GeneralGame.ItemSpawn",
-              "__guid": "7235bed4-2576-4233-89e9-68692f4d0039",
-              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
-            }
-          ]
-        },
-        {
-          "__guid": "413b6a72-56eb-4c2c-a408-861e4722c98d",
-          "Flags": 0,
-          "Name": "Itemspawner",
-          "Position": "5434.634,-3907.818,1986.871",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "GeneralGame.ItemSpawn",
-              "__guid": "556d486a-8f62-47de-90b6-207aa12273a9",
-              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
-            }
-          ]
-        },
-        {
-          "__guid": "26046f65-a185-4316-b1ed-3707822a84b2",
-          "Flags": 0,
-          "Name": "Itemspawner",
-          "Position": "5459.563,-3941.924,1988.23",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "GeneralGame.ItemSpawn",
-              "__guid": "04d3d11c-7057-4392-9e51-1c201012aa12",
-              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
-            }
-          ]
-        },
-        {
-          "__guid": "08665520-c5f9-4af3-a76d-1b4708a657fd",
-          "Flags": 0,
-          "Name": "Itemspawner",
-          "Position": "5415.612,-4006.539,1991.646",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "GeneralGame.ItemSpawn",
-              "__guid": "4712690b-aab4-44ad-9637-e54a5e8d1d94",
-              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
-            }
-          ]
-        },
-        {
-          "__guid": "15621b75-4aba-477c-860c-e13c533c25c3",
-          "Flags": 0,
-          "Name": "Itemspawner",
-          "Position": "5459.093,-3969.358,1988.08",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "GeneralGame.ItemSpawn",
-              "__guid": "cb3514b3-82ff-4f94-8131-83da23835e90",
-              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
-            }
-          ]
-        },
-        {
-          "__guid": "0ed34810-30b0-4c43-8ef9-0eb96755fa75",
-          "Flags": 0,
-          "Name": "Itemspawner",
-          "Position": "5400.813,-4015.687,1991.646",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "GeneralGame.ItemSpawn",
-              "__guid": "1e140218-f27b-40d2-914c-117df18e458d",
-              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
-            }
-          ]
-        },
-        {
-          "__guid": "a067e945-362f-43c9-97d4-d38327800ae9",
-          "Flags": 0,
-          "Name": "Itemspawner",
-          "Position": "5456.345,-3906.876,1987.566",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "GeneralGame.ItemSpawn",
-              "__guid": "eeb495e8-fd9f-404e-8591-035d85cbbb27",
-              "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
-            }
-          ]
-        }
-      ]
+      "Position": "3910.281,2165.937,1854.691",
+      "Enabled": true
     },
     {
       "__guid": "dfc10c3c-2c54-4a6a-b387-39bebc2e4dce",
       "Flags": 0,
       "Name": "zombiespawner",
       "Position": "4233.422,3712.07,1891.075",
+      "Tags": "ignorenav",
       "Enabled": true,
       "__Prefab": "prefabs/npcs/zombiespawner.prefab",
       "__PrefabVariables": {}
@@ -379,6 +261,243 @@
       "Tags": "ignorenav",
       "Enabled": true,
       "__Prefab": "prefabs/npcs/zombiespawner.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "65d58076-dc15-4429-ab24-d1b8fbe280cf",
+      "Flags": 0,
+      "Name": "reming870",
+      "Position": "3880.543,2076.994,1826.601",
+      "Rotation": "-0.7010573,-0.09229594,0.09229595,0.7010574",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/reming870.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "40154a74-602a-48ca-8357-763b7f298a59",
+      "Flags": 0,
+      "Name": "beretta",
+      "Position": "3916.047,2157.476,1851.336",
+      "Rotation": "-0.4304593,-0.5609855,0.5609854,0.4304594",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/beretta.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "69f01e81-1476-4c7e-8eb7-24db87f8468f",
+      "Flags": 0,
+      "Name": "ammo_shotgun",
+      "Position": "3884.848,2077.712,1823.001",
+      "Rotation": "0,0,0.7933533,0.6087615",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_shotgun.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "16cbda4f-fc3c-4487-9777-c51122b6704a",
+      "Flags": 0,
+      "Name": "ammo_shotgun (1)",
+      "Position": "3893.571,2079.624,1823.001",
+      "Rotation": "0,0,-0.258819,0.9659258",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_shotgun.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "465045c1-40b3-423f-a817-439f2232d136",
+      "Flags": 0,
+      "Name": "ammo_shotgun (2)",
+      "Position": "3899.955,2078.437,1823.001",
+      "Rotation": "0,0,0.258819,0.9659258",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_shotgun.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0b9149fa-c3d5-4aad-b52f-4c062845549b",
+      "Flags": 0,
+      "Name": "ammo_pistol",
+      "Position": "3908.14,2170.894,1847.632",
+      "Rotation": "0,0,-0.1305262,0.9914448",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "4a7cf220-e8e2-49d0-be17-b7951891d279",
+      "Flags": 0,
+      "Name": "ammo_pistol (1)",
+      "Position": "3916.401,2164.882,1847.632",
+      "Rotation": "0,0,0.258819,0.9659258",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "597612fd-2aeb-47ff-a33a-21f98e4c052a",
+      "Flags": 0,
+      "Name": "ammo_pistol (2)",
+      "Position": "3914.492,2173.333,1847.632",
+      "Rotation": "0,0,0.4999999,0.8660254",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d2d09ac0-b05c-4ef8-b5db-add336f03269",
+      "Flags": 0,
+      "Name": "ammo_pistol (3)",
+      "Position": "3906.915,2178.179,1847.632",
+      "Rotation": "0,0,0.4999999,0.8660254",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "760a6999-f761-41e2-ae31-a8b6cb63186c",
+      "Flags": 0,
+      "Name": "ammo_sniper",
+      "Position": "3916.591,2208.909,1843",
+      "Rotation": "0,0,0.3826834,0.9238795",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_sniper.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f5fb15ff-ac37-422c-8bcd-727c491d4675",
+      "Flags": 0,
+      "Name": "ammo_rifle",
+      "Position": "3922.094,2213.723,1839.001",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "06e3d01a-502e-42b0-938a-b7732fdf64e7",
+      "Flags": 0,
+      "Name": "ammo_sniper (1)",
+      "Position": "4334.113,4476.906,1863.001",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_sniper.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "a9930d08-25f4-49b4-8796-40e03cdb8a9d",
+      "Flags": 0,
+      "Name": "ammo_sniper (2)",
+      "Position": "4343.338,4476.94,1863.001",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_sniper.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0dad34af-951d-4195-a149-24c54da6c0c8",
+      "Flags": 0,
+      "Name": "ammo_sniper (3)",
+      "Position": "4339.574,4487.687,1863.001",
+      "Rotation": "0,0,0.6087613,0.7933533",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_sniper.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0e129647-21ed-4e6c-8b35-f97ca5ad7a39",
+      "Flags": 0,
+      "Name": "awp",
+      "Position": "4356.171,4488.541,1885.576",
+      "Rotation": "-0.3535533,-0.6123724,-0.1830127,0.6830127",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/awp.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f37e1700-1831-4df1-9d42-1faba3f9b1fd",
+      "Flags": 0,
+      "Name": "vss",
+      "Position": "3696.954,-139.0901,1764.888",
+      "Rotation": "0.6123725,-0.3535533,-0.3535533,0.6123725",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/vss.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "71a69828-7e83-4756-b24d-fab6c584bf39",
+      "Flags": 0,
+      "Name": "ammo_rifle (1)",
+      "Position": "3705.393,-156.3862,1764.877",
+      "Rotation": "0,0,0.7933533,0.6087615",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "be599011-d626-49a5-8437-1e390f1ee649",
+      "Flags": 0,
+      "Name": "ammo_rifle (2)",
+      "Position": "3703.916,-145.0245,1764.877",
+      "Rotation": "0,0,0.258819,0.9659258",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0c53a8be-ed4d-4ecf-9209-c29ee09878e4",
+      "Flags": 0,
+      "Name": "ammo_rifle (3)",
+      "Position": "3714.73,-154.1295,1764.877",
+      "Rotation": "0,0,0.258819,0.9659258",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_rifle.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8b25f6b7-adb5-4203-ab8e-9d62e9ea61a2",
+      "Flags": 0,
+      "Name": "ammo_pistol (4)",
+      "Position": "4335.336,904.2931,1751.826",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "86f7a7fa-d4a0-4fee-b2f9-8f23bdcaa6e7",
+      "Flags": 0,
+      "Name": "ammo_pistol (5)",
+      "Position": "4341.548,908.6412,1751.826",
+      "Rotation": "0,0,-0.258819,0.9659258",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "a6b34348-67ee-4e34-a01f-01550c196bee",
+      "Flags": 0,
+      "Name": "ammo_pistol (6)",
+      "Position": "4342.342,900.0294,1751.826",
+      "Rotation": "0,0,0.3826834,0.9238796",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/ammo_pistol.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f7c14c5b-3f2d-49c3-ab43-8465dba43856",
+      "Flags": 0,
+      "Name": "mp7",
+      "Position": "4331.529,907.3966,1753.81",
+      "Rotation": "-0.6830127,0.1830127,-0.1830127,0.6830128",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/mp7.prefab",
       "__PrefabVariables": {}
     }
   ],

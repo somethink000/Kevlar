@@ -29,18 +29,17 @@ public partial class PlayerBase
 		Vignette.Intensity = 0.5f * (1f - health);
 	}
 
-
-
-	[Broadcast]
-	public virtual void TakeDamage( DamageType type, float damage, Vector3 position, Vector3 force, Guid attackerId, string[] hitboxes )
+	public void OnDamage( in DamageInfo damage )
 	{
 		if ( IsProxy || !IsAlive || GodMode )
 			return;
 
-		Health -= damage;
+		Health -= damage.Damage;
 
 
 		if ( Health <= 0 )
-			OnDeath( force, position, attackerId );
+			OnDeath( damage );
 	}
+
+
 }
