@@ -35,7 +35,6 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IPlayerBas
 
 		OnCameraAwake();
 		OnMovementAwake();
-		
 	}
 	
 

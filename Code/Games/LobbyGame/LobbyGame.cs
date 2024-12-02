@@ -16,7 +16,7 @@ public class LobbyGame : BaseGame
 
 	}
 
-	[Broadcast]
+	[Rpc.Broadcast]
 	public override void ChangeGame()
 	{
 		if (!IsProxy)

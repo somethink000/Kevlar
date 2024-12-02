@@ -20,6 +20,8 @@ public partial class PlayerBase
 	[Sync] public bool IsCrouching { get; set; } = false;
 	[Sync] public bool IsRunning { get; set; } = false;
 	[Sync] public bool IsSlide { get; set; } = false;
+	[Sync] public bool IsGrounded { get; set; } = false;
+
 
 	public bool IsOnGround => CharacterController.IsOnGround;
 	public Vector3 Velocity => CharacterController.Velocity;
@@ -30,6 +32,8 @@ public partial class PlayerBase
 	public CapsuleCollider BodyCollider { get; set; }
 
 	TimeSince timeSinceLastFootstep = 0;
+	
+	float fallVelocity = 0;	
 
 	void OnMovementAwake()
 	{
@@ -101,6 +105,18 @@ public partial class PlayerBase
 
 	}
 
+	private void OnGrounded()
+	{
+		if ( fallVelocity > 650)
+		{
+			var damage = new DamageInfo( fallVelocity / 10, GameObject, GameObject );
+			
+			OnDamage( damage );
+		}
+		fallVelocity = 0;
+	}
+
+	//Velocity.WithY( 0 ).Length
 	void Move()
 	{
 		var gravity = Scene.PhysicsWorld.Gravity;
@@ -111,6 +127,11 @@ public partial class PlayerBase
 			CharacterController.Velocity = CharacterController.Velocity.WithZ( 0 );
 			CharacterController.Accelerate( WishVelocity );
 			CharacterController.ApplyFriction( GroundControl );
+
+			if ( !IsGrounded ) {
+				OnGrounded();
+				IsGrounded = true;
+			}
 		}
 		else
 		{
@@ -118,6 +139,9 @@ public partial class PlayerBase
 			CharacterController.Velocity += gravity * Time.Delta * 0.5f;
 			CharacterController.Accelerate( WishVelocity.ClampLength( MaxForce ) );
 			CharacterController.ApplyFriction( AirControl );
+
+			IsGrounded = false;
+			fallVelocity = CharacterController.Velocity.WithY( 0 ).Length;
 		}
 
 		if ( !(CharacterController.Velocity.IsNearZeroLength && WishVelocity.IsNearZeroLength) )

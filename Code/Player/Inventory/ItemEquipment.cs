@@ -23,7 +23,7 @@ public class ItemEquipment : ItemComponent
 
 	public void UpdateEquipped()
 	{
-		
+		Log.Info(this);
 		if ( Equipped )
 		{
 			Components.Get<ModelCollider>( FindMode.InSelf ).Enabled = false;

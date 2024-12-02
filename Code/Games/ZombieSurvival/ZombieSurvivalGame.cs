@@ -48,12 +48,16 @@ public class ZombieSurvivalGame : BaseGame
 
 	public override void OnPlayerDeath( PlayerBase player, PlayerBase killer )
 	{
-		if  (Scene.GetAllComponents<PlayerBase>().Where( x => x.IsAlive).Count() <= 0)
+		if ( Scene.GetAllComponents<PlayerBase>().Where( x => x.IsAlive ).Count() <= 0 )
 		{
 			GameManager.ActiveScene.LoadFromFile( "scenes/basement.scene" );
 		}
+		else
+		{
+			player.RespawnWithDelay( 5 );
+		}
 
-		player.RespawnWithDelay( 5 );
+		
 	}
 
 
@@ -106,12 +110,12 @@ public class ZombieSurvivalGame : BaseGame
 			return;
 
 
-		var lights = Game.ActiveScene.GetAllComponents<Light>();
+		//var lights = Game.ActiveScene.GetAllComponents<Light>();
 			
-		foreach ( var light in lights )
-		{
-			light.Shadows = false;
-		}
+		//foreach ( var light in lights )
+		//{
+		//	light.Shadows = false;
+		//}
 
 	}
 

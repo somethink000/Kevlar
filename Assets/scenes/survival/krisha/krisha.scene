@@ -499,6 +499,16 @@
       "NetworkMode": 1,
       "__Prefab": "prefabs/weapons/mp7.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b4938d31-6794-4c71-b319-2974eb43d0a9",
+      "Flags": 0,
+      "Name": "medical_box",
+      "Position": "3888.631,2114.316,1845.058",
+      "Rotation": "0,0,0.7933536,-0.6087613",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/medical_box.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

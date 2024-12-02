@@ -7,8 +7,6 @@ public partial class Inventory
 	[Property] public GameObject WeaponBone { get; set; }
 
 	public Weapon Deployed;
-
-	private bool Delayed = false;
 	public EquipSlot CurrentWeaponSlot { get; set; } = EquipSlot.FirstWeapon;
 
 	public void DeployCurrent()
@@ -33,7 +31,7 @@ public partial class Inventory
 
 	public void UpdateWeaponSlot()
 	{
-		if ( IsProxy || Delayed ) return;
+		if ( IsProxy ) return;
 
 		if ( Input.Pressed( InputButtonHelper.Slot1 ) ) Next();
 		else if ( Input.Pressed( InputButtonHelper.Slot2 ) ) Next();
@@ -43,7 +41,7 @@ public partial class Inventory
 
 	public void RemoveEquipUpdate( EquipSlot slot, bool drop = false)
 	{
-		if ( CurrentWeaponSlot == slot && !Delayed ) {
+		if ( CurrentWeaponSlot == slot ) {
 			Deployed.EndHolster();
 			Deployed = null;
 		}
@@ -53,7 +51,7 @@ public partial class Inventory
 	{
 		if ( CurrentWeaponSlot == slot ) DeployCurrent();
 	}
-
+	 
 	
 	public void Next()
 	{
@@ -64,13 +62,11 @@ public partial class Inventory
 		{
 			
 			if ( !Deployed.CanHolster() ) return;
-			Delayed = true;
 			Deployed.Holster();
 
 		}
 		else
 		{
-			Delayed = true;
 			ChangeSlot();
 		}
 		
@@ -78,7 +74,6 @@ public partial class Inventory
 
 	public void ChangeSlot()
 	{
-		Delayed = false;
 		Deployed = null;
 
 

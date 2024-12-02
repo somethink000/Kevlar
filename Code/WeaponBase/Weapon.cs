@@ -201,7 +201,7 @@ public partial class Weapon : Component
 	public bool CanHolster()
 	{
 
-		if ( IsShooting() || InBoltBack ) return false;
+		if ( IsShooting() || InBoltBack || IsHolstering || IsDeploying ) return false;
 		return true;
 	}
 	public void Holster()
@@ -231,7 +231,7 @@ public partial class Weapon : Component
 			IsAiming = false;
 			IsCustomizing = false;
 			DestroyUI();
-		}
+		} 
 
 		Owner.Inventory.ChangeSlot();
 		Owner = null;

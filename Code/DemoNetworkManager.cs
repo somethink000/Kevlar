@@ -7,11 +7,12 @@ public class DemoNetworkManager : Component, Component.INetworkListener
 {
 	[Property] public PrefabScene PlayerPrefab { get; set; }
 
+	LobbyConfig LobbyConfig { get; set; } = new LobbyConfig();
 	protected override void OnStart()
 	{
-		if ( !GameNetworkSystem.IsActive )
+		if ( !Networking.IsActive )
 		{
-			GameNetworkSystem.CreateLobby();
+			Networking.CreateLobby( LobbyConfig );
 		}
 
 		base.OnStart();

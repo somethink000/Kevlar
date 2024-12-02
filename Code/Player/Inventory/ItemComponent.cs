@@ -130,9 +130,9 @@ public class ItemComponent : Component
 
 	protected override void OnDestroy()
 	{
-		if ( IsProxy || !Game.IsPlaying )
-			return;
+		//if ( IsProxy || !Game.IsPlaying )
+		//	return;
 
-        PlayerBase.GetLocal()?.Inventory?.ClearItem( this );
+  //      PlayerBase.GetLocal()?.Inventory?.ClearItem( this );
 	}
 }

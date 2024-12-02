@@ -52,7 +52,7 @@ partial class PlayerBase
 
 		return (_saveData.Value, true);
 	}
-	
+
 	/// <summary>
 	/// Writes a pure PlayerSave struct into a local save.
 	/// </summary>
@@ -67,14 +67,14 @@ partial class PlayerBase
 	public static void Save( PlayerBase player = null )
 	{
 		player ??= GetLocal();
-		
+
 		// Get the data that sticks.
 		var data = GetSave();
 		var save = data.Has
 			? data.Save
 			: new PlayerSave()
 			{
-			
+
 			};
 
 		var items = PrefabLibrary.FindByComponent<ItemComponent>();
@@ -112,7 +112,7 @@ partial class PlayerBase
 						data.Add( property.Name, serialized );
 				}
 			}
-			
+
 			return new ItemSave
 			{
 				Path = item.Prefab,
@@ -121,7 +121,7 @@ partial class PlayerBase
 			};
 		}
 		//DropInvent =
-		
+
 		_saveData = save with
 		{
 			Experience = player.Experience,
@@ -152,17 +152,18 @@ partial class PlayerBase
 		player ??= Local;
 
 		var tuple = GetSave();
-			if ( !tuple.Has ) { 
-				WriteSave(
-					new()
-					{
-						
-					}
-				);
+		if ( !tuple.Has )
+		{
+			WriteSave(
+				new()
+				{
+
+				}
+			);
 			return false;
 		}
 
-		
+
 		// Setup basic player information.
 		var save = tuple.Save;
 
@@ -210,13 +211,13 @@ partial class PlayerBase
 
 		// Go through all items.
 		if ( save.Inventory != null && !save.DropInvent )
-			
+
 			foreach ( var data in save.Inventory )
 			{
-				
+
 				if ( !ResourceLibrary.TryGet<PrefabFile>( data.Path, out var prefab ) )
 					continue;
-				
+
 				var o = SceneUtility.GetPrefabScene( prefab ).Clone();
 				o.NetworkMode = NetworkMode.Object;
 				if ( !o.Network.Active ) o.NetworkSpawn();

@@ -184,7 +184,7 @@ public class Zombie : Component, IHealthComponent
 			timeSinceDead = 0;
 			LifeState = LifeState.Dead;
 
-
+			GameObject.Tags.Add( "ragdolled" );
 			if ( damage.Attacker.Components.GetInAncestorsOrSelf<PlayerBase>() is PlayerBase ply )
 			{
 				ply.CurrentGame.OnZombieKilled( ply );
