@@ -1074,7 +1074,7 @@
               "__guid": "145f1e31-d22f-4786-8aaa-30d0f2b1b685",
               "Flags": 0,
               "Name": "Text (2)",
-              "Position": "0,208.2337,-8.34201",
+              "Position": "0,208.2337,-29.14578",
               "Rotation": "0,0,0.00000006705523,-1",
               "Enabled": true,
               "Components": [
@@ -1185,67 +1185,10 @@
               ]
             },
             {
-              "__guid": "ebed2268-e15f-4b18-a5e8-2e0414e32f05",
-              "Flags": 0,
-              "Name": "TODO",
-              "Position": "0,208.2337,2.653046",
-              "Rotation": "0,0,0.00000006705523,-1",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.TextRenderer",
-                  "__guid": "63a3ed06-e469-44ee-bb2c-ded6e62bf79d",
-                  "__version": 1,
-                  "BlendMode": "Normal",
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": true,
-                    "AfterUILayer": false
-                  },
-                  "Scale": 0.18,
-                  "TextAlignment": "Center",
-                  "TextScope": {
-                    "Text": "\u043E\u0448\u0438\u0431\u043A\u0430 \u043F\u0440\u0438 \u0432\u044B\u0445\u043E\u0434\u0435 \u0441 \u0443\u0440\u043E\u0432\u043D\u044F",
-                    "TextColor": "1,1,1,1",
-                    "FontName": "Zekton",
-                    "FontSize": 32.58,
-                    "FontWeight": 800,
-                    "FontItalic": false,
-                    "LineHeight": 1,
-                    "LetterSpacing": 0,
-                    "WordSpacing": 0,
-                    "Outline": {
-                      "Enabled": false,
-                      "Size": 4,
-                      "Color": "0,0,1,1"
-                    },
-                    "Shadow": {
-                      "Enabled": false,
-                      "Size": 4,
-                      "Color": "1,1,1,1",
-                      "Offset": "4,4"
-                    },
-                    "OutlineUnder": {
-                      "Enabled": false,
-                      "Size": 4,
-                      "Color": "0,1,0,1"
-                    },
-                    "ShadowUnder": {
-                      "Enabled": false,
-                      "Size": 4,
-                      "Color": "0,0,0,1",
-                      "Offset": "4,4"
-                    }
-                  }
-                }
-              ]
-            },
-            {
               "__guid": "57a5fa59-7654-4cb6-875c-e96581634187",
               "Flags": 0,
               "Name": "Text (2)",
-              "Position": "0,208.2337,-59.64127",
+              "Position": "0,208.2337,-94.98422",
               "Rotation": "0,0,0.00000006705523,-1",
               "Enabled": true,
               "Components": [
@@ -1302,7 +1245,7 @@
               "__guid": "ed482251-cf83-48bf-a621-1a710f3fd987",
               "Flags": 0,
               "Name": "Text (2)",
-              "Position": "0,208.2337,-50.22513",
+              "Position": "0,208.2337,-65.46304",
               "Rotation": "0,0,0.00000006705523,-1",
               "Enabled": true,
               "Components": [
@@ -1359,7 +1302,7 @@
               "__guid": "6b4fa844-9518-4e75-a9f7-3ebdc0d6f6fb",
               "Flags": 0,
               "Name": "Text (2)",
-              "Position": "0,208.2337,-18.41269",
+              "Position": "0,208.2337,-39.21646",
               "Rotation": "0,0,0.00000006705523,-1",
               "Enabled": true,
               "Components": [
@@ -1413,16 +1356,16 @@
               ]
             },
             {
-              "__guid": "f506f80b-43c8-49d4-afbd-47db2762b391",
+              "__guid": "82e5716e-bcc1-4b64-9852-ce89ef077904",
               "Flags": 0,
               "Name": "Text (2)",
-              "Position": "0,208.2337,-28.89407",
+              "Position": "0,208.2337,-46.35971",
               "Rotation": "0,0,0.00000006705523,-1",
               "Enabled": true,
               "Components": [
                 {
                   "__type": "Sandbox.TextRenderer",
-                  "__guid": "7af5e868-0640-4b08-9542-0f71fda6b516",
+                  "__guid": "54efaea3-940c-4d93-a579-e95dec03f776",
                   "__version": 1,
                   "BlendMode": "Normal",
                   "RenderOptions": {
@@ -1434,7 +1377,7 @@
                   "Scale": 0.18,
                   "TextAlignment": "Center",
                   "TextScope": {
-                    "Text": "\u0423\u0440\u043E\u043D \u043E\u0442 \u043F\u0430\u0434\u0435\u043D\u0438\u044F",
+                    "Text": "\u041D\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u0435 \u043D\u0430 \u0431\u0430\u0437\u0435",
                     "TextColor": "1,1,1,1",
                     "FontName": "Zekton",
                     "FontSize": 32.58,
@@ -1473,7 +1416,7 @@
               "__guid": "ef954b44-e402-499e-aaf7-f8a343df8b40",
               "Flags": 0,
               "Name": "Text (2)",
-              "Position": "0,208.2337,-40.57468",
+              "Position": "0,208.2337,-55.81259",
               "Rotation": "0,0,0.00000006705523,-1",
               "Enabled": true,
               "Components": [

@@ -45,12 +45,18 @@ public class ZombieSurvivalGame : BaseGame
 		await GameTask.DelaySeconds( delay );
 		//DefendObject = Scene.GetAllComponents<PlayerBase>().First().GameObject;
 	}
-
+	public async void EndGameWithDelay( float delay )
+	{
+		await GameTask.DelaySeconds( delay );
+		//DefendObject = Scene.GetAllComponents<PlayerBase>().First().GameObject;
+		Game.ActiveScene.LoadFromFile( "scenes/basement.scene" );
+	}
 	public override void OnPlayerDeath( PlayerBase player, PlayerBase killer )
 	{
 		if ( Scene.GetAllComponents<PlayerBase>().Where( x => x.IsAlive ).Count() <= 0 )
 		{
-			GameManager.ActiveScene.LoadFromFile( "scenes/basement.scene" );
+			
+			EndGameWithDelay( 1 );
 		}
 		else
 		{
@@ -59,7 +65,7 @@ public class ZombieSurvivalGame : BaseGame
 
 		
 	}
-
+	
 
 	public override void OnZombieKilled( PlayerBase ply )
 	{

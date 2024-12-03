@@ -164,8 +164,10 @@ public partial class PlayerBase : Component, Component.INetworkSpawn, IPlayerBas
 	protected override void OnFixedUpdate()
 	{
 		if ( !IsAlive ) return;
-		OnMovementFixedUpdate();
 
+		OnMovementFixedUpdate();
+		if ( !IsProxy )
+	
 		if (IsProxy)
 			return;
 

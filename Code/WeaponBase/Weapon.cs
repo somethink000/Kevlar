@@ -201,7 +201,7 @@ public partial class Weapon : Component
 	public bool CanHolster()
 	{
 
-		if ( IsShooting() || InBoltBack || IsHolstering || IsDeploying ) return false;
+		if ( IsShooting() || InBoltBack || IsHolstering || IsDeploying || IsReloading ) return false;
 		return true;
 	}
 	public void Holster()

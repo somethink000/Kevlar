@@ -112,7 +112,7 @@ public partial class PlayerBase
 			var damage = new DamageInfo( fallVelocity / 10, GameObject, GameObject );
 			
 			OnDamage( damage );
-		}
+					}
 		fallVelocity = 0;
 	}
 
@@ -130,6 +130,7 @@ public partial class PlayerBase
 
 			if ( !IsGrounded ) {
 				OnGrounded();
+				
 				IsGrounded = true;
 			}
 		}
