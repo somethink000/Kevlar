@@ -11,6 +11,7 @@ public partial class PlayerBase
 {
 	[Property] public float Distance { get; set; } = 0f;
 
+
 	public float CurFOV { get; set; }
 	public float TargetFov { get; set; } = 0;
 
@@ -34,6 +35,7 @@ public partial class PlayerBase
 	public void ApplyFov( float multiplyer )
 	{
 		TargetFov += multiplyer;
+		//CamShaker.ShakeOnce( 1, 1, 0.1f, 0.1f );
 	}
 
 

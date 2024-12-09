@@ -5,7 +5,8 @@ namespace GeneralGame;
 
 public partial class PlayerBase
 {
-	[Property] public float GroundControl { get; set; } = 4.0f;
+
+	[Property] public float BaseGroundControl { get; set; } = 4.0f;
 	[Property] public float AirControl { get; set; } = 0.1f;
 	[Property] public float MaxForce { get; set; } = 50f;
 	[Property] public float RunSpeed { get; set; } = 290f;
@@ -13,7 +14,8 @@ public partial class PlayerBase
 	[Property] public float CrouchSpeed { get; set; } = 90f;
 	[Property] public float JumpForce { get; set; } = 350f;
 
-	[Sync] public Vector3 SlideVelocity { get; set; } = Vector3.Zero;
+
+	
 	[Sync] public Vector3 WishVelocity { get; set; } = Vector3.Zero;
 	[Sync] public Angles EyeAngles { get; set; }
 	[Sync] public Vector3 EyeOffset { get; set; } = Vector3.Zero;
@@ -23,11 +25,12 @@ public partial class PlayerBase
 	[Sync] public bool IsGrounded { get; set; } = false;
 
 
+	private float GroundControl { get; set; }
 	public bool IsOnGround => CharacterController.IsOnGround;
 	public Vector3 Velocity => CharacterController.Velocity;
 	public Vector3 EyePos => Head.Transform.Position + EyeOffset;
 
-	public CharacterController CharacterController { get; set; }
+	public CharController CharacterController { get; set; }
 	public CitizenAnimationHelper AnimationHelper { get; set; }
 	public CapsuleCollider BodyCollider { get; set; }
 
@@ -37,7 +40,9 @@ public partial class PlayerBase
 
 	void OnMovementAwake()
 	{
-		CharacterController = Components.Get<CharacterController>();
+		GroundControl = BaseGroundControl;
+
+		CharacterController = Components.Get<CharController>();
 		AnimationHelper = Components.Get<CitizenAnimationHelper>();
 		BodyCollider = Body.Components.Get<CapsuleCollider>();
 
@@ -73,8 +78,7 @@ public partial class PlayerBase
 	void BuildWishVelocity()
 	{
 
-		if ( !IsSlide )
-		{
+		
 
 			WishVelocity = 0;
 			
@@ -84,6 +88,9 @@ public partial class PlayerBase
 			if ( Input.Down( InputButtonHelper.Left ) ) WishVelocity += rot.Left;
 			if ( Input.Down( InputButtonHelper.Right ) ) WishVelocity += rot.Right;
 
+
+		if ( !IsSlide )
+		{
 			WishVelocity = WishVelocity.WithZ( 0 );
 			if ( !WishVelocity.IsNearZeroLength ) WishVelocity = WishVelocity.Normal;
 
@@ -95,11 +102,11 @@ public partial class PlayerBase
 		{
 			//Log.Info( SlideVelocity.Length );
 			//CharacterController.ApplyFriction(-3f);
-			SlideVelocity = Vector3.Lerp( SlideVelocity, Vector3.Zero, Time.Delta * 0.5f );
-			WishVelocity = SlideVelocity;
+			//SlideVelocity = Vector3.Lerp( SlideVelocity, Vector3.Zero, Time.Delta * 0.5f );
+			//WishVelocity = SlideVelocity;
 		
-			if ( Velocity.Length < 200 ) IsSlide = false; 
-
+			if ( Velocity.Length < 200 ) SlideEnd();
+			
 		}
 
 
@@ -116,7 +123,7 @@ public partial class PlayerBase
 		fallVelocity = 0;
 	}
 
-	//Velocity.WithY( 0 ).Length
+	
 	void Move()
 	{
 		var gravity = Scene.PhysicsWorld.Gravity;
@@ -127,7 +134,7 @@ public partial class PlayerBase
 			CharacterController.Velocity = CharacterController.Velocity.WithZ( 0 );
 			CharacterController.Accelerate( WishVelocity );
 			CharacterController.ApplyFriction( GroundControl );
-
+			
 			if ( !IsGrounded ) {
 				OnGrounded();
 				
@@ -140,7 +147,6 @@ public partial class PlayerBase
 			CharacterController.Velocity += gravity * Time.Delta * 0.5f;
 			CharacterController.Accelerate( WishVelocity.ClampLength( MaxForce ) );
 			CharacterController.ApplyFriction( AirControl );
-
 			IsGrounded = false;
 			fallVelocity = CharacterController.Velocity.WithY( 0 ).Length;
 		}
@@ -173,6 +179,7 @@ public partial class PlayerBase
 	void Jump()
 	{
 		if ( !IsOnGround ) return;
+		if ( IsSlide ) SlideEnd();
 
 		CharacterController.Punch( Vector3.Up * JumpForce );
 		AnimationHelper?.TriggerJump();
@@ -189,13 +196,40 @@ public partial class PlayerBase
 		AnimationHelper.WithLook( EyeAngles.ToRotation().Forward, 1f, 0.75f, 0.5f );
 		AnimationHelper.MoveStyle = CitizenAnimationHelper.MoveStyles.Run;
 		AnimationHelper.DuckLevel = IsCrouching ? 1 : 0;
+		AnimationHelper.SpecialMove = IsSlide ? CitizenAnimationHelper.SpecialMoveStyle.Slide : CitizenAnimationHelper.SpecialMoveStyle.None;
 
+	}
+
+	private void Slide()
+	{
+		GroundControl = 0.5f;
+		CharacterController.Height /= 2f;
+		BodyCollider.End = BodyCollider.End.WithZ( BodyCollider.End.z / 2f );
+		IsSlide = true;
+	}
+	private void SlideEnd()
+	{
+		GroundControl = BaseGroundControl;
+		IsSlide = false;
 		
+		var targetHeight = CharacterController.Height * 2f;
+		var upTrace = CharacterController.TraceDirection( Vector3.Up * targetHeight );
+
+		if ( !upTrace.Hit )
+		{
+			IsCrouching = false;
+			CharacterController.Height = targetHeight;
+			BodyCollider.End = BodyCollider.End.WithZ( BodyCollider.End.z * 2f );
+		}else
+		{
+			IsCrouching = true;
+		}
 	}
 
 	void UpdateCrouch()
 	{
 		if ( IsSlide ) return;
+
 		if ( Input.Down( InputButtonHelper.Duck ) && !IsCrouching && IsOnGround )
 		{
 			
@@ -206,11 +240,7 @@ public partial class PlayerBase
 				BodyCollider.End = BodyCollider.End.WithZ( BodyCollider.End.z / 2f );
 			} else
 			{
-				SlideVelocity = Velocity * 1.5f;
-				IsSlide = true;
-				CharacterController.Height /= 2f;
-				BodyCollider.End = BodyCollider.End.WithZ( BodyCollider.End.z / 2f );
-				
+				Slide();
 			}	
 		}
 

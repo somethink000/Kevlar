@@ -5,11 +5,6 @@ namespace GeneralGame
 	{
 		[Property] public bool InfiniteAmmo { get; set; } = false;
 		//[Property] public bool InfiniteAmmo => false;
-		public virtual int TimerValue { get; set; }
-		public virtual int CountValue { get; set; }
-		public virtual int SecondCountValue { get; set; }
-
-		
 
 		public virtual void InitPlayer( PlayerBase player )
 		{
@@ -17,7 +12,7 @@ namespace GeneralGame
 		
 		}
 
-		[Broadcast]
+		[Rpc.Broadcast]
 		public virtual void ChangeGame( )
 		{
 			
@@ -29,10 +24,10 @@ namespace GeneralGame
 
 		}
 
-		public void Notificate(string message)
-		{
-			UI.GameState.Instance.RockNotificate( message );
-		}
+		//public void Notificate(string message)
+		//{
+		//	UI.GameState.Instance.RockNotificate( message );
+		//}
 		public virtual void OnZombieKilled( PlayerBase ply )
 		{
 

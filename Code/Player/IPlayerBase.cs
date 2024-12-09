@@ -8,7 +8,7 @@ public interface IPlayerBase : IValid
 	public CameraComponent Camera { get; set; }
 	public GameObject Body { get; set; }
 	public SkinnedModelRenderer BodyRenderer { get; set; }
-	public CharacterController CharacterController { get; set; }
+	public CharController CharacterController { get; set; }
 	public CitizenAnimationHelper AnimationHelper { get; set; }
 	public GameObject GameObject { get; }
 	public Inventory Inventory { get; set; }

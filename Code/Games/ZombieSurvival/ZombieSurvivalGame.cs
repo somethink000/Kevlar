@@ -23,9 +23,9 @@ public class ZombieSurvivalGame : BaseGame
 	private IEnumerable<ZombieSpawner> ZombieSpawners { get; set; }
 
 
-	public override int TimerValue => UntilNextVave.Relative.CeilToInt();
-	public override int CountValue => CurVave;
-	public override int SecondCountValue => ZombieLeft;
+	public int TimerValue => UntilNextVave.Relative.CeilToInt();
+	public int CountValue => CurVave;
+	public int SecondCountValue => ZombieLeft;
 	
 
 	protected override void OnAwake()
@@ -83,7 +83,7 @@ public class ZombieSurvivalGame : BaseGame
 	{
 		ZombieSpawned = 0;
 		ZombieLeft = Vaves[CurVave];
-		Notificate( "New wave begin, try to stay alive!" );
+		//Notificate( "New wave begin, try to stay alive!" );
 		CurVave++;
 	}
 

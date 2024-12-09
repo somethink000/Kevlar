@@ -1012,7 +1012,7 @@
               "__guid": "145f1e31-d22f-4786-8aaa-30d0f2b1b685",
               "Flags": 0,
               "Name": "Text (2)",
-              "Position": "0,208.2337,22.08307",
+              "Position": "0,208.2337,-14.61212",
               "Rotation": "0,0,0.00000006705523,-1",
               "Enabled": true,
               "Components": [
@@ -1066,10 +1066,67 @@
               ]
             },
             {
+              "__guid": "64aa86a7-ad0e-4c11-884d-8568cc4aa4e0",
+              "Flags": 0,
+              "Name": "Text (2)",
+              "Position": "0,208.2337,-5.883789",
+              "Rotation": "0,0,0.00000006705523,-1",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.TextRenderer",
+                  "__guid": "4b0a4692-022f-4f3f-91b1-c88449a7da84",
+                  "__version": 1,
+                  "BlendMode": "Normal",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": true,
+                    "AfterUILayer": false
+                  },
+                  "Scale": 0.18,
+                  "TextAlignment": "Center",
+                  "TextScope": {
+                    "Text": "\u041E\u0431\u044C\u0435\u043A\u0442 \u0438\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441\u0430 \u043F\u043E \u0440\u0435\u0436\u0438\u043C\u0430\u043C",
+                    "TextColor": "1,1,1,1",
+                    "FontName": "Zekton",
+                    "FontSize": 32.58,
+                    "FontWeight": 800,
+                    "FontItalic": false,
+                    "LineHeight": 1,
+                    "LetterSpacing": 0,
+                    "WordSpacing": 0,
+                    "Outline": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,1,1"
+                    },
+                    "Shadow": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "1,1,1,1",
+                      "Offset": "4,4"
+                    },
+                    "OutlineUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,1,0,1"
+                    },
+                    "ShadowUnder": {
+                      "Enabled": false,
+                      "Size": 4,
+                      "Color": "0,0,0,1",
+                      "Offset": "4,4"
+                    }
+                  }
+                }
+              ]
+            },
+            {
               "__guid": "ed482251-cf83-48bf-a621-1a710f3fd987",
               "Flags": 0,
               "Name": "Text (2)",
-              "Position": "0,208.2337,-7.28952",
+              "Position": "0,208.2337,-43.98471",
               "Rotation": "0,0,0.00000006705523,-1",
               "Enabled": true,
               "Components": [
@@ -1126,7 +1183,7 @@
               "__guid": "6b4fa844-9518-4e75-a9f7-3ebdc0d6f6fb",
               "Flags": 0,
               "Name": "Text (2)",
-              "Position": "0,208.2337,12.51004",
+              "Position": "0,208.2337,-24.18515",
               "Rotation": "0,0,0.00000006705523,-1",
               "Enabled": true,
               "Components": [
@@ -1183,7 +1240,7 @@
               "__guid": "3036f6dc-69d7-460e-bd42-c1919b856de3",
               "Flags": 0,
               "Name": "Text (2)",
-              "Position": "0,208.2337,-16.76047",
+              "Position": "0,208.2337,-53.45566",
               "Rotation": "0,0,0.00000006705523,-1",
               "Enabled": true,
               "Components": [
@@ -1240,7 +1297,7 @@
               "__guid": "ef954b44-e402-499e-aaf7-f8a343df8b40",
               "Flags": 0,
               "Name": "Text (2)",
-              "Position": "0,208.2337,2.360931",
+              "Position": "0,208.2337,-34.33426",
               "Rotation": "0,0,0.00000006705523,-1",
               "Enabled": true,
               "Components": [

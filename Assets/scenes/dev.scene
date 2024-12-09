@@ -1,0 +1,196 @@
+{
+  "__guid": "4cb361c9-2b9c-494e-bae6-570bd172b67c",
+  "GameObjects": [
+    {
+      "__guid": "056fe911-1848-492b-8745-458ea477143c",
+      "Flags": 0,
+      "Name": "Logic",
+      "Position": "-114,-73.99997,250",
+      "Rotation": "0,0,0.7071068,0.7071068",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "ced06cad-4f18-446b-a2ef-2ddbb270f2f9",
+          "Flags": 0,
+          "Name": "Sound",
+          "Rotation": "0.3210197,-0.3851179,0.5930297,-0.6300368",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SoundscapeTrigger",
+              "__guid": "0b005dda-74a8-4ef6-bdea-c056a6dccb61",
+              "BoxSize": "50,50,50",
+              "Radius": 5000,
+              "StayActiveOnExit": true,
+              "Type": "Sphere"
+            }
+          ]
+        },
+        {
+          "__guid": "760cb151-ba23-4a23-a70d-8342d232bdc2",
+          "Flags": 0,
+          "Name": "Envmap",
+          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "3699bb84-1bf6-4f90-aa6b-eaea6948b177",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-16384,-16384,-16384",
+                "Maxs": "16384,16384,16384"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 16384,
+              "MultiBounce": false,
+              "Projection": "Sphere",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 16384,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "d734b50a-e173-4e88-b45b-22070b2c7371",
+          "Flags": 0,
+          "Name": "WeaponRegistry",
+          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
+          "Enabled": true,
+          "NetworkMode": 1,
+          "Components": [
+            {
+              "__type": "GeneralGame.WeaponRegistry",
+              "__guid": "f7148026-55b9-40db-973f-8844516caf61",
+              "WeaponPrefabs": []
+            },
+            {
+              "__type": "GeneralGame.WeaponSettings",
+              "__guid": "105d1eca-2975-499e-9765-62796b45635c",
+              "AutoReload": true,
+              "Customization": true
+            },
+            {
+              "__type": "GeneralGame.PrefabInitializer",
+              "__guid": "5f9c944b-6c5e-4fbb-85b5-854b4548b345"
+            }
+          ]
+        },
+        {
+          "__guid": "cdc90544-b57e-46be-839b-dd0e5d3c255b",
+          "Flags": 0,
+          "Name": "ExampleNetworkManager",
+          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.DemoNetworkManager",
+              "__guid": "5cf80343-4e99-4433-8ffa-e1ddef78052b",
+              "PlayerPrefab": {
+                "_type": "gameobject",
+                "prefab": "prefabs/player.prefab"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "20eda5f4-c77c-47c0-99a4-35b066b7b0e9",
+          "Flags": 0,
+          "Name": "Game",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.LobbyGame",
+              "__guid": "2a02cf93-8bae-449a-a621-e6b502fb2389",
+              "InfiniteAmmo": true
+            }
+          ]
+        },
+        {
+          "__guid": "c4f7d946-823b-4356-8e50-0281e0b61d82",
+          "Flags": 0,
+          "Name": "2D Skybox",
+          "Tags": "skybox",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkyBox2D",
+              "__guid": "26e920fc-e74a-4ed7-abc2-751fc4f340f8",
+              "SkyIndirectLighting": true,
+              "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "56d7c94d-cd40-46a3-9fd2-0d06f114d6eb",
+      "Flags": 0,
+      "Name": "Spawnpoint",
+      "Position": "309.6025,-40.25035,301.1627",
+      "Rotation": "0,0,0.7071065,-0.707107",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpawnPoint",
+          "__guid": "8af25799-0126-4e7d-8a56-57c2f9cad474",
+          "Color": "0.8902,0.31765,0.05098,1"
+        }
+      ]
+    },
+    {
+      "__guid": "51116be5-de37-4f53-a097-70e92b0e8f8d",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "-179.247,-288,124",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "2cf4bad2-4b81-4d55-834c-e8948d5f2b71",
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "scenes/new map.vmap",
+          "NoOrigin": false,
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 60,
+    "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "Metadata": {},
+    "NavMesh": {
+      "Enabled": true,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": false,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "ResourceVersion": 2,
+  "Title": null,
+  "Description": null,
+  "__references": [],
+  "__version": 2
+}

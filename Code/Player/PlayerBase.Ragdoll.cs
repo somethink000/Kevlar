@@ -6,7 +6,7 @@ public partial class PlayerBase
 
 	public bool IsRagdolled => RagdollPhysics.Enabled;
 
-	[Broadcast]
+	[Rpc.Broadcast]
 	public virtual void Ragdoll( Vector3 force, Vector3 forceOrigin )
 	{
 		ToggleColliders( false );
