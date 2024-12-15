@@ -1,11 +1,45 @@
+// THIS FILE IS AUTO-GENERATED
 
 Layer0
 {
-	shader "shaders/complex.shader_c"
+	shader "shaders/blendable.shader"
 
-	TextureColor "materials/map/dirty/grass_blend/forest_grass.png"
-	TextureAmbientOcclusion "materials/default/default_ao.tga"
-	TextureNormal "materials/default/default_normal.tga"
-	TextureRoughness "materials/default/default_rough.tga"
+	F_MULTIBLEND 2 // 3 Layers
 
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Material A ----
+	g_flTintColorA "[1.000000 1.000000 1.000000 0.000000]"
+	TextureAmbientOcclusionA "materials/default/default_ao.tga"
+	TextureBlendMaskA "materials/default/default_blend.tga"
+	TextureColorA "materials/map/dirty/grass_blend/forest_grass.png"
+	TextureMetalnessA "materials/default/default_metal.tga"
+	TextureNormalA "materials/default/default_normal.tga"
+	TextureRoughnessA "[1.000000 1.000000 1.000000 0.000000]"
+	TextureTintMaskA "materials/default/default.tga"
+
+	//---- Material B ----
+	g_flBlendSoftnessB "0.500"
+	g_flTintColorB "[1.000000 1.000000 1.000000 0.000000]"
+	g_vTexCoordScale2 "[1.000 1.000]"
+	TextureAmbientOcclusionB "materials/default/default_ao.tga"
+	TextureBlendMaskB "materials/default/default_blend.tga"
+	TextureColorB "materials/map/dirty/grass_blend/cliff.png"
+	TextureMetalnessB "materials/default/default_metal.tga"
+	TextureNormalB "materials/default/default_normal.tga"
+	TextureRoughnessB "[1.000000 1.000000 1.000000 0.000000]"
+	TextureTintMaskB "materials/default/default.tga"
+
+	//---- Material C ----
+	g_flBlendSoftnessC "0.500"
+	g_flTintColorC "[1.000000 1.000000 1.000000 0.000000]"
+	g_vTexCoordScale3 "[1.000 1.000]"
+	TextureAmbientOcclusionC "materials/default/default_ao.tga"
+	TextureBlendMaskC "materials/default/default_blend.tga"
+	TextureColorC "materials/map/dirty/grass_blend/train_dirt_floor_01_krya.png"
+	TextureMetalnessC "materials/default/default_metal.tga"
+	TextureNormalC "materials/default/default_normal.tga"
+	TextureRoughnessC "[1.000000 1.000000 1.000000 0.000000]"
+	TextureTintMaskC "materials/default/default.tga"
 }

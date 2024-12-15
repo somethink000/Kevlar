@@ -80,22 +80,6 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "weapons/reming870/compil/870 barrel 7.smd"
-						import_translation = [ 0.0, 0.0, 0.0 ]
-						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 1.0
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = ""
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = [  ]
-						}
-					},
-					{
-						_class = "RenderMeshFile"
 						filename = "weapons/reming870/compil/870.smd"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
@@ -112,7 +96,7 @@
 					},
 					{
 						_class = "RenderMeshFile"
-						filename = "weapons/reming870/compil/870 stock wood.smd"
+						filename = "weapons/reming870/compil/870 stock.smd"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -128,42 +112,7 @@
 					},
 					{
 						_class = "RenderMeshFile"
-						filename = "weapons/reming870/compil/870 pump wood old.smd"
-						import_translation = [ 0.0, 0.0, 0.0 ]
-						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 1.0
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = ""
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = [  ]
-						}
-					},
-					{
-						_class = "RenderMeshFile"
-						filename = "weapons/reming870/compil/870 rs rail.smd"
-						import_translation = [ 0.0, 0.0, 0.0 ]
-						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 1.0
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						parent_bone = ""
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = 
-							[
-								"870_rs_rail",
-							]
-						}
-					},
-					{
-						_class = "RenderMeshFile"
-						filename = "weapons/reming870/compil/870 rs rail sight.smd"
+						filename = "weapons/reming870/compil/870 barrel 7.smd"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -180,6 +129,70 @@
 					{
 						_class = "RenderMeshFile"
 						filename = "weapons/reming870/compil/870 irons.smd"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						filename = "weapons/reming870/compil/870 pump.smd"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						filename = "weapons/reming870/compil/ammos 590 r.smd"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						filename = "weapons/reming870/compil/870 irons.smd"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						filename = "weapons/reming870/compil/870 rs rail sight.smd"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -710,6 +723,22 @@
 							{
 								_class = "AnimFile"
 								name = "sgreload_start_empty"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_GENERIC_EVENT"
+										event_frame = 65
+										event_keys = 
+										{
+											TypeName = "shell_insert"
+											Int = 0
+											Float = 0.0
+											Vector = [ 0.0, 0.0, 0.0 ]
+											StringData = ""
+										}
+									},
+								]
 								activity_name = ""
 								activity_weight = 1
 								weight_list_name = ""

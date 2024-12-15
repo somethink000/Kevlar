@@ -13,9 +13,9 @@ public partial class PlayerBase
 	[Property] public float WalkSpeed { get; set; } = 160f;
 	[Property] public float CrouchSpeed { get; set; } = 90f;
 	[Property] public float JumpForce { get; set; } = 350f;
+	[Property, Group( "Sounds" )] public SoundEvent SlideSound { get; set; }
 
 
-	
 	[Sync] public Vector3 WishVelocity { get; set; } = Vector3.Zero;
 	[Sync] public Angles EyeAngles { get; set; }
 	[Sync] public Vector3 EyeOffset { get; set; } = Vector3.Zero;
@@ -202,6 +202,7 @@ public partial class PlayerBase
 
 	private void Slide()
 	{
+		Sound.Play( SlideSound, WorldPosition );
 		GroundControl = 0.5f;
 		CharacterController.Height /= 2f;
 		BodyCollider.End = BodyCollider.End.WithZ( BodyCollider.End.z / 2f );

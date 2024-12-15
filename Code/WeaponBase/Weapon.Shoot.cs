@@ -91,7 +91,7 @@ public partial class Weapon
 		}
 
 		Owner.ApplyFov( 10 );
-
+		Owner.ApplyShake( 5, 1 );
 	}
 
 	[Broadcast]

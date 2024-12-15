@@ -1123,63 +1123,6 @@
               ]
             },
             {
-              "__guid": "ed482251-cf83-48bf-a621-1a710f3fd987",
-              "Flags": 0,
-              "Name": "Text (2)",
-              "Position": "0,208.2337,-43.98471",
-              "Rotation": "0,0,0.00000006705523,-1",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.TextRenderer",
-                  "__guid": "d08c194b-3c65-4016-84b5-44508d6065cd",
-                  "__version": 1,
-                  "BlendMode": "Normal",
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": true,
-                    "AfterUILayer": false
-                  },
-                  "Scale": 0.18,
-                  "TextAlignment": "Center",
-                  "TextScope": {
-                    "Text": "\u041D\u043E\u0440\u043C\u0430\u043B\u044C\u043D\u044B\u0435 \u043F\u043E\u0434\u043A\u0430\u0442\u044B",
-                    "TextColor": "1,1,1,1",
-                    "FontName": "Zekton",
-                    "FontSize": 32.58,
-                    "FontWeight": 800,
-                    "FontItalic": false,
-                    "LineHeight": 1,
-                    "LetterSpacing": 0,
-                    "WordSpacing": 0,
-                    "Outline": {
-                      "Enabled": false,
-                      "Size": 4,
-                      "Color": "0,0,1,1"
-                    },
-                    "Shadow": {
-                      "Enabled": false,
-                      "Size": 4,
-                      "Color": "1,1,1,1",
-                      "Offset": "4,4"
-                    },
-                    "OutlineUnder": {
-                      "Enabled": false,
-                      "Size": 4,
-                      "Color": "0,1,0,1"
-                    },
-                    "ShadowUnder": {
-                      "Enabled": false,
-                      "Size": 4,
-                      "Color": "0,0,0,1",
-                      "Offset": "4,4"
-                    }
-                  }
-                }
-              ]
-            },
-            {
               "__guid": "6b4fa844-9518-4e75-a9f7-3ebdc0d6f6fb",
               "Flags": 0,
               "Name": "Text (2)",
@@ -1202,63 +1145,6 @@
                   "TextAlignment": "Center",
                   "TextScope": {
                     "Text": "\u041D\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u0435 \u043D\u0430 \u043A\u0440\u044B\u0448\u0435",
-                    "TextColor": "1,1,1,1",
-                    "FontName": "Zekton",
-                    "FontSize": 32.58,
-                    "FontWeight": 800,
-                    "FontItalic": false,
-                    "LineHeight": 1,
-                    "LetterSpacing": 0,
-                    "WordSpacing": 0,
-                    "Outline": {
-                      "Enabled": false,
-                      "Size": 4,
-                      "Color": "0,0,1,1"
-                    },
-                    "Shadow": {
-                      "Enabled": false,
-                      "Size": 4,
-                      "Color": "1,1,1,1",
-                      "Offset": "4,4"
-                    },
-                    "OutlineUnder": {
-                      "Enabled": false,
-                      "Size": 4,
-                      "Color": "0,1,0,1"
-                    },
-                    "ShadowUnder": {
-                      "Enabled": false,
-                      "Size": 4,
-                      "Color": "0,0,0,1",
-                      "Offset": "4,4"
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "__guid": "3036f6dc-69d7-460e-bd42-c1919b856de3",
-              "Flags": 0,
-              "Name": "Text (2)",
-              "Position": "0,208.2337,-53.45566",
-              "Rotation": "0,0,0.00000006705523,-1",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.TextRenderer",
-                  "__guid": "43348ded-a5dd-4af0-b750-5085cf6d05f4",
-                  "__version": 1,
-                  "BlendMode": "Normal",
-                  "RenderOptions": {
-                    "GameLayer": true,
-                    "OverlayLayer": false,
-                    "BloomLayer": true,
-                    "AfterUILayer": false
-                  },
-                  "Scale": 0.18,
-                  "TextAlignment": "Center",
-                  "TextScope": {
-                    "Text": "\u041F\u043E\u0444\u0438\u043A\u0441\u0438\u0442\u044C \u043F\u0440\u0438\u0441\u0435\u0434\u0430\u043D\u0438\u044F",
                     "TextColor": "1,1,1,1",
                     "FontName": "Zekton",
                     "FontSize": 32.58,
@@ -1650,6 +1536,18 @@
           "Tint": "1,1,1,1"
         }
       ]
+    },
+    {
+      "__guid": "d8e543fe-141d-47f2-b13f-325ebe499d14",
+      "Flags": 0,
+      "Name": "reming870",
+      "Position": "350.1457,-141.4171,332.2982",
+      "Rotation": "0.6532815,0.270598,0.270598,0.6532815",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/reming870.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

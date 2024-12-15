@@ -27,6 +27,12 @@ public partial class PlayerBase
 	public bool IsFirstPerson => Distance == 0f;
 	private float fovSpeed = 5f;
 
+
+	TimeSince timeSinceShake;
+	float shakeSpeed;
+	private Vector3 CurShakePos { get; set; }
+	private Angles CurShakeRot { get; set; } 
+
 	public void OnCameraAwake()
 	{
 		CurFOV = Preferences.FieldOfView;
@@ -35,15 +41,26 @@ public partial class PlayerBase
 	public void ApplyFov( float multiplyer )
 	{
 		TargetFov += multiplyer;
-		//CamShaker.ShakeOnce( 1, 1, 0.1f, 0.1f );
+		
+		
 	}
 
-
-	private void HandleCameraRotation()
+	public void ApplyShake( float multiplyer, float duration )
 	{
+		var random = new Random();
+		CurShakePos = new Vector3( random.Float( 0, multiplyer ), random.Float( 0, multiplyer ), random.Float( 0, multiplyer ) );
+		CurShakeRot = new Angles( random.Float( 0, multiplyer ), random.Float( 0, multiplyer ), 0 );
 
-		Camera.Transform.Rotation = ZeroRotation;
 	}
+
+	private void HandleScreenShake()
+	{
+		 
+		CurShakePos = Vector3.Lerp( CurShakePos, Vector3.Zero, 0.4f );
+		//CurShakeRot = CurShakeRot.LerpTo( , 1f );
+		Log.Info( CurShakePos );
+	}
+
 
 	private void HandleCameraFov()
 	{
@@ -115,13 +132,14 @@ public partial class PlayerBase
 
 			ZeroRotation = eyeAngles.ToRotation();
 
-			HandleCameraRotation();
+			
 			HandleCameraFov();
 
+			//Log.Info(CurShakePos);
+			Camera.WorldRotation = ZeroRotation;
+			Camera.WorldPosition = camPos + CurShakePos;
 
-
-			Camera.Transform.Position = camPos;
-
+			HandleScreenShake();
 		}
 
 	}

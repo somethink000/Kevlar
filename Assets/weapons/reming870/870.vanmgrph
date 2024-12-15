@@ -57,7 +57,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -853.930298, -119.390854 ]
+					m_vecPosition = [ -864.0, -160.0 ]
 					m_nNodeID = 
 					{
 						m_id = 577670065
@@ -95,6 +95,27 @@
 							m_id = 4294967295
 						}
 					}
+				}
+			},
+			{
+				key = 
+				{
+					m_id = 749333898
+				}
+				value = 
+				{
+					_class = "CSequenceAnimNode"
+					m_sName = "Unnamed"
+					m_vecPosition = [ -896.0, -112.0 ]
+					m_nNodeID = 
+					{
+						m_id = 749333898
+					}
+					m_sNote = ""
+					m_tagSpans = [  ]
+					m_sequenceName = "sgreload_start_empty"
+					m_playbackSpeed = 1.0
+					m_bLoop = false
 				}
 			},
 			{
@@ -180,7 +201,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -853.930298, -71.390854 ]
+					m_vecPosition = [ -864.0, -64.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1212816174
@@ -432,6 +453,80 @@
 					m_sequenceName = "fire"
 					m_playbackSpeed = 1.0
 					m_bLoop = false
+				}
+			},
+			{
+				key = 
+				{
+					m_id = 1676379061
+				}
+				value = 
+				{
+					_class = "CSelectorAnimNode"
+					m_sName = "Unnamed"
+					m_vecPosition = [ -656.0, -144.0 ]
+					m_nNodeID = 
+					{
+						m_id = 1676379061
+					}
+					m_sNote = ""
+					m_children = 
+					[
+						{
+							m_nodeID = 
+							{
+								m_id = 577670065
+							}
+							m_outputID = 
+							{
+								m_id = 4294967295
+							}
+						},
+						{
+							m_nodeID = 
+							{
+								m_id = 749333898
+							}
+							m_outputID = 
+							{
+								m_id = 4294967295
+							}
+						},
+					]
+					m_tags = 
+					[
+						{
+							m_id = 4294967295
+						},
+						{
+							m_id = 4294967295
+						},
+					]
+					m_selectionSource = "SelectionSource_Bool"
+					m_boolParamID = 
+					{
+						m_id = 515060656
+					}
+					m_enumParamID = 
+					{
+						m_id = 157973474
+					}
+					m_intParamID = 
+					{
+						m_id = 4294967295
+					}
+					m_intParamMinValue = 0
+					m_intParamMaxValue = 2
+					m_blendDuration = 0.2
+					m_tagBehavior = "SelectorTagBehavior_OffBeforeFinished"
+					m_bResetOnChange = true
+					m_bSyncCyclesOnChange = false
+					m_blendCurve = 
+					{
+						m_vControlPoint1 = [ 0.5, 0.0 ]
+						m_vControlPoint2 = [ 0.5, 1.0 ]
+					}
+					m_intParamNames = [  ]
 				}
 			},
 			{
@@ -725,7 +820,7 @@
 							{
 								m_nodeID = 
 								{
-									m_id = 577670065
+									m_id = 1676379061
 								}
 								m_outputID = 
 								{
@@ -1771,7 +1866,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -853.930298, -23.390854 ]
+					m_vecPosition = [ -864.0, -16.0 ]
 					m_nNodeID = 
 					{
 						m_id = 2065450542
@@ -1908,6 +2003,18 @@
 				m_previewButton = "ANIMPARAM_BUTTON_NONE"
 				m_bUseMostRecentValue = false
 				m_bAutoReset = true
+				m_bDefaultValue = false
+			},
+			{
+				_class = "CBoolAnimParameter"
+				m_name = "empty"
+				m_id = 
+				{
+					m_id = 515060656
+				}
+				m_previewButton = "ANIMPARAM_BUTTON_NONE"
+				m_bUseMostRecentValue = false
+				m_bAutoReset = false
 				m_bDefaultValue = false
 			},
 		]
