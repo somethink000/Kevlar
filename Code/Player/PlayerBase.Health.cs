@@ -32,7 +32,7 @@ public partial class PlayerBase
 
 	public void OnDamage( in DamageInfo damage )
 	{
-		if ( IsProxy || !IsAlive || GodMode )
+		if ( !IsAlive || GodMode )
 			return;
 
 		Health -= damage.Damage;

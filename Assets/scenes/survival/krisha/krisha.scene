@@ -197,7 +197,7 @@
               "EndDistance": 20000,
               "FalloffExponent": 1,
               "Height": 120000,
-              "StartDistance": 8000,
+              "StartDistance": 4000,
               "VerticalFalloffExponent": -10
             }
           ]
@@ -253,7 +253,7 @@
           "__guid": "44599370-eab6-4d58-8834-575447b160ae",
           "Flags": 0,
           "Name": "Sound",
-          "Position": "-6186.656,-807.2701,-4536.199",
+          "Position": "-6651.932,-1063.483,-3960.403",
           "Enabled": true,
           "Components": [
             {
@@ -280,7 +280,7 @@
           "__guid": "a5c9e7a7-e2b3-42aa-ae55-8e3c98bea319",
           "Flags": 0,
           "Name": "spawn",
-          "Position": "502.748,884.4553,-1125.469",
+          "Position": "-596.6357,1383.017,-999.5767",
           "Enabled": true,
           "Components": [
             {
@@ -331,7 +331,7 @@
           "__guid": "3bc93a4b-e329-414e-8044-b524006d37d9",
           "Flags": 0,
           "Name": "spawn",
-          "Position": "-1957.854,491.1724,-1083.891",
+          "Position": "-374.4238,1483.933,-1042.323",
           "Enabled": true,
           "Components": [
             {
@@ -729,6 +729,26 @@
       "Enabled": true,
       "NetworkMode": 1,
       "__Prefab": "prefabs/weapons/mp7.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0958bbcc-816d-4076-acea-ca4f2797e375",
+      "Flags": 0,
+      "Name": "medical_box",
+      "Position": "4245.583,3694.036,-7305.3",
+      "Rotation": "0,0,-0.9659258,0.2588192",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/medical_box.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "eafcbe91-ba5d-40ae-8d7a-4bc7157804e8",
+      "Flags": 0,
+      "Name": "medical_box (1)",
+      "Position": "4245.45,4067.718,-7441.302",
+      "Rotation": "0,0,-0.8660254,0.5000001",
+      "Enabled": true,
+      "__Prefab": "prefabs/items/medical_box.prefab",
       "__PrefabVariables": {}
     }
   ],

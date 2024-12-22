@@ -114,7 +114,7 @@ public class Zombie : Component, IHealthComponent
 	//if (Vector3.DistanceBetween(target, GameObject.Transform.Position) < 80f)
 	protected override void OnFixedUpdate()
 	{
-		if ( IsProxy || LifeState == LifeState.Dead )
+		if ( LifeState == LifeState.Dead )
 			return;
 
 		
@@ -143,8 +143,8 @@ public class Zombie : Component, IHealthComponent
 
 	protected override void OnUpdate()
 	{
-		if ( IsProxy )
-			return;
+		//if ( IsProxy )
+		//	return;
 
 		if ( LifeState == LifeState.Dead )
 		{
@@ -170,7 +170,7 @@ public class Zombie : Component, IHealthComponent
 	public void OnDamage( in DamageInfo damage )
 	{
 		
-		if ( IsProxy || LifeState == LifeState.Dead )
+		if ( LifeState == LifeState.Dead )
 			return;
 
 		

@@ -951,6 +951,17 @@
           "Tint": "1,1,1,1"
         }
       ]
+    },
+    {
+      "__guid": "12c9da28-7cc5-4061-b870-fa914957984d",
+      "Flags": 0,
+      "Name": "mp7",
+      "Position": "361.3018,-141.9426,339",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/mp7.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
