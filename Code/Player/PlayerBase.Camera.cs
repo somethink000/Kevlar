@@ -49,16 +49,14 @@ public partial class PlayerBase
 	{
 		var random = new Random();
 		CurShakePos = new Vector3( random.Float( 0, multiplyer ), random.Float( 0, multiplyer ), random.Float( 0, multiplyer ) );
-		CurShakeRot = new Angles( random.Float( 0, multiplyer ), random.Float( 0, multiplyer ), 0 );
+		CurShakeRot = new Angles( random.Float( 0, 2 ), random.Float( 0, 2 ), 0 );
 
 	}
 
 	private void HandleScreenShake()
 	{
-		 
 		CurShakePos = Vector3.Lerp( CurShakePos, Vector3.Zero, 0.4f );
-		//CurShakeRot = CurShakeRot.LerpTo( , 1f );
-		Log.Info( CurShakePos );
+		CurShakeRot = Rotation.Lerp( CurShakeRot, Angles.Zero, 0.4f );
 	}
 
 
@@ -129,15 +127,15 @@ public partial class PlayerBase
 			//Camera.Transform.Local = Camera.Transform.Local.RotateAround( EyePos, EyeAngles.WithYaw( 0f ) );
 
 			//EyeAnglesOffset
-
+			eyeAngles += CurShakeRot;
 			ZeroRotation = eyeAngles.ToRotation();
 
 			
 			HandleCameraFov();
-
+			
 			//Log.Info(CurShakePos);
 			Camera.WorldRotation = ZeroRotation;
-			Camera.WorldPosition = camPos + CurShakePos;
+			Camera.WorldPosition = camPos + CurShakePos; 
 
 			HandleScreenShake();
 		}

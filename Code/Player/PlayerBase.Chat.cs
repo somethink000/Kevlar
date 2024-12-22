@@ -9,7 +9,7 @@ public partial class PlayerBase
 {
 	public List<ChatEntry> StoredChat { get; set; } = new();
 
-	[Broadcast]
+	[Rpc.Broadcast]
 	public void NewEntry( string author, string message )
 	{	
 		UI.Chat.Instance.AddTextLocal( author, message );

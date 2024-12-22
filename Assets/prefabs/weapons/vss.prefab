@@ -41,7 +41,7 @@
         "HoldType": "Rifle",
         "InfiniteAmmo": "disabled",
         "MuzzleFlashParticle": "particles/swb/muzzle/flash_silenced.vpcf",
-        "Recoil": 2,
+        "Recoil": 1,
         "ReloadEmptyTScale": 1,
         "ReloadTScale": 1,
         "RPM": 600,

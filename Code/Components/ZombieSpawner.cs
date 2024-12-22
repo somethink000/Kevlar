@@ -26,8 +26,8 @@ public sealed class ZombieSpawner : Component
 		if ( !Networking.IsHost )
 			return;
 
-
-		var zombie = ZombiePrefab.Clone( this.Transform.World );
+		Log.Info(target);
+		var zombie = ZombiePrefab.Clone( this.WorldTransform );
 		zombie.Components.Get<Zombie>().TargetPrimaryObject = target;
 		zombie.NetworkSpawn();
 	}

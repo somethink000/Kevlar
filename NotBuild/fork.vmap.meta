@@ -1,0 +1,28 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "Rp Fork",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "rpfork",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "evilinc.ah_super_large_pine002#48323",
+        "evilinc.floorold1#48231",
+        "evilinc.metal_list_clean#48919",
+        "evilinc.plaster_p#48227",
+        "facepunch.glass_a#19946",
+        "loli.tool_water#19068"
+      ],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "scenes/mainmap/fork.vmap",
+        "ParentPackage": "evilinc.real_fps_base"
+      }
+    }
+  }
+}

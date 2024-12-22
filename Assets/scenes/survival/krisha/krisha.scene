@@ -5,6 +5,7 @@
       "__guid": "c3fe7d19-05e0-4f92-9623-f8b31eec3171",
       "Flags": 0,
       "Name": "Defence",
+      "Position": "4434.921,3373.885,-7288.154",
       "Enabled": true,
       "Components": [
         {
@@ -38,78 +39,26 @@
       ]
     },
     {
+      "__guid": "e94a36c8-b37f-415f-85f4-b1db97f5cca6",
+      "Flags": 0,
+      "Name": "Spawn",
+      "Position": "4410.34,3858.184,-7442.638",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpawnPoint",
+          "__guid": "6923125d-7fe4-46e9-9299-4bd3edd12483",
+          "Color": "0.8902,0.31765,0.05098,1"
+        }
+      ]
+    },
+    {
       "__guid": "759629fa-ac1e-41d8-be90-ac659883fc3e",
       "Flags": 0,
       "Name": "Logic",
-      "Position": "-271.672,191.4495,10138.12",
+      "Position": "4570.636,2938.905,-7311.395",
       "Enabled": true,
       "Children": [
-        {
-          "__guid": "44599370-eab6-4d58-8834-575447b160ae",
-          "Flags": 0,
-          "Name": "Sound",
-          "Position": "-169.4924,-80.89013,-48.91211",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SoundscapeTrigger",
-              "__guid": "76319fe7-6e09-481e-8b2e-c190988bbdd0",
-              "BoxSize": "50,50,50",
-              "Radius": 100,
-              "Soundscape": "sounds/ambient/construct_outside.sndscape",
-              "StayActiveOnExit": true,
-              "Type": "Sphere"
-            }
-          ]
-        },
-        {
-          "__guid": "d36259b0-1109-47f9-9dd8-587b94281662",
-          "Flags": 0,
-          "Name": "Sound",
-          "Position": "-544.5138,-73.97153,-63.46777",
-          "Scale": "4.931928,5.14216,1",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SoundscapeTrigger",
-              "__guid": "26c9feca-21d8-4a8f-a988-04236760be58",
-              "BoxSize": "50,50,50",
-              "Radius": 5000,
-              "Soundscape": "sounds/ambient/construct_inside.sndscape",
-              "StayActiveOnExit": true,
-              "Type": "Box"
-            }
-          ]
-        },
-        {
-          "__guid": "7b507888-48d8-48ba-af9f-bab745768d22",
-          "Flags": 0,
-          "Name": "Envmap",
-          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.EnvmapProbe",
-              "__guid": "9988890c-542b-4803-9d43-369c393bf7a5",
-              "Bounds": {
-                "Mins": "-16384,-16384,-16384",
-                "Maxs": "16384,16384,16384"
-              },
-              "DelayBetweenUpdates": 0.1,
-              "Feathering": 0.02,
-              "FrameInterval": 5,
-              "MaxDistance": 16384,
-              "MultiBounce": false,
-              "Projection": "Sphere",
-              "RenderDynamically": true,
-              "Texture": "textures/cubemaps/default2.vtex",
-              "TintColor": "1,1,1,1",
-              "UpdateStrategy": "OnEnabled",
-              "ZFar": 16384,
-              "ZNear": 16
-            }
-          ]
-        },
         {
           "__guid": "8b3cd142-6acb-47f1-b4e0-6b00f75f7355",
           "Flags": 0,
@@ -156,6 +105,7 @@
           "__guid": "65d545c0-0167-4c8b-8da5-ba561eddd43f",
           "Flags": 0,
           "Name": "Game",
+          "Position": "0,0,-106.814",
           "Enabled": true,
           "Components": [
             {
@@ -175,55 +125,6 @@
               "InfiniteAmmo": false
             }
           ]
-        },
-        {
-          "__guid": "da72bf18-bde9-4a1e-be22-0079c10bdbbd",
-          "Flags": 0,
-          "Name": "plysp",
-          "Position": "-83.39828,-134.7773,-104.832",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SpawnPoint",
-              "__guid": "b3d15011-6edf-46f6-8896-35f3364259de",
-              "Color": "0.8902,0.31765,0.05098,1"
-            }
-          ]
-        },
-        {
-          "__guid": "dfba56d5-97e3-4bc6-a7d7-75c62e773321",
-          "Flags": 0,
-          "Name": "Atmosphere",
-          "Tags": "skybox,light_directional,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SkyBox2D",
-              "__guid": "440f3719-3ce8-4e08-82e4-9dfbb5afa586",
-              "SkyIndirectLighting": true,
-              "SkyMaterial": "materials/sky/atmosphere_sky.vmat",
-              "Tint": "0.9907,0.9907,0.9907,1"
-            },
-            {
-              "__type": "Sandbox.DirectionalLight",
-              "__guid": "86920de1-dec8-4acf-bd34-51aed89ee1cd",
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "1,1,1,1",
-              "Shadows": true,
-              "SkyColor": "0.62326,0.62326,0.62326,1"
-            },
-            {
-              "__type": "Sandbox.GradientFog",
-              "__guid": "a3a2d516-64d8-4666-93f5-afb523f2858f",
-              "Color": "1,1,1,0.33",
-              "EndDistance": 60024,
-              "FalloffExponent": 1,
-              "Height": 100000,
-              "StartDistance": 10000,
-              "VerticalFalloffExponent": 1
-            }
-          ]
         }
       ]
     },
@@ -231,7 +132,6 @@
       "__guid": "aa5203dc-8cce-4adc-a896-0278204d6df5",
       "Flags": 0,
       "Name": "Map",
-      "Position": "0,0,10002",
       "Enabled": true,
       "Components": [
         {
@@ -239,29 +139,498 @@
           "__guid": "229b1fc7-d1a2-4f63-be11-15dc86f69f20",
           "__version": 1,
           "EnableCollision": true,
-          "MapName": "scenes/nikolsk/fork.vmap",
+          "MapName": "scenes/mainmap/fork.vmap",
           "NoOrigin": false,
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
           "UseMapFromLaunch": false
         }
       ],
       "Children": []
     },
     {
-      "__guid": "48e7d49a-e9ce-4c4f-8d11-ea3a31c2ec8c",
+      "__guid": "8b6ba3d7-b4ec-4d17-90b8-034a913c484e",
       "Flags": 0,
-      "Name": "beretta",
-      "Position": "-13503.91,12397.19,-74.99974",
+      "Name": "spawners",
+      "Position": "3795.916,2002.876,-9949.831",
+      "Enabled": true
+    },
+    {
+      "__guid": "d52c26a1-6ebf-4758-b79e-4ae06cc12bb9",
+      "Flags": 0,
+      "Name": "Atmosphere",
+      "Position": "11134.42,4727.845,-3618.95",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "4f7db652-3fe6-4a19-b76b-67dd14df30be",
+          "Flags": 0,
+          "Name": "Sun",
+          "Position": "-2462.267,1909.142,-2617.408",
+          "Rotation": "0.5908522,-0.5489478,0.3134204,-0.501316",
+          "Tags": "light,light_directional",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.DirectionalLight",
+              "__guid": "86920de1-dec8-4acf-bd34-51aed89ee1cd",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.30233,0.22424,0.13499,1",
+              "Shadows": false,
+              "SkyColor": "0.21395,0.18005,0.14131,1"
+            }
+          ]
+        },
+        {
+          "__guid": "f7e4d723-96ea-4d55-acca-34a5417b3e6b",
+          "Flags": 0,
+          "Name": "Gradient Fog (1)",
+          "Position": "-2462.27,1909.141,-2617.408",
+          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.GradientFog",
+              "__guid": "0449c051-548a-4bb5-a87c-496f0fdf526e",
+              "Color": "0.11334,0.11334,0.14419,1",
+              "EndDistance": 20000,
+              "FalloffExponent": 1,
+              "Height": 120000,
+              "StartDistance": 8000,
+              "VerticalFalloffExponent": -10
+            }
+          ]
+        },
+        {
+          "__guid": "7b507888-48d8-48ba-af9f-bab745768d22",
+          "Flags": 0,
+          "Name": "Envmap",
+          "Position": "-2462.27,1909.141,-2617.408",
+          "Rotation": "-0.03700712,-0.03700712,0.7061377,-0.7061377",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "9988890c-542b-4803-9d43-369c393bf7a5",
+              "Bounds": {
+                "Mins": "-16384,-16384,-16384",
+                "Maxs": "16384,16384,16384"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 16384,
+              "MultiBounce": false,
+              "Projection": "Sphere",
+              "RenderDynamically": true,
+              "Texture": "textures/cubemaps/default2.vtex",
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 16384,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "d74f755b-b470-462a-bcf2-988314f90bfa",
+          "Flags": 0,
+          "Name": "2D Skybox",
+          "Position": "-2462.27,1909.141,-2617.408",
+          "Tags": "skybox",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkyBox2D",
+              "__guid": "440f3719-3ce8-4e08-82e4-9dfbb5afa586",
+              "SkyIndirectLighting": true,
+              "SkyMaterial": "materials/skybox/skybox_dark_01.vmat",
+              "Tint": "0.9907,0.9907,0.9907,1"
+            }
+          ]
+        },
+        {
+          "__guid": "44599370-eab6-4d58-8834-575447b160ae",
+          "Flags": 0,
+          "Name": "Sound",
+          "Position": "-6186.656,-807.2701,-4536.199",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SoundscapeTrigger",
+              "__guid": "76319fe7-6e09-481e-8b2e-c190988bbdd0",
+              "BoxSize": "50,50,50",
+              "Radius": 5000,
+              "Soundscape": "sounds/ambient/construct_outside.sndscape",
+              "StayActiveOnExit": true,
+              "Type": "Sphere"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "85d7e7fa-f02a-4f91-85b9-9d1a8b5b0f88",
+      "Flags": 0,
+      "Name": "zombspawns",
+      "Position": "5374.385,2377.349,-6443.059",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "a5c9e7a7-e2b3-42aa-ae55-8e3c98bea319",
+          "Flags": 0,
+          "Name": "spawn",
+          "Position": "502.748,884.4553,-1125.469",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ZombieSpawner",
+              "__guid": "6b81384c-5da6-4e0a-ac29-f460b07f83c5",
+              "ZombiePrefab": {
+                "_type": "gameobject",
+                "prefab": "prefabs/npcs/zombie.prefab"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "dd6aea75-a5b5-4aa8-a262-69451f44b610",
+          "Flags": 0,
+          "Name": "spawn",
+          "Position": "-630.9111,-382.7784,-1148.734",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ZombieSpawner",
+              "__guid": "18beae4b-05db-4774-8306-28ab19625017",
+              "ZombiePrefab": {
+                "_type": "gameobject",
+                "prefab": "prefabs/npcs/zombie.prefab"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "2ff9d4a9-0337-4bbc-a411-0d6d02358177",
+          "Flags": 0,
+          "Name": "spawn",
+          "Position": "-1418.19,-248.5071,-1106.309",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ZombieSpawner",
+              "__guid": "290c6f78-5023-45f3-8e87-86a34f7e0963",
+              "ZombiePrefab": {
+                "_type": "gameobject",
+                "prefab": "prefabs/npcs/zombie.prefab"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "3bc93a4b-e329-414e-8044-b524006d37d9",
+          "Flags": 0,
+          "Name": "spawn",
+          "Position": "-1957.854,491.1724,-1083.891",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GeneralGame.ZombieSpawner",
+              "__guid": "9db23022-527d-48e7-9b73-187080e4c242",
+              "ZombiePrefab": {
+                "_type": "gameobject",
+                "prefab": "prefabs/npcs/zombie.prefab"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "67892738-51bb-458b-950f-581c776c2c2c",
+      "Flags": 0,
+      "Name": "Box",
+      "Position": "10657.63,6573.438,-14937.79",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MeshComponent",
+          "__guid": "45e643d7-5887-46a4-9535-88fba62f053d",
+          "Collision": "Mesh",
+          "Color": "1,1,1,1",
+          "HideInGame": false,
+          "IsTrigger": false,
+          "Mesh": {
+            "Topology": "H4sIAAAAAAAACuNgYGCQYGBgYGNgYPg/Cv4PRQAAZt4OsMQBAAA=",
+            "Positions": [
+              "-41.56543,-476.3208,409.3428",
+              "41.56543,-476.3208,409.3428",
+              "41.56543,476.3208,409.3428",
+              "-41.56543,476.3208,409.3428",
+              "-41.56543,476.3208,-409.3428",
+              "41.56543,476.3208,-409.3428",
+              "41.56543,-476.3208,-409.3428",
+              "-41.56543,-476.3208,-409.3428"
+            ],
+            "TextureCoord": [
+              "0.3247299,3.721256",
+              "-0.3247299,-3.19799",
+              "0.3247299,-3.721256",
+              "-3.721256,-3.19799",
+              "-0.3247299,-3.721256",
+              "-0.3247299,-3.19799",
+              "-0.3247299,3.721256",
+              "-3.721256,-3.19799",
+              "0.3247299,-3.721256",
+              "0.3247299,3.19799",
+              "0.3247299,3.721256",
+              "3.721256,3.19799",
+              "-0.3247299,3.721256",
+              "0.3247299,3.19799",
+              "-0.3247299,-3.721256",
+              "3.721256,3.19799",
+              "3.721256,-3.19799",
+              "-0.3247299,3.19799",
+              "-3.721256,3.19799",
+              "0.3247299,-3.19799",
+              "-3.721256,3.19799",
+              "0.3247299,-3.19799",
+              "3.721256,-3.19799",
+              "-0.3247299,3.19799"
+            ],
+            "TextureUAxis": [
+              "1,0,0",
+              "1,0,-0",
+              "0,-1,0",
+              "0,1,0",
+              "-1,0,0",
+              "1,-0,0"
+            ],
+            "TextureVAxis": [
+              "0,-1,0",
+              "0,-1,0",
+              "0,0,-1",
+              "-0,0,-1",
+              "0,0,-1",
+              "-0,0,-1"
+            ],
+            "TextureScale": [
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25"
+            ],
+            "TextureOffset": [
+              "306.7031,278.0498",
+              "306.7031,278.0498",
+              "278.0498,413.1172",
+              "233.9502,413.1172",
+              "205.2969,413.1172",
+              "306.7031,413.1172"
+            ],
+            "MaterialIndex": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "EdgeFlags": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "Materials": [
+              "materials/dev/reflectivity_30.vmat",
+              "materials/tools/toolsskybox.vmat"
+            ]
+          },
+          "SmoothingAngle": 40,
+          "Static": true,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ]
+    },
+    {
+      "__guid": "225bcc3c-f03e-4b6a-90bf-5d44f2afc987",
+      "Flags": 0,
+      "Name": "itemsspawns",
+      "Position": "4244.463,3868.747,-7397.508",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.ItemSpawn",
+          "__guid": "9c199869-52e6-45f3-9376-8921ab9cae7f",
+          "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+        }
+      ]
+    },
+    {
+      "__guid": "7c6342e7-45e6-4d80-b35a-5fa0c443b732",
+      "Flags": 0,
+      "Name": "itemsspawns (11)",
+      "Position": "4533.91,3923.976,-7407.534",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.ItemSpawn",
+          "__guid": "9cf00721-0816-42ec-ba9b-307ce9de75b7",
+          "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+        }
+      ]
+    },
+    {
+      "__guid": "c9e8df43-ef12-4fe4-98d2-292dd14b3d05",
+      "Flags": 0,
+      "Name": "itemsspawns (3)",
+      "Position": "4666.81,4153.897,-7432.817",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.ItemSpawn",
+          "__guid": "bac114c9-bb84-4b99-83e3-7917be387db8",
+          "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+        }
+      ]
+    },
+    {
+      "__guid": "d87dae9c-b172-4885-b2e4-c06d7166ae8b",
+      "Flags": 0,
+      "Name": "itemsspawns (1)",
+      "Position": "4255.322,3878.929,-7397.508",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.ItemSpawn",
+          "__guid": "4dd49a27-77b9-47da-b4fc-b724105bcd5b",
+          "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+        }
+      ]
+    },
+    {
+      "__guid": "5f822770-4032-41a0-8712-1abecb32f9eb",
+      "Flags": 0,
+      "Name": "itemsspawns (13)",
+      "Position": "4544.769,3934.158,-7407.534",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.ItemSpawn",
+          "__guid": "63b9e019-34ef-4f30-a57b-79a6f74b7bad",
+          "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+        }
+      ]
+    },
+    {
+      "__guid": "f4618091-1807-4dd8-a900-0aca10857104",
+      "Flags": 0,
+      "Name": "itemsspawns (4)",
+      "Position": "4677.669,4164.08,-7432.817",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.ItemSpawn",
+          "__guid": "d729b5b6-ad2d-4edd-894d-c09c0b249bf3",
+          "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+        }
+      ]
+    },
+    {
+      "__guid": "ca84306a-444d-47a8-9e73-51610ebe0653",
+      "Flags": 0,
+      "Name": "itemsspawns (2)",
+      "Position": "4261.052,3864.01,-7397.508",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.ItemSpawn",
+          "__guid": "9f67c2e7-5a28-4082-9e30-2e469b3652dc",
+          "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+        }
+      ]
+    },
+    {
+      "__guid": "7bb23738-0ecc-4ce3-b036-1e2ca8caaf9b",
+      "Flags": 0,
+      "Name": "itemsspawns (12)",
+      "Position": "4550.499,3919.239,-7407.534",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.ItemSpawn",
+          "__guid": "7890acda-5f94-4d4f-a61d-2d6429851195",
+          "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+        }
+      ]
+    },
+    {
+      "__guid": "ba2f9605-e557-404e-9991-aa6eb5f153c9",
+      "Flags": 0,
+      "Name": "itemsspawns (5)",
+      "Position": "4683.399,4149.16,-7432.817",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.ItemSpawn",
+          "__guid": "966920ba-716b-487d-ac1d-1aa42fc90ca7",
+          "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+        }
+      ]
+    },
+    {
+      "__guid": "d3445fa8-a4ff-4b91-b986-a680e03be1e5",
+      "Flags": 0,
+      "Name": "reming870",
+      "Position": "4252.322,3818.579,-7396.533",
+      "Rotation": "-0.4999999,-0.4999999,0.4999999,0.5000001",
       "Tags": "weapon",
       "Enabled": true,
       "NetworkMode": 1,
-      "__Prefab": "prefabs/weapons/beretta.prefab",
+      "__Prefab": "prefabs/weapons/reming870.prefab",
       "__PrefabVariables": {}
     },
     {
-      "__guid": "aa3ba455-f12f-45c7-802a-e16f035a7c37",
+      "__guid": "609c8299-4175-45ea-94ef-3e5467dcbb95",
+      "Flags": 0,
+      "Name": "awp",
+      "Position": "4681.02,4114.556,-7418.526",
+      "Rotation": "0.09229596,-0.7010573,-0.09229594,0.7010574",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/awp.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "3f7efa98-b45b-4e8e-84ff-cdbaf3794439",
       "Flags": 0,
       "Name": "vss",
-      "Position": "-304.743,35.63831,10027",
+      "Position": "4537.413,3381.064,-7260.992",
+      "Rotation": "0.7071067,0,0,0.7071068",
       "Tags": "weapon",
       "Enabled": true,
       "NetworkMode": 1,
@@ -269,23 +638,97 @@
       "__PrefabVariables": {}
     },
     {
-      "__guid": "257b4b5e-d93c-457c-92a1-f71bb4e2ae32",
+      "__guid": "8ba0a0d0-dab2-4da2-a8cc-50a1b28f5ded",
       "Flags": 0,
-      "Name": "ammo_rifle",
-      "Position": "-356.0894,65.34506,10004",
+      "Name": "itemsspawns (6)",
+      "Position": "4500.509,3377.129,-7258.155",
       "Enabled": true,
-      "__Prefab": "prefabs/items/ammo_rifle.prefab",
-      "__PrefabVariables": {}
+      "Components": [
+        {
+          "__type": "GeneralGame.ItemSpawn",
+          "__guid": "521e9e4e-6c25-4434-9a0a-7b3e4096d229",
+          "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+        }
+      ]
     },
     {
-      "__guid": "0f69aac9-c15c-42a0-8b0b-71c14257d434",
+      "__guid": "d32ed6cb-364a-4162-a1f2-bbb580320756",
       "Flags": 0,
-      "Name": "beretta (1)",
-      "Position": "-322.698,4.459007,10013",
+      "Name": "itemsspawns (9)",
+      "Position": "4602.302,3395.715,-7406.759",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.ItemSpawn",
+          "__guid": "dbe387b0-f387-4b6b-9818-43f28c5ae64f",
+          "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+        }
+      ]
+    },
+    {
+      "__guid": "dfac2ec8-9f43-475b-bb36-899d7c169dca",
+      "Flags": 0,
+      "Name": "itemsspawns (10)",
+      "Position": "4614.921,3406.048,-7406.759",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.ItemSpawn",
+          "__guid": "d8eac280-ae0c-4915-bfbc-3ebbe93d9f43",
+          "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+        }
+      ]
+    },
+    {
+      "__guid": "06c8b827-dced-488d-9c7e-b009043a5b4f",
+      "Flags": 0,
+      "Name": "itemsspawns (7)",
+      "Position": "4489.65,3366.946,-7258.155",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.ItemSpawn",
+          "__guid": "90a76bad-8129-45f6-a813-16425fc5c7b1",
+          "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+        }
+      ]
+    },
+    {
+      "__guid": "0c66cd1d-927e-4228-884b-6976cb495a9e",
+      "Flags": 0,
+      "Name": "itemsspawns (8)",
+      "Position": "4506.239,3362.209,-7258.155",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GeneralGame.ItemSpawn",
+          "__guid": "1892ad86-eadb-4d14-9cc7-3515e5d5aeba",
+          "SpawnableGroup": "prefabs/spawn_groups/ammo.spawn"
+        }
+      ]
+    },
+    {
+      "__guid": "cbd6d70d-481f-4cb3-8e28-daa40b7dbe41",
+      "Flags": 0,
+      "Name": "beretta",
+      "Position": "4634.731,3401.829,-7405",
+      "Rotation": "0.7233174,0.2613776,0.2613777,0.5832457",
       "Tags": "weapon",
       "Enabled": true,
       "NetworkMode": 1,
       "__Prefab": "prefabs/weapons/beretta.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "5d033339-6180-4cd7-a636-c4053bd687fa",
+      "Flags": 0,
+      "Name": "mp7",
+      "Position": "4517.208,3969.634,-7407.3",
+      "Rotation": "0.5880182,0.157559,0.2053349,0.7663205",
+      "Tags": "weapon",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "__Prefab": "prefabs/weapons/mp7.prefab",
       "__PrefabVariables": {}
     }
   ],
@@ -300,7 +743,7 @@
     "UseFixedUpdate": true,
     "Metadata": {},
     "NavMesh": {
-      "Enabled": false,
+      "Enabled": true,
       "IncludeStaticBodies": true,
       "IncludeKeyframedBodies": true,
       "EditorAutoUpdate": false,

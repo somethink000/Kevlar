@@ -38,6 +38,7 @@ public partial class Weapon
 	[Property, Group( "Bullets" )] public float Spread { get; set; } = 0.1f;
 	[Property, Group( "Bullets" )] public float Recoil { get; set; } = 0.1f;
 	[Property, Group( "Bullets" )] public int RPM { get; set; } = 200;
+	[Property, Group( "Bullets" )] public int ViewPunch { get; set; } = 5;
 	[Property, Group( "Bullets" )] public FiringType FireMod { get; set; } = FiringType.semi;
 	[Property, Group( "Sounds" )] public SoundEvent DryShootSound { get; set; }
 	[Property, Group( "Sounds" )] public SoundEvent ShootSound { get; set; }

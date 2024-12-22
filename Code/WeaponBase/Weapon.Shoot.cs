@@ -91,10 +91,10 @@ public partial class Weapon
 		}
 
 		Owner.ApplyFov( 10 );
-		Owner.ApplyShake( 5, 1 );
+		Owner.ApplyShake( ViewPunch, 1 );
 	}
 
-	[Broadcast]
+	[Rpc.Broadcast]
 	public virtual void ShootBullet( Vector3 spreadOffset )
 	{
 		

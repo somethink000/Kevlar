@@ -52,11 +52,11 @@ public class Zombie : Component, IHealthComponent
 	private TimeUntil timeUntilLastDrawHeands = 0;
 	private TimeSince timeSinceDead = 0;
 
-	[HostSync] public TimeUntil NextAttack { get; set; }
-	[HostSync] public bool ReachedDestination { get; set; } = true;
-	[HostSync] public Vector3 TargetPosition { get; set; }
-	[HostSync] public bool FollowingTargetObject { get; set; } = false;
-	[HostSync] public int NpcId { get; set; }
+	[Sync( SyncFlags.FromHost )] public TimeUntil NextAttack { get; set; }
+	[Sync( SyncFlags.FromHost )] public bool ReachedDestination { get; set; } = true;
+	[Sync( SyncFlags.FromHost )] public Vector3 TargetPosition { get; set; }
+	[Sync( SyncFlags.FromHost )] public bool FollowingTargetObject { get; set; } = false;
+	[Sync( SyncFlags.FromHost )] public int NpcId { get; set; }
 
 
 	protected override void OnAwake()
